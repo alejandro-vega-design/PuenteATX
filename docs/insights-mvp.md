@@ -14,6 +14,7 @@ The approved visual reference is `references/puente-atx-insights-overview.png`. 
 - Browsers have no direct insert or read privileges on `analytics_events`.
 - Authenticated administrators query `get_insights_snapshot(...)` and `get_insights_time_series(...)`. Both PostgreSQL RPCs verify the `admin` role and return only aggregates.
 - Editors cannot execute Insights queries.
+- The global `Origen / Source` filter isolates aggregate events by stored `page_path`: `/recursos`, `/buscador` or `/mi-lista`. Filtering occurs inside the protected RPCs; individual events are never sent to the dashboard.
 - Vercel Web Analytics remains the source for general traffic and page/referrer statistics.
 - Vercel Speed Insights remains the source for Core Web Vitals and route/device performance.
 

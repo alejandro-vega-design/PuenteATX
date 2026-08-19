@@ -33,7 +33,8 @@ export async function getInsightsSnapshot(filters) {
       p_end_date: range.end,
       p_environment: filters.environment,
       p_language: filters.language === 'all' ? null : filters.language,
-      p_device_type: filters.device === 'all' ? null : filters.device
+      p_device_type: filters.device === 'all' ? null : filters.device,
+      p_page_path: { directory: '/recursos', finder: '/buscador', saved: '/mi-lista' }[filters.source] || null
     }
   };
   const snapshot = await supabaseRequest('/rest/v1/rpc/get_insights_snapshot', request);

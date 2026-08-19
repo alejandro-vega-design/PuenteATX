@@ -1012,7 +1012,7 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
 .insights-header p { margin: 5px 0 0; font-size: 17px; }
 .insights-header-actions, .insights-empty-overview > div { display: flex; flex-wrap: wrap; gap: 10px; }
 .insights-header-actions button { margin: 0; display: inline-flex; align-items: center; gap: 8px; }
-.insights-filters { margin-bottom: 20px; padding: 16px; border: 1px solid var(--color-line-subtle); border-radius: var(--radius-md); background: var(--color-insights-surface); display: grid; grid-template-columns: repeat(4, minmax(140px, 1fr)); gap: 12px; }
+.insights-filters { margin-bottom: 20px; padding: 16px; border: 1px solid var(--color-line-subtle); border-radius: var(--radius-md); background: var(--color-insights-surface); display: grid; grid-template-columns: repeat(5, minmax(140px, 1fr)); gap: 12px; }
 .insights-filters label, .insights-resource-toolbar label { display: grid; gap: 6px; font-weight: 600; }
 .insights-filters select, .insights-resource-toolbar select, .insights-resource-toolbar input { width: 100%; min-height: 44px; padding: 8px 36px 8px 11px; border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-white); color: var(--color-ink); font-weight: 400; }
 .insights-loading, .admin-error-state { min-height: 280px; display: grid; place-content: center; text-align: center; }
@@ -1466,6 +1466,7 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
 @media (max-width: 374px) { .legal-page { padding-inline: 16px; } }
 
 @media (max-width: 1100px) {
+  .insights-filters { grid-template-columns: repeat(3, minmax(140px, 1fr)); }
   .insights-kpi-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .insights-grid { grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr); gap: 20px; }
   .insights-panel-wide { grid-column: 1; }

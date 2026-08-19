@@ -2,6 +2,7 @@ import React from 'react';
 import { CategoryIcon, MapIcon, PhoneIcon } from '../Icons';
 import { localized } from '../../data/resourceUtils';
 import { formatMiles } from '../../utils/geo';
+import { trackPuenteEvent } from '../../analytics/client';
 
 export default function CompactResourceCard({ resource, category, lang, t, selected, hovered, included, onSelect, onHover, onToggleIncluded }) {
   const title = localized(resource, 'title', lang);
@@ -25,7 +26,7 @@ export default function CompactResourceCard({ resource, category, lang, t, selec
     <p className="resource-organization">{resource.organization_name}</p>
     {badges.length > 0 && <ul className="compact-resource-badges">{badges.map(badge => <li key={badge}>{badge}</li>)}</ul>}
     {address && <p className="compact-resource-line"><MapIcon/><span>{address}</span></p>}
-    {resource.phone && <a className="compact-resource-line" href={`tel:${resource.phone}`} onClick={event => event.stopPropagation()}><PhoneIcon/><span>{resource.phone}</span></a>}
+    {resource.phone && <a className="compact-resource-line" href={`tel:${resource.phone}`} onClick={event => { event.stopPropagation(); trackPuenteEvent('call_clicked', { resource_id: resource.id, category_slug: category?.slug }); }}><PhoneIcon/><span>{resource.phone}</span></a>}
     {selected && <span className="sr-only">{t.selected}</span>}
   </article>;
 }

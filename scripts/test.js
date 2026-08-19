@@ -115,7 +115,7 @@ assert.deepStrictEqual(normalizeServiceArea({ serviceAreaEs: '', serviceAreaEn: 
 assert.deepStrictEqual(normalizeServiceArea({ serviceAreaEs: 'Todo Texas', serviceAreaEn: 'Statewide', city: '', county: '', postalCode: '' }), { es: 'Todos los condados de Texas', en: 'All Texas counties', counties: ['statewide'] }, 'preserves statewide service coverage without listing cities');
 assert.equal(applyImportVerificationDate({ last_verified_at: null }, true, '2026-07-27').last_verified_at, '2026-07-27', 'uses the import date when verification is enabled and the CSV date is empty');
 assert.equal(applyImportVerificationDate({ last_verified_at: '2026-06-12' }, true, '2026-07-27').last_verified_at, '2026-06-12', 'preserves a verification date supplied by the CSV');
-const williamsonCsv = prepareCsvResources(parseCsv(fs.readFileSync(new URL('../docs/williamson-county-resources.csv', import.meta.url), 'utf8')), []);
+const williamsonCsv = prepareCsvResources(parseCsv(fs.readFileSync(new URL('../resource-lists-import/williamson-county-resources.csv', import.meta.url), 'utf8')), []);
 assert.strictEqual(williamsonCsv.rows.length, 35, 'provides the curated Williamson County bulk-import dataset');
 assert.ok(williamsonCsv.rows.every(row => row.errors.length === 0), 'keeps every Williamson County CSV row compatible with the admin importer');
 assert.equal(applyImportVerificationDate({ last_verified_at: null }, false, '2026-07-27').last_verified_at, null, 'leaves verification empty when the option is disabled');
@@ -176,7 +176,7 @@ assert.strictEqual(sanitizeSearchTerm('512-555-1212'), null, 'does not store tel
 assert.strictEqual(sanitizeSearchTerm('1200 Victory Dr'), null, 'does not store address search terms');
 assert.strictEqual(sanitizeSearchTerm('https://example.com/help'), null, 'does not store URL search terms');
 assert.strictEqual(sanitizeSearchTerm('á'.repeat(100)).length, 80, 'limits stored search terms to 80 characters');
-const insightFilters = { period: '90d', language: 'en', device: 'tablet', environment: 'preview' };
+const insightFilters = { period: '90d', source: 'finder', language: 'en', device: 'tablet', environment: 'preview' };
 assert.deepStrictEqual(parseInsightFilters(`?${serializeInsightFilters(insightFilters)}`), insightFilters, 'round-trips Insight filters in the URL');
 assert.strictEqual(metricTrend(22, 19), null, 'hides trends with a net change below the threshold');
 assert.deepStrictEqual(metricTrend(30, 20), { net: 10, percent: 50, direction: 'up', sentiment: 'neutral' }, 'shows material trends with sufficient volume');

@@ -56,6 +56,7 @@ function downloadInsightsCsv(snapshot, filters, t, lang) {
     [lang === 'es' ? 'Rango inicial' : 'Range start', range.start],
     [lang === 'es' ? 'Rango final' : 'Range end', range.end],
     [t.environment, t.environments[filters.environment]],
+    [t.source, t.sources[filters.source]],
     [t.language, t.languages[filters.language]],
     [t.device, t.devices[filters.device]],
     [],
@@ -236,7 +237,7 @@ export default function AdminInsights({ lang, locationSearch, navigate }) {
   return <div className="admin-insights-page">
     <header className="insights-header"><div><h1>{t.title}</h1><p>{t.subtitle}</p></div><div className="insights-header-actions"><button className="secondary-button" onClick={() => setMethodologyOpen(true)}><span className="material-symbols-outlined" aria-hidden="true">info</span>{t.methodology}</button><button className="secondary-button secondary-cta" onClick={() => { setExportError(false); try { downloadInsightsCsv(snapshot, filters, t, lang); } catch { setExportError(true); } }}><span className="material-symbols-outlined" aria-hidden="true">download</span>{t.exportCsv}</button></div></header>
     <section className="insights-filters" aria-label={lang === 'es' ? 'Filtros de Insights' : 'Insights filters'}>
-      {[['period', t.period, t.periods], ['language', t.language, t.languages], ['device', t.device, t.devices], ['environment', t.environment, t.environments]].map(([key, label, options]) => <label key={key}>{label}<select value={filters[key]} onChange={event => updateFilters({ ...filters, [key]: event.target.value })}>{Object.entries(options).map(([value, text]) => <option value={value} key={value}>{text}</option>)}</select></label>)}
+      {[['period', t.period, t.periods], ['source', t.source, t.sources], ['language', t.language, t.languages], ['device', t.device, t.devices], ['environment', t.environment, t.environments]].map(([key, label, options]) => <label key={key}>{label}<select value={filters[key]} onChange={event => updateFilters({ ...filters, [key]: event.target.value })}>{Object.entries(options).map(([value, text]) => <option value={value} key={value}>{text}</option>)}</select></label>)}
     </section>
     {error && <p className="insights-partial-error" role="status">{t.loadError} <button onClick={load}>{t.retry}</button></p>}
     <p className="sr-only" aria-live="polite">{exportError ? t.exportFailed : ''}</p>

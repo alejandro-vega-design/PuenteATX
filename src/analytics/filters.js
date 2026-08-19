@@ -1,5 +1,6 @@
 export const insightFilterDefaults = {
   period: '30d',
+  source: 'all',
   language: 'all',
   device: 'all',
   environment: 'production'
@@ -7,6 +8,7 @@ export const insightFilterDefaults = {
 
 const allowed = {
   period: new Set(['7d', '30d', '90d', 'all']),
+  source: new Set(['all', 'directory', 'finder', 'saved']),
   language: new Set(['all', 'es', 'en']),
   device: new Set(['all', 'mobile', 'tablet', 'desktop']),
   environment: new Set(['production', 'preview', 'development'])
@@ -33,4 +35,3 @@ export function insightDateRange(period, now = new Date()) {
   else start.setUTCDate(start.getUTCDate() - Number(period.replace('d', '')));
   return { start: start.toISOString(), end: end.toISOString() };
 }
-
