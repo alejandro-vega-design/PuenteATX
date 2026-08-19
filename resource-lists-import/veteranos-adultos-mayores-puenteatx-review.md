@@ -1,0 +1,55 @@
+# Revisión de recursos para Puente ATX
+
+- Archivos fuente: PuenteATX_Recursos_Veteranos_Validados.csv, PuenteATX_Recursos_Adultos_Mayores.csv
+- Recursos candidatos: 45
+- Duplicados exactos excluidos: 0
+- Fecha de verificación: se dejó vacía; convertir los archivos no constituye verificación.
+- Importación: los registros se preparan como borradores y no se publican automáticamente.
+
+## Revisión humana
+
+- Clínica VA de Austin: fecha de verificación pendiente.
+- Servicios para Veteranos del Condado de Travis: fecha de verificación pendiente.
+- Atención para Veteranos sin Hogar de VA Central Texas: fecha de verificación pendiente.
+- Programa de Alcance de Justicia para Veteranos – Central Texas: fecha de verificación pendiente.
+- Servicios para Veteranos del Condado de Williamson: wilcotx.gov devolvió error 429 durante la verificación directa; datos confirmados vía TexVet.org y artículo de noticias — recomendable verificación telefónica final; fecha de verificación pendiente.
+- Clínica VA de Cedar Park: fecha de verificación pendiente.
+- Servicios para Veteranos del Condado de Hays: Corrige el teléfono anterior (no confirmado) por el número oficial verificado; fecha de verificación pendiente.
+- Caridades Católicas de Central Texas – Servicios para Veteranos St. Michael's: fecha de verificación pendiente.
+- Oficina de Servicios para Veteranos del Condado de Bastrop: fecha de verificación pendiente.
+- Heroes Night Out / Centro de Recursos Heroes: fecha de verificación pendiente.
+- OP Veteran: fecha de verificación pendiente.
+- Meals for Vets (Comidas para Veteranos): fecha de verificación pendiente.
+- Comisión de Veteranos de Texas — Representantes de Reclamos de VA: El sitio oficial tvc.texas.gov bloqueó el acceso automatizado durante la verificación — confirmar horario/idiomas por teléfono antes de publicar; fecha de verificación pendiente.
+- Servicios para Veteranos del Condado de Caldwell: fecha de verificación pendiente.
+- Centro de Asistencia para Negocios de Veteranos (VBOC) – UTRGV: área no confirmada; PENDIENTE: llamar al (956) 665-8931 (UTRGV) y comparar con el VBOC de UT Arlington (817-272-6789, área "North/Central Texas") para confirmar cuál cubre Austin antes de publicar este recurso; fecha de verificación pendiente.
+- Agencia de Área sobre el Envejecimiento del Área Capital (AAACAP) / ADRC — CAPCOG: fecha de verificación pendiente.
+- AGE of Central Texas — Servicios para Cuidadores: Confirmar por teléfono si atienden casos en Hays, Bastrop o Caldwell; fecha de verificación pendiente.
+- Alzheimer's Texas — Apoyo a Cuidadores: Confirmar cobertura específica de Bastrop y Caldwell por teléfono; fecha de verificación pendiente.
+- Family Eldercare: fecha de verificación pendiente.
+- Meals on Wheels Central Texas (MOWCT): fecha de verificación pendiente.
+- Opportunities for Williamson & Burnet Counties (OWBC) — Meals on Wheels: fecha de verificación pendiente.
+- Meals on Wheels Rural Capital Area: fecha de verificación pendiente.
+- Central Texas Food Bank — Programas para Adultos Mayores (CSFP y HOPE): fecha de verificación pendiente.
+- Proyecto de Solicitud Simplificada de Texas (TSAP) — SNAP para Adultos Mayores: fecha de verificación pendiente.
+- Programa de Consejería de Beneficios / HICAP de Texas — vía AAACAP: fecha de verificación pendiente.
+- 2-1-1 Texas (HHSC): fecha de verificación pendiente.
+- CapMetro Access: fecha de verificación pendiente.
+- CARTS (Capital Area Rural Transportation System): fecha de verificación pendiente.
+- Drive a Senior (Central Texas): fecha de verificación pendiente.
+- Línea Legal Directa para Texanos (Texas Legal Services Center): fecha de verificación pendiente.
+- Volunteer Legal Services of Central Texas (VLSoCT): Confirmar si tienen un programa específico para adultos mayores; fecha de verificación pendiente.
+- Exención de Impuestos Homestead 65+ (Distrito de Tasación): fecha de verificación pendiente.
+- Servicios de Protección para Adultos de Texas (APS) — Línea Estatal: fecha de verificación pendiente.
+- Asistencia con Servicios Públicos del Condado de Travis (CEAP): fecha de verificación pendiente.
+- Asistencia con Servicios Públicos — OWBC (Williamson/Burnet): fecha de verificación pendiente.
+- Asistencia con Servicios Públicos — Community Action Inc. (Hays/Caldwell/Blanco): Proveedor CEAP de Bastrop no confirmado — candidatos posibles: Combined Community Action o CAPCOG; fecha de verificación pendiente.
+- Centro de Ancianos San Marcos (San Marcos Senior Citizens Center): fecha de verificación pendiente.
+- Centro de Actividades para Ancianos del Área de Lockhart: sin fuente oficial; fecha de verificación pendiente.
+- Centro Comunitario de Ancianos de Bastrop: Muy poca información pública disponible — se recomienda llamar o visitar para confirmar detalles antes de publicar; fecha de verificación pendiente.
+- engAGE Travis County: fecha de verificación pendiente.
+- Servicios para Adultos Mayores del Condado de Williamson: El sitio oficial bloqueó el acceso automatizado (robots.txt) — verificar directamente por teléfono o visitando el sitio en un navegador; fecha de verificación pendiente.
+- H.E.L.P. (Programa de Préstamo de Equipo Médico) — AGE of Central Texas: Es la respuesta más directa a "DME for seniors" — confirmar cobertura de Hays y Bastrop por teléfono; fecha de verificación pendiente.
+- Ollie's Medical Equipment Lending Closet — Senior Access / Drive a Senior: Confirmar por teléfono alcance y elegibilidad exacta antes de referir; fecha de verificación pendiente.
+- Closet de Equipo — CPATH (Cerebral Palsy Awareness Transition Hope): Enfoque histórico en necesidades de movilidad/parálisis cerebral, pero el equipo (sillas de ruedas, andadores) también sirve a adultos mayores — confirmar elegibilidad por edad/condición; fecha de verificación pendiente.
+- Medicare Parte B — Cobertura de Equipo Médico Duradero (DME): fecha de verificación pendiente.

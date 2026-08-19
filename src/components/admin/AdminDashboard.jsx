@@ -1,0 +1,7 @@
+import React from 'react';
+import { verificationState } from '../../data/resourceUtils';
+
+export default function AdminDashboard({ t, resources, demo, navigate }) {
+  const metrics = [{ label: t.published, value: resources.filter(item => item.status === 'published').length }, { label: t.drafts, value: resources.filter(item => item.status === 'draft').length }, { label: t.archived, value: resources.filter(item => item.status === 'archived').length }, { label: t.needsReview, value: resources.filter(item => verificationState(item) !== 'recent').length }, { label: t.recentlyUpdated, value: resources.filter(item => Date.now() - new Date(item.updated_at) < 30 * 86400000).length }];
+  return <><header className="admin-page-header"><div><h1>{t.dashboard}</h1>{demo && <p className="demo-banner">{t.demoMode}</p>}</div><div className="admin-resource-header-actions"><button className="secondary-button admin-import-resource-button" onClick={() => navigate('/admin/recursos/importar')}><span className="material-symbols-outlined" aria-hidden="true">upload_file</span>{t.importCsv}</button><button className="primary-button admin-add-resource-button" onClick={() => navigate('/admin/recursos/nuevo')}><span aria-hidden="true">＋</span>{t.addResource}</button></div></header><section className="admin-insights"><h2>{t.resourceInsights}</h2><div className="admin-insight-grid">{metrics.map(metric => <div key={metric.label}><strong>{metric.value}</strong><span>{metric.label}</span></div>)}</div></section></>;
+}

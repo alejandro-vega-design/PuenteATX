@@ -1,0 +1,26 @@
+{
+  "source": {
+    "rows": 64,
+    "headers": [
+      "Organización",
+      "Título en español",
+      "Título en inglés",
+      "Estado",
+      "Categorías",
+      "Fecha de verificación",
+      "Modificado"
+    ],
+    "expectedHeaders": 45
+  },
+  "recovered": 40,
+  "approvedSubset": 15,
+  "recommendations": {
+    "manual_verification_required": 40,
+    "approve_rebuild": 15,
+    "exclude": 9
+  },
+  "importerValidation": {
+    "missingHeaders": [],
+    "rowErrors": []
+  }
+}
