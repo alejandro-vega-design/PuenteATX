@@ -16,13 +16,14 @@ const DESKTOP_MAP_PADDING = { top: 64, right: 48, bottom: 64, left: 500 };
 const MOBILE_MAP_PADDING = { top: 48, right: 32, bottom: 48, left: 32 };
 const allCoordinates = coordinates => Array.isArray(coordinates?.[0]?.[0]) ? coordinates.flatMap(allCoordinates) : coordinates;
 const isDesktopMap = () => window.matchMedia(DESKTOP_MAP_QUERY).matches;
-const getMapPadding = () => isDesktopMap() ? DESKTOP_MAP_PADDING : MOBILE_MAP_PADDING;
+const getMapPadding = (bottomInset = 0) => isDesktopMap() ? DESKTOP_MAP_PADDING : { ...MOBILE_MAP_PADDING, bottom: Math.max(MOBILE_MAP_PADDING.bottom, bottomInset + 16) };
 const getVisibleMapOffset = () => isDesktopMap() ? [226, 0] : [0, 0];
 const boundsFromPoints = points => points.reduce((bounds, point) => bounds.extend(point), new maplibregl.LngLatBounds(points[0], points[0]));
 
-export default function ResourceMap({ t, zip, zipCenter, resources, categories, selectedId, hoveredId, fitResults = true, onSelect, onHover, onSearchArea }) {
-  const containerRef = useRef(null); const mapRef = useRef(null); const markersRef = useRef(new Map()); const clusterMarkersRef = useRef([]); const clusterOriginsRef = useRef(new Map()); const clusterRefreshVersionRef = useRef(0); const clusterRefreshFrameRef = useRef(null); const lastClusterCameraRef = useRef(''); const lastClusterSelectionRef = useRef(selectedId); const zipMarkerRef = useRef(null); const userMoveRef = useRef(false); const refreshClustersRef = useRef(() => {}); const selectedIdRef = useRef(selectedId);
+const ResourceMap = React.memo(function ResourceMap({ t, zip, zipCenter, resources, categories, selectedId, hoveredId, fitResults = true, bottomInset = 0, onSelect, onHover, onSearchArea }) {
+  const containerRef = useRef(null); const mapRef = useRef(null); const markersRef = useRef(new Map()); const clusterMarkersRef = useRef([]); const clusterOriginsRef = useRef(new Map()); const clusterRefreshVersionRef = useRef(0); const clusterRefreshFrameRef = useRef(null); const lastClusterCameraRef = useRef(''); const lastClusterSelectionRef = useRef(selectedId); const zipMarkerRef = useRef(null); const userMoveRef = useRef(false); const refreshClustersRef = useRef(() => {}); const selectedIdRef = useRef(selectedId); const bottomInsetRef = useRef(bottomInset);
   selectedIdRef.current = selectedId;
+  bottomInsetRef.current = bottomInset;
   const [loaded, setLoaded] = useState(false); const [failed, setFailed] = useState(false); const [zipGeojson, setZipGeojson] = useState(null); const [showRings, setShowRings] = useState(false); const [pendingBounds, setPendingBounds] = useState(null);
   const selectedZipFeature = useMemo(() => zipGeojson?.features?.find(feature => feature.properties?.zip_code === zip), [zipGeojson, zip]);
   const selectedZipCoordinates = useMemo(() => selectedZipFeature ? allCoordinates(selectedZipFeature.geometry.coordinates) : [], [selectedZipFeature]);
@@ -88,13 +89,20 @@ export default function ResourceMap({ t, zip, zipCenter, resources, categories, 
     // overlay only and must never force the map to zoom away from the results.
     const points = [...resourcePoints, ...(zipCenter ? [[zipCenter.longitude, zipCenter.latitude]] : []), ...selectedZipCoordinates];
     if (points.length > 1) {
-      map.fitBounds(boundsFromPoints(points), { padding: getMapPadding(), maxZoom: 12, duration: 700 });
+      map.fitBounds(boundsFromPoints(points), { padding: getMapPadding(bottomInsetRef.current), maxZoom: 12, duration: 700 });
     } else if (points.length === 1) map.easeTo({ center: points[0], offset: getVisibleMapOffset(), zoom: 11, duration: 700 });
   }, [loaded, resources, zipCenter, selectedZipCoordinates, fitResults]);
   useEffect(() => {
     const map = mapRef.current;
+    if (!map || !loaded || isDesktopMap()) return;
+    const mapHeight = containerRef.current?.clientHeight || window.innerHeight;
+    const safeBottomInset = Math.min(bottomInset + 16, Math.max(48, mapHeight - 96));
+    map.easeTo({ padding: { top: 48, right: 32, bottom: safeBottomInset, left: 32 }, duration: 0 });
+  }, [bottomInset, loaded]);
+  useEffect(() => {
+    const map = mapRef.current;
     if (!map || !loaded || zip) return;
-    map.fitBounds(RESOURCE_FINDER_COVERAGE_BOUNDS, { padding: getMapPadding(), maxZoom: 10, duration: 600 });
+    map.fitBounds(RESOURCE_FINDER_COVERAGE_BOUNDS, { padding: getMapPadding(bottomInsetRef.current), maxZoom: 10, duration: 600 });
   }, [loaded, zip]);
   useEffect(() => {
     const map = mapRef.current; if (!map || !loaded) return;
@@ -165,7 +173,7 @@ export default function ResourceMap({ t, zip, zipCenter, resources, categories, 
           const coordinates = group.points.map(point => [point.longitude, point.latitude]);
           const bounds = boundsFromPoints(coordinates);
           if (bounds.getNorth() === bounds.getSouth() && bounds.getEast() === bounds.getWest()) map.easeTo({ center: coordinates[0], zoom: Math.min(map.getZoom() + 2, 14), duration: 450 });
-          else map.fitBounds(bounds, { padding: getMapPadding(), maxZoom: 14, duration: 450 });
+          else map.fitBounds(bounds, { padding: getMapPadding(bottomInsetRef.current), maxZoom: 14, duration: 450 });
         });
         clusterMarkersRef.current.push(new maplibregl.Marker({ element, anchor: 'center' }).setLngLat([longitude, latitude]).addTo(map));
         const clusterScreen = map.project([longitude, latitude]);
@@ -231,4 +239,6 @@ export default function ResourceMap({ t, zip, zipCenter, resources, categories, 
     </div>
     {!loaded && !failed && <div className="finder-map-status">{t.mapLoading}</div>}{failed && <div className="finder-map-status"><p>{t.mapError}</p></div>}
   </section>;
-}
+});
+
+export default ResourceMap;

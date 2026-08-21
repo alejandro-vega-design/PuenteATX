@@ -65,9 +65,14 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
   const [error, setError] = useState(null);
   const [zipError, setZipError] = useState('');
   const [searched, setSearched] = useState(Boolean(initialZip));
-  const [mobileView, setMobileView] = useState('list');
   const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches);
+  const [mobileSheetSnap, setMobileSheetSnap] = useState('peek');
+  const [mobileSheetHeight, setMobileSheetHeight] = useState(null);
+  const [mobileSheetDragging, setMobileSheetDragging] = useState(false);
+  const [filterDrawerMounted, setFilterDrawerMounted] = useState(false);
+  const [filterDrawerActive, setFilterDrawerActive] = useState(false);
   const cardRefs = useRef(new Map());
+  const sheetDragRef = useRef(null);
 
   useEffect(() => {
     const media = window.matchMedia('(max-width: 767px)');
@@ -77,6 +82,23 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
     return () => media.removeEventListener?.('change', update);
   }, []);
   useEffect(() => { getCategories().then(setCategories).catch(() => setError(t.loadError)); }, [t.loadError]);
+  useEffect(() => {
+    if (!isMobile) { setFilterDrawerMounted(false); setFilterDrawerActive(false); return undefined; }
+    if (panelView === 'filters') {
+      setFilterDrawerMounted(true);
+      const frame = window.requestAnimationFrame(() => setFilterDrawerActive(true));
+      return () => window.cancelAnimationFrame(frame);
+    }
+    setFilterDrawerActive(false);
+    const timer = window.setTimeout(() => setFilterDrawerMounted(false), 260);
+    return () => window.clearTimeout(timer);
+  }, [isMobile, panelView]);
+  useEffect(() => {
+    if (!isMobile || panelView !== 'filters') return undefined;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = previousOverflow; };
+  }, [isMobile, panelView]);
 
   const urlForSearch = useCallback((zip, nextFilters) => {
     const next = new URLSearchParams();
@@ -141,48 +163,108 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
     const resource = resources.find(item => item.id === id);
     const selectedCategory = categories.find(item => item.id === resource?.primary_category_id);
     if (resource) trackPuenteEvent('resource_selected', { resource_id: id, category_slug: selectedCategory?.slug, area_code: activeZip });
-    window.requestAnimationFrame(() => {
+    const revealCard = () => {
       const card = cardRefs.current.get(id);
       if (!card) return;
       scrollCardInsideResults(card, centerCard);
-    });
-  }, [activeZip, categories, resources]);
+    };
+    if (centerCard && isMobile) {
+      setMobileSheetSnap('half');
+      window.setTimeout(revealCard, 300);
+    } else window.requestAnimationFrame(revealCard);
+  }, [activeZip, categories, isMobile, resources]);
   const hoverResource = useCallback(id => setHoveredResourceId(id), []);
   const toggleIncluded = useCallback(id => setIncludedResourceIds(current => current.includes(id) ? current.filter(value => value !== id) : [...current, id]), []);
   const toggleAllVisible = useCallback(ids => setIncludedResourceIds(current => ids.every(id => current.includes(id)) ? current.filter(id => !ids.includes(id)) : [...new Set([...current, ...ids])]), []);
-  const showStatus = message => setStatusToast({ id: Date.now(), message });
-  const shareSelected = async () => {
+  const showStatus = useCallback(message => setStatusToast({ id: Date.now(), message }), []);
+  const shareSelected = useCallback(async () => {
     const url = sharedListUrl(includedResources.map(resource => resource.slug));
     trackPuenteEvent('list_shared');
     const result = await shareLink({ title: t.shareTitle(activeZip), text: t.shareText(includedResources.length), url });
     if (result === 'copied') showStatus(t.copied);
     if (result === 'failed') showStatus(t.shareError);
-  };
-  const printSelected = pdf => {
+  }, [activeZip, includedResources, showStatus, t]);
+  const printSelected = useCallback(pdf => {
     trackPuenteEvent('list_printed');
     if (pdf) showStatus(t.pdfHint);
     document.body.classList.add('printing-finder-list');
     const cleanup = () => document.body.classList.remove('printing-finder-list');
     window.addEventListener('afterprint', cleanup, { once: true });
     window.setTimeout(() => { window.print(); window.setTimeout(cleanup, 1000); }, pdf ? 250 : 0);
-  };
+  }, [showStatus, t.pdfHint]);
   const submit = event => { event.preventDefault(); runSearch(form.zip, filters); };
-  const expand = () => runSearch(form.zip, filters, radius === RESOURCE_FINDER_INITIAL_RADIUS_MILES ? RESOURCE_FINDER_EXPANDED_RADIUS_MILES : RESOURCE_FINDER_REGIONAL_RADIUS_MILES);
+  const expand = useCallback(() => runSearch(form.zip, filters, radius === RESOURCE_FINDER_INITIAL_RADIUS_MILES ? RESOURCE_FINDER_EXPANDED_RADIUS_MILES : RESOURCE_FINDER_REGIONAL_RADIUS_MILES), [filters, form.zip, radius, runSearch]);
   const applyFilters = () => { setFilters(draftFilters); setPanelView('results'); runSearch(form.zip, draftFilters); };
   const removeFilter = item => {
     const next = { ...filters, [item.key]: Array.isArray(filters[item.key]) ? filters[item.key].filter(value => value !== item.value) : false };
     setFilters(next); setDraftFilters(next); runSearch(form.zip, next);
   };
-  const clearCategory = () => {
+  const clearCategory = useCallback(() => {
     const next = { ...filters, categories: [] };
     setFilters(next); setDraftFilters(next); runSearch(form.zip, next);
-  };
+  }, [filters, form.zip, runSearch]);
   const clearFilters = () => {
     const next = { categories: [], languages: [], methods: [], costs: [], recent: false };
     setFilters(next); setDraftFilters(next); runSearch(form.zip, next);
   };
   const searchVisibleArea = useCallback(bounds => { setViewportBounds(bounds); setSelectedResourceId(null); }, []);
-  const map = <ResourceMap t={t} zip={activeZip} zipCenter={zipCenter} resources={results} categories={categories} selectedId={selectedResourceId} hoveredId={hoveredResourceId} fitResults={!viewportBounds} onSelect={id => selectResource(id, true)} onHover={hoverResource} onSearchArea={searchVisibleArea}/>;
+  const startSheetDrag = event => {
+    if (!isMobile) return;
+    const sheet = event.currentTarget.closest('.finder-results');
+    if (!sheet) return;
+    sheetDragRef.current = { pointerId: event.pointerId, startY: event.clientY, startHeight: sheet.getBoundingClientRect().height, moved: false };
+    event.currentTarget.setPointerCapture?.(event.pointerId);
+    setMobileSheetDragging(true);
+  };
+  const moveSheetDrag = event => {
+    const drag = sheetDragRef.current;
+    if (!drag || drag.pointerId !== event.pointerId) return;
+    const delta = drag.startY - event.clientY;
+    if (Math.abs(delta) > 4) drag.moved = true;
+    const minHeight = 150;
+    const maxHeight = Math.min(window.innerHeight * .72, window.innerHeight - 148);
+    setMobileSheetHeight(Math.max(minHeight, Math.min(maxHeight, drag.startHeight + delta)));
+  };
+  const endSheetDrag = event => {
+    const drag = sheetDragRef.current;
+    if (!drag || drag.pointerId !== event.pointerId) return;
+    const minHeight = 150;
+    const midHeight = Math.min(window.innerHeight * .5, window.innerHeight - 190);
+    const maxHeight = Math.min(window.innerHeight * .72, window.innerHeight - 148);
+    const currentHeight = mobileSheetHeight ?? drag.startHeight;
+    const closestSnap = [
+      { name: 'peek', height: minHeight },
+      { name: 'half', height: midHeight },
+      { name: 'expanded', height: maxHeight }
+    ].reduce((closest, candidate) => Math.abs(candidate.height - currentHeight) < Math.abs(closest.height - currentHeight) ? candidate : closest);
+    setMobileSheetSnap(closestSnap.name);
+    setMobileSheetHeight(null);
+    setMobileSheetDragging(false);
+    window.setTimeout(() => { sheetDragRef.current = null; }, 0);
+  };
+  const toggleMobileSheet = () => {
+    if (sheetDragRef.current?.moved) return;
+    setMobileSheetSnap(current => current === 'peek' ? 'half' : current === 'half' ? 'expanded' : 'peek');
+  };
+  const mobileMapBottomInset = (() => {
+    if (!isMobile) return 0;
+    if (mobileSheetSnap === 'half') return Math.min(window.innerHeight * .5, window.innerHeight - 190);
+    if (mobileSheetSnap === 'expanded') return Math.min(window.innerHeight * .72, window.innerHeight - 148);
+    return 150;
+  })();
+  const selectResourceFromMap = useCallback(id => selectResource(id, true), [selectResource]);
+  const requestHelp = useCallback(() => navigate('/conversacion'), [navigate]);
+  const printIncluded = useCallback(() => printSelected(false), [printSelected]);
+  const saveIncludedPdf = useCallback(() => printSelected(true), [printSelected]);
+  const openMobileActions = useCallback(() => { if (isMobile) setMobileSheetSnap('expanded'); }, [isMobile]);
+  const map = <ResourceMap t={t} zip={activeZip} zipCenter={zipCenter} resources={results} categories={categories} selectedId={selectedResourceId} hoveredId={hoveredResourceId} fitResults={!viewportBounds} bottomInset={mobileMapBottomInset} onSelect={selectResourceFromMap} onHover={hoverResource} onSearchArea={searchVisibleArea}/>;
+  const resultsPanel = <div className="finder-panel-results">
+    {isMobile && <div className="finder-mobile-map">{map}</div>}
+    <div className={`finder-results is-sheet-${mobileSheetSnap}${mobileSheetDragging ? ' is-sheet-dragging' : ''}`} style={mobileSheetHeight ? { '--finder-sheet-height': `${mobileSheetHeight}px` } : undefined}>
+      <button className="finder-sheet-handle" type="button" aria-label={mobileSheetSnap === 'expanded' ? (lang === 'es' ? 'Contraer resultados' : 'Collapse results') : (lang === 'es' ? 'Expandir resultados' : 'Expand results')} aria-expanded={mobileSheetSnap !== 'peek'} onClick={toggleMobileSheet} onPointerDown={startSheetDrag} onPointerMove={moveSheetDrag} onPointerUp={endSheetDrag} onPointerCancel={endSheetDrag}><span aria-hidden="true"/></button>
+      {error ? <div className="finder-empty"><p>{error}</p><button className="secondary-button" onClick={() => runSearch(form.zip, filters, radius)}>{t.retry}</button></div> : <ResourceResultsPanel t={t} lang={lang} results={results} unlocatedResults={unlocatedResults} remoteResults={remoteResults} categories={categories} selectedId={selectedResourceId} hoveredId={hoveredResourceId} includedIds={includedResourceIds} loading={loading} searched={searched} zip={activeZip} categoryLabel={categoryLabel} excludedCount={excludedCount} radius={radius} onSelect={selectResource} onHover={hoverResource} onToggleIncluded={toggleIncluded} onToggleAll={toggleAllVisible} onExpand={expand} onClearCategory={clearCategory} onRequestHelp={requestHelp} onShare={shareSelected} onPrint={printIncluded} onSavePdf={saveIncludedPdf} onOpenActions={openMobileActions} cardRefs={cardRefs}/>}
+    </div>
+  </div>;
 
   return <main className="resource-finder-page">
     {!isMobile && <div className="finder-desktop-map">{map}</div>}
@@ -192,12 +274,13 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
         <ResourceSearchForm t={t} values={form} error={zipError} loading={loading} activeFilterCount={filterCount(filters)} onChange={updateSearchForm} onSubmit={submit} onOpenFilters={() => { setDraftFilters(filters); setPanelView('filters'); }}/>
         {active.length > 0 && <div className="finder-active-filters" aria-label={t.activeFilters}>{active.map(item => <button key={`${item.key}-${item.value}`} type="button" onClick={() => removeFilter(item)} aria-label={`${t.removeFilter}: ${item.label}`}>{item.label}<span aria-hidden="true">×</span></button>)}<button className="finder-clear-filters" type="button" onClick={clearFilters}>{t.clearFilters}</button></div>}
       </header>
-      {panelView === 'filters' ? <ResourceFinderFilters filters={draftFilters} setFilters={setDraftFilters} categories={categories} lang={lang} t={filterT} onApply={applyFilters} onClear={() => setDraftFilters(emptyFinderFilters)} onBack={() => setPanelView('results')}/> : <div className="finder-panel-results">
-        <div className="finder-mobile-switch" role="group" aria-label={`${t.list} / ${t.map}`}><button className={mobileView === 'list' ? 'is-active' : ''} onClick={() => setMobileView('list')}>{t.list}</button><button className={mobileView === 'map' ? 'is-active' : ''} onClick={() => setMobileView('map')}>{t.map}</button></div>
-        {isMobile && <div className={`finder-mobile-map${mobileView === 'map' ? ' is-visible' : ''}`}>{map}</div>}
-        <div className={`finder-results${mobileView === 'list' ? ' is-visible' : ''}`}>{error ? <div className="finder-empty"><p>{error}</p><button className="secondary-button" onClick={() => runSearch(form.zip, filters, radius)}>{t.retry}</button></div> : <ResourceResultsPanel t={t} lang={lang} results={results} unlocatedResults={unlocatedResults} remoteResults={remoteResults} categories={categories} selectedId={selectedResourceId} hoveredId={hoveredResourceId} includedIds={includedResourceIds} loading={loading} searched={searched} zip={activeZip} categoryLabel={categoryLabel} excludedCount={excludedCount} radius={radius} onSelect={selectResource} onHover={hoverResource} onToggleIncluded={toggleIncluded} onToggleAll={toggleAllVisible} onExpand={expand} onClearCategory={clearCategory} onRequestHelp={() => navigate('/conversacion')} onShare={shareSelected} onPrint={() => printSelected(false)} onSavePdf={() => printSelected(true)} cardRefs={cardRefs}/>}</div>
-      </div>}
+      {isMobile ? resultsPanel : panelView === 'filters' ? <ResourceFinderFilters filters={draftFilters} setFilters={setDraftFilters} categories={categories} lang={lang} t={filterT} onApply={applyFilters} onClear={() => setDraftFilters(emptyFinderFilters)} onBack={() => setPanelView('results')}/> : resultsPanel}
     </section>
+    {isMobile && filterDrawerMounted && <div className={`finder-filter-drawer-overlay${filterDrawerActive ? ' is-open' : ''}`} role="presentation" onPointerDown={event => { if (event.target === event.currentTarget) setPanelView('results'); }}>
+      <div className="finder-filter-drawer" role="dialog" aria-modal="true" aria-labelledby="finder-filter-title">
+        <ResourceFinderFilters drawer filters={draftFilters} setFilters={setDraftFilters} categories={categories} lang={lang} t={filterT} onApply={applyFilters} onClear={() => setDraftFilters(emptyFinderFilters)} onBack={() => setPanelView('results')}/>
+      </div>
+    </div>}
     <FinderPrintSheet resources={includedResources} categories={categories} zip={activeZip} lang={lang} t={t}/>
     <StatusToast toast={statusToast} onClose={() => setStatusToast(null)} closeLabel={filterT.closeNotification}/>
   </main>;

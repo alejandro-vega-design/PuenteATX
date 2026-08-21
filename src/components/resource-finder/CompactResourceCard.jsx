@@ -4,7 +4,7 @@ import { localized } from '../../data/resourceUtils';
 import { formatMiles } from '../../utils/geo';
 import { trackPuenteEvent } from '../../analytics/client';
 
-export default function CompactResourceCard({ resource, category, lang, t, selected, hovered, included, onSelect, onHover, onToggleIncluded }) {
+function CompactResourceCard({ resource, category, lang, t, selected, hovered, included, onSelect, onHover, onToggleIncluded }) {
   const title = localized(resource, 'title', lang);
   const categoryLabel = category ? localized(category, 'label', lang) : '';
   const hasStreetAddress = Boolean(resource.address_line_1?.trim());
@@ -30,3 +30,15 @@ export default function CompactResourceCard({ resource, category, lang, t, selec
     {selected && <span className="sr-only">{t.selected}</span>}
   </article>;
 }
+
+const sameCardState = (previous, next) => previous.resource === next.resource
+  && previous.category === next.category
+  && previous.lang === next.lang
+  && previous.t === next.t
+  && previous.selected === next.selected
+  && previous.hovered === next.hovered
+  && previous.included === next.included;
+
+const MemoizedCompactResourceCard = React.memo(CompactResourceCard, sameCardState);
+
+export default MemoizedCompactResourceCard;
