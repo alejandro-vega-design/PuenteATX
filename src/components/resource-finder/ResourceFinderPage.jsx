@@ -159,6 +159,10 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
   const categoryLabel = filters.categories.length === 1 ? active.find(item => item.key === 'categories')?.label || '' : '';
 
   const selectResource = useCallback((id, centerCard = false) => {
+    if (selectedResourceId === id) {
+      setSelectedResourceId(null);
+      return;
+    }
     setSelectedResourceId(id);
     const resource = resources.find(item => item.id === id);
     const selectedCategory = categories.find(item => item.id === resource?.primary_category_id);
@@ -172,7 +176,7 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
       setMobileSheetSnap('half');
       window.setTimeout(revealCard, 300);
     } else window.requestAnimationFrame(revealCard);
-  }, [activeZip, categories, isMobile, resources]);
+  }, [activeZip, categories, isMobile, resources, selectedResourceId]);
   const hoverResource = useCallback(id => setHoveredResourceId(id), []);
   const toggleIncluded = useCallback(id => setIncludedResourceIds(current => current.includes(id) ? current.filter(value => value !== id) : [...current, id]), []);
   const toggleAllVisible = useCallback(ids => setIncludedResourceIds(current => ids.every(id => current.includes(id)) ? current.filter(id => !ids.includes(id)) : [...new Set([...current, ...ids])]), []);
