@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare Puente Resources"
+  short_description: "Research and complete bilingual resource CSVs"
+  default_prompt: "Use $prepare-puente-resources to audit this resource file, complete missing fields from official sources, and produce a validated bilingual Puente ATX CSV."
