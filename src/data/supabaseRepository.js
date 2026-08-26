@@ -1,9 +1,11 @@
 import { supabaseRequest } from './supabaseClient';
+import { adminSupabaseRequest } from './adminSupabaseClient';
 import { filterAndSortResources } from './resourceUtils';
-import { getAdminSession } from '../services/adminAuth';
 
-const sessionToken = () => getAdminSession()?.access_token;
-const adminHeaders = () => ({ token: sessionToken(), headers: { Prefer: 'return=representation' } });
+const adminRequest = (path, options = {}) => adminSupabaseRequest(path, {
+  ...options,
+  headers: { Prefer: 'return=representation', ...options.headers }
+});
 // Keep public reads compatible before migration 009 is applied. The finder only
 // needs the existing latitude/longitude columns; geocoding workflow fields are
 // administrative metadata and do not belong in public queries.
@@ -16,7 +18,7 @@ const resourceRow = values => {
   if (row.longitude === '') row.longitude = null;
   return row;
 };
-const syncAdditionalCategories = async (resourceId, ids = []) => { await supabaseRequest(`/rest/v1/resource_categories?resource_id=eq.${encodeURIComponent(resourceId)}`, { method: 'DELETE', ...adminHeaders() }); if (ids.length) await supabaseRequest('/rest/v1/resource_categories', { method: 'POST', body: [...new Set(ids)].map(category_id => ({ resource_id: resourceId, category_id })), ...adminHeaders() }); };
+const syncAdditionalCategories = async (resourceId, ids = []) => { await adminRequest(`/rest/v1/resource_categories?resource_id=eq.${encodeURIComponent(resourceId)}`, { method: 'DELETE' }); if (ids.length) await adminRequest('/rest/v1/resource_categories', { method: 'POST', body: [...new Set(ids)].map(category_id => ({ resource_id: resourceId, category_id })) }); };
 
 export const supabaseRepository = {
   mode: 'supabase',
@@ -26,16 +28,16 @@ export const supabaseRepository = {
   async filterResources(filters, lang = 'es') { return this.getPublishedResources(filters, lang); },
   async getResourceFinderData({ filters = {}, lang = 'es' } = {}) { return this.getPublishedResources({ q: '', categories: [], languages: [], methods: [], costs: [], area: '', recent: false, sort: 'updated', page: 1, ...filters }, lang); },
   async getAdminResources() {
-    const rows = await supabaseRequest('/rest/v1/resources?select=*,resource_categories(category_id)&order=updated_at.desc', adminHeaders());
+    const rows = await adminRequest('/rest/v1/resources?select=*,resource_categories(category_id)&order=updated_at.desc');
     return rows.map(row => ({ ...row, additional_category_ids: row.resource_categories?.map(link => link.category_id) || [] }));
   },
-  async createResource(values) { const rows = await supabaseRequest('/rest/v1/resources', { method: 'POST', body: resourceRow(values), ...adminHeaders() }); await syncAdditionalCategories(rows[0].id, values.additional_category_ids); return rows[0]; },
-  async updateResource(id, values) { const rows = await supabaseRequest(`/rest/v1/resources?id=eq.${encodeURIComponent(id)}`, { method: 'PATCH', body: resourceRow(values), ...adminHeaders() }); if (Object.prototype.hasOwnProperty.call(values, 'additional_category_ids')) await syncAdditionalCategories(id, values.additional_category_ids); return rows[0]; },
+  async createResource(values) { const rows = await adminRequest('/rest/v1/resources', { method: 'POST', body: resourceRow(values) }); await syncAdditionalCategories(rows[0].id, values.additional_category_ids); return rows[0]; },
+  async updateResource(id, values) { const rows = await adminRequest(`/rest/v1/resources?id=eq.${encodeURIComponent(id)}`, { method: 'PATCH', body: resourceRow(values) }); if (Object.prototype.hasOwnProperty.call(values, 'additional_category_ids')) await syncAdditionalCategories(id, values.additional_category_ids); return rows[0]; },
   async publishResource(id) { return this.updateResource(id, { status: 'published', published_at: new Date().toISOString(), archived_at: null }); },
   async archiveResource(id) { return this.updateResource(id, { status: 'archived', archived_at: new Date().toISOString() }); },
   async restoreResource(id) { return this.updateResource(id, { status: 'draft', archived_at: null }); },
-  async deleteResourcePermanently(id) { return supabaseRequest('/rest/v1/rpc/delete_resource_permanently', { method: 'POST', body: { p_resource_id: id }, ...adminHeaders() }); },
-  async getCategories({ admin = false } = {}) { return supabaseRequest(`/rest/v1/categories?${admin ? '' : 'is_active=eq.true&'}select=*&order=sort_order.asc`, admin ? adminHeaders() : {}); },
-  async createCategory(values) { const rows = await supabaseRequest('/rest/v1/categories', { method: 'POST', body: values, ...adminHeaders() }); return rows[0]; },
-  async updateCategory(id, values) { const rows = await supabaseRequest(`/rest/v1/categories?id=eq.${encodeURIComponent(id)}`, { method: 'PATCH', body: values, ...adminHeaders() }); return rows[0]; }
+  async deleteResourcePermanently(id) { return adminRequest('/rest/v1/rpc/delete_resource_permanently', { method: 'POST', body: { p_resource_id: id } }); },
+  async getCategories({ admin = false } = {}) { return admin ? adminRequest('/rest/v1/categories?select=*&order=sort_order.asc') : supabaseRequest('/rest/v1/categories?is_active=eq.true&select=*&order=sort_order.asc'); },
+  async createCategory(values) { const rows = await adminRequest('/rest/v1/categories', { method: 'POST', body: values }); return rows[0]; },
+  async updateCategory(id, values) { const rows = await adminRequest(`/rest/v1/categories?id=eq.${encodeURIComponent(id)}`, { method: 'PATCH', body: values }); return rows[0]; }
 };

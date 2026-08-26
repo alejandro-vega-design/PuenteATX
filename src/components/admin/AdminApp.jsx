@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { adminCopy } from '../../data';
 import { getAdminResources, isDemoMode } from '../../data/repository';
-import { clearAdminSession, getAdminSession, validateAdminSession } from '../../services/adminAuth';
+import { ADMIN_SESSION_EXPIRED_EVENT, clearAdminSession, expireAdminSession, getAdminSession, validateAdminSession } from '../../services/adminAuth';
 import AdminCategories from './AdminCategories';
 import AdminDashboard from './AdminDashboard';
 import AdminLayout from './AdminLayout';
@@ -23,7 +23,7 @@ import { requiresAdminMfa } from '../../services/adminMfa';
 
 export default function AdminApp({ path, locationSearch, lang, setLang, navigate }) {
   const [session, setSession] = useState(null); const [sessionReady, setSessionReady] = useState(false); const [resources, setResources] = useState([]); const [loading, setLoading] = useState(true); const [toast, setToast] = useState(null); const t = adminCopy[lang];
-  const hasLoadedResources = useRef(false); const refreshInFlight = useRef(null);
+  const hasLoadedResources = useRef(false); const refreshInFlight = useRef(null); const sessionValidationInFlight = useRef(null);
   const notify = useCallback(message => setToast({ id: Date.now(), message }), []);
   const closeToast = useCallback(() => setToast(null), []);
   const refresh = useCallback(() => {
@@ -39,7 +39,48 @@ export default function AdminApp({ path, locationSearch, lang, setLang, navigate
     return request;
   }, [session]);
   useEffect(() => { let active = true; validateAdminSession(getAdminSession()).then(value => active && setSession(value)).catch(() => { clearAdminSession(); }).finally(() => active && setSessionReady(true)); return () => { active = false; }; }, []);
-  useEffect(() => { if (!session?.refresh_token || !session.expires_at) return undefined; const delay = Math.max(1000, session.expires_at * 1000 - Date.now() - 60000); const timer = window.setTimeout(() => { validateAdminSession(session, { forceRefresh: true }).then(setSession).catch(() => { clearAdminSession(); setSession(null); }); }, delay); return () => window.clearTimeout(timer); }, [session]);
+  const revalidateCurrentSession = useCallback(() => {
+    if (sessionValidationInFlight.current) return sessionValidationInFlight.current;
+    const stored = getAdminSession();
+    if (!stored) {
+      setSession(null);
+      return Promise.resolve(null);
+    }
+    const request = validateAdminSession(stored, {
+      forceRefresh: Boolean(stored.refresh_token && stored.expires_at && stored.expires_at * 1000 <= Date.now() + 60000)
+    }).then(value => {
+      setSession(value);
+      return value;
+    }).catch(() => {
+      expireAdminSession();
+      setSession(null);
+      return null;
+    }).finally(() => {
+      if (sessionValidationInFlight.current === request) sessionValidationInFlight.current = null;
+    });
+    sessionValidationInFlight.current = request;
+    return request;
+  }, []);
+  useEffect(() => {
+    if (!session?.refresh_token || !session.expires_at) return undefined;
+    const delay = Math.max(1000, session.expires_at * 1000 - Date.now() - 60000);
+    const timer = window.setTimeout(revalidateCurrentSession, delay);
+    return () => window.clearTimeout(timer);
+  }, [session, revalidateCurrentSession]);
+  useEffect(() => {
+    const onReturn = () => { if (document.visibilityState !== 'hidden') revalidateCurrentSession(); };
+    const onExpired = () => setSession(null);
+    window.addEventListener('focus', onReturn);
+    window.addEventListener('pageshow', onReturn);
+    window.addEventListener(ADMIN_SESSION_EXPIRED_EVENT, onExpired);
+    document.addEventListener('visibilitychange', onReturn);
+    return () => {
+      window.removeEventListener('focus', onReturn);
+      window.removeEventListener('pageshow', onReturn);
+      window.removeEventListener(ADMIN_SESSION_EXPIRED_EVENT, onExpired);
+      document.removeEventListener('visibilitychange', onReturn);
+    };
+  }, [revalidateCurrentSession]);
   useEffect(() => { refresh(); }, [refresh, path]);
   useEffect(() => { if (!sessionReady) return; if (path === '/admin/login' && session) navigate('/admin', { replace: true }); else if (path !== '/admin/login' && !session) navigate('/admin/login', { replace: true }); }, [path, session, sessionReady, navigate]);
   if (!sessionReady) return <main className="admin-loading">{lang === 'es' ? 'Comprobando sesión…' : 'Checking session…'}</main>;

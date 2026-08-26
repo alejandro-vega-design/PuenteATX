@@ -1,9 +1,14 @@
 import { getSupabaseAnonKey, getSupabaseUrl, hasSupabaseConfig, isDemoEnabled, supabaseRequest } from '../data/supabaseClient';
 
 const SESSION_KEY = 'puente-atx:admin-session';
+export const ADMIN_SESSION_EXPIRED_EVENT = 'puente-atx:admin-session-expired';
 export const getAdminSession = () => { try { return JSON.parse(sessionStorage.getItem(SESSION_KEY) || 'null'); } catch { return null; } };
 export const clearAdminSession = () => sessionStorage.removeItem(SESSION_KEY);
 export const saveAdminSession = session => sessionStorage.setItem(SESSION_KEY, JSON.stringify(session));
+export const expireAdminSession = () => {
+  clearAdminSession();
+  if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent(ADMIN_SESSION_EXPIRED_EVENT));
+};
 
 const profileFor = async session => {
   const profiles = await supabaseRequest(`/rest/v1/admin_profiles?id=eq.${session.user.id}&select=*&limit=1`, { token: session.access_token });
@@ -35,11 +40,20 @@ export function getSessionAssuranceLevel(accessToken) {
   }
 }
 
+let refreshInFlight = null;
 async function refreshSession(refreshToken) {
-  const response = await fetch(`${getSupabaseUrl()}/auth/v1/token?grant_type=refresh_token`, { method: 'POST', headers: { apikey: getSupabaseAnonKey(), 'Content-Type': 'application/json' }, body: JSON.stringify({ refresh_token: refreshToken }) });
-  if (!response.ok) throw new Error('session_expired');
-  const session = await response.json();
-  return { ...session, expires_at: session.expires_at || Math.floor(Date.now() / 1000) + session.expires_in };
+  if (refreshInFlight) return refreshInFlight;
+  refreshInFlight = (async () => {
+    const response = await fetch(`${getSupabaseUrl()}/auth/v1/token?grant_type=refresh_token`, { method: 'POST', headers: { apikey: getSupabaseAnonKey(), 'Content-Type': 'application/json' }, body: JSON.stringify({ refresh_token: refreshToken }) });
+    if (!response.ok) throw new Error('session_expired');
+    const session = await response.json();
+    return { ...session, expires_at: session.expires_at || Math.floor(Date.now() / 1000) + session.expires_in };
+  })();
+  try {
+    return await refreshInFlight;
+  } finally {
+    refreshInFlight = null;
+  }
 }
 
 export async function validateAdminSession(stored, { forceRefresh = false } = {}) {
