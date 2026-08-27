@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useLayoutEffect, useMemo, useRef, useState } from 'react';
 
 const METRICS = ['active_sessions', 'searches', 'resource_saves', 'contact_actions', 'no_results'];
 
@@ -67,19 +67,30 @@ export default function ActivityTimeline({ timeline, t, lang }) {
   };
   const trendIconClass = trend === 'positive' ? 'is-up' : trend === 'negative' ? '' : 'is-right';
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    if (!hasData) return undefined;
     const element = chartRef.current;
     if (!element) return undefined;
-    const updateWidth = () => setChartWidthValue(Math.max(280, Math.round(element.getBoundingClientRect().width)));
+    let frame;
+    const updateWidth = entry => {
+      const measuredWidth = entry?.contentRect?.width ?? element.getBoundingClientRect().width;
+      if (measuredWidth > 0) setChartWidthValue(Math.max(280, Math.round(measuredWidth)));
+    };
     updateWidth();
     if (typeof ResizeObserver === 'undefined') {
       window.addEventListener('resize', updateWidth);
       return () => window.removeEventListener('resize', updateWidth);
     }
-    const observer = new ResizeObserver(updateWidth);
+    const observer = new ResizeObserver(entries => {
+      window.cancelAnimationFrame(frame);
+      frame = window.requestAnimationFrame(() => updateWidth(entries[0]));
+    });
     observer.observe(element);
-    return () => observer.disconnect();
-  }, []);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      observer.disconnect();
+    };
+  }, [hasData]);
 
   return <div className={`insights-timeline is-${trend}`}>
     <div className="insights-timeline-toolbar">
