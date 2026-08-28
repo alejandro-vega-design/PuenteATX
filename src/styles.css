@@ -956,11 +956,17 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
 .admin-resource-form textarea { min-height: 110px; resize: vertical; }
 .admin-form-footer { padding-top: 4px; }
 .admin-form-footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.admin-form-footer.is-sticky { position: fixed; z-index: 30; left: 240px; right: 0; bottom: 0; padding: 12px clamp(20px, 4vw, 60px) calc(12px + env(safe-area-inset-bottom)); border-top: 1px solid var(--color-line-subtle); background: var(--color-canvas); box-shadow: 0 -2px 6px rgba(68, 42, 22, .08); }
+.admin-form-footer.is-sticky { position: fixed; z-index: 30; left: 240px; right: 0; bottom: 0; padding: 8px clamp(20px, 4vw, 60px) calc(8px + env(safe-area-inset-bottom)); border-top: 1px solid var(--color-line-subtle); background: var(--color-canvas); box-shadow: 0 -2px 6px rgba(68, 42, 22, .08); }
 .admin-form-footer.is-sticky .admin-form-footer-inner { width: min(100%, 1000px); }
 .admin-form-footer p { margin: 0; }
 .admin-form-footer p span { font-weight: 400; }
 .admin-form-footer p strong { font-weight: 600; }
+.admin-resource-status-actions { display: flex; align-items: center; gap: 14px; }
+.admin-delete-resource-button { display: inline-flex; align-items: center; gap: 6px; height: 40px; min-height: 40px; padding: 6px 12px; border: 1px solid var(--status-negative); border-radius: var(--radius-sm); background: transparent; color: var(--status-negative); font-family: var(--font-heading); font-weight: 600; cursor: pointer; }
+.admin-delete-resource-button:hover { background: var(--status-negative-bg); }
+.admin-delete-resource-button:focus-visible { outline: 2px solid var(--status-negative); outline-offset: 2px; }
+.admin-delete-resource-button:disabled { opacity: .5; cursor: not-allowed; }
+.admin-delete-resource-button svg { width: 20px; height: 20px; flex: none; fill: currentColor; }
 .admin-check-group { margin: 18px 0 0; padding: 0; border: 0; display: flex; flex-wrap: wrap; gap: 12px 18px; }
 .required-mark { color: var(--color-accent); }
 .admin-check-group legend { padding: 0 8px 0 0; font-family: var(--font-heading); font-weight: 600; }
@@ -969,9 +975,10 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
 .admin-resource-form input[type="checkbox"], .admin-category-table input[type="checkbox"], .admin-category-mobile input[type="checkbox"] { accent-color: var(--color-accent); }
 .admin-resource-form input[type="checkbox"]:focus-visible, .admin-category-table input[type="checkbox"]:focus-visible, .admin-category-mobile input[type="checkbox"]:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 0; }
 .admin-form-actions { display: flex; justify-content: flex-end; gap: 10px; }
+.admin-form-actions > button { height: 40px; min-height: 40px; padding: 6px 14px; }
 .admin-form-actions .primary-button { margin: 0; }
 .admin-resource-stepper { display: inline-flex; gap: 6px; }
-.admin-resource-stepper button { display: inline-flex; align-items: center; justify-content: center; width: 44px; min-width: 44px; height: 44px; padding: 0; }
+.admin-resource-stepper button { display: inline-flex; align-items: center; justify-content: center; width: 40px; min-width: 40px; height: 40px; min-height: 40px; padding: 0; }
 .admin-resource-stepper button:disabled { opacity: .45; cursor: not-allowed; }
 .admin-category-table-wrap { border: 1px solid var(--color-line-subtle); border-radius: var(--radius-md); background: var(--color-insights-surface); overflow-x: auto; overflow-y: hidden; }
 .admin-category-table { width: 100%; min-width: 720px; border-collapse: collapse; table-layout: fixed; }
@@ -1285,7 +1292,11 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
 .empty-state { margin-top: 38px; padding: 30px 15px; border-block: 1px solid var(--color-line); text-align: center; }
 .empty-state strong { font-size: 20px; }
 
+/* Dense control sizing is scoped to administrative workflows. */
+.admin-shell, .admin-login, .admin-mfa-card, .admin-row-menu-popover { --admin-control-height: 40px; }
+
 @media (max-width: 800px) {
+  .admin-shell, .admin-login, .admin-mfa-card, .admin-row-menu-popover { --admin-control-height: 44px; }
   .header-action { font-size: 12px; }
   .saved-label-full { display: none; }
   .saved-label-short { display: inline; }
@@ -1517,6 +1528,7 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
   .admin-form-actions { display: grid; }
   .admin-form-footer.is-sticky { padding-inline: 20px; }
   .admin-form-footer-inner { align-items: stretch; flex-direction: column; gap: 8px; }
+  .admin-resource-status-actions { justify-content: space-between; }
   .admin-toast { bottom: 20px; }
   .organization-access-page .admin-resource-header { display: grid; }
   .organization-access-page .admin-add-resource-button { width: 100%; }
@@ -1613,3 +1625,8 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
   .finder-print-links { display: grid; gap: 2mm; font-size: 10pt; overflow-wrap: anywhere; }
   .finder-print-links a { color: #2f241d !important; text-decoration: underline !important; text-underline-offset: 2px; }
 }
+
+.admin-shell .admin-main button, .admin-shell .admin-nav button, .admin-login button, .admin-mfa-card button, .admin-row-menu-popover button { height: var(--admin-control-height); min-height: var(--admin-control-height); padding-block: 6px; }
+.admin-shell .admin-main input:not([type="checkbox"]):not([type="radio"]), .admin-shell .admin-main select,
+.admin-login input:not([type="checkbox"]):not([type="radio"]), .admin-mfa-card input:not([type="checkbox"]):not([type="radio"]) { height: var(--admin-control-height); min-height: var(--admin-control-height); padding-block: 6px; }
+.admin-csv-file input::file-selector-button { height: var(--admin-control-height); min-height: var(--admin-control-height); padding-block: 6px; }
