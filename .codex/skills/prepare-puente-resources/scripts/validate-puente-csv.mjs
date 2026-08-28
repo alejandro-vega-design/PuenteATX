@@ -57,6 +57,13 @@ for (const row of prepared.rows) {
   const resource = row.resource;
   const missingBilingual = ['title_es', 'title_en', 'summary_es', 'summary_en'].filter(field => !String(resource[field] || '').trim());
   if (missingBilingual.length) qualityWarnings.push({ row: row.rowNumber, issue: `missing bilingual fields: ${missingBilingual.join(', ')}` });
+  const hoursEs = String(resource.hours_es || '').trim();
+  const hoursEn = String(resource.hours_en || '').trim();
+  if (Boolean(hoursEs) !== Boolean(hoursEn)) {
+    qualityWarnings.push({ row: row.rowNumber, issue: `schedule must populate both hours_es and hours_en (missing ${hoursEs ? 'hours_en' : 'hours_es'})` });
+  } else if (hoursEs && hoursEs === hoursEn && /[A-Za-zÀ-ÖØ-öø-ÿ]/.test(hoursEs)) {
+    qualityWarnings.push({ row: row.rowNumber, issue: 'hours_es and hours_en contain identical prose; confirm the schedule was translated' });
+  }
   const hasContact = [resource.phone, resource.sms_phone, resource.whatsapp_phone, resource.email, resource.website_url].some(value => String(value || '').trim());
   if (!hasContact) qualityWarnings.push({ row: row.rowNumber, issue: 'missing contact method or website' });
   if (!String(resource.source_url || '').trim()) qualityWarnings.push({ row: row.rowNumber, issue: 'missing source_url' });

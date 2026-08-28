@@ -61,6 +61,8 @@ Read the live importer first. These rules supplement it and resolve recurring da
 - Do not mark a service free unless the source says it is free or no-cost.
 - Keep unknown cost as `unknown` rather than guessing.
 - Preserve qualification language and uncertainty in eligibility, documents, application steps, and schedules.
+- When a schedule is available, write a natural Spanish version in `hours_es` and an English version in `hours_en`. Preserve all days, times, time zones, appointment requirements, seasonal limits, closures, and exceptions.
+- Do not leave only one schedule language populated. Do not copy identical prose into both schedule fields; identical values are acceptable only when the content is language-neutral, such as digits or universally understood abbreviations.
 - Do not imply that a service is currently available merely because a page exists.
 
 ## Review report triggers

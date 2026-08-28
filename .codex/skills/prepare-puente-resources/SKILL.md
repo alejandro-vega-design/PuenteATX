@@ -79,6 +79,7 @@ The JSON file must be an array of resource objects. Do not connect to production
 
 - Produce drafts ready for admin review; never publish or import automatically.
 - Populate both Spanish and English titles and summaries.
+- When schedule or availability information exists, populate and naturally translate both `hours_es` and `hours_en`. Preserve days, times, time zones, appointment requirements, seasonal limits, and exceptions exactly; never translate only the field label or copy prose unchanged between languages.
 - Keep summaries short, user-facing, and free of phone numbers, emails, URLs, or raw contact lists.
 - Map all researched content to existing CSV columns; never add a new CSV field merely because the source template uses a different label.
 - Treat the 19-point research checklist as a completeness guide. Skip research for populated fields unless validation or correction is requested.

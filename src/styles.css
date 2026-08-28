@@ -1643,3 +1643,4 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
 .admin-login input:not([type="checkbox"]):not([type="radio"]), .admin-mfa-card input:not([type="checkbox"]):not([type="radio"]) { height: var(--admin-control-height); min-height: var(--admin-control-height); padding-block: 6px; }
 .admin-csv-file input::file-selector-button { height: var(--admin-control-height); min-height: var(--admin-control-height); padding-block: 6px; }
 .admin-shell .admin-main .optional-contact-field > div button { height: auto; min-height: 0; padding-block: 0; line-height: normal; }
+.admin-shell .admin-main .verification-source-field button { height: 30px; min-height: 30px; padding-block: 4px; }
