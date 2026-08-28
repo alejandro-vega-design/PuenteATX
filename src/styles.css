@@ -737,6 +737,12 @@ a.compact-resource-line { text-decoration: underline; text-underline-offset: 3px
 .admin-login h1 { margin: 28px 0 22px; font-size: 30px; }
 .admin-login label { margin-top: 16px; display: grid; gap: 7px; font-family: var(--font-heading); font-weight: 600; }
 .admin-login input, .admin-toolbar input, .admin-toolbar select, .admin-resource-form input, .admin-resource-form textarea, .admin-resource-form select, .admin-category-mobile input { width: 100%; min-height: 46px; padding: 9px 11px; border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-white); color: var(--color-ink); font: inherit; font-weight: 400; }
+.password-field, .verification-source-field { position: relative; display: block; }
+.admin-login .password-field input { padding-right: 50px; }
+.password-toggle { position: absolute; top: 50%; right: 4px; display: grid; place-items: center; width: 40px; height: 40px; padding: 0; transform: translateY(-50%); border: 0; border-radius: var(--radius-sm); background: transparent; color: var(--color-ink); cursor: pointer; }
+.password-toggle:hover { background: var(--color-panel); }
+.password-toggle:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.password-toggle svg { width: 22px; height: 22px; fill: currentColor; }
 .admin-login .primary-button { width: 100%; margin-top: 24px; }
 .text-button { width: 100%; min-height: 44px; margin-top: 10px; border: 0; background: transparent; text-decoration: underline; cursor: pointer; }
 .admin-error, .admin-form-message { padding: 12px; border-left: 3px solid var(--color-accent); background: var(--color-panel); }
@@ -939,6 +945,10 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
 .admin-resource-form section { padding: 24px; border: 1px solid var(--color-line); border-radius: var(--radius-md); background: var(--color-insights-surface); }
 .admin-resource-form h2 { margin: 0 0 18px; font-size: 22px; }
 .admin-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.verification-source-field input { padding-right: 84px; }
+.verification-source-field button { position: absolute; top: 50%; right: 5px; min-height: 36px; padding: 5px 12px; transform: translateY(-50%); border: 1px solid var(--color-accent); border-radius: calc(var(--radius-sm) - 2px); background: var(--color-white); color: var(--color-accent-dark); font: inherit; font-weight: 700; cursor: pointer; }
+.verification-source-field button:hover { background: var(--color-panel); }
+.verification-source-field button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
 .admin-required-field-group { min-width: 0; margin: 18px 0 0; padding: 0; border: 0; }
 .admin-required-field-group legend { padding: 0; font-weight: 600; }
 .admin-required-field-group > p { margin: 3px 0 10px; font-size: 14px; }
