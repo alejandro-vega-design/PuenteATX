@@ -667,6 +667,12 @@ a.compact-resource-line { text-decoration: underline; text-underline-offset: 3px
 .save-card-action.is-saved { border-color: var(--color-accent); color: var(--color-accent); }
 .show-more { width: 100%; }
 .loading-state, .public-state { min-height: 220px; padding: 40px 20px; border: 1px solid var(--color-line); border-radius: var(--radius-md); display: grid; place-items: center; text-align: center; }
+.resource-loading-state { align-content: center; gap: 12px; }
+.resource-loading-state strong { font-family: var(--font-heading); font-size: 20px; }
+.resource-loading-state > span:last-child { max-width: 340px; line-height: 1.45; }
+.resource-loading-spinner { width: 34px; height: 34px; border-width: 3px; border-color: var(--color-line-faint); border-top-color: var(--color-accent); }
+.resource-progressive-loading { min-height: 52px; padding: 8px 12px; border: 1px solid var(--color-line-subtle); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--color-ink); font-weight: 600; }
+.resource-progressive-loading .resource-loading-spinner { width: 20px; height: 20px; border-width: 2px; }
 .results-list > .public-state { border-color: var(--color-line-subtle); }
 .saved-empty { border-color: var(--color-line-subtle); }
 .public-state h2 { margin: 0; }

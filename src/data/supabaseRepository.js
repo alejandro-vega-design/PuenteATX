@@ -22,7 +22,27 @@ const syncAdditionalCategories = async (resourceId, ids = []) => { await adminRe
 
 export const supabaseRepository = {
   mode: 'supabase',
-  async getPublishedResources(filters = {}, lang = 'es') { const rows = await supabaseRequest(`/rest/v1/resources?status=eq.published&select=${PUBLIC_RESOURCE_COLUMNS}`); return filterAndSortResources(rows.map(row => ({ ...row, additional_category_ids: row.resource_categories?.map(link => link.category_id) || [] })), filters, lang); },
+  async getPublishedResources(filters = {}, lang = 'es', { onProgress, initialBatchSize = 12, batchSize = 24, signal } = {}) {
+    const mapRows = rows => rows.map(row => ({ ...row, additional_category_ids: row.resource_categories?.map(link => link.category_id) || [] }));
+    if (!onProgress) {
+      const rows = await supabaseRequest(`/rest/v1/resources?status=eq.published&select=${PUBLIC_RESOURCE_COLUMNS}`, { signal });
+      return filterAndSortResources(mapRows(rows), filters, lang);
+    }
+    const resources = [];
+    let offset = 0;
+    let complete = false;
+    let filtered = [];
+    while (!complete) {
+      const currentBatchSize = offset === 0 ? initialBatchSize : batchSize;
+      const rows = await supabaseRequest(`/rest/v1/resources?status=eq.published&select=${PUBLIC_RESOURCE_COLUMNS}&order=updated_at.desc.nullslast&limit=${currentBatchSize}&offset=${offset}`, { signal });
+      resources.push(...mapRows(rows));
+      filtered = filterAndSortResources(resources, filters, lang);
+      complete = rows.length < currentBatchSize;
+      onProgress(filtered, { loaded: resources.length, complete });
+      offset += rows.length;
+    }
+    return filtered;
+  },
   async getResourceBySlug(slug) { const rows = await supabaseRequest(`/rest/v1/resources?slug=eq.${encodeURIComponent(slug)}&status=eq.published&select=${PUBLIC_RESOURCE_COLUMNS}&limit=1`); return rows[0] ? { ...rows[0], additional_category_ids: rows[0].resource_categories?.map(link => link.category_id) || [] } : null; },
   async searchResources(term, lang = 'es') { return this.getPublishedResources({ q: term }, lang); },
   async filterResources(filters, lang = 'es') { return this.getPublishedResources(filters, lang); },

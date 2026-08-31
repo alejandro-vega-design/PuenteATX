@@ -8,7 +8,7 @@ const delay = value => new Promise(resolve => window.setTimeout(() => resolve(va
 
 export const demoRepository = {
   mode: 'demo',
-  async getPublishedResources(filters = {}, lang = 'es') { return delay(filterAndSortResources(resources.filter(resource => resource.status === 'published'), filters, lang)); },
+  async getPublishedResources(filters = {}, lang = 'es', { onProgress } = {}) { const result = await delay(filterAndSortResources(resources.filter(resource => resource.status === 'published'), filters, lang)); onProgress?.(result, { loaded: result.length, complete: true }); return result; },
   async getResourceBySlug(slug) { return delay(resources.find(resource => resource.slug === slug && resource.status === 'published') || null); },
   async searchResources(term, lang = 'es') { return this.getPublishedResources({ q: term }, lang); },
   async filterResources(filters, lang = 'es') { return this.getPublishedResources(filters, lang); },

@@ -3,12 +3,13 @@ const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 export const hasSupabaseConfig = Boolean(url && anonKey);
 export const isDemoEnabled = import.meta.env.DEV || import.meta.env.VITE_ENABLE_DEMO_MODE === 'true';
 
-export async function supabaseRequest(path, { method = 'GET', body, token, headers = {} } = {}) {
+export async function supabaseRequest(path, { method = 'GET', body, token, headers = {}, signal } = {}) {
   if (!hasSupabaseConfig) throw new Error('Supabase is not configured');
   const response = await fetch(`${url}${path}`, {
     method,
     headers: { apikey: anonKey, Authorization: `Bearer ${token || anonKey}`, 'Content-Type': 'application/json', ...headers },
-    body: body === undefined ? undefined : JSON.stringify(body)
+    body: body === undefined ? undefined : JSON.stringify(body),
+    signal
   });
   if (!response.ok) {
     let details = {};
