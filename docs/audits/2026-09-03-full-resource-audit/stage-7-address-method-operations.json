@@ -1,0 +1,404 @@
+[
+  {
+    "canonical_id": "36cce978-6612-4e04-8874-0a54503645eb",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "service_methods": [
+        "phone",
+        "online",
+        "in_person"
+      ]
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "622d9262-1590-46f0-a976-b75a1c13ec4d",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "service_methods": [
+        "phone",
+        "online",
+        "in_person"
+      ]
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "bb12f176-ea4d-4370-80de-21b47489272b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "service_methods": [
+        "online",
+        "in_person"
+      ]
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "78fd23b1-9406-49ad-b803-71e3e0c077ac",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "service_methods": [
+        "phone",
+        "online",
+        "in_person"
+      ]
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "7ad531f3-582b-45d5-b9c7-c4edf164e26b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "service_methods": [
+        "phone",
+        "online",
+        "in_person"
+      ]
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "8e73d3df-4162-4125-b65e-ef03c3293585",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "service_methods": [
+        "phone",
+        "online",
+        "in_person"
+      ]
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ff866166-7d9e-4d6e-ac4d-7386004157d5",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "service_methods": [
+        "phone",
+        "in_person"
+      ]
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "b3cfcb36-4f77-44d5-978c-d66c763d429a",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "service_methods": [
+        "phone",
+        "in_person"
+      ]
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "edc2a6d0-c693-4b83-9d1e-a1e4c1e4bc6a",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "service_methods": [
+        "phone",
+        "in_person"
+      ]
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "d28a7164-f6b8-4ded-a55a-07ab2e5751fd",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "",
+      "address_line_2": "",
+      "city": "",
+      "state": "",
+      "postal_code": "",
+      "county": "",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5d8f99e2-1f94-43ef-824d-6db420ef9742",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "",
+      "address_line_2": "",
+      "city": "",
+      "state": "",
+      "postal_code": "",
+      "county": "",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "3471b448-666e-449a-917d-7b56298439f9",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "address_line_1": "",
+      "address_line_2": "",
+      "city": "",
+      "state": "",
+      "postal_code": "",
+      "county": "",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "2b71fb0b-d017-4a52-b188-67fe1b23a9cf",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "",
+      "address_line_2": "",
+      "city": "",
+      "state": "",
+      "postal_code": "",
+      "county": "",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "1f38b864-ea55-418e-89e3-91cec44a92d6",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "",
+      "address_line_2": "",
+      "city": "",
+      "state": "",
+      "postal_code": "",
+      "county": "",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "4f319f20-d10c-4127-b367-821adfe1b5c0",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "address_line_1": "",
+      "address_line_2": "",
+      "city": "",
+      "state": "",
+      "postal_code": "",
+      "county": "",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "16d516fc-28ce-45c2-b035-a5d9ee23d813",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "address_line_1": "",
+      "address_line_2": "",
+      "city": "",
+      "state": "",
+      "postal_code": "",
+      "county": "",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "f628a3d6-5aac-4b4a-8286-388271782c88",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "address_line_1": "",
+      "address_line_2": "",
+      "city": "",
+      "state": "",
+      "postal_code": "",
+      "county": "",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "21f73241-fcef-4258-ae30-48bece224ed4",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "address_line_1": "",
+      "address_line_2": "",
+      "city": "",
+      "state": "",
+      "postal_code": "",
+      "county": "",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "801a5986-85a8-48fc-920c-0b4ca1142c6a",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "address_line_1": "",
+      "address_line_2": "",
+      "city": "",
+      "state": "",
+      "postal_code": "",
+      "county": "",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "1f6272c7-a375-4adf-987e-b9f237db57bb",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "",
+      "address_line_2": "",
+      "city": "",
+      "state": "",
+      "postal_code": "",
+      "county": "",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "969b11e0-252c-4c6c-bca7-769f4326288c",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "",
+      "address_line_2": "",
+      "city": "",
+      "state": "",
+      "postal_code": "",
+      "county": "",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ccd0d6b2-a99e-4203-96e8-41b68f1385a2",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "",
+      "address_line_2": "",
+      "city": "",
+      "state": "",
+      "postal_code": "",
+      "county": "",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ba71aa96-7a45-40ee-8f26-950d7180e7b9",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "",
+      "address_line_2": "",
+      "city": "",
+      "state": "",
+      "postal_code": "",
+      "county": "",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "bd0bfec9-67eb-41bf-a349-f59e6e9e21f8",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "",
+      "address_line_2": "",
+      "city": "",
+      "state": "",
+      "postal_code": "",
+      "county": "",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "67120353-9e41-4d94-987d-5b4731a05eea",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "",
+      "address_line_2": "",
+      "city": "",
+      "state": "",
+      "postal_code": "",
+      "county": "",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "2529bbca-e9d7-41ed-aba0-24ba610650b4",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "",
+      "address_line_2": "",
+      "city": "",
+      "state": "",
+      "postal_code": "",
+      "county": "",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  }
+]

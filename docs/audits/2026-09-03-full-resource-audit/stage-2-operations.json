@@ -1,0 +1,151 @@
+[
+  {
+    "canonical_id": "cbb1de0f-9b82-413d-9b00-d24c855e256d",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "description_es": "American Gateways ofrece representación y asesoría legal de inmigración, incluyendo asilo, peticiones VAWA, visas T y U, defensa migratoria, residencia permanente, naturalización, DACA y peticiones familiares, para personas de bajos ingresos cuyos casos cumplen las prioridades del programa.",
+      "description_en": "American Gateways provides immigration legal representation and advice, including asylum, VAWA petitions, T and U visas, immigration defense, permanent residency, naturalization, DACA, and family petitions, for low-income people whose cases meet program priorities.",
+      "cost_type": "sliding_scale",
+      "eligibility_es": "Personas que cumplen los límites de ingresos y las prioridades de casos de la organización.",
+      "eligibility_en": "People who meet the organization's income guidelines and case priorities.",
+      "application_steps_es": "Llama a la oficina de Austin para solicitar una cita.",
+      "application_steps_en": "Call the Austin office to request an appointment.",
+      "hours_es": "Solo con cita previa.",
+      "hours_en": "By appointment only.",
+      "address_line_1": "314 E. Highland Mall Boulevard",
+      "address_line_2": "Suite 501",
+      "latitude": 30.32862,
+      "longitude": -97.711788,
+      "geocoded_at": "2026-08-07T18:43:36.635959+00:00",
+      "geocode_status": "success",
+      "source_url": "https://www.americangateways.org/",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "Verificado el 2026-09-03 con el sitio oficial de American Gateways. Los servicios se ofrecen sin costo o a bajo costo y la oficina de Austin atiende solo con cita previa."
+    },
+    "archive_ids": ["6b6206fb-08ba-4230-9456-88d4359a1da6"]
+  },
+  {
+    "canonical_id": "24649112-d2e5-434e-9c89-3303e7f01b52",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Entrega de comidas calientes y comidas comunitarias para adultos mayores elegibles en los condados de Williamson y Burnet.",
+      "summary_en": "Hot meal delivery and congregate meals for eligible older adults in Williamson and Burnet counties.",
+      "description_es": "Meals on Wheels de OWBC entrega comidas calientes de lunes a viernes a personas mayores que no pueden preparar sus propias comidas. También ofrece comidas comunitarias en centros para adultos mayores y contacto regular para reducir el aislamiento.",
+      "description_en": "OWBC Meals on Wheels delivers hot meals Monday through Friday to older adults who cannot prepare their own meals. It also offers congregate meals at senior centers and regular contact to reduce isolation.",
+      "hours_es": "Entregas de lunes a viernes; los horarios de las comidas comunitarias varían según el centro.",
+      "hours_en": "Deliveries Monday–Friday; congregate-meal schedules vary by center.",
+      "service_area_es": "Condado de Williamson, Condado de Burnet",
+      "service_area_en": "Williamson County, Burnet County",
+      "email": "information@owbc-tx.org",
+      "source_url": "https://www.owbc-tx.org/meals-on-wheels/",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "Verificado el 2026-09-03 con las páginas oficiales de OWBC y su guía de recursos. Atiende Williamson y Burnet; las comidas se ofrecen sin costo a las personas participantes."
+    },
+    "archive_ids": ["6fb636e3-f6b5-4faa-99f8-a284f3054576"]
+  },
+  {
+    "canonical_id": "e7858484-4606-4481-8395-617996075df6",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "description_es": "El Programa Integral de Asistencia Energética (CEAP) de OWBC ayuda a hogares de bajos ingresos de los condados de Williamson y Burnet con costos de energía. Las solicitudes pueden enviarse en línea, por correo, email, fax o en persona y están sujetas a elegibilidad, fondos y disponibilidad.",
+      "description_en": "OWBC's Comprehensive Energy Assistance Program (CEAP) helps low-income households in Williamson and Burnet counties with energy costs. Applications may be submitted online, by mail, email, fax, or in person and are subject to eligibility, funding, and availability.",
+      "eligibility_es": "Hogares de bajos ingresos de los condados de Williamson o Burnet que cumplen los requisitos vigentes de CEAP.",
+      "eligibility_en": "Low-income households in Williamson or Burnet County that meet current CEAP requirements.",
+      "required_documents_es": "Puede requerirse identificación, comprobante de ciudadanía o estatus migratorio y comprobantes de ingresos del hogar.",
+      "required_documents_en": "Identification, proof of citizenship or immigration status, and household income documentation may be required.",
+      "application_steps_es": "Completa la solicitud de OWBC y envíala por uno de los métodos aceptados. Confirma antes la disponibilidad de fondos.",
+      "application_steps_en": "Complete the OWBC application and submit it through an accepted method. Confirm funding availability first.",
+      "service_area_es": "Condado de Williamson, Condado de Burnet",
+      "service_area_en": "Williamson County, Burnet County",
+      "email": "utilities@owbc-tx.org",
+      "source_url": "https://owbc-tx.org/services/",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "Verificado el 2026-09-03 con el sitio oficial de OWBC. CEAP forma parte de Community Services y atiende Williamson y Burnet; la admisión depende de elegibilidad, fondos y disponibilidad."
+    },
+    "archive_ids": ["5450d92c-a2e9-47e5-b432-1ce59ceeb232"]
+  },
+  {
+    "canonical_id": "f1d6fc93-5384-4c7c-9f8b-efb2940fa682",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "source_url": "https://www.vlsoct.org/get-help/",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "Verificado el 2026-09-03 con la página oficial de VLS. Ofrece orientación legal civil gratuita mediante abogados voluntarios; no atiende asuntos penales, migratorios ni de derechos civiles."
+    },
+    "archive_ids": ["d9e90b78-3228-4cbd-a42b-cdfe7b217850"]
+  },
+  {
+    "canonical_id": "b15f53c8-9f9f-472c-9983-1d4af24c2f1e",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Servicios de salud mental, uso de sustancias y crisis",
+      "title_en": "Mental health, substance use, and crisis services",
+      "summary_es": "Atención de salud mental, tratamiento por uso de sustancias y apoyo de crisis para niñas, niños, adultos y familias del condado de Travis.",
+      "summary_en": "Mental health care, substance-use treatment, and crisis support for children, adults, and families in Travis County.",
+      "description_es": "Integral Care ofrece consejería, psiquiatría, manejo de medicamentos, tratamiento por consumo de alcohol y drogas, intervención de crisis y servicios para discapacidades intelectuales y del desarrollo. Los servicios y requisitos dependen del programa.",
+      "description_en": "Integral Care provides counseling, psychiatry, medication management, alcohol and drug treatment, crisis intervention, and services for intellectual and developmental disabilities. Services and requirements vary by program.",
+      "keywords_es": ["salud mental", "uso de sustancias", "crisis", "consejería", "psiquiatría"],
+      "keywords_en": ["mental health", "substance use", "crisis", "counseling", "psychiatry"],
+      "service_methods": ["phone", "online"],
+      "email": "",
+      "website_url": "https://integralcare.org/en/home-3/",
+      "source_url": "https://integralcare.org/en/home-3/",
+      "hours_es": "Línea de ayuda disponible las 24 horas; los horarios de otros servicios varían según el programa.",
+      "hours_en": "The helpline is available 24 hours; other service hours vary by program.",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "Verificado el 2026-09-03 con el sitio oficial de Integral Care. El recurso de vivienda se mantiene separado porque representa una línea de servicio distinta."
+    },
+    "archive_ids": [
+      "abfb4265-6d22-4071-908f-98470e5c81b4",
+      "8475be9e-3a90-464e-a69a-b1ade532df22"
+    ]
+  },
+  {
+    "canonical_id": "ee3e39b6-e869-4c08-85ff-6f2236829471",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Apoyo integral para familias con niñas y niños",
+      "title_en": "Comprehensive support for families with children",
+      "summary_es": "Orientación personalizada, apoyo para la crianza, salud mental, coordinación médica, terapias y conexión con recursos para familias con niñas y niños.",
+      "summary_en": "Personalized guidance, parenting support, mental health care, medical coordination, therapies, and resource connections for families with children.",
+      "description_es": "Any Baby Can ofrece programas de desarrollo infantil, salud familiar y apoyo para la crianza. Según el programa, puede brindar visitas al hogar, telesalud, terapias, clases para padres, consejería, coordinación médica, navegación de recursos y ayuda con necesidades básicas.",
+      "description_en": "Any Baby Can provides child-development, family-health, and parenting-support programs. Depending on the program, services may include home visits, telehealth, therapies, parenting classes, counseling, medical coordination, resource navigation, and basic-needs support.",
+      "keywords_es": ["desarrollo infantil", "apoyo familiar", "crianza", "salud mental", "terapias", "navegación de recursos"],
+      "keywords_en": ["child development", "family support", "parenting", "mental health", "therapies", "resource navigation"],
+      "cost_type": "sliding_scale",
+      "service_area_es": "Condado de Travis, Condado de Williamson, Condado de Hays, Condado de Bastrop, Condado de Caldwell, Condado de Burnet, Condado de Bell",
+      "service_area_en": "Travis County, Williamson County, Hays County, Bastrop County, Caldwell County, Burnet County, Bell County",
+      "email": "info@anybabycan.org",
+      "website_url": "https://anybabycan.org/",
+      "source_url": "https://anybabycan.org/",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "Verificado el 2026-09-03 con el sitio oficial y la ficha institucional FY26 de Any Baby Can. Los servicios son gratuitos o de bajo costo y la cobertura depende del programa."
+    },
+    "additional_category_ids": ["10000000-0000-4000-8000-000000000006"],
+    "archive_ids": [
+      "ce83670d-be6e-4249-be5b-a8a736e73a91",
+      "8093360e-800e-45ee-981b-f2cdccfc04d5"
+    ]
+  },
+  {
+    "canonical_id": "7136ccfe-2ede-4de6-ad9a-fffbcb49040d",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Apoyo integral para adultos mayores y cuidadores",
+      "title_en": "Comprehensive support for older adults and caregivers",
+      "cost_type": "unknown",
+      "website_url": "https://ageofcentraltx.org/",
+      "source_url": "https://ageofcentraltx.org/",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "Verificado el 2026-09-03 con el sitio oficial de AGE of Central Texas. El costo depende del programa: Pathways ofrece servicios gratuitos y Thrive acepta distintas formas de pago. El borrador específico de Pathways se conserva para revisión como posible programa independiente."
+    },
+    "archive_ids": ["b033b94a-9998-4818-aa5a-4f0f263dc50f"]
+  }
+]

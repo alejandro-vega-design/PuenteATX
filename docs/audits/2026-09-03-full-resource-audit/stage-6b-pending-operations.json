@@ -1,0 +1,60 @@
+[
+  {
+    "canonical_id": "0a97f4ee-26c3-4a07-a118-c3cf024c20d5",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {},
+    "archive_ids": [
+      "a7b453f7-8679-4e59-9a1c-1fc605ae8251"
+    ]
+  },
+  {
+    "canonical_id": "cb14b8fd-d05f-4d23-bfdb-30ebbe0abaa6",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {},
+    "archive_ids": [
+      "6dca176a-b43a-442e-9b74-020200601d1c"
+    ]
+  },
+  {
+    "canonical_id": "6ed78f92-6096-4cd2-a233-de17e623b82a",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "status": "archived",
+      "archived_at": "2026-09-03T12:00:00.000Z"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5721a97c-d903-4727-8df1-3cf667905448",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "status": "archived",
+      "archived_at": "2026-09-03T12:00:00.000Z"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "efebdc9d-35e9-4209-842e-2cacb4f100e9",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "status": "archived",
+      "archived_at": "2026-09-03T12:00:00.000Z"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "62e8a3c8-74e5-4bde-990f-3784cea517aa",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "status": "archived",
+      "archived_at": "2026-09-03T12:00:00.000Z"
+    },
+    "archive_ids": []
+  }
+]

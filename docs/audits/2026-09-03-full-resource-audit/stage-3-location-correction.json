@@ -1,0 +1,20 @@
+[
+  {
+    "canonical_id": "babaf4b3-a506-4cef-8dbc-bccc0e05d71e",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "address_line_1": null,
+      "address_line_2": null,
+      "city": null,
+      "state": null,
+      "postal_code": null,
+      "county": null,
+      "latitude": null,
+      "longitude": null,
+      "geocode_status": null,
+      "geocoded_at": null
+    },
+    "archive_ids": []
+  }
+]

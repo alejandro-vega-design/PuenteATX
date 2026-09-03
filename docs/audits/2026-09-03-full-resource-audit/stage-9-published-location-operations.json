@@ -1,0 +1,338 @@
+[
+  {
+    "canonical_id": "248e2b4d-7a2c-4427-9773-5cf5d36bbc60",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "620 Round Rock West Drive",
+      "address_line_2": "Building 8",
+      "city": "Round Rock",
+      "state": "TX",
+      "postal_code": "78681",
+      "county": "Williamson",
+      "source_url": "https://sacredheartclinic.org/locations/sacred-heart-clinic/",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5f5f2227-d772-4fbb-82fd-e81b283f3750",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "1401 N. Highway 183",
+      "address_line_2": "",
+      "city": "Leander",
+      "state": "TX",
+      "postal_code": "78641",
+      "county": "",
+      "source_url": "https://www.operationlh.org/contact",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9a3dbad5-475f-4fc9-bf04-66897b2da65c",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "8402 Cross Park Drive",
+      "address_line_2": "",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78754",
+      "county": "Travis",
+      "source_url": "https://www.crosscreekhospital.com/about/location/",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "dc1dba5f-ed5e-4f0b-ab30-931192372aed",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "1200 W. 17th Street",
+      "address_line_2": "",
+      "city": "Georgetown",
+      "state": "TX",
+      "postal_code": "78626",
+      "county": "Williamson",
+      "source_url": "https://www.bgctx.org/UserFiles/files/BGCTX%20Parent%20Handbook%202026.pdf",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "0e0452ad-c60b-4f3b-92ab-0434444425f4",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "6408 Muleshoe Bend Trail",
+      "address_line_2": "",
+      "city": "Marble Falls",
+      "state": "TX",
+      "postal_code": "78654",
+      "county": "",
+      "source_url": "https://candlelightranch.org/contact-us/",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "1fee08a5-40ba-4bbf-b10a-0474d09ea20c",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "2418 Stratford Drive",
+      "address_line_2": "",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78746",
+      "county": "Travis",
+      "source_url": "https://www.rowingdock.com/find-us/",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "bc94d411-db8d-4ba0-8571-2a8e964f289a",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "24814 Hamilton Pool Road",
+      "address_line_2": "",
+      "city": "Round Mountain",
+      "state": "TX",
+      "postal_code": "78663",
+      "county": "",
+      "source_url": "https://www.westcave.org/",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "a56bf4d3-8986-4009-b2d6-9c6273582a8d",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "2220 Barton Springs Road",
+      "address_line_2": "",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78746",
+      "county": "Travis",
+      "source_url": "https://zilkergarden.org/contact/",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "b460fd32-3961-4299-9beb-4f29f185029b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "2005 Wheless Lane",
+      "address_line_2": "",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78723",
+      "county": "Travis",
+      "source_url": "https://austincreativereuse.org/contact-us",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "e3497e15-889d-4c79-b5df-5464e49d62b3",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "610 E. 45th Street",
+      "address_line_2": "Inside Hyde Park Christian Church, east entrance",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78751",
+      "county": "Travis",
+      "source_url": "https://www.austinclubhouse.org/contact-us",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "20e66dca-2481-48d1-a472-2f0cd5092e22",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "2306 Hancock Drive",
+      "address_line_2": "",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78756",
+      "county": "Travis",
+      "source_url": "https://christicenter.org/get-started/",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "73b444a8-b037-4d04-8325-8e5ecec24043",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "3804 Avenue B",
+      "address_line_2": "",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78751",
+      "county": "Travis",
+      "source_url": "https://helpinghandhome.org/contact-us/",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "e01eedb9-6ee0-4c1b-81c6-b822ffc9e6c7",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "address_line_1": "810 W. 45th Street",
+      "address_line_2": "",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78751",
+      "county": "Travis",
+      "source_url": "https://www.austinchildguidance.org/our-services/client-information/overview.html",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "179bfc2d-5f17-4f27-9000-086c4ec3c871",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Convertido de “Complete Family Resource Guide List.xlsx”, fila 43, el 2026-08-10. Revisar datos y fuente oficial antes de publicar. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "6736b501-749e-4473-b1d5-45c82c1fa03f",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Convertido de “Complete Family Resource Guide List.xlsx”, fila 68, el 2026-08-10. Revisar datos y fuente oficial antes de publicar. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5ebe2d7f-a56c-4e2c-89ff-03f385c585a6",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Convertido de “Complete Family Resource Guide List.xlsx”, fila 71, el 2026-08-10. Revisar datos y fuente oficial antes de publicar. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5dae4db1-6d7d-47ce-a9a8-822cdd6b50a9",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Convertido de “Complete Family Resource Guide List.xlsx”, fila 31, el 2026-08-10. Revisar datos y fuente oficial antes de publicar. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "7b3c4f39-f752-49eb-b8c7-5fc858a65e3c",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Convertido de “Complete Family Resource Guide List.xlsx”, fila 45, el 2026-08-10. Revisar datos y fuente oficial antes de publicar. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "6979b575-1dc0-4995-8ba3-2dc3a7a76413",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "a322325a-0aa9-42dd-9803-52d242da0f4c",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "705a5ab0-a0d7-4fd5-86b7-6afa79678d64",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "summary_es": "Ofrece ropa profesional, preparación laboral y apoyo para mujeres que buscan empleo o crecimiento profesional.",
+      "summary_en": "Provides professional clothing, career preparation, and employment support for women pursuing work or career advancement.",
+      "description_es": "Dress for Success Austin ofrece citas de vestimenta profesional, orientación laboral y programas de desarrollo profesional. Las citas presenciales requieren reservación previa.",
+      "description_en": "Dress for Success Austin offers professional styling appointments, career guidance, and professional-development programs. In-person appointments require advance booking.",
+      "address_line_1": "3000 S. I-35 Frontage Road",
+      "address_line_2": "Suite 180",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78704",
+      "county": "Travis",
+      "website_url": "https://www.dressforsuccessaustin.org/",
+      "source_url": "https://www.dressforsuccessaustin.org/appointments",
+      "last_verified_at": "2026-09-03",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null
+    },
+    "archive_ids": [
+      "fa2a5b60-1967-4367-b0a6-97f9d68d0c91"
+    ]
+  }
+]

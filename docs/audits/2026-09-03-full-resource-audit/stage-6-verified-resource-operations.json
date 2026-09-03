@@ -1,0 +1,261 @@
+[
+  {
+    "canonical_id": "d8aae272-9f5e-44dd-a62d-889109042f03",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "phone": "512-763-1400",
+      "website_url": "https://mypec.com/ways-to-pay/member-assistance-program/",
+      "source_url": "https://mypec.com/ways-to-pay/member-assistance-program/",
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "4700ee4d-5771-4fdc-ac55-6091e6f4a5e7",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "organization_name": "CareConnect USA",
+      "website_url": "https://careconnectusa.org/debt-relief-help-line/",
+      "source_url": "https://careconnectusa.org/debt-relief-help-line/",
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "18264cb5-f5ba-4ec7-af01-67b7e1e59c84",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "organization_name": "CareConnect USA",
+      "website_url": "https://careconnectusa.org/free-bankruptcy-advice/",
+      "source_url": "https://careconnectusa.org/free-bankruptcy-advice/",
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "117daed6-98d8-4169-94fe-44ee6deeebd4",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "organization_name": "CareConnect USA",
+      "website_url": "https://careconnectusa.org/discount-prescriptions-free-drug-card/",
+      "source_url": "https://careconnectusa.org/discount-prescriptions-free-drug-card/",
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ec966e92-b70d-4286-8429-5d719774462b",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "organization_name": "CareConnect USA",
+      "website_url": "https://careconnectusa.org/stop-foreclosure/",
+      "source_url": "https://careconnectusa.org/stop-foreclosure/",
+      "last_verified_at": "2026-09-03",
+      "hours_es": "Lunes a viernes, 9:00 a.m.–6:00 p.m.; sábado, 10:00 a.m.–2:00 p.m.",
+      "hours_en": "Monday–Friday, 9:00 a.m.–6:00 p.m.; Saturday, 10:00 a.m.–2:00 p.m."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "8181be7b-00f9-498e-8ca2-9041bd8847b5",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "organization_name": "Community Action, Inc. of Central Texas",
+      "website_url": "https://www.communityaction.com/utilityassistance",
+      "source_url": "https://www.communityaction.com/utilityassistance",
+      "last_verified_at": "2026-09-03",
+      "phone": "512-398-4420",
+      "hours_es": "Lunes a jueves, 8:00 a.m.–12:00 p.m. y 1:00–5:00 p.m.; viernes, 8:00 a.m.–12:00 p.m.",
+      "hours_en": "Monday–Thursday, 8:00 a.m.–12:00 p.m. and 1:00–5:00 p.m.; Friday, 8:00 a.m.–12:00 p.m."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "3f4c51bd-6177-47fe-a08b-c107343ef834",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "organization_name": "St. Mary of the Visitation — Society of St. Vincent de Paul",
+      "title_es": "Asistencia con alimentos y servicios públicos",
+      "title_en": "Food and utility assistance",
+      "website_url": "https://smvl.org/st-vincent-de-paul-1",
+      "source_url": "https://smvl.org/st-vincent-de-paul-1",
+      "last_verified_at": "2026-09-03",
+      "hours_es": "Con cita; llamadas de lunes a jueves, 8:00 a.m.–5:00 p.m.",
+      "hours_en": "By appointment; calls answered Monday–Thursday, 8:00 a.m.–5:00 p.m."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "d6fbd72c-02bc-4869-8f71-f51b67502191",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "organization_name": "U.S. Department of Veterans Affairs",
+      "title_es": "Inscripción en atención médica de VA",
+      "title_en": "VA health care enrollment",
+      "website_url": "https://www.va.gov/health-care/",
+      "source_url": "https://www.va.gov/health-care/after-you-apply/",
+      "last_verified_at": "2026-09-03",
+      "service_area_es": "Estados Unidos",
+      "service_area_en": "United States"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "a4d0d460-3893-41ed-8ac0-7e84f5753a70",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "organization_name": "Community Council of South Central Texas",
+      "website_url": "https://www.ccsct.org/program/veterans-financial-assistance-program/",
+      "source_url": "https://www.ccsct.org/program/veterans-financial-assistance-program/",
+      "phone": "830-491-2585",
+      "email": "dmontano@ccsct.org",
+      "last_verified_at": "2026-09-03",
+      "hours_es": "Lunes a viernes, 8:00 a.m.–5:00 p.m.",
+      "hours_en": "Monday–Friday, 8:00 a.m.–5:00 p.m."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "7a509cc3-5721-482e-80ec-dec41bfa4b92",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "organization_name": "Sacred Heart Catholic Church — Society of St. Vincent de Paul",
+      "title_es": "Asistencia con necesidades básicas",
+      "title_en": "Basic-needs assistance",
+      "summary_es": "Ofrece ayuda limitada con renta, servicios públicos, ropa, muebles, alimentos y medicamentos, además de referidos y visitas domiciliarias.",
+      "summary_en": "Offers limited help with rent, utilities, clothing, furniture, food, and medication, plus referrals and home visits.",
+      "description_es": "La conferencia de San Vicente de Paúl de Sacred Heart ofrece asistencia según la necesidad y la disponibilidad de fondos. Llame durante el horario indicado para solicitar ayuda.",
+      "description_en": "Sacred Heart’s Society of St. Vincent de Paul conference offers assistance based on need and available funds. Call during the listed hours to request help.",
+      "website_url": "https://sacredheartchurchaustin.org/st-vincent-de-paulsan-vicente-de-pal",
+      "source_url": "https://sacredheartchurchaustin.org/st-vincent-de-paulsan-vicente-de-pal",
+      "last_verified_at": "2026-09-03",
+      "hours_es": "Llamadas: martes y jueves, 9:15–11:00 a.m.",
+      "hours_en": "Calls: Tuesday and Thursday, 9:15–11:00 a.m."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9124771b-1610-4770-aa68-e9fd890abc49",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "organization_name": "Baptist Community Center Mission",
+      "phone": "512-478-7243",
+      "website_url": "https://www.bccmission.org/",
+      "source_url": "https://mypec.com/ways-to-pay/member-assistance-program/",
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "8ca08b9d-87fc-4901-8791-698c5341e9a4",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "organization_name": "St. Matthew's Episcopal Church",
+      "title_es": "Fondo de Buena Fe para servicios públicos",
+      "title_en": "Good Faith Fund utility assistance",
+      "phone": "512-345-7600",
+      "website_url": "https://stmattsaustin.org/contact/good-faith-fund/",
+      "source_url": "https://stmattsaustin.org/contact/good-faith-fund/",
+      "summary_es": "Ayuda a residentes de la ciudad de Austin con facturas de servicios públicos mediante un proceso de solicitud.",
+      "summary_en": "Helps City of Austin residents with utility bills through an application process.",
+      "description_es": "El Fondo de Buena Fe revisa solicitudes de residentes de Austin que necesitan ayuda con facturas de servicios públicos. La entrega de fondos puede tardar de tres a cuatro semanas.",
+      "description_en": "The Good Faith Fund reviews applications from Austin residents who need help with utility bills. Funds may take three to four weeks to be disbursed.",
+      "eligibility_es": "Residentes de la ciudad de Austin.",
+      "eligibility_en": "City of Austin residents.",
+      "application_steps_es": "Llame los martes durante el horario indicado y complete la solicitud requerida.",
+      "application_steps_en": "Call on Tuesday during the listed hours and complete the required application.",
+      "hours_es": "Llamadas: martes, 10:00 a.m.–12:00 p.m.",
+      "hours_en": "Calls: Tuesday, 10:00 a.m.–12:00 p.m.",
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "8c649e92-d0c9-48b6-bbbd-020dfc153811",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Refugio y apoyo para sobrevivientes de violencia",
+      "title_en": "Shelter and support for survivors of violence",
+      "phone": "512-303-7755",
+      "source_url": "https://www.family-crisis-center.org/services",
+      "service_area_es": "Condado de Bastrop, Condado de Colorado, Condado de Fayette, Condado de Lee",
+      "service_area_en": "Bastrop County, Colorado County, Fayette County, Lee County",
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": [
+      "cb85a753-658c-491e-96e3-3afb16e5b232",
+      "49ad891f-7d31-4eda-812f-aab20801f4d5"
+    ]
+  },
+  {
+    "canonical_id": "0a97f4ee-26c3-4a07-a118-c3cf024c20d5",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {},
+    "archive_ids": [
+      "a7b453f7-8679-4e59-9a1c-1fc605ae8251"
+    ]
+  },
+  {
+    "canonical_id": "cb14b8fd-d05f-4d23-bfdb-30ebbe0abaa6",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {},
+    "archive_ids": [
+      "6dca176a-b43a-442e-9b74-020200601d1c"
+    ]
+  },
+  {
+    "canonical_id": "6ed78f92-6096-4cd2-a233-de17e623b82a",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "status": "archived",
+      "archived_at": "2026-09-03T12:00:00.000Z"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5721a97c-d903-4727-8df1-3cf667905448",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "status": "archived",
+      "archived_at": "2026-09-03T12:00:00.000Z"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "efebdc9d-35e9-4209-842e-2cacb4f100e9",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "status": "archived",
+      "archived_at": "2026-09-03T12:00:00.000Z"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "62e8a3c8-74e5-4bde-990f-3784cea517aa",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "status": "archived",
+      "archived_at": "2026-09-03T12:00:00.000Z"
+    },
+    "archive_ids": []
+  }
+]

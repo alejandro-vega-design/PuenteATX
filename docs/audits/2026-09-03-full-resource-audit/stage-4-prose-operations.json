@@ -1,0 +1,458 @@
+[
+  {
+    "canonical_id": "93b39ce7-b3ed-4cd1-91b7-9cd85cafc318",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece servicio telefónico mediante el beneficio federal Lifeline a personas que cumplen los requisitos.",
+      "summary_en": "Offers phone service through the federal Lifeline benefit to people who meet eligibility requirements.",
+      "description_es": "Las personas pueden calificar por sus ingresos o por participar en programas como SNAP, Medicaid, SSI, asistencia federal de vivienda, pensiones para veteranos y sobrevivientes u otros programas tribales elegibles.",
+      "description_en": "Applicants may qualify based on income or participation in programs such as SNAP, Medicaid, SSI, Federal Public Housing Assistance, Veterans and Survivors Pension benefits, or other eligible Tribal programs."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "a7b453f7-8679-4e59-9a1c-1fc605ae8251",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Brinda asistencia limitada para pagar renta y facturas de servicios públicos a personas que cumplen los requisitos.",
+      "summary_en": "Provides limited assistance with rent and utility bills to people who meet eligibility requirements.",
+      "description_es": "La asistencia puede cubrir hasta $40 de renta o servicios públicos y se ofrece por orden de llegada a un número limitado de personas. Una persona puede recibir ayuda una vez cada seis meses.",
+      "description_en": "Assistance may cover up to $40 toward rent or utility bills and is offered first come, first served to a limited number of people. A person may receive help once every six months."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "b46b9fea-09ff-496e-a141-5c302dd53067",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Brinda enfermería, terapias y otros servicios de salud en el hogar.",
+      "summary_en": "Provides nursing, therapy, and other health services in the home.",
+      "description_es": "Los servicios incluyen enfermería a domicilio, fisioterapia, asistentes de salud, cuidado de heridas y trabajo social médico.",
+      "description_en": "Services include in-home nursing, physical therapy, home health aides, wound care, and medical social services."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9ce822a1-a937-412a-ac7b-651db9f9f27f",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Brinda apoyo confidencial y culturalmente sensible a sobrevivientes de violencia doméstica y agresión sexual.",
+      "summary_en": "Provides confidential, culturally responsive support for survivors of domestic violence and sexual assault.",
+      "description_es": "Los servicios incluyen planificación de seguridad, consejería y conexión con recursos básicos, empleo, educación, asistencia legal, atención médica y opciones de vivienda de emergencia o a largo plazo.",
+      "description_en": "Services include safety planning, counseling, and connections to basic resources, employment, education, legal help, medical care, and emergency or long-term housing options."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "463348b0-7ad0-4b4e-abe3-d9ab5afe50c5",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ayuda a familias a obtener alimentos para mascotas y opciones de reubicación cuando están disponibles.",
+      "summary_en": "Helps families access pet food and rehoming options when available.",
+      "description_es": "Ofrece una despensa de alimentos para mascotas y servicios para encontrarles un nuevo hogar. La despensa estaba pausada al 17 de agosto de 2026; consulta el sitio web para confirmar su disponibilidad actual.",
+      "description_en": "Offers a pet food pantry and rehoming services. The pantry was paused as of August 17, 2026; check the website to confirm current availability."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "153a2496-64c7-4ea3-b4bb-e51c370d0376",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Conecta a residentes con ayuda para renta, servicios públicos, alimentos, empleo y transporte.",
+      "summary_en": "Connects residents with help for rent, utilities, food, employment, and transportation.",
+      "description_es": "Los centros vecinales ofrecen asistencia para renta y servicios públicos, alimentos, apoyo para buscar empleo y pases de autobús, según elegibilidad y disponibilidad.",
+      "description_en": "Neighborhood centers provide rent and utility assistance, food, job-search support, and bus passes, depending on eligibility and availability."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "12bd6cff-ffaa-48c0-9d3f-9239ff15efa5",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece atención primaria y especializada para veteranos elegibles.",
+      "summary_en": "Provides primary and specialty health care for eligible veterans.",
+      "description_es": "La clínica ofrece atención primaria y especialidades como quiropráctica, optometría, odontología, oncología, tratamiento de lesiones cerebrales traumáticas y podiatría.",
+      "description_en": "The clinic offers primary care and specialties such as chiropractic care, optometry, dentistry, oncology, traumatic brain injury treatment, and podiatry."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "e2d51c94-d6f5-4449-a409-6b3dede0de48",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece vivienda asistida y cuidado especializado para personas con Alzheimer u otras necesidades de memoria.",
+      "summary_en": "Offers assisted living and specialized care for people with Alzheimer’s or other memory-related needs.",
+      "description_es": "La residencia cuenta con 25 espacios de cuidado de memoria, servicios de vivienda asistida y un sistema de seguridad para personas con riesgo de deambulación.",
+      "description_en": "The residence has 25 memory-care spaces, assisted-living services, and a security system for residents at risk of wandering."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9124771b-1610-4770-aa68-e9fd890abc49",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece asistencia financiera limitada para renta, hipoteca local y facturas de servicios públicos.",
+      "summary_en": "Offers limited financial assistance for rent, local mortgages, and utility bills.",
+      "description_es": "La ayuda puede cubrir agua, electricidad, gas, renta o hipotecas locales. Se requiere identificación, tarjeta del Seguro Social y una factura vigente que confirme la dirección; llama para hacer una cita.",
+      "description_en": "Help may cover water, electricity, gas, rent, or local mortgages. Applicants need identification, a Social Security card, and a current bill confirming their address; call for an appointment."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "2370ce88-bccd-4b7b-ab14-a90c9028f1f7",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Evalúa las necesidades relacionadas con el consumo de sustancias y conecta a las personas con tratamiento y apoyo de recuperación.",
+      "summary_en": "Assesses substance-use needs and connects people with treatment and recovery support.",
+      "description_es": "El personal autorizado realiza evaluaciones para determinar la gravedad y el impacto del consumo, coordina referidos y ofrece manejo de casos hasta el ingreso al tratamiento. También puede evaluar asistencia financiera para personas sin seguro o con cobertura insuficiente.",
+      "description_en": "Licensed staff screens for the severity and impact of substance use, coordinates referrals, and provides case management until treatment begins. The team may also assess financial assistance for people who are uninsured or underinsured."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "04223034-598c-435c-8d68-62d308b7bd07",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Proporciona comidas nutritivas junto con refugio de emergencia y vivienda transicional.",
+      "summary_en": "Provides nutritious meals alongside emergency shelter and transitional housing.",
+      "description_es": "Además de comidas y vivienda temporal, conecta a participantes con recursos de higiene, atención médica y colocación laboral. Confirma la disponibilidad antes de acudir.",
+      "description_en": "In addition to meals and temporary housing, it connects participants with hygiene resources, health care, and job-placement services. Confirm availability before visiting."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "bdd2ff76-896e-4c89-b3b5-165a07d3dca0",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Orienta a adultos mayores y sus familias para encontrar opciones adecuadas de cuidado y vivienda.",
+      "summary_en": "Guides older adults and their families in finding appropriate care and housing options.",
+      "description_es": "Ayuda a comparar vivienda asistida, cuidado de memoria, vida independiente, hogares de enfermería, cuidado en el hogar y cuidado de relevo, incluso después de un alta hospitalaria o un cambio de salud.",
+      "description_en": "Helps compare assisted living, memory care, independent living, nursing homes, in-home care, and respite care, including after a hospital discharge or change in health."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "f885dbcf-e491-4038-a9ed-21fa7f9f3d15",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Orienta a adultos mayores y sus familias para encontrar opciones adecuadas de cuidado y vivienda.",
+      "summary_en": "Guides older adults and their families in finding appropriate care and housing options.",
+      "description_es": "Ayuda a comparar vivienda asistida, cuidado de memoria, vida independiente, hogares de enfermería, cuidado en el hogar y cuidado de relevo, incluso después de un alta hospitalaria o un cambio de salud.",
+      "description_en": "Helps compare assisted living, memory care, independent living, nursing homes, in-home care, and respite care, including after a hospital discharge or change in health."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "56c3dc2d-704f-4e0b-8610-9ca65785b32c",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Brinda asistencia legal de inmigración a personas y familias que pueden solicitar beneficios migratorios.",
+      "summary_en": "Provides immigration legal assistance to individuals and families who may qualify for immigration benefits.",
+      "description_es": "Los servicios se enfocan en reunificación familiar e incluyen alivio humanitario, Estatus de Protección Temporal y opciones para sobrevivientes de violencia doméstica o trata de personas. Confirma el horario de consultas.",
+      "description_en": "Services focus on family reunification and include humanitarian relief, Temporary Protected Status, and options for survivors of domestic violence or human trafficking. Confirm the current consultation schedule."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "cb5732bd-032f-4146-9f6f-dfdc426a8a46",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece atención primaria, salud mental y otros servicios especializados para veteranos elegibles.",
+      "summary_en": "Provides primary care, mental health care, and other specialty services for eligible veterans.",
+      "description_es": "Los servicios incluyen atención primaria, salud mental, radiografías, laboratorio, orientación nutricional y atención de salud para mujeres.",
+      "description_en": "Services include primary care, mental health care, X-rays, laboratory testing, nutrition counseling, and women’s health care."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ff3e097d-18c5-46a3-8d4c-d5d7090f9fff",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ayuda a residentes sin seguro del condado de Travis a acceder a servicios médicos.",
+      "summary_en": "Helps uninsured Travis County residents access health services.",
+      "description_es": "El programa conecta a personas elegibles con médicos locales, atención dental, medicamentos recetados y otros servicios de salud.",
+      "description_en": "The program connects eligible residents with local doctors, dental care, prescription medications, and other health services."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "798beb75-7052-4241-af32-58a77d98e259",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ayuda a familias militares elegibles con subsidios para cuidado infantil y opciones de cuidado de relevo.",
+      "summary_en": "Helps eligible military families with child care subsidies and respite care options.",
+      "description_es": "Child Care Aware of America administra asistencia financiada federalmente mediante el Military Fee Assistance Program. Algunas familias elegibles también pueden acceder a cuidado de relevo.",
+      "description_en": "Child Care Aware of America administers federally funded assistance through the Military Fee Assistance Program. Some eligible families may also access respite care."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "539f2929-8496-4a25-acf4-588a4b00b864",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece comidas, asistencia con servicios públicos, climatización y apoyo de vivienda.",
+      "summary_en": "Offers meals, utility assistance, weatherization, and housing support.",
+      "description_es": "Los programas ayudan con alimentación, facturas de servicios públicos, mejoras de eficiencia energética, necesidades de vivienda y otros servicios comunitarios.",
+      "description_en": "Programs help with food, utility bills, energy-efficiency improvements, housing needs, and other community services."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "d7ce7df6-a443-4deb-88b6-e2f3097dac72",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece clases gratuitas para desarrollar habilidades académicas, lingüísticas, digitales y laborales.",
+      "summary_en": "Offers free classes that build academic, language, digital, and workplace skills.",
+      "description_es": "Las opciones presenciales y en línea incluyen preparación para GED en inglés y español, inglés como segundo idioma, capacitación profesional, alfabetización digital, educación a distancia y preparación universitaria.",
+      "description_en": "In-person and online options include GED preparation in English and Spanish, English as a second language, career training, digital literacy, distance education, and college preparation."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "27d08a00-9ce1-423d-9664-b60593846a20",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Conecta a residentes con asistencia energética, medicamentos de bajo costo y otros servicios médicos.",
+      "summary_en": "Connects residents with energy assistance, low-cost prescriptions, and other medical services.",
+      "description_es": "Ofrece referidos al programa CEAP para ayuda con facturas y conservación de energía, además de un programa de medicamentos recetados de bajo costo y referidos de atención médica.",
+      "description_en": "Provides referrals to CEAP for utility-bill and energy-conservation assistance, along with a low-cost prescription program and other health-care referrals."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9b69d51f-cb43-4c93-ba58-19dafd8f7eea",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Reúne servicios sociales y de salud pública en un solo lugar y ayuda a encontrar recursos adicionales.",
+      "summary_en": "Brings social and public-health services together in one location and helps people find additional resources.",
+      "description_es": "Organizaciones sin fines de lucro y agencias públicas ofrecen allí servicios de empleo, educación, alimentos, transporte, salud y apoyo para adultos mayores y niños. El personal también coordina referidos externos.",
+      "description_en": "Nonprofit organizations and public agencies provide employment, education, food, transportation, health, senior, and child services in one location. Staff also coordinate referrals to off-site programs."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "8181be7b-00f9-498e-8ca2-9041bd8847b5",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ayuda a hogares elegibles de Hays, Caldwell y Blanco con costos y necesidades de energía.",
+      "summary_en": "Helps eligible households in Hays, Caldwell, and Blanco counties with energy costs and needs.",
+      "description_es": "Incluye educación energética, evaluación de necesidades, orientación presupuestaria, pago de servicios y, en situaciones de crisis, unidades portátiles de calefacción o enfriamiento. Se priorizan hogares con alta carga energética o integrantes vulnerables.",
+      "description_en": "Services include energy education, needs assessment, budget counseling, utility payments, and portable heating or cooling units in a crisis. Priority goes to households with high energy burdens or vulnerable members."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "cb85a753-658c-491e-96e3-3afb16e5b232",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece refugio de emergencia y apoyo de vivienda transicional para personas en crisis.",
+      "summary_en": "Offers emergency shelter and transitional housing support for people in crisis.",
+      "description_es": "Proporciona alojamiento seguro de emergencia y ayuda para avanzar hacia una vivienda transicional más estable.",
+      "description_en": "Provides safe emergency accommodation and support toward more stable transitional housing."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "4257c95b-892b-4b7d-a2c0-2e520a19f576",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Brinda atención médica, hospicio y terapias en el hogar.",
+      "summary_en": "Provides home-based health care, hospice, and therapy services.",
+      "description_es": "Los servicios incluyen enfermería especializada, hospicio, terapias, enfermería psiquiátrica, manejo de medicamentos y enfermedades crónicas, telesalud y alimentación por infusión.",
+      "description_en": "Services include skilled nursing, hospice, therapies, psychiatric nursing, medication and chronic-disease management, telehealth, and infusion feeding."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "b05780d3-c0f8-453c-b665-6a0676fe2f71",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece ayuda para buscar empleo y acceder a capacitación laboral.",
+      "summary_en": "Offers job-search assistance and access to workforce training.",
+      "description_es": "El centro ayuda con la búsqueda de empleo y recursos de capacitación. La admisión se ofrece de lunes a jueves en horarios limitados y los viernes solamente con cita.",
+      "description_en": "The center helps with job searches and training resources. Intake is offered Monday through Thursday during limited hours and on Friday by appointment only."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "25ad6490-ad4a-4974-b5c5-1d420ff62214",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ayuda a personas con emergencias financieras a pagar renta y servicios públicos.",
+      "summary_en": "Helps people facing financial emergencies pay rent and utility bills.",
+      "description_es": "La asistencia comunitaria para renta y servicios públicos se ofrece según disponibilidad. Comunícate con el programa para confirmar los requisitos y el proceso vigente.",
+      "description_en": "Community rent and utility assistance is available subject to funding. Contact the program to confirm current requirements and procedures."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "e30fd355-274e-4f5f-9a73-427037fca0e3",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece asistencia financiera de emergencia para electricidad, gas y renta, además de referidos.",
+      "summary_en": "Offers emergency financial assistance for electricity, gas, and rent, along with referrals.",
+      "description_es": "Ayuda con costos urgentes de electricidad, gas y vivienda, incluida la renta, según elegibilidad y disponibilidad. También conecta a las personas con otros recursos comunitarios.",
+      "description_en": "Helps with urgent electricity, gas, and housing costs, including rent, depending on eligibility and availability. It also connects people with other community resources."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "49e20288-0419-4c47-9c8f-f063aafd4a6b",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece comidas, despensa y opciones de refugio para personas y familias que necesitan apoyo.",
+      "summary_en": "Offers meals, pantry food, and shelter options for individuals and families needing support.",
+      "description_es": "Los servicios incluyen refugio familiar, nocturno y para veteranos con discapacidades; se requiere solicitud en línea. También sirve comidas en horarios específicos y distribuye alimentos de despensa los jueves.",
+      "description_en": "Services include family, overnight, and disabled-veteran shelter; an online application is required. It also serves meals at scheduled times and distributes pantry food on Thursdays."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "29117cb0-2d56-4dc2-9abd-dbe455dcf335",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece atención primaria, telesalud y otros servicios especializados para veteranos elegibles.",
+      "summary_en": "Provides primary care, telehealth, and other specialty services for eligible veterans.",
+      "description_es": "Los servicios incluyen atención primaria, radiografías, medicamentos recetados, telesalud y otras especialidades clínicas.",
+      "description_en": "Services include primary care, X-rays, prescription medications, telehealth, and other clinical specialties."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "fb64f4a9-8f18-427e-a511-97bb0d42e52d",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Brinda enfermería especializada, terapias y apoyo médico en el hogar.",
+      "summary_en": "Provides skilled nursing, therapies, and medical support in the home.",
+      "description_es": "Incluye enfermería, asistentes de salud, terapia ocupacional y del habla, trabajo social médico, quimioterapia y terapia intravenosa. La elegibilidad depende de la cobertura y la necesidad de servicios especializados en casa.",
+      "description_en": "Services include nursing, home health aides, occupational and speech therapy, medical social work, chemotherapy, and IV therapy. Eligibility depends on coverage and the need for skilled services at home."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "d8aae272-9f5e-44dd-a62d-889109042f03",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Brinda asistencia financiera limitada para renta y facturas de gas, electricidad y otros servicios.",
+      "summary_en": "Provides limited financial assistance for rent, gas, electricity, and other utility bills.",
+      "description_es": "Los hogares de bajos ingresos que cumplen los requisitos pueden recibir ayuda de emergencia. El centro también ayuda a completar solicitudes de beneficios públicos y ofrece referidos a servicios comunitarios.",
+      "description_en": "Eligible low-income households may receive emergency assistance. The center also helps complete applications for public benefits and provides referrals to community services."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5e5dad48-075b-4540-b4d0-48206fc82b8c",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece orientación confidencial y gratuita para encontrar cuidado y vivienda para adultos mayores.",
+      "summary_en": "Offers confidential, no-cost guidance for finding senior care and housing.",
+      "description_es": "Los asesores ayudan a comparar vivienda asistida, cuidado de memoria, vida independiente, hogares de cuidado, relevo, transiciones del hospital al hogar y otros recursos. Trabajan con familias y profesionales para identificar opciones adecuadas.",
+      "description_en": "Advisors help compare assisted living, memory care, independent living, care homes, respite, hospital-to-home transitions, and other resources. They work with families and professionals to identify suitable options."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "97c3289a-20eb-4581-a420-48e93c3c5dc0",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece cuidado en el hogar, apoyo de memoria y asistencia personal para adultos mayores.",
+      "summary_en": "Offers in-home care, memory support, and personal assistance for older adults.",
+      "description_es": "Los servicios incluyen evaluación geriátrica, ayuda con higiene, comidas, movilidad, recordatorios de medicamentos, transporte, tareas domésticas y compañía. Hay servicio las 24 horas y la evaluación inicial es gratuita.",
+      "description_en": "Services include geriatric assessment, help with personal care, meals, mobility, medication reminders, transportation, housekeeping, and companionship. Service is available 24 hours a day, and the initial assessment is free."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5b58628a-fea9-46ee-a8c4-42b880aef872",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece asistencia financiera limitada para renta y facturas de servicios públicos.",
+      "summary_en": "Offers limited financial assistance for rent and utility bills.",
+      "description_es": "La ayuda se asigna mediante sorteo a un número limitado de personas y puede cubrir servicios públicos o parte de la renta. Quienes califican pueden recibir asistencia una vez cada seis meses.",
+      "description_en": "Assistance is awarded by lottery to a limited number of people and may cover utilities or part of the rent. Eligible recipients may receive help once every six months."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "f98be83d-1a62-46c2-bff5-5186baf6bb33",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Brinda servicios legales civiles gratuitos a personas que cumplen los requisitos.",
+      "summary_en": "Provides free civil legal services to people who meet eligibility requirements.",
+      "description_es": "Atiende asuntos de familia, empleo, ejecución hipotecaria, vivienda subsidiada, derechos de trabajadores agrícolas, derechos civiles y derecho ambiental.",
+      "description_en": "Handles matters involving family law, employment, foreclosure, subsidized housing, farmworker rights, civil rights, and environmental law."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "62e8a3c8-74e5-4bde-990f-3784cea517aa",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ayuda a propietarios e inquilinos de bajos ingresos a pagar facturas de agua y aguas residuales.",
+      "summary_en": "Helps low-income homeowners and renters pay water and wastewater bills.",
+      "description_es": "Las personas que cumplen los requisitos pueden recibir asistencia financiera para gastos elegibles de agua y aguas residuales.",
+      "description_en": "People who meet eligibility requirements may receive financial assistance for eligible water and wastewater expenses."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "82c204f8-4b8f-4785-a38e-2ef1b175ef75",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece tratamiento residencial para veteranos con necesidades de salud mental, consumo de sustancias o apoyo psicosocial.",
+      "summary_en": "Offers residential treatment for veterans with mental health, substance-use, or psychosocial needs.",
+      "description_es": "Los programas suelen durar entre 30 y 60 días y atienden distintas necesidades de salud mental y recuperación. La programación para veteranas se concentra en Waco.",
+      "description_en": "Programs generally last 30 to 60 days and address a range of mental health and recovery needs. Programming for women veterans is based in Waco."
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "e3599bf1-0015-4bc7-a032-7c527276b0ed",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece esterilización gratuita para gatos callejeros, ferales o comunitarios dentro del área de servicio.",
+      "summary_en": "Offers free spay and neuter services for stray, feral, or community cats within the service area.",
+      "description_es": "Además de esterilización de gatos comunitarios, el refugio ofrece microchips, recursos para mascotas de militares, placas PetHub, registro y orientación para reubicación.",
+      "description_en": "In addition to community-cat spay and neuter services, the shelter offers microchips, military pet resources, PetHub tags, registration, and rehoming guidance."
+    },
+    "archive_ids": []
+  }
+]

@@ -1,0 +1,952 @@
+[
+  {
+    "canonical_id": "c2e8d27a-38f3-4a7e-a82c-33cdf7e11f97",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Vivienda accesible para personas con discapacidades",
+      "title_en": "Accessible housing for people with disabilities"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "0a97f4ee-26c3-4a07-a118-c3cf024c20d5",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Asistencia con renta y servicios públicos",
+      "title_en": "Rent and utility assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "d8a0d9f5-ca03-4a94-bf7a-a0d4f5d37669",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Comidas calientes y duchas",
+      "title_en": "Hot meals and showers"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "bf5c41af-a94a-4b0f-be55-3a8c0bded946",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Atención de salud sexual y bienestar",
+      "title_en": "Sexual health and wellness care"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "b082a770-59a2-46cf-aa1c-03293fe26012",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Refrigeradores y despensas comunitarias",
+      "title_en": "Community refrigerators and food pantries"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5c580c96-5e59-465f-9223-c223a9a1e1b1",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Programa de compra de vivienda asequible",
+      "title_en": "Affordable homeownership program"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "cfba8357-d505-4dfe-acdd-0f97af507dfb",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Orientación para inquilinos y vivienda justa",
+      "title_en": "Tenant counseling and fair housing support"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "a40fba36-1d16-4abf-b8f8-0ff41173d148",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Vivienda residencial para madres solteras y sus hijos",
+      "title_en": "Residential housing for single mothers and children"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "972f44f8-ae7a-43db-8433-a87ce7293d51",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Organización y defensa colectiva de inquilinos",
+      "title_en": "Tenant organizing and collective advocacy"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9fb125d7-eee4-41ed-bb48-adfcf413ff6b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Alimentos y apoyo para necesidades básicas",
+      "title_en": "Food and basic-needs assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c567ffe0-7dc7-401d-9070-e41641d6e452",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Acceso a alimentos y ayuda con solicitudes de SNAP",
+      "title_en": "Food access and SNAP application assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "289575a2-533f-40c9-80ba-2493c04e34b5",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Servicio de referencia de abogados",
+      "title_en": "Lawyer referral service"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "30a2ed4d-a999-4c72-bf55-373715e765cb",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Vivienda asequible en Clarksville",
+      "title_en": "Affordable housing in Clarksville"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "e80c7223-8a58-48b3-a796-556333001f2d",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Asistencia con renta atrasada y servicios públicos",
+      "title_en": "Past-due rent and utility assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "1617f63a-5e6d-4d72-ae3c-24cef6ca65f4",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Transporte voluntario para adultos mayores",
+      "title_en": "Volunteer transportation for older adults"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "54f421f8-ef5c-464e-b432-0d7070caff95",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Evaluación coordinada para asistencia de vivienda",
+      "title_en": "Coordinated assessment for housing assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "90b3d0f4-6385-4e67-aff8-28777cba01dc",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Información sobre desalojos y apoyo para inquilinos",
+      "title_en": "Eviction information and tenant support"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "1a14a367-0b90-4bf9-a205-a4937b57db90",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Vivienda pública y vales de Sección 8",
+      "title_en": "Public housing and Section 8 vouchers"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9da35367-d065-47e8-83f2-862a7e66e89f",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Despensa de alimentos",
+      "title_en": "Food pantry"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "a13989cb-a3d6-42da-bf51-264ecc328b84",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Alquiler y compra de vivienda asequible",
+      "title_en": "Affordable rental and homeownership options"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "01bd9281-55d8-4e86-93f8-9723e134aeca",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Ayuda con copagos, primas y costos médicos",
+      "title_en": "Help with copays, premiums, and medical costs"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "af22c751-b355-4999-923d-cc77bc27bc8f",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Vivienda pública y listas de asistencia de renta",
+      "title_en": "Public housing and rental-assistance waitlists"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "8aa8a027-bd36-44a7-ae4b-2d1338547725",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Vales de vivienda y vivienda asequible",
+      "title_en": "Housing vouchers and affordable housing"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "4fcd375f-c87d-4f8d-98a5-b6e7d9486ed5",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Despensa y asistencia de emergencia",
+      "title_en": "Food pantry and emergency assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "986bbf8f-0c0a-4b57-a0d1-ab8d9fb7fe9f",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Plan de ahorro para atención dental",
+      "title_en": "Dental care savings plan"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "f4540f06-84ce-419b-89a5-050cde1f0a0b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Centro de recursos para jóvenes sin vivienda",
+      "title_en": "Resource center for youth experiencing homelessness"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "6aaaceb5-440b-463b-b09b-81c9752bc509",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Alfabetización, inglés y preparación para GED",
+      "title_en": "Literacy, English, and GED preparation"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "1f38b864-ea55-418e-89e3-91cec44a92d6",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Comidas para veteranos y sus familias",
+      "title_en": "Meals for veterans and their families"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "babaf4b3-a506-4cef-8dbc-bccc0e05d71e",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Comidas a domicilio y apoyo para adultos mayores",
+      "title_en": "Home-delivered meals and support for older adults"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c95962a4-2670-4382-809b-433c69bd0c27",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Compra y alquiler de viviendas asequibles en Mueller",
+      "title_en": "Affordable homeownership and rentals in Mueller"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "bb79ba13-9206-42de-8815-bdabc9089bb3",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Alimentos, pañales y asistencia con servicios públicos",
+      "title_en": "Food, diapers, and utility assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ef198568-885e-40d2-816b-520a9e26b137",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Anteojos recetados gratuitos",
+      "title_en": "Free prescription eyeglasses"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "61f9b09f-3d53-42b5-9852-24eaa0007d4b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Tratamiento ambulatorio de salud mental y uso de sustancias",
+      "title_en": "Outpatient mental health and substance-use treatment"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5f5f2227-d772-4fbb-82fd-e81b283f3750",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Alimentos, ropa y asistencia financiera",
+      "title_en": "Food, clothing, and financial assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "f238120b-962a-4a16-9b5d-cd985c720925",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Vivienda pública y asistencia de renta",
+      "title_en": "Public housing and rental assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "aba8c2dc-e950-4c8f-88cb-fac97c7d2768",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Asistencia con renta y servicios públicos en varias ubicaciones",
+      "title_en": "Multi-location rent and utility assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c65384a6-0859-4ba8-8c8b-aba0aff5fc07",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Asistencia con renta y servicios públicos",
+      "title_en": "Rent and utility assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c3fa79c2-8092-4bd6-9e5b-dff2f71ca79c",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Vivienda asequible para adultos mayores y personas con discapacidades",
+      "title_en": "Affordable housing for older adults and people with disabilities"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "d77a2e01-6c7d-41bd-aaca-886b552cc7ec",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Asistencia con servicios públicos para familias monoparentales",
+      "title_en": "Utility assistance for single-parent families"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "2c99f837-d066-4da3-888b-3103fae05249",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Centro de día y navegación para personas sin vivienda",
+      "title_en": "Day center and navigation for people experiencing homelessness"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ce5651d2-ee8b-4a6c-9611-9481118421d0",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Vivienda pública y vales de Sección 8",
+      "title_en": "Public housing and Section 8 vouchers"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "45d1f506-6093-411c-93f6-3e766cd8c226",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Servicios legales civiles en todo Texas",
+      "title_en": "Statewide civil legal services"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5f2c362a-438a-4f1a-9a7e-f5d76a092c3b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Educación técnica y capacitación profesional",
+      "title_en": "Technical education and career training"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ab4f146b-6be9-4bde-93ea-072903bfeb76",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Asistencia con servicios públicos",
+      "title_en": "Utility assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "e0d9758c-a1a5-40d4-8cef-a4fe70121dec",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Centro de día para personas sin vivienda",
+      "title_en": "Day center for people experiencing homelessness"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "cb14b8fd-d05f-4d23-bfdb-30ebbe0abaa6",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Asistencia con servicios públicos y necesidades básicas",
+      "title_en": "Utility and basic-needs assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "636abf06-f27e-465f-a084-db2dec7f7fc5",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Consejería de salud mental con asistencia Ryan White",
+      "title_en": "Mental health counseling with Ryan White assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c8dbfac7-9f96-46ce-9968-5f58ebec7f72",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Empleo, capacitación y desarrollo laboral",
+      "title_en": "Employment, training, and workforce development"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "e6f92c60-4b28-411d-9ec3-2a7d6beb32fd",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Reuniones de recuperación y apoyo familiar",
+      "title_en": "Recovery meetings and family support"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5e7c1ec1-b2e5-4807-9b3c-248719aefd2b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Orientación y reclamos de beneficios para veteranos",
+      "title_en": "Veterans benefits counseling and claims assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "b4ec4cc4-7148-4215-9e96-bf243cb77dd1",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Servicios para Veteranos St. Michael's",
+      "title_en": "St. Michael's Veteran Services"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "d4ed0a29-53f4-4a2d-b599-a0658288b06e",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Tratamiento del trastorno por consumo de opioides — Cedar Park",
+      "title_en": "Opioid use disorder treatment — Cedar Park"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "1f9d9076-ebd8-444e-9c6e-5a3964b6e7e1",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Orientación y reclamos de beneficios para veteranos",
+      "title_en": "Veterans benefits counseling and claims assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5161245e-540b-4198-bbfb-51c2763f0ed3",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Centro de recursos para veteranos y sus familias",
+      "title_en": "Resource center for veterans and their families"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "b3e2deec-ec82-4a93-8c2b-fa160cc216ff",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Atención de salud conductual — Round Rock",
+      "title_en": "Behavioral health care — Round Rock"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "efc5c4c7-6673-4c20-923a-6105141637a0",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Atención de salud conductual — Georgetown",
+      "title_en": "Behavioral health care — Georgetown"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "baf26283-8c39-4a4b-99dc-41126636b87d",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Servicios comunitarios y manejo de casos",
+      "title_en": "Community services and case management"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "381ceae3-e148-49af-84be-d9a66b5fc351",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Transporte voluntario para adultos mayores",
+      "title_en": "Volunteer transportation for older adults"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "b2d9fdb2-61f0-4eac-b3c6-9b0631cbb96d",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Consejería y apoyo familiar para jóvenes de 6 a 17 años",
+      "title_en": "Counseling and family support for youth ages 6–17"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "701f1343-57dc-4616-9bf6-c6582bd42593",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Ayuda legal civil gratuita en Williamson County",
+      "title_en": "Free civil legal help in Williamson County"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "36baf425-4bb9-47ad-bc13-101fdfd4fb78",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "NEST Empowerment Center",
+      "title_en": "NEST Empowerment Center"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "717c0149-204c-4a6e-8300-b1a1213eabe0",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Orientación y reclamos de beneficios para veteranos",
+      "title_en": "Veterans benefits counseling and claims assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c81ada7a-35f9-4f2c-8282-303c82c3b30c",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Tribunal de Recuperación Familiar",
+      "title_en": "Family Recovery Court"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "800cef72-58f3-4bd0-bb1a-294961db7486",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Orientación y reclamos de beneficios para veteranos",
+      "title_en": "Veterans benefits counseling and claims assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "96e32345-c31a-4260-a816-efb412582e88",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Salud mental y apoyo familiar para jóvenes en justicia juvenil",
+      "title_en": "Mental health and family support for justice-involved youth"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9ce822a1-a937-412a-ac7b-651db9f9f27f",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Apoyo para sobrevivientes de violencia doméstica y agresión sexual",
+      "title_en": "Support for survivors of domestic violence and sexual assault"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "f76f85ba-51fe-426f-b57a-dffe1defe6bb",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Vivienda de emergencia, prevención de desalojo y centro de día",
+      "title_en": "Emergency housing, eviction prevention, and day shelter"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "73e14c4e-af91-43fe-83bb-094977880a82",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Orientación y apoyo para cuidadores familiares",
+      "title_en": "Navigation and support for family caregivers"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "506da0f9-5a4a-4d22-95de-5765ecc825dd",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Apoyo y relevo para cuidadores de personas con demencia",
+      "title_en": "Support and respite for dementia caregivers"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "16d516fc-28ce-45c2-b035-a5d9ee23d813",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Reparación de vivienda para propietarios de bajos ingresos — Bastrop",
+      "title_en": "Home repair for low-income homeowners — Bastrop"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "3471b448-666e-449a-917d-7b56298439f9",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Servicio al cliente y asistencia con facturas de agua",
+      "title_en": "Customer service and water-bill assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "96f1bed9-7531-411e-99b6-f15a7e030f85",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Asistencia de emergencia con renta y servicios públicos",
+      "title_en": "Emergency rent and utility assistance"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "a43b6184-e8d0-4794-bebe-82bd37dd0fa2",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Salud conductual, discapacidades y apoyo en crisis — Bastrop",
+      "title_en": "Behavioral health, disability, and crisis support — Bastrop"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "4380d5fd-6cfa-41d7-8380-3b8f185ba163",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Orientación y solicitudes de beneficios para veteranos",
+      "title_en": "Veterans benefits counseling and applications"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "acbc17f1-ec65-47fc-93f7-00e68e3c0c0a",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Transporte público rural y médico no urgente",
+      "title_en": "Rural public and non-emergency medical transportation"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ec30a4a3-60cf-4a17-bdbe-b2098131d48a",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Despensa de alimentos de Cedar Creek",
+      "title_en": "Cedar Creek food pantry"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "04566642-11ce-41c5-b1c2-b3cec69dbbdd",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Programas de alimentos para adultos mayores (CSFP y HOPE)",
+      "title_en": "Senior food programs (CSFP and HOPE)"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5089e913-cd51-483c-b322-666165033d0f",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Despensa móvil de Cedar Creek",
+      "title_en": "Cedar Creek mobile pantry"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "1d5c0fd4-3e2a-4d75-a2a2-d2fcd2fffb61",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Despensa móvil de Elgin",
+      "title_en": "Elgin mobile pantry"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "f307f0ea-7f7a-4737-a487-e9c3c5cd2f41",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Despensa comunitaria de Elgin",
+      "title_en": "Elgin community food pantry"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "3c5faf40-fa41-450b-894c-299c71202980",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Despensa de alimentos de Elgin",
+      "title_en": "Elgin food pantry"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "8f45635a-6179-4946-9761-8d2104e43bc6",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Comidas a domicilio y apoyo para adultos mayores",
+      "title_en": "Home-delivered meals and support for older adults"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "e094e039-07de-436e-8942-3abbe5becd34",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Despensa de alimentos y clóset de ropa — Bastrop",
+      "title_en": "Food pantry and clothing closet — Bastrop"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c4e54dbb-6cae-42b4-8ce4-c5138271bfed",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Alimentos y asistencia con renta y servicios públicos — Elgin",
+      "title_en": "Food, rent, and utility assistance — Elgin"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "801a5986-85a8-48fc-920c-0b4ca1142c6a",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Servicio de Referencia e Información de Abogados (LRIS)",
+      "title_en": "Lawyer Referral & Information Service (LRIS)"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "b53bac7b-daaf-4336-b67b-a19c290e87ec",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Línea legal para adultos mayores y beneficiarios de Medicare",
+      "title_en": "Legal hotline for older adults and Medicare beneficiaries"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c74b8afc-53cb-47fb-a880-a21ccf91a0c8",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Representantes para reclamos y apelaciones de beneficios de VA",
+      "title_en": "Representatives for VA benefit claims and appeals"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "bb315bb3-7fb2-4348-b299-449331255bd4",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "División de Registros",
+      "title_en": "Recording Division"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "b70cbbba-4659-4657-b50e-7d2db25a1388",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "División de Sucesiones",
+      "title_en": "Probate Division"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "2820cec6-9291-4585-9a6a-a7ce0dd533c4",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "División de Delitos Menores",
+      "title_en": "Misdemeanor Division"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "a8dc3b93-1f99-408c-a283-b421244d111d",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "División Civil",
+      "title_en": "Civil Division"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "192ff2bb-47d5-4e66-8ce0-707963cedb01",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Servicios de jurado y pasaportes",
+      "title_en": "Jury and passport services"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "4115c792-beac-4c6d-8a48-741741cc1a67",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Presentación y procesamiento de divorcios",
+      "title_en": "Divorce filing and processing"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "bb95d5c7-253a-4a94-be18-40a11ee4bba4",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Guía de servicios para adultos mayores",
+      "title_en": "Senior services guide"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ffc5a197-bdbc-49f6-a8b0-e2fc6d20e3f2",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Empleo y capacitación laboral — Oficina de Bastrop",
+      "title_en": "Employment and job training — Bastrop office"
+    },
+    "archive_ids": []
+  }
+]

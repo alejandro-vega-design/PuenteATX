@@ -1,0 +1,114 @@
+[
+  {
+    "canonical_id": "db30ec56-b7c1-4bed-b0f5-807a68f44478",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "description_es": "El consulado ofrece documentación, protección, orientación educativa, salud preventiva, asesoría financiera y vinculación comunitaria para personas mexicanas en su circunscripción.",
+      "description_en": "The consulate provides documentation, protection, educational guidance, preventive health information, financial counseling, and community connections for Mexican nationals in its jurisdiction.",
+      "languages": ["es"],
+      "hours_es": "Departamento de Comunidades: lunes a viernes, 8:00 a.m.–5:00 p.m.",
+      "hours_en": "Community Affairs Department: Monday–Friday, 8 a.m.–5 p.m.",
+      "email": "comunidadesatn@sre.gob.mx",
+      "website_url": "https://consulmex.sre.gob.mx/austin/index.php/servicios-a-personas-mexicanas",
+      "source_url": "https://consulmex.sre.gob.mx/austin/index.php/servicios-a-personas-mexicanas",
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "965b2004-2de8-49f4-a0d3-d0f6a0ccb3ac",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Brinda representación y orientación en asuntos de inmigración a clientes en todo Estados Unidos.",
+      "summary_en": "Provides representation and guidance in immigration matters to clients across the United States.",
+      "description_es": "Atiende inmigración familiar, residencia permanente, naturalización, inmigración laboral, VAWA, visas U y T, defensa ante deportación, detención migratoria y apelaciones.",
+      "description_en": "Handles family immigration, permanent residence, naturalization, employment-based immigration, VAWA, U and T visas, deportation defense, immigration detention, and appeals.",
+      "languages": ["es", "en"],
+      "hours_es": "Lunes a viernes, 9:00 a.m.–5:00 p.m.; sábado, 10:00 a.m.–2:00 p.m.; domingo, cerrado.",
+      "hours_en": "Monday–Friday, 9 a.m.–5 p.m.; Saturday, 10 a.m.–2 p.m.; Sunday, closed.",
+      "source_url": "https://www.lincolngoldfinch.com/practice-areas/",
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c5211c29-1b7f-43fc-bbd3-209a9af4b1ad",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Open Door distribuye desayuno, agua, café, ropa, artículos de higiene y ropa interior a personas sin vivienda.",
+      "summary_en": "Open Door distributes breakfast, water, coffee, clothing, toiletries, and underwear to people experiencing homelessness.",
+      "description_es": "El ministerio recibe a sus visitantes los sábados por la mañana y distribuye bolsas de comida y artículos básicos en el patio de la iglesia.",
+      "description_en": "The ministry welcomes guests on Saturday mornings and distributes meal bags and basic supplies in the church courtyard.",
+      "service_methods": ["in_person", "online"],
+      "hours_es": "Sábados, 8:00–9:30 a.m.",
+      "hours_en": "Saturdays, 8–9:30 a.m.",
+      "website_url": "https://www.uumc.org/open-door",
+      "address_line_1": "2409 Guadalupe Street",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78705",
+      "county": "Travis",
+      "source_url": "https://www.uumc.org/open-door",
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "0a97f4ee-26c3-4a07-a118-c3cf024c20d5",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "summary_es": "Ofrece asistencia con renta, servicios públicos, pases de autobús, tarjetas para alimentos, identificación y otras necesidades básicas.",
+      "summary_en": "Offers help with rent, utilities, bus passes, grocery cards, identification, and other basic needs.",
+      "description_es": "El ministerio Loaves & Fishes atiende a personas con dificultades económicas y combina asistencia material con orientación y trato respetuoso. Los tipos de ayuda dependen de los recursos disponibles.",
+      "description_en": "The Loaves & Fishes ministry serves people experiencing financial hardship, combining material assistance with guidance and respectful support. Available forms of help depend on current resources.",
+      "cost_type": "free",
+      "hours_es": "Martes, 9:00–11:00 a.m.; la atención a visitantes comienza a las 9:30 a.m.",
+      "hours_en": "Tuesdays, 9–11 a.m.; guest service begins at 9:30 a.m.",
+      "website_url": "https://allsaints-austin.org/loaves-fishes/",
+      "source_url": "https://allsaints-austin.org/loaves-fishes/",
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "cb14b8fd-d05f-4d23-bfdb-30ebbe0abaa6",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "title_es": "Asistencia con facturas de Austin Energy",
+      "title_en": "Austin Energy bill assistance",
+      "summary_es": "Ayuda a clientes residenciales de Austin Energy que enfrentan dificultades económicas a solicitar asistencia Plus 1.",
+      "summary_en": "Helps Austin Energy residential customers experiencing financial hardship apply for Plus 1 assistance.",
+      "description_es": "UPLift tramita asistencia financiera de emergencia de Plus 1 para facturas residenciales de Austin Energy. El programa confirma la elegibilidad y el saldo directamente con Austin Energy antes de aplicar fondos a la cuenta.",
+      "description_en": "UPLift processes emergency Plus 1 financial assistance for residential Austin Energy bills. The program confirms eligibility and the account balance directly with Austin Energy before applying funds.",
+      "languages": ["en"],
+      "service_methods": ["phone", "online"],
+      "eligibility_es": "Clientes residenciales de Austin Energy que atraviesan una dificultad económica, como una enfermedad grave, pérdida reciente del empleo u otra emergencia. La elegibilidad debe ser confirmada por el programa.",
+      "eligibility_en": "Austin Energy residential customers experiencing financial hardship, such as serious illness, recent job loss, or another emergency. Eligibility must be confirmed by the program.",
+      "required_documents_es": "Imagen de la factura vigente de Austin Energy que muestre el nombre del titular, la dirección de servicio y el número de cuenta; identificación con fotografía.",
+      "required_documents_en": "An image of the current Austin Energy bill showing the account holder’s name, service address, and account number; photo identification.",
+      "application_steps_es": "Envía por correo electrónico un teléfono, el horario en que puedes participar en una llamada de tres vías con Austin Energy, una imagen de la factura vigente y una identificación con fotografía.",
+      "application_steps_en": "Email a phone number, a time when you can join a three-way call with Austin Energy, an image of the current bill, and photo identification.",
+      "hours_es": "No se publica un horario fijo para solicitudes; envía la documentación por correo electrónico.",
+      "hours_en": "No fixed application hours are published; submit the documents by email.",
+      "website_url": "https://upcaustin.org/serve/getting-help/",
+      "address_line_1": null,
+      "address_line_2": null,
+      "city": null,
+      "state": null,
+      "postal_code": null,
+      "county": null,
+      "latitude": null,
+      "longitude": null,
+      "geocode_status": null,
+      "geocoded_at": null,
+      "source_url": "https://upcaustin.org/serve/getting-help/",
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  }
+]

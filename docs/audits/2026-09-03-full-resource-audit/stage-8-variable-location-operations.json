@@ -1,0 +1,326 @@
+[
+  {
+    "canonical_id": "2428ce80-12ca-41f2-b8c4-2e7f97ccc0b2",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ef4c29a6-c365-45bd-9522-4372e0bcd2f0",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "61bdd76d-f81b-493a-ab05-584d643c593c",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Información revisada con la guía de Williamson County y la fuente oficial el 2026-08-07. Confirmar disponibilidad antes de publicar. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "10825944-0e36-452d-94a3-148363d1ee10",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Confirmar tarifas y asistencia de idioma actuales. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "eb50ec57-9f9f-413b-a695-5d9d14744273",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "El documento lo destaca como un recurso relativamente nuevo; confirmar tarifas actuales. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "381ceae3-e148-49af-84be-d9a66b5fc351",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Confirmar área de servicio actual antes de recomendar. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "640c90ee-1db6-40f5-9523-3a873742e909",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "verification_notes": "IMPORTANT — LIKELY DUPLICATE/MERGE: driveasenioratx.org now 301-redirects to driveasenior.org, whose own page states that West Austin Caregivers, Chariot, Drive a Senior ATX, and Senior Access merged into one organization ('Drive a Senior') as of August 2025. If another batch has a separate record for 'Drive a Senior (antes Chariot)' or 'Senior Access', it is very likely the SAME current organization as this record — flag for dedup/consolidation review. Used the 'Central' regional phone number (512-472-6339) as primary since org lists separate numbers by sub-area (North 512-310-1060, South 512-445-5552, Elgin 512-281-6553); consider whether the CSV should keep only one or list all as notes. Office address (2601 Exposition Blvd, Austin, TX 78703) exists but is not included as a service address since the service is rides/home visits, not an office you visit. Minimum age requirement is stated inconsistently across sources (60 vs 65) so left general in eligibility. Cost stated as 'free' by the org's own marketing language on multiple pages (driveasenioratx.org description, KUT article), though no rate card was found confirming zero cost in all cases. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "58886f56-a383-4fab-9de3-69091c2bb92f",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "verification_notes": "Confirmado directamente hoy en la página oficial de CARTS. Nota: para consultas sobre convenios de vales/vouchers, la página lista un contacto adicional (Pearl@RideCARTS.com) que no corresponde a atención directa al público, por lo que no se incluyó como email principal. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "6a4e5f6f-82a4-466d-83ab-c7e908f7081f",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "verification_notes": "Confirmado directamente hoy en la página oficial de CARTS (ridecarts.com): tarifas, horario, cobertura y método de reserva. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c336fcb3-3fc8-4767-9bbc-e73dd7f5d974",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "verification_notes": "No se pudo cargar directamente la página oficial (error 404 al momento de la verificación); los datos provienen de resultados de búsqueda indexados de ridecarts.com. Los horarios varían entre páginas de CARTS (10am-3pm vs 8am-4pm) — se recomienda confirmar por teléfono antes de publicar. Posible superposición/duplicado con el registro 58 (CARTS Country Bus), que también describe servicio local en Smithville de lunes a jueves. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "52e14780-187c-4da0-aa22-8723a2dc8334",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "verification_notes": "Schedule, fares, and accessibility statement confirmed via the official ridecarts.com route page today. The exact street address of the Elgin CARTS station (Depot St.) was not confirmed precisely enough to populate address fields for a fixed-route service that riders board at various stops; recommend follow-up with CARTS for a specific stop address if the directory needs one. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "f2839ead-ac8c-4fc8-a137-5294ba153283",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "verification_notes": "Confirmed via the official driveasenior.org site today. Multiple regional phone lines exist (North 512-310-1060, Central 512-472-6339, South 512-445-5552, Elgin 512-281-6553); used the Elgin-area number since it is most relevant to this listing's Bastrop/Elgin focus — verify with the org which number Puente ATX should publish. The central administrative address (2601 Exposition Blvd, Austin) is HQ only, not a client-facing service location, so address fields were left blank per the rules for transportation/home-pickup services. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "7c12b2f6-3825-479d-932b-e64bf14a6006",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "7c09f9be-c599-4f1f-a803-9e13f309540d",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Información revisada con la guía de Williamson County y la fuente oficial el 2026-08-07. Confirmar disponibilidad antes de publicar. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "2f3dd17c-8a9b-47c0-95fd-499b693273c3",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Información revisada con la guía de Williamson County y la fuente oficial el 2026-08-07. Confirmar disponibilidad antes de publicar. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "11d31d56-84c0-4f93-b048-ca140c5d554a",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Información revisada con el catálogo AVEY Fall 2026 y la fuente oficial el 11 ago 2026. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "464ffcb3-0fc6-46e9-8613-e581d1f31fa9",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "verification_notes": "Verificado por Puente ATX el 2026-09-02 con las páginas oficiales de clínicas móviles de Emancipet. Consolidado del piloto de Bluebonnet Project HOPE; requiere revisión administrativa antes de publicar. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "29a68c85-b3d6-431c-be10-9217ef6ea7b3",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "verification_notes": "Confirmed via official ccaction.com program page and consistent secondary sources (donation amount, eligibility, counties served, waitlist note). No single address included because congregate meals are served at seven different sites and home-delivered meals go to clients' homes, not one office. NOT a duplicate of idx 114 (OWBC, serves Williamson/Burnet) or idx 115 (MOWCT, serves the Austin/Travis area) — these are three distinct regional Meals on Wheels affiliates covering non-overlapping counties, part of the statewide Meals on Wheels Texas network. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9705f473-749a-45d8-aa10-c1c7e7b35537",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Información revisada con el catálogo AVEY Fall 2026 y la fuente oficial el 11 ago 2026. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "d7cdfca1-dd48-419e-9b40-bc26888e1ede",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5b5e715c-1154-4c6a-84d5-856bb491db4f",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "265e6ee1-0afb-4146-9f65-ace9c5f0fd94",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Información revisada con la guía de Williamson County y la fuente oficial el 2026-08-07. Confirmar disponibilidad antes de publicar. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "7579a51f-b20b-48d1-803d-565fae885ee7",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Información revisada con la guía de Williamson County y la fuente oficial el 2026-08-07. Confirmar disponibilidad antes de publicar. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "84bc6c87-6a0e-4e45-8677-6c6aa9c9242b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Verificado por Puente ATX el 2026-09-03 con la página oficial de salud mental. La dirección administrativa se retiró como ubicación de servicio. OSAR y tratamiento de sustancias permanecen separados. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c8dbfac7-9f96-46ce-9968-5f58ebec7f72",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "La fuente recomienda clasificarlo en Education + Employment. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "cc1e8755-504a-4bb2-8af6-0b86dd9d9fa3",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Información revisada con el catálogo AVEY Fall 2026 y la fuente oficial el 11 ago 2026. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "84e753f7-023c-4527-9a6b-1e8e6871f1dc",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Multiple locations across Central Texas. Para el directorio, recomiendo no usar una sola dirección porque los servicios varían por clínica. Tiene ubicaciones en Austin, Bastrop, Cedar Park, Georgetown y otras comunidades de Central Texas. La ubicación más conveniente debe confirmarse según el servicio que la persona necesita.\nCost: Costs vary by service and insurance coverage. Medicaid, Medicare, CHIP, MAP and many insurance plans are accepted. Uninsured patients may qualify for discounted fees based on household income and family size. No patient is denied services because of an inability to pay.\nImportante: Este es un recurso especialmente valioso para PuenteATX porque no requiere seguro médico y no restringe la atención según ingresos o lugar de residencia. Sin embargo, no todos los servicios están disponibles en todas las clínicas. Al referir a una familia, se recomienda llamar primero y especificar el servicio que necesita para identificar la ubicación correcta. Para familias sin seguro, el personal puede realizar una evaluación financiera y ayudar con solicitudes de programas de asistencia médica.\nVerificado directamente por Puente ATX. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "1592590b-5cd6-47c3-931b-fae1ab5710bc",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Information was confirmed through Manor ISD’s official Project Hope/McKinney-Vento page. The district currently lists Hilda Torres-Salazar as the McKinney-Vento Education Liaison and Veronica Rivera Santos as the McKinney-Vento Liaison Assistant, with dedicated phone numbers and email contacts. The page provides a referral process and links to a Spanish-language community resource guide. Spanish-language service delivery by program staff is not explicitly confirmed, so languages should remain listed as English only until separately verified. No dedicated walk-in service address is listed; the district’s main administrative address was not confirmed as a service location, so the address field is left blank.\nVerificado directamente por Puente ATX [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "179b818c-3ff0-4748-87d7-42d78891b0de",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "LTISD Community Programs offers a variety of programs across multiple campuses. Extended Care is available at all seven elementary campuses, while the Child Development Centers are located at Lake Pointe Elementary and Lake Travis Elementary. There is no single service address; the appropriate address should be listed based on the specific campus.\n\nFor the 2026–2027 school year, Extended Care costs $220 per month or $30 per day for drop-in care, plus a $50 annual registration fee per student. Registration and payments are currently managed through Arux.\n\nThis is a paid resource and, on its own, does not appear to meet PuenteATX’s primary criteria of free or low-cost services. It would be helpful to verify whether financial assistance, subsidies, scholarships, or reduced fees are available. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "61c2eb0e-15e4-4ab3-850d-b0523906648c",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Multiple locations within Eanes ISD: Barton Creek Elementary, Valley View Elementary, and Forest Trail Elementary, Austin, TX. Contact Eanes Care to confirm the appropriate campus.\nConfirmed via official Eanes ISD page and program FAQ (fetched live). Exact tuition rates not published online — confirmed as fee-based (paid) via online payment portal and handbooks, but amounts not found. No single service address — care is provided at multiple campuses, so address fields left blank. A vague FAQ reference to a 'dual-language program' was not specific enough to confirm actual Spanish-language service delivery, so languages left blank.\nVerificado directamente por Puente ATX [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "7fa18f46-b399-464b-aad2-a7a363e16d3d",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Información revisada con el catálogo AVEY Fall 2026 y la fuente oficial el 11 ago 2026. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "000603d6-1748-4b96-8b53-6199e5631544",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Información revisada con el catálogo AVEY Fall 2026 y la fuente oficial el 11 ago 2026. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "a2c84b8d-dea7-4e87-b8bc-8b7b252b3d19",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "verification_notes": "Confirmed via official WSRCA site (workforcesolutionsrca.com/childcare/parents): eligibility, income-guideline PDF, application process, phone, email. This is a regional benefit program applied for online/by phone; no single service address applies, so address fields left blank. Related to idx 38 (WSRCA Bastrop Office) — same parent organization; that record covers the physical Bastrop office rather than this specific child-care subsidy program. Flagging both for review to confirm they should remain as separate directory entries. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c7d5e8eb-2fe9-4426-b76f-df160b7294db",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Verificado directamente por Puente ATX. [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "e463ca6b-f0a8-465a-8852-3116fb039d43",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "verification_notes": "Cost: Varía según el programa o evento. Las actividades comunitarias pueden ser gratuitas, pero se recomienda verificar los detalles de cada evento antes de participar.\n\nO.P. Veteran is primarily a community connection and Veteran engagement organization. It should not be presented as a direct provider of housing assistance, financial assistance, legal services, or VA benefits. For Veterans needing those services, O.P. Veteran can be a community connection point, while specialized providers such as VA or Veterans Justice Outreach should be listed separately [location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "8c649e92-d0c9-48b6-bbbd-020dfc153811",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "verification_notes": "Confirmed via official site and findhelp.org listing that the emergency shelter address is confidential for safety (standard for DV shelters); therefore address fields left blank even though a public administrative office address (431 Old Austin Hwy, Bastrop, TX 78602) exists — that address is for administrative/counseling services, not the confidential shelter itself, so it was not used to avoid implying the shelter location is public. 24/7 crisis hotline: 512-303-7755 / 888-311-7755; separate office line 512-321-7760 used as main phone. [location-review: confidential]"
+    },
+    "archive_ids": []
+  }
+]

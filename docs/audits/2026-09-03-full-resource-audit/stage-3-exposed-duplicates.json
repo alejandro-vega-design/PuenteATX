@@ -1,0 +1,46 @@
+[
+  {
+    "canonical_id": "f238120b-962a-4a16-9b5d-cd985c720925",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "website_url": "https://www.roundrockha.org/",
+      "source_url": "https://www.roundrockha.org/"
+    },
+    "archive_ids": [
+      "e90e730b-2572-403f-99e0-1a4d2a146474"
+    ]
+  },
+  {
+    "canonical_id": "babaf4b3-a506-4cef-8dbc-bccc0e05d71e",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "description_es": "Entrega comidas a domicilio a personas principalmente confinadas en casa que no pueden preparar comidas nutritivas fácilmente. También ofrece comidas en centros para adultos mayores, apoyo con alimentos, reparaciones menores del hogar y otros servicios para ayudar a las personas a vivir de forma segura e independiente.",
+      "description_en": "Delivers meals to people who are primarily homebound and unable to easily prepare nutritious meals. It also offers meals at senior centers, grocery support, minor home repairs, and other services that help people live safely and independently.",
+      "primary_category_id": "10000000-0000-4000-8000-000000000001",
+      "languages": ["es", "en"],
+      "service_methods": ["home_visit", "phone", "online"],
+      "eligibility_es": "Personas principalmente confinadas en casa, que no pueden preparar comidas nutritivas fácilmente, no tienen ayuda diurna constante, pueden recibir las entregas programadas y viven en el área metropolitana de Austin. La organización confirma la elegibilidad mediante una evaluación.",
+      "eligibility_en": "People who are primarily homebound, unable to easily prepare nutritious meals, without consistent daytime assistance, able to receive scheduled deliveries, and living in the Greater Austin area. The organization confirms eligibility through an assessment.",
+      "application_steps_es": "Completa el formulario de solicitud en línea. El personal se comunicará para realizar la admisión, programar una visita al hogar y confirmar la elegibilidad.",
+      "application_steps_en": "Complete the online inquiry form. Staff will follow up to conduct intake, schedule a home visit, and confirm eligibility.",
+      "hours_es": "Entrega de comidas: lunes a viernes, 10:30 a.m.–1:30 p.m. El horario puede variar según la disponibilidad y la evaluación.",
+      "hours_en": "Meal delivery: Monday–Friday, 10:30 a.m.–1:30 p.m. Timing may vary based on availability and assessment.",
+      "website_url": "https://www.mowctx.org/need-meal-services",
+      "address_line_1": "3227 East 5th Street",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78702",
+      "county": "Travis",
+      "source_url": "https://www.mowctx.org/need-meal-services",
+      "last_verified_at": "2026-09-03"
+    },
+    "additional_category_ids": [
+      "10000000-0000-4000-8000-000000000008"
+    ],
+    "archive_ids": [
+      "8f45635a-6179-4946-9761-8d2104e43bc6"
+    ]
+  }
+]

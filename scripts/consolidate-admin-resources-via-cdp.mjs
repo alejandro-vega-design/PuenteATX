@@ -69,12 +69,26 @@ const expression = `
     const completed = [];
     const archivedAt = new Date().toISOString();
     for (const item of operations) {
-      const canonicalResponse = await fetch(base + '/resources?id=eq.' + encodeURIComponent(item.canonical_id) + '&status=eq.' + item.expected_canonical_status + '&select=id,slug,status,organization_name,title_es,title_en,updated_at', {
-        method: 'PATCH', headers: jsonHeaders, body: JSON.stringify(item.patch)
-      });
-      if (!canonicalResponse.ok) throw new Error('Canonical update failed for ' + item.canonical_id + ': ' + canonicalResponse.status);
-      const canonicalRows = await canonicalResponse.json();
-      if (canonicalRows.length !== 1) throw new Error('Canonical conditional update missed ' + item.canonical_id);
+      let canonicalRows;
+      if (Object.keys(item.patch).length) {
+        const canonicalResponse = await fetch(base + '/resources?id=eq.' + encodeURIComponent(item.canonical_id) + '&status=eq.' + item.expected_canonical_status + '&select=id,slug,status,organization_name,title_es,title_en,updated_at', {
+          method: 'PATCH', headers: jsonHeaders, body: JSON.stringify(item.patch)
+        });
+        if (!canonicalResponse.ok) throw new Error('Canonical update failed for ' + item.canonical_id + ': ' + canonicalResponse.status);
+        canonicalRows = await canonicalResponse.json();
+        if (canonicalRows.length !== 1) throw new Error('Canonical conditional update missed ' + item.canonical_id);
+      } else {
+        const canonical = byId.get(item.canonical_id);
+        canonicalRows = [{
+          id: canonical.id,
+          slug: canonical.slug,
+          status: canonical.status,
+          organization_name: canonical.organization_name,
+          title_es: canonical.title_es,
+          title_en: canonical.title_en,
+          updated_at: canonical.updated_at
+        }];
+      }
 
       if (Array.isArray(item.additional_category_ids)) {
         const deleteResponse = await fetch(base + '/resource_categories?resource_id=eq.' + encodeURIComponent(item.canonical_id), { method: 'DELETE', headers });

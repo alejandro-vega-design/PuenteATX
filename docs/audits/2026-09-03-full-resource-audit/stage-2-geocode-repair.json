@@ -1,0 +1,14 @@
+[
+  {
+    "canonical_id": "cbb1de0f-9b82-413d-9b00-d24c855e256d",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.32862,
+      "longitude": -97.711788,
+      "geocoded_at": "2026-08-07T18:43:36.635959+00:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  }
+]

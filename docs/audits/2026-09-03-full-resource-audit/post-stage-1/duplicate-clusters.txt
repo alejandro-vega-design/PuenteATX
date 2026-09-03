@@ -1,0 +1,195 @@
+1. [4] Feed the Need - Stony Point
+     draft     feed-the-need-stony-point-travis  ·  "Comidas calientes gratuitas"
+     draft     feed-the-need-smithville-bastrop  ·  "Comidas calientes gratuitas"
+     draft     feed-the-need-bastrop-south-bastrop  ·  "Comidas calientes gratuitas"
+     draft     feed-the-need-bastrop-north-bastrop  ·  "Comidas calientes gratuitas"
+
+2. [4] Austin Public Health
+     published austin-public-health-st-john-community-center  ·  "Centro Comunitario St. John"
+     published austin-public-health-dove-springs-neighborhood-center  ·  "Centro Vecinal Dove Springs"
+     published austin-public-health-east-austin-neighborhood-center  ·  "Centro Vecinal del Este de Austin"
+     published austin-public-health-montopolis-community-center  ·  "Centro Comunitario Montopolis"
+
+3. [4] Drive a Senior Central Texas
+     draft     drive-a-senior-central-texas-drive-a-senior-central-texas  ·  "Transporte y apoyo en el hogar para adultos mayores"
+     published transporte-gratuito-para-adultos-mayores-drive-a-senior  ·  "Transporte gratuito para adultos mayores"
+     published ollie-s-medical-equipment-lending-closet-senior-access-drive-a-senior-drive-a-senior-central-texas-antes-senior-access  ·  "Drive a Senior – Transporte y Apoyo para Adultos Mayores"
+     draft     drive-a-senior-transporte-para-adultos-mayores-del-centro-de-texas-drive-a-senior-antes-chariot  ·  "Drive a Senior — Transporte para Adultos Mayores del Centro de Texas"
+
+4. [3] Lone Star Circle of Care
+     published lone-star-circle-of-care-cedar-park  ·  "Clínica comunitaria de Cedar Park"
+     published lone-star-circle-of-care-georgetown  ·  "Clínica comunitaria de Georgetown"
+     published lone-star-circle-of-care-aw-grimes  ·  "Clínica comunitaria de Round Rock"
+
+5. [3] Texas RioGrande Legal Aid
+     archived  asistencia-legal-civil-gratuita-texas-riogrande-legal-aid  ·  "Asistencia legal civil gratuita"
+     draft     texas-rio-grande-legal-aid-legal-and-safety-support-austin  ·  "Asistencia legal civil"
+     published texas-riogrande-legal-aid-williamson-county  ·  "Asistencia legal civil gratuita"
+
+6. [3] Community Action of Central Texas
+     draft     community-action-of-central-texas-housing-and-financial-assistance-williamson  ·  "Referidos para servicios públicos y medicamentos"
+     draft     community-action-for-central-texas-health-and-personal-support-bastrop  ·  "Medicamentos de bajo costo y referidos médicos"
+     draft     community-action-for-central-texas-housing-and-financial-assistance-bastrop  ·  "Referidos para asistencia energética"
+
+7. [3] Smithville Food Pantry
+     draft     despensa-de-alimentos-de-smithville-smithville-food-pantry  ·  "Despensa de alimentos"
+     archived  smithville-food-pantry-bastrop-2  ·  "Despensa de alimentos"
+     archived  smithville-food-pantry-bastrop  ·  "Despensa de alimentos"
+
+8. [3] El Buen Samaritano
+     published despensa-de-alimentos-y-distribucion-de-panales-el-buen-samaritano  ·  "Servicios comunitarios y apoyo familiar"
+     archived  el-buen-samaritano-community-support-for-individuals-and-families  ·  "Apoyo comunitario para personas y familias"
+     archived  el-buen-samaritano-community-support-services  ·  "Servicios de apoyo comunitario"
+
+9. [3] AGE of Central Texas
+     published age-of-central-texas-age-of-central-texas  ·  "AGE of Central Texas"
+     draft     age-of-central-texas-servicios-para-cuidadores-age-of-central-texas  ·  "AGE of Central Texas — Servicios para Cuidadores"
+     published h-e-l-p-programa-de-prestamo-de-equipo-medico-age-of-central-texas-age-of-central-texas  ·  "AGE of Central Texas – Apoyo para Adultos Mayores y Cuidadores"
+
+10. [2] American Gateways
+     published servicios-legales-de-inmigracion-american-gateways  ·  "Servicios legales de inmigración"
+     draft     american-gateways-american-gateways  ·  "Servicios legales de inmigración"
+
+11. [2] Bluebonnet Trails Community Services
+     archived  bluebonnet-trails-mental-health-williamson  ·  "Servicios de salud mental y crisis"
+     published bluebonnet-trails-mental-health  ·  "Servicios de salud mental y crisis"
+
+12. [2] The Caring Place
+     archived  the-caring-place-community-assistance  ·  "Alimentos y asistencia por crisis"
+     published the-caring-place  ·  "Alimentos y asistencia por crisis"
+
+13. [2] Hill Country Community Ministries
+     published hill-country-community-ministries-food-pantry  ·  "Alimentos y asistencia para necesidades básicas"
+     archived  hill-country-community-ministries-food-and-basic-needs-assistance  ·  "Alimentos y asistencia para necesidades básicas"
+
+14. [2] Texas Baptist Children's Home
+     published hope-counseling-program-williamson-county  ·  "Consejería Hope"
+     archived  programa-de-consejeria-hope-texas-baptist-children-s-home  ·  "Programa de Consejería Hope"
+
+15. [2] Austin Public Health
+     published austin-public-health-far-south-immunization-clinic  ·  "Clínica de vacunación Far South"
+     published austin-public-health-st-johns-immunization-clinic  ·  "Clínica de vacunación St. Johns"
+
+16. [2] Greater Mt. Zion Church
+     published greater-mt-zion-church-greater-mt-zion-church-2  ·  "Despensa de Alimentos"
+     draft     greater-mt-zion-church-food-pantry-travis  ·  "Despensa de alimentos"
+
+17. [2] Bastrop County
+     published oficina-de-servicios-para-veteranos-del-condado-de-bastrop-bastrop-county  ·  "Oficina de Servicios para Veteranos del Condado de Bastrop"
+     draft     oficina-de-servicios-para-veteranos-del-condado-de-bastrop-bastrop-county-government  ·  "Oficina de Servicios para Veteranos del Condado de Bastrop"
+
+18. [2] Travis County Family Support Services (Palm Square Office)
+     archived  travis-county-family-support-services-palm-square-office-health-and-personal-support-travi  ·  "Beneficios del Seguro Social"
+     archived  travis-county-family-support-services-palm-square-office-housing-and-financial-assistance-3  ·  "Beneficios del Seguro Social"
+
+19. [2] Austin Blessings Food Pantry: Austin Reconciliation Church
+     draft     austin-blessings-food-pantry-austin-reconciliation-church-travis  ·  "Despensa de alimentos"
+     draft     austin-blessings-food-pantry-austin-blessings-outreach-center-travis  ·  "Despensa de alimentos"
+
+20. [2] Mortgage Relief Helpline
+     archived  mortgage-relief-helpline-community-support-williamson  ·  "Asistencia de vivienda"
+     draft     mortgage-relief-helpline-care-connect-usa-community-support-bastrop  ·  "Orientación hipotecaria y prevención de ejecución"
+
+21. [2] Capital Area Rural Transportation System (CARTS)
+     draft     carts-now-bastrop-servicio-a-demanda-capital-area-rural-transportation-system-carts  ·  "CARTS Now Bastrop (servicio a demanda)"
+     draft     carts-now-elgin-servicio-a-demanda-capital-area-rural-transportation-system-carts  ·  "CARTS Now Elgin (servicio a demanda)"
+
+22. [2] Texas Health and Human Services Commission (HHSC)
+     draft     oficina-de-beneficios-de-hhsc-bastrop-texas-health-and-human-services-commission-hhsc  ·  "Oficina de Beneficios de HHSC — Bastrop"
+     draft     oficina-de-beneficios-de-hhsc-elgin-texas-health-and-human-services-commission-hhsc  ·  "Oficina de Beneficios de HHSC — Elgin"
+
+23. [2] Open Door Soup Kitchen: In The Streets - Hands Up High (ITS HUH)
+     draft     open-door-soup-kitchen-in-the-streets-hands-up-high-its-huh-bastrop  ·  "Comedor comunitario Open Door"
+     draft     in-the-streets-hands-up-high-housing-and-financial-assistance-bastrop  ·  "Comidas, despensa y refugio"
+
+24. [2] Central Texas Food Bank
+     draft     despensa-movil-de-cedar-creek-central-texas-food-bank-central-texas-food-bank  ·  "Despensa Móvil de Cedar Creek (Central Texas Food Bank)"
+     draft     despensa-movil-de-elgin-central-texas-food-bank-central-texas-food-bank  ·  "Despensa Móvil de Elgin (Central Texas Food Bank)"
+
+25. [2] Integral Care
+     published integral-care-mental-health-and-substance-use-services  ·  "Servicios de salud mental y uso de sustancias"
+     published integral-care-integral-care-2  ·  "Salud Mental, Uso de Sustancias y Servicios de Crisis"
+
+26. [2] Volunteer Legal Services of Central Texas
+     archived  volunteer-legal-services-of-central-texas-volunteer-legal-services-of-central-texas  ·  "Volunteer Legal Services of Central Texas"
+     draft     volunteer-legal-services-of-central-texas-vlsoct-volunteer-legal-services-of-central-texas  ·  "Servicios Legales Voluntarios del Centro de Texas (VLSoCT)"
+
+27. [2] Bluebonnet Trails Community Services
+     published bluebonnet-trails-osar-williamson  ·  "Evaluación y referidos para uso de sustancias"
+     draft     bluebonnet-trails-osar-outreach-screening-assessment-and-referral-health-and-personal-supp  ·  "Evaluación y referidos para consumo de sustancias"
+
+28. [2] Round Rock Area Serving Center
+     published round-rock-area-serving-center-assistance  ·  "Despensa y asistencia financiera"
+     archived  round-rock-area-serving-center  ·  "Round Rock Area Serving Center"
+
+29. [2] Opportunities for Williamson & Burnet Counties
+     published opportunities-williamson-burnet-counties  ·  "Opportunities for Williamson & Burnet Counties (OWBC)"
+     draft     opportunities-for-williamson-burnet-counties-owbc-meals-on-wheels-opportunities-for-williamson-burnet-counties  ·  "Opportunities for Williamson & Burnet Counties (OWBC) — Meals on Wheel"
+
+30. [2] City of Austin Housing Department
+     published buscador-de-vivienda-asequible-de-austin-city-of-austin-housing-department  ·  "Buscador de vivienda asequible de Austin"
+     published affordable-housing-online-search-tool-ahost-affordable-housing-search  ·  "Búsqueda de vivienda asequible"
+
+31. [2] Greater Mt. Zion Church
+     published greater-mt-zion-church-greater-mt-zion-church  ·  "Asistencia para alquiler y servicios públicos"
+     draft     greater-mt-zion-church-community-assistance-and-referral-center-housing-and-financial-assi  ·  "Asistencia con servicios públicos"
+
+32. [2] Travis County Clerk's Office
+     draft     travis-county-clerk-s-office-recording-division  ·  "Travis County Clerk's Office – División de Registros"
+     draft     travis-county-clerk-s-office-misdemeanor-division  ·  "Travis County Clerk's Office – División de Delitos Menores"
+
+33. [2] CommUnityCare Health Centers
+     published atencion-medica-primaria-y-especializada-communitycare-health-centers  ·  "Atención médica primaria y especializada"
+     published communitycare-primary-and-specialty-health-services  ·  "Servicios de salud primaria y especializada"
+
+34. [2] Lone Star Circle of Care
+     published lone-star-circle-of-care-round-rock-behavioral-health  ·  "Lone Star Circle of Care – Salud Conductual de Round Rock"
+     published lone-star-circle-of-care-georgetown-behavioral-health  ·  "Lone Star Circle of Care – Salud Conductual de Georgetown"
+
+35. [2] Travis Central Appraisal District (TCAD)
+     draft     travis-central-appraisal-district-tcad  ·  "Avalúo de propiedades y exenciones fiscales"
+     draft     exencion-de-impuestos-homestead-65-distrito-de-tasacion-travis-central-appraisal-district-y-distritos-equivalentes-en-cada-condado  ·  "Exención de Impuestos Homestead 65+ (Distrito de Tasación)"
+
+36. [2] Central Presbyterian Church
+     published central-presbyterian-church-breakfast-and-basic-needs-support  ·  "Central Mission: desayuno y necesidades básicas"
+     archived  central-presbyterian-church-central-presbyterian-church  ·  "Central Mission – Alimentos y Necesidades Básicashttps://cpcaustin.org"
+
+37. [2] The SAFE Alliance
+     published linea-confidencial-24-7-para-violencia-y-abuso-the-safe-alliance  ·  "Línea confidencial 24/7 para violencia y abuso"
+     published the-safe-alliance-servicios-legales-the-safe-alliance  ·  "Apoyo y Servicios Gratuitos para Sobrevivientes de Violencia y Abuso"
+
+38. [2] Williamson County Community Resource Center
+     published williamson-county-community-resource-navigation  ·  "Orientación para encontrar ayuda"
+     published williamson-county-community-resource-center-liberty-hill  ·  "Williamson County Community Resource Center – Liberty Hill"
+
+39. [2] Catholic Charities of Central Texas
+     published catholic-charities-of-central-texas-catholic-charities-of-central-texas  ·  "Asistencia financiera"
+     archived  catholic-charities-of-central-texas-housing-and-financial-assistance-travis  ·  "Asistencia con servicios públicos"
+
+40. [2] People's Community Clinic
+     published atencion-medica-familiar-de-bajo-costo-people-s-community-clinic  ·  "Atención médica familiar de bajo costo"
+     published people-s-community-clinic-community-health-clinic  ·  "Asistencia de MAP y atención médica asequible"
+
+41. [2] Capital Area Rural Transportation System (CARTS)
+     published transporte-rural-y-regional-en-travis-county-capital-area-rural-transportation-system-carts  ·  "Transporte rural y regional en Travis County"
+     draft     capital-area-rutal-transportation-systems-carts-transportation-williamson  ·  "Reservaciones de transporte regional CARTS"
+
+42. [2] Any Baby Can
+     published apoyo-integral-para-familias-con-ninos-any-baby-can  ·  "Apoyo integral para familias con niños"
+     published any-baby-can-community-support-for-individuals-and-families  ·  "Apoyo comunitario para personas y familias"
+
+43. [2] Emancipet
+     draft     emancipet-community-support-williamson  ·  "Clínicas veterinarias móviles"
+     archived  emancipet-community-support-travis  ·  "Atención veterinaria"
+
+44. [2] Community Action, Inc. of Central Texas
+     draft     educacion-para-adultos-de-community-action-inc-bastrop-community-action-inc-of-central-texas  ·  "Educación para Adultos de Community Action Inc. (Bastrop)"
+     draft     community-action-for-central-texas-adult-education-education-and-employment-san-marcos  ·  "Educación para adultos"
+
+45. [2] Central Texas Food Bank
+     published central-texas-food-bank-food-distribution  ·  "Distribución de alimentos"
+     archived  central-texas-food-bank-travis  ·  "Despensa de alimentos"
+
+46. [2] Shepherd's Heart Food Pantry
+     published shepherds-heart-taylor-assistance  ·  "Despensa y asistencia de Taylor"
+     draft     shepherd-s-heart-food-pantry-and-community-ministries-williamson  ·  "Despensa de alimentos"

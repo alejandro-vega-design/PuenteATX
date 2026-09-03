@@ -196,7 +196,8 @@ for (const r of records) {
   if (r.cost_type && !COST.has(String(r.cost_type))) add(r, 'invalid_cost_type', String(r.cost_type));
   for (const l of langs) if (!['es', 'en'].includes(l)) add(r, 'invalid_language', l);
 
-  if (methods.includes('in_person') && !nonEmpty(r.address_line_1)) add(r, 'in_person_without_address');
+  const locationReviewed = /\[location-review:\s*(?:variable|confidential)\]/i.test(String(r.verification_notes ?? ''));
+  if (methods.includes('in_person') && !nonEmpty(r.address_line_1) && !locationReviewed) add(r, 'in_person_without_address');
   if ((nonEmpty(r.address_line_1) || nonEmpty(r.latitude)) && !methods.includes('in_person')) add(r, 'address_without_in_person');
   if ((nonEmpty(r.latitude) || nonEmpty(r.longitude)) && !nonEmpty(r.address_line_1)) add(r, 'coords_without_address');
   if (nonEmpty(r.postal_code) && !/^\d{5}$/.test(String(r.postal_code).trim())) add(r, 'bad_postal_code', String(r.postal_code));
