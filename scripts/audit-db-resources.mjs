@@ -34,7 +34,17 @@ const categoryById = new Map(resourceCategories.map(c => [c.id, c.slug]));
 
 const norm = v => String(v ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
 const digits = v => String(v ?? '').replace(/\D/g, '').replace(/^1(?=\d{10}$)/, '');
-const list = v => Array.isArray(v) ? v : String(v ?? '').split(/[|;,]/).map(s => s.trim()).filter(Boolean);
+const list = v => {
+  if (Array.isArray(v)) return v.map(String);
+  const s = String(v ?? '').trim();
+  if (!s) return [];
+  if (s.startsWith('[') || s.startsWith('{')) {
+    try { const p = JSON.parse(s.startsWith('{') ? `[${s.slice(1, -1)}]` : s); if (Array.isArray(p)) return p.map(String); } catch { /* fall through */ }
+    // Postgres array literal {a,b,c}
+    if (s.startsWith('{')) return s.slice(1, -1).split(',').map(x => x.replace(/^"|"$/g, '').trim()).filter(Boolean);
+  }
+  return s.split(/[|;,]/).map(x => x.trim()).filter(Boolean);
+};
 const webKey = v => norm(String(v ?? '').replace(/^https?:\/\//i, '').replace(/^www\./i, '').split(/[?#]/)[0].replace(/\/$/, '')).replace(/ /g, '');
 const nonEmpty = v => Array.isArray(v) ? v.length > 0 : String(v ?? '').trim().length > 0;
 
@@ -60,12 +70,15 @@ const id = r => r.slug || r.id || `${norm(r.organization_name)}/${norm(r.title_e
 // ---------- duplicates ----------
 const cluster = (keyFn, label) => {
   const m = new Map();
-  for (const r of records) for (const k of [].concat(keyFn(r)).filter(Boolean)) {
+  for (const r of records) for (const k of new Set([].concat(keyFn(r)).filter(Boolean))) {
     if (!m.has(k)) m.set(k, []);
     m.get(k).push(r);
   }
   return [...m.entries()]
-    .map(([k, rs]) => ({ key: k, count: rs.length, ids: rs.map(id), slugs: rs.map(r => r.slug), orgs: [...new Set(rs.map(r => r.organization_name))], titles: [...new Set(rs.map(r => r.title_es || r.title_en))] }))
+    .map(([k, rs]) => {
+      const uniq = [...new Map(rs.map(r => [id(r), r])).values()];
+      return { key: k, count: uniq.length, ids: uniq.map(id), slugs: uniq.map(r => r.slug), statuses: uniq.map(r => r.status), orgs: [...new Set(uniq.map(r => r.organization_name))], titles: [...new Set(uniq.map(r => r.title_es || r.title_en))] };
+    })
     .filter(g => g.count > 1)
     .sort((a, b) => b.count - a.count);
 };
@@ -74,15 +87,69 @@ const dupExactSlug = cluster(r => r.slug && `slug:${r.slug}`, 'slug');
 const dupOrgTitle = cluster(r => {
   const o = norm(r.organization_name);
   return [norm(r.title_es) && `${o}|${norm(r.title_es)}`, norm(r.title_en) && `${o}|${norm(r.title_en)}`];
-}).filter(g => g.slugs.filter(Boolean).length !== 1 || new Set(g.slugs).size > 1);
+});
 const dupPhone = cluster(r => { const p = digits(r.phone); return p.length === 10 && `ph:${p}`; })
-  .filter(g => new Set(g.ids).size > 1 && g.titles.length > 1);
+  .filter(g => g.titles.length > 1 || g.orgs.length > 1);
 const dupWebsite = cluster(r => { const w = webKey(r.website_url); return w.length >= 6 && `web:${w}`; })
-  .filter(g => new Set(g.ids).size > 1 && g.titles.length > 1);
+  .filter(g => g.titles.length > 1);
 const dupAddress = cluster(r => {
   const a = norm(r.address_line_1); const c = norm(r.city);
   return a.length > 4 && c && `addr:${a}|${c}`;
 }).filter(g => g.titles.length > 1);
+
+// ---------- high-confidence duplicate pairs ----------
+// Among records that share a strong anchor (phone / website / address), flag pairs
+// whose titles or summaries are near-identical — these are very likely the same service.
+const bigrams = s => { const t = ` ${norm(s)} `; const g = new Set(); for (let i = 0; i < t.length - 1; i++) g.add(t.slice(i, i + 2)); return g; };
+const dice = (a, b) => { if (!a && !b) return 1; if (!a || !b) return 0; const A = bigrams(a), B = bigrams(b); let inter = 0; for (const x of A) if (B.has(x)) inter++; return (2 * inter) / (A.size + B.size); };
+const anchorsOf = r => new Set([
+  digits(r.phone).length === 10 && `ph:${digits(r.phone)}`,
+  webKey(r.website_url).length >= 6 && `web:${webKey(r.website_url)}`,
+  norm(r.address_line_1).length > 4 && norm(r.city) && `addr:${norm(r.address_line_1)}|${norm(r.city)}`,
+].filter(Boolean));
+const anchorIndex = new Map();
+records.forEach((r, i) => { for (const a of anchorsOf(r)) { if (!anchorIndex.has(a)) anchorIndex.set(a, []); anchorIndex.get(a).push(i); } });
+const seenPair = new Set();
+const highConfidencePairs = [];
+for (const idxs of anchorIndex.values()) {
+  for (let x = 0; x < idxs.length; x++) for (let y = x + 1; y < idxs.length; y++) {
+    const pk = idxs[x] < idxs[y] ? `${idxs[x]}-${idxs[y]}` : `${idxs[y]}-${idxs[x]}`;
+    if (seenPair.has(pk)) continue; seenPair.add(pk);
+    const a = records[idxs[x]], b = records[idxs[y]];
+    const titleSim = Math.max(dice(a.title_es, b.title_es), dice(a.title_en, b.title_en));
+    const sumSim = Math.max(dice(a.summary_es, b.summary_es), dice(a.summary_en, b.summary_en));
+    const orgSim = dice(a.organization_name, b.organization_name);
+    const sharedAnchors = [...anchorsOf(a)].filter(z => anchorsOf(b).has(z));
+    if (titleSim >= 0.82 || sumSim >= 0.86 || (orgSim >= 0.6 && titleSim >= 0.55 && sharedAnchors.length >= 2)) {
+      highConfidencePairs.push({
+        score: Number(Math.max(titleSim, sumSim).toFixed(2)),
+        titleSim: Number(titleSim.toFixed(2)), summarySim: Number(sumSim.toFixed(2)),
+        sharedAnchors,
+        a: { slug: a.slug, status: a.status, org: a.organization_name, title: a.title_es || a.title_en },
+        b: { slug: b.slug, status: b.status, org: b.organization_name, title: b.title_es || b.title_en },
+      });
+    }
+  }
+}
+highConfidencePairs.sort((p, q) => q.score - p.score);
+
+// connected components of the high-confidence pair graph = duplicate clusters
+const adj = new Map();
+const pairMeta = new Map();
+for (const p of highConfidencePairs) for (const [x, y] of [[p.a, p.b], [p.b, p.a]]) {
+  pairMeta.set(x.slug, x);
+  if (!adj.has(x.slug)) adj.set(x.slug, new Set());
+  adj.get(x.slug).add(y.slug);
+}
+const seenNode = new Set();
+const duplicateClusters = [];
+for (const start of adj.keys()) {
+  if (seenNode.has(start)) continue;
+  const stack = [start]; const members = []; seenNode.add(start);
+  while (stack.length) { const c = stack.pop(); members.push(c); for (const n of adj.get(c) || []) if (!seenNode.has(n)) { seenNode.add(n); stack.push(n); } }
+  if (members.length > 1) duplicateClusters.push(members.map(s => pairMeta.get(s)));
+}
+duplicateClusters.sort((a, b) => b.length - a.length);
 
 // org-name variants (same normalized website or phone, different org string)
 const entityGroups = new Map();
@@ -113,6 +180,7 @@ for (const r of records) {
   if (!nonEmpty(r.title_es) || !nonEmpty(r.title_en)) add(r, 'missing_bilingual_title');
   if (!nonEmpty(r.summary_es) || !nonEmpty(r.summary_en)) add(r, 'missing_bilingual_summary');
   if (nonEmpty(r.description_es) !== nonEmpty(r.description_en)) add(r, 'description_one_language_only');
+  else if (!nonEmpty(r.description_es) && !nonEmpty(r.description_en)) add(r, 'no_description_either_language');
   if (nonEmpty(r.hours_es) !== nonEmpty(r.hours_en)) add(r, 'hours_one_language_only');
   else if (nonEmpty(r.hours_es) && String(r.hours_es).trim() === String(r.hours_en).trim() && /[a-zà-ÿ]{4}/i.test(String(r.hours_es))) add(r, 'hours_identical_prose', String(r.hours_es).slice(0, 60));
   if (nonEmpty(r.eligibility_es) !== nonEmpty(r.eligibility_en)) add(r, 'eligibility_one_language_only');
@@ -150,7 +218,7 @@ for (const r of records) {
     if (!nonEmpty(r.organization_name)) missing.push('organization_name');
     if (!nonEmpty(r.title_es) && !nonEmpty(r.title_en)) missing.push('title');
     if (!nonEmpty(r.summary_es) && !nonEmpty(r.summary_en)) missing.push('summary');
-    if (!nonEmpty(r.description_es) && !nonEmpty(r.description_en)) missing.push('description');
+    // description is NOT a publish requirement since migration 005
     if (!nonEmpty(catSlug)) missing.push('primary_category');
     if (!nonEmpty(r.phone) && !nonEmpty(r.email) && !nonEmpty(r.website_url)) missing.push('contact');
     if (!nonEmpty(r.source_url)) missing.push('source_url');
@@ -168,14 +236,21 @@ const csvCell = v => `"${String(v ?? '').replace(/"/g, '""')}"`;
 fs.writeFileSync(path.join(outDir, 'field-issues.csv'),
   `﻿slug,status,organization,code,detail\n${issues.map(i => [i.slug, i.status, i.org, i.code, i.detail].map(csvCell).join(',')).join('\n')}\n`);
 fs.writeFileSync(path.join(outDir, 'duplicates.json'), JSON.stringify({
-  exactSlug: dupExactSlug, orgPlusTitle: dupOrgTitle, sharedPhone: dupPhone, sharedWebsite: dupWebsite, sharedAddress: dupAddress, organizationNameVariants: orgVariants,
+  duplicateClusters, highConfidencePairs, exactSlug: dupExactSlug, orgPlusTitle: dupOrgTitle, sharedPhone: dupPhone, sharedWebsite: dupWebsite, sharedAddress: dupAddress, organizationNameVariants: orgVariants,
 }, null, 2));
+fs.writeFileSync(path.join(outDir, 'duplicate-clusters.txt'),
+  duplicateClusters.map((g, i) => `${i + 1}. [${g.length}] ${g[0].org}\n${g.map(m => `     ${(m.status || '').padEnd(9)} ${m.slug}  ·  "${(m.title || '').replace(/\s+/g, ' ').slice(0, 70)}"`).join('\n')}`).join('\n\n') + '\n');
+fs.writeFileSync(path.join(outDir, 'likely-duplicate-pairs.csv'),
+  `﻿score,titleSim,summarySim,shared,a_slug,a_status,a_org,a_title,b_slug,b_status,b_org,b_title\n${highConfidencePairs.map(p => [p.score, p.titleSim, p.summarySim, p.sharedAnchors.join(' '), p.a.slug, p.a.status, p.a.org, p.a.title, p.b.slug, p.b.status, p.b.org, p.b.title].map(csvCell).join(',')).join('\n')}\n`);
 
 const statusCounts = records.reduce((m, r) => (m[r.status || 'unknown'] = (m[r.status || 'unknown'] || 0) + 1, m), {});
 const summary = {
   total: records.length,
   byStatus: statusCounts,
-  duplicateClusters: {
+  duplicates: {
+    clusters: duplicateClusters.length,
+    recordsInClusters: duplicateClusters.reduce((n, g) => n + g.length, 0),
+    highConfidencePairs: highConfidencePairs.length,
     exactSlug: dupExactSlug.length,
     orgPlusTitle: dupOrgTitle.length,
     sharedPhoneDifferentRecord: dupPhone.length,

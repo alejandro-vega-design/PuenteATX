@@ -8,3 +8,7 @@ node_modules/
 *.log
 .vercel
 .DS_Store
+
+# Local DB exports for auditing (contain full draft records)
+resource-lists-import/db-export-*.csv
+resource-lists-import/db-export-*.json
