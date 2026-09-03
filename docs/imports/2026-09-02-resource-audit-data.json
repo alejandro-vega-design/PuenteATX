@@ -1,0 +1,1566 @@
+{
+  "totalRows": 479,
+  "files": [
+    {
+      "file": "Preview___24_recursos_para_Puente_ATX.csv",
+      "headers": 18,
+      "note": "not the 45-col importer template — skipped for row checks"
+    },
+    {
+      "file": "avey-healthcare-catalog-fall-2026-puenteatx-import.csv",
+      "rows": 17,
+      "errors": 0,
+      "importerWarnings": 0,
+      "quality": {
+        "in_person_without_address": 9,
+        "cost_free_no_textual_support": 9,
+        "languages_es_maybe_unsupported": 17,
+        "slug_blank": 11,
+        "service_area_names_city_not_county": 2
+      }
+    },
+    {
+      "file": "bastrop-travis-no-austin-consolidated-puenteatx-import.csv",
+      "rows": 116,
+      "errors": 0,
+      "importerWarnings": 0,
+      "quality": {
+        "service_area_names_city_not_county": 65,
+        "slug_blank": 116,
+        "hours_one_language_only": 79,
+        "missing_last_verified_at": 106,
+        "address_without_in_person_method": 24,
+        "languages_es_maybe_unsupported": 29,
+        "cost_free_no_textual_support": 7,
+        "in_person_without_address": 8
+      }
+    },
+    {
+      "file": "complete-family-resource-guide-puenteatx-import.csv",
+      "rows": 79,
+      "errors": 0,
+      "importerWarnings": 1,
+      "quality": {
+        "in_person_without_address": 76,
+        "missing_last_verified_at": 79,
+        "service_area_names_city_not_county": 75,
+        "languages_es_maybe_unsupported": 30,
+        "summary_has_contact_info": 1,
+        "phone_not_dashed_format": 3,
+        "service_area_not_county_normalized": 12
+      }
+    },
+    {
+      "file": "counseling-resources-austin-puenteatx-import.csv",
+      "rows": 6,
+      "errors": 0,
+      "importerWarnings": 0,
+      "quality": {
+        "slug_blank": 3,
+        "service_area_names_city_not_county": 2,
+        "languages_es_maybe_unsupported": 1
+      }
+    },
+    {
+      "file": "eviction-solidarity-network-consolidated-puenteatx-import.csv",
+      "rows": 77,
+      "errors": 0,
+      "importerWarnings": 39,
+      "quality": {
+        "summary_has_contact_info": 39,
+        "missing_last_verified_at": 77,
+        "service_area_names_city_not_county": 70,
+        "languages_es_maybe_unsupported": 72,
+        "hours_one_language_only": 3,
+        "phone_not_dashed_format": 1,
+        "missing_source_url": 13,
+        "no_contact_method": 5,
+        "cost_free_no_textual_support": 1
+      }
+    },
+    {
+      "file": "resource-list-cmm-updated-puenteatx-import.csv",
+      "rows": 65,
+      "errors": 0,
+      "importerWarnings": 7,
+      "quality": {
+        "missing_last_verified_at": 65,
+        "service_area_names_city_not_county": 65,
+        "missing_source_url": 9,
+        "languages_es_maybe_unsupported": 8,
+        "phone_not_dashed_format": 2,
+        "summary_has_contact_info": 7,
+        "tracking_params_in_url": 4
+      }
+    },
+    {
+      "file": "resource-summary-cleanup-2026-08-10.csv",
+      "headers": 7,
+      "note": "not the 45-col importer template — skipped for row checks"
+    },
+    {
+      "file": "veteranos-adultos-mayores-puenteatx-import.csv",
+      "rows": 45,
+      "errors": 0,
+      "importerWarnings": 0,
+      "quality": {
+        "hours_one_language_only": 31,
+        "missing_last_verified_at": 45,
+        "slug_blank": 45,
+        "service_area_names_city_not_county": 21,
+        "languages_es_maybe_unsupported": 17,
+        "in_person_without_address": 6,
+        "cost_free_no_textual_support": 1,
+        "address_without_in_person_method": 3,
+        "missing_source_url": 1
+      }
+    },
+    {
+      "file": "williamson-county-recursos-puenteatx-import-ready.csv",
+      "rows": 39,
+      "errors": 0,
+      "importerWarnings": 0,
+      "quality": {
+        "cost_free_no_textual_support": 16,
+        "missing_last_verified_at": 39,
+        "languages_es_maybe_unsupported": 8,
+        "service_area_names_city_not_county": 16,
+        "in_person_without_address": 10,
+        "service_area_not_county_normalized": 15,
+        "missing_source_url": 4,
+        "address_without_in_person_method": 3,
+        "phone_not_dashed_format": 1
+      }
+    },
+    {
+      "file": "williamson-county-resources.csv",
+      "rows": 35,
+      "errors": 0,
+      "importerWarnings": 0,
+      "quality": {
+        "cost_free_no_textual_support": 25,
+        "languages_es_maybe_unsupported": 35,
+        "in_person_without_address": 7
+      }
+    }
+  ],
+  "duplicates": {
+    "exactOrgTitleAcrossFiles": [
+      {
+        "key": "central texas food bank|es|ayuda para solicitar beneficios publicos",
+        "count": 2,
+        "where": [
+          "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:4",
+          "williamson-county-resources.csv:3"
+        ]
+      },
+      {
+        "key": "central texas food bank|en|public benefits application assistance",
+        "count": 2,
+        "where": [
+          "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:4",
+          "williamson-county-resources.csv:3"
+        ]
+      },
+      {
+        "key": "central health|es|programa de acceso medico (map)",
+        "count": 2,
+        "where": [
+          "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:5",
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:61"
+        ]
+      },
+      {
+        "key": "central health|en|medical access program (map)",
+        "count": 2,
+        "where": [
+          "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:5",
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:61"
+        ]
+      },
+      {
+        "key": "lone star circle of care|es|servicios comunitarios de salud",
+        "count": 2,
+        "where": [
+          "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:11",
+          "resource-list-cmm-updated-puenteatx-import.csv:7"
+        ]
+      },
+      {
+        "key": "lone star circle of care|en|community health services",
+        "count": 2,
+        "where": [
+          "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:11",
+          "resource-list-cmm-updated-puenteatx-import.csv:7"
+        ]
+      },
+      {
+        "key": "half helen foundation|es|examenes comunitarios de la vista",
+        "count": 2,
+        "where": [
+          "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:15",
+          "resource-list-cmm-updated-puenteatx-import.csv:64"
+        ]
+      },
+      {
+        "key": "half helen foundation|en|community eye exams",
+        "count": 2,
+        "where": [
+          "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:15",
+          "resource-list-cmm-updated-puenteatx-import.csv:64"
+        ]
+      },
+      {
+        "key": "volunteer legal services of central texas|en|volunteer legal services of central texas (vlsoct)",
+        "count": 2,
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:52",
+          "veteranos-adultos-mayores-puenteatx-import.csv:32"
+        ]
+      },
+      {
+        "key": "bastrop community senior center|en|bastrop community senior center",
+        "count": 2,
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:60",
+          "veteranos-adultos-mayores-puenteatx-import.csv:40"
+        ]
+      },
+      {
+        "key": "samaritan center|es|servicios de salud mental y bienestar",
+        "count": 2,
+        "where": [
+          "complete-family-resource-guide-puenteatx-import.csv:21",
+          "counseling-resources-austin-puenteatx-import.csv:4"
+        ]
+      },
+      {
+        "key": "samaritan center|en|mental health and wellness services",
+        "count": 2,
+        "where": [
+          "complete-family-resource-guide-puenteatx-import.csv:21",
+          "counseling-resources-austin-puenteatx-import.csv:4"
+        ]
+      },
+      {
+        "key": "capital area counseling|es|servicios de consejeria asequibles",
+        "count": 2,
+        "where": [
+          "counseling-resources-austin-puenteatx-import.csv:3",
+          "resource-list-cmm-updated-puenteatx-import.csv:19"
+        ]
+      },
+      {
+        "key": "capital area counseling|en|affordable counseling services",
+        "count": 2,
+        "where": [
+          "counseling-resources-austin-puenteatx-import.csv:3",
+          "resource-list-cmm-updated-puenteatx-import.csv:19"
+        ]
+      },
+      {
+        "key": "austin child guidance center|es|terapia infantil y familiar",
+        "count": 2,
+        "where": [
+          "counseling-resources-austin-puenteatx-import.csv:7",
+          "resource-list-cmm-updated-puenteatx-import.csv:22"
+        ]
+      },
+      {
+        "key": "austin child guidance center|en|child and family therapy",
+        "count": 2,
+        "where": [
+          "counseling-resources-austin-puenteatx-import.csv:7",
+          "resource-list-cmm-updated-puenteatx-import.csv:22"
+        ]
+      },
+      {
+        "key": "austin public library|es|tarjeta de biblioteca mejorada",
+        "count": 2,
+        "where": [
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:72",
+          "resource-list-cmm-updated-puenteatx-import.csv:42"
+        ]
+      },
+      {
+        "key": "austin public library|en|enhanced library card",
+        "count": 2,
+        "where": [
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:72",
+          "resource-list-cmm-updated-puenteatx-import.csv:42"
+        ]
+      }
+    ],
+    "sharedPhoneDifferentRecord": [
+      {
+        "phone": "5124934288",
+        "orgs": [
+          "Austin Voices for Education and Youth (AVEY)",
+          "Austin Voices for Education and Youth"
+        ],
+        "where": [
+          "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:2",
+          "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:8",
+          "complete-family-resource-guide-puenteatx-import.csv:42"
+        ]
+      },
+      {
+        "phone": "7377174000",
+        "orgs": [
+          "Foundation Communities"
+        ],
+        "where": [
+          "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:6",
+          "resource-list-cmm-updated-puenteatx-import.csv:54",
+          "resource-list-cmm-updated-puenteatx-import.csv:55"
+        ]
+      },
+      {
+        "phone": "5129789015",
+        "orgs": [
+          "CommUnityCare Health Centers",
+          "Central Health",
+          "CommUnityCare"
+        ],
+        "where": [
+          "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:9",
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:61",
+          "resource-list-cmm-updated-puenteatx-import.csv:8"
+        ]
+      },
+      {
+        "phone": "8778005722",
+        "orgs": [
+          "Lone Star Circle of Care",
+          "Lone Star Circle of Care (LSCC)"
+        ],
+        "where": [
+          "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:11",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:23",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:81",
+          "resource-list-cmm-updated-puenteatx-import.csv:7",
+          "williamson-county-recursos-puenteatx-import-ready.csv:10",
+          "williamson-county-recursos-puenteatx-import-ready.csv:11",
+          "williamson-county-resources.csv:20",
+          "williamson-county-resources.csv:21"
+        ]
+      },
+      {
+        "phone": "5124784939",
+        "orgs": [
+          "People's Community Clinic"
+        ],
+        "where": [
+          "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:12",
+          "resource-list-cmm-updated-puenteatx-import.csv:9",
+          "resource-list-cmm-updated-puenteatx-import.csv:10"
+        ]
+      },
+      {
+        "phone": "5125025205",
+        "orgs": [
+          "Lirios Pediatrics",
+          "Lirios Para Mental Health"
+        ],
+        "where": [
+          "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:13",
+          "resource-list-cmm-updated-puenteatx-import.csv:18"
+        ]
+      },
+      {
+        "phone": "5123030033",
+        "orgs": [
+          "Bastrop County Emergency Food Pantry"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:2",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:44"
+        ]
+      },
+      {
+        "phone": "5127970796",
+        "orgs": [
+          "Community Cupboard",
+          "Elgin Community Cupboard"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:5",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:90"
+        ]
+      },
+      {
+        "phone": "5122853882",
+        "orgs": [
+          "Sacred Heart Catholic Church",
+          "Sacred Heart Catholic Church / Sociedad de San Vicente de Paúl"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:6",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:45"
+        ]
+      },
+      {
+        "phone": "5122822111",
+        "orgs": [
+          "Central Texas Food Bank",
+          "Central Texas Food Bank (programa Golden Harvest)",
+          "Central Texas Food Bank and SNAP Assistance"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:11",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:12",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:13",
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:55",
+          "resource-list-cmm-updated-puenteatx-import.csv:28"
+        ]
+      },
+      {
+        "phone": "9795402980",
+        "orgs": [
+          "Combined Community Action, Inc."
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:18",
+          "veteranos-adultos-mayores-puenteatx-import.csv:23"
+        ]
+      },
+      {
+        "phone": "5124728788",
+        "orgs": [
+          "Austin Habitat for Humanity",
+          "Austin Habitat for Humanity Homeownership Program"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:19",
+          "complete-family-resource-guide-puenteatx-import.csv:75",
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:28"
+        ]
+      },
+      {
+        "phone": "8443096385",
+        "orgs": [
+          "Bluebonnet Trails Community Services"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:26",
+          "williamson-county-recursos-puenteatx-import-ready.csv:2",
+          "williamson-county-recursos-puenteatx-import-ready.csv:9",
+          "williamson-county-resources.csv:8",
+          "williamson-county-resources.csv:9"
+        ]
+      },
+      {
+        "phone": "5124787433",
+        "orgs": [
+          "Capital Area Rural Transportation System (CARTS)",
+          "CARTS, en contrato con la Ciudad de Smithville",
+          "CARTS, en coordinación con Capital Metro",
+          "CARTS"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:29",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:30",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:31",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:32",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:33",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:98",
+          "veteranos-adultos-mayores-puenteatx-import.csv:29"
+        ]
+      },
+      {
+        "phone": "8776338747",
+        "orgs": [
+          "Texas HHSC / Texas Medicaid & Healthcare Partnership (TMHP)",
+          "Texas Health and Human Services"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:34",
+          "williamson-county-resources.csv:19"
+        ]
+      },
+      {
+        "phone": "5129855169",
+        "orgs": [
+          "Bastrop Independent School District (BISD)",
+          "Community Action, Inc. of Central Texas"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:38",
+          "williamson-county-resources.csv:27"
+        ]
+      },
+      {
+        "phone": "5124765550",
+        "orgs": [
+          "Volunteer Legal Services of Central Texas"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:52",
+          "veteranos-adultos-mayores-puenteatx-import.csv:32",
+          "williamson-county-recursos-puenteatx-import-ready.csv:37"
+        ]
+      },
+      {
+        "phone": "5125814006",
+        "orgs": [
+          "Bastrop County Government",
+          "Bastrop County"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:57",
+          "veteranos-adultos-mayores-puenteatx-import.csv:10"
+        ]
+      },
+      {
+        "phone": "5122590360",
+        "orgs": [
+          "Hill Country Community Ministries"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:82",
+          "complete-family-resource-guide-puenteatx-import.csv:15",
+          "williamson-county-recursos-puenteatx-import-ready.csv:19",
+          "williamson-county-resources.csv:14"
+        ]
+      },
+      {
+        "phone": "8553663401",
+        "orgs": [
+          "Central Texas Food Bank / Del Valle ISD",
+          "Central Texas Food Bank"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:89",
+          "veteranos-adultos-mayores-puenteatx-import.csv:24"
+        ]
+      },
+      {
+        "phone": "5122677233",
+        "orgs": [
+          "The SAFE Alliance",
+          "Safe Alliance"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:97",
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:46"
+        ]
+      },
+      {
+        "phone": "5124741200",
+        "orgs": [
+          "Capital Metropolitan Transportation Authority (CapMetro)"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:99",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:100",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:101"
+        ]
+      },
+      {
+        "phone": "5128548245",
+        "orgs": [
+          "Housing Authority of Travis County"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:104",
+          "resource-list-cmm-updated-puenteatx-import.csv:27"
+        ]
+      },
+      {
+        "phone": "5123893723",
+        "orgs": [
+          "Dress for Success Austin"
+        ],
+        "where": [
+          "complete-family-resource-guide-puenteatx-import.csv:33",
+          "resource-list-cmm-updated-puenteatx-import.csv:56"
+        ]
+      },
+      {
+        "phone": "5129433701",
+        "orgs": [
+          "Williamson County Children's Advocacy Center"
+        ],
+        "where": [
+          "complete-family-resource-guide-puenteatx-import.csv:39",
+          "williamson-county-recursos-puenteatx-import-ready.csv:15",
+          "williamson-county-resources.csv:32"
+        ]
+      },
+      {
+        "phone": "5124724357",
+        "orgs": [
+          "Integral Care"
+        ],
+        "where": [
+          "complete-family-resource-guide-puenteatx-import.csv:61",
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:38",
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:67"
+        ]
+      },
+      {
+        "phone": "5127352400",
+        "orgs": [
+          "Lifeworks",
+          "Lifeworks (youth only)"
+        ],
+        "where": [
+          "complete-family-resource-guide-puenteatx-import.csv:62",
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:45"
+        ]
+      },
+      {
+        "phone": "5124398900",
+        "orgs": [
+          "El Buen Samaritano"
+        ],
+        "where": [
+          "complete-family-resource-guide-puenteatx-import.csv:73",
+          "resource-list-cmm-updated-puenteatx-import.csv:3"
+        ]
+      },
+      {
+        "phone": "5124512242",
+        "orgs": [
+          "Austin Child Guidance Center"
+        ],
+        "where": [
+          "complete-family-resource-guide-puenteatx-import.csv:76",
+          "counseling-resources-austin-puenteatx-import.csv:7",
+          "resource-list-cmm-updated-puenteatx-import.csv:22"
+        ]
+      },
+      {
+        "phone": "9569968752",
+        "orgs": [
+          "Texas RioGrande Legal Aid"
+        ],
+        "where": [
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:5",
+          "williamson-county-recursos-puenteatx-import-ready.csv:36"
+        ]
+      },
+      {
+        "phone": "5126516100",
+        "orgs": [
+          "Catholic Charities of Central Texas"
+        ],
+        "where": [
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:8",
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:65",
+          "veteranos-adultos-mayores-puenteatx-import.csv:9",
+          "williamson-county-resources.csv:31"
+        ]
+      },
+      {
+        "phone": "5125221097",
+        "orgs": [
+          "Austin Resource Center for the Homeless (ARCH)",
+          "Sunrise Homeless Navigation Center"
+        ],
+        "where": [
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:41",
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:47"
+        ]
+      },
+      {
+        "phone": "7372566926",
+        "orgs": [
+          "The Salvation Army - Rathgeber Center for Families",
+          "Sunrise Homeless Navigation Center",
+          "The Rathgeber Center for Families"
+        ],
+        "where": [
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:49",
+          "resource-list-cmm-updated-puenteatx-import.csv:4",
+          "resource-list-cmm-updated-puenteatx-import.csv:61"
+        ]
+      },
+      {
+        "phone": "5126432327",
+        "orgs": [
+          "Angel House/ Austin Baptist Chapel",
+          "Austin Baptist Chapel / Angel House Soup Kitchen"
+        ],
+        "where": [
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:52",
+          "resource-list-cmm-updated-puenteatx-import.csv:31"
+        ]
+      },
+      {
+        "phone": "5124514611",
+        "orgs": [
+          "AGE of Central Texas"
+        ],
+        "where": [
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:69",
+          "veteranos-adultos-mayores-puenteatx-import.csv:18"
+        ]
+      },
+      {
+        "phone": "5129725520",
+        "orgs": [
+          "Austin Public Health"
+        ],
+        "where": [
+          "resource-list-cmm-updated-puenteatx-import.csv:11",
+          "resource-list-cmm-updated-puenteatx-import.csv:12"
+        ]
+      },
+      {
+        "phone": "8004232111",
+        "orgs": [
+          "U.S. Department of Veterans Affairs (VHA)",
+          "U.S. Department of Veterans Affairs (VA Central Texas)"
+        ],
+        "where": [
+          "veteranos-adultos-mayores-puenteatx-import.csv:5",
+          "veteranos-adultos-mayores-puenteatx-import.csv:7"
+        ]
+      },
+      {
+        "phone": "5127631400",
+        "orgs": [
+          "Opportunities for Williamson & Burnet Counties"
+        ],
+        "where": [
+          "veteranos-adultos-mayores-puenteatx-import.csv:22",
+          "veteranos-adultos-mayores-puenteatx-import.csv:36",
+          "williamson-county-recursos-puenteatx-import-ready.csv:31",
+          "williamson-county-resources.csv:5",
+          "williamson-county-resources.csv:6"
+        ]
+      },
+      {
+        "phone": "5123101060",
+        "orgs": [
+          "Drive a Senior Central Texas",
+          "Drive a Senior Central Texas (antes \"Senior Access\")",
+          "Senior Access"
+        ],
+        "where": [
+          "veteranos-adultos-mayores-puenteatx-import.csv:30",
+          "veteranos-adultos-mayores-puenteatx-import.csv:44",
+          "williamson-county-recursos-puenteatx-import-ready.csv:30"
+        ]
+      },
+      {
+        "phone": "5122442431",
+        "orgs": [
+          "Round Rock Area Serving Center"
+        ],
+        "where": [
+          "williamson-county-recursos-puenteatx-import-ready.csv:18",
+          "williamson-county-resources.csv:10"
+        ]
+      },
+      {
+        "phone": "5129430700",
+        "orgs": [
+          "The Caring Place"
+        ],
+        "where": [
+          "williamson-county-recursos-puenteatx-import-ready.csv:21",
+          "williamson-county-resources.csv:13"
+        ]
+      },
+      {
+        "phone": "5125485091",
+        "orgs": [
+          "Community Resource Centers of Texas",
+          "Williamson County Community Resource Center"
+        ],
+        "where": [
+          "williamson-county-recursos-puenteatx-import-ready.csv:23",
+          "williamson-county-resources.csv:2"
+        ]
+      },
+      {
+        "phone": "5122553702",
+        "orgs": [
+          "Round Rock Housing Authority"
+        ],
+        "where": [
+          "williamson-county-recursos-puenteatx-import-ready.csv:25",
+          "williamson-county-resources.csv:35"
+        ]
+      },
+      {
+        "phone": "5123523231",
+        "orgs": [
+          "Taylor Housing Authority"
+        ],
+        "where": [
+          "williamson-county-recursos-puenteatx-import-ready.csv:26",
+          "williamson-county-resources.csv:36"
+        ]
+      },
+      {
+        "phone": "5124776000",
+        "orgs": [
+          "Texas Legal Services Center",
+          "TexasLawHelp.org"
+        ],
+        "where": [
+          "williamson-county-recursos-puenteatx-import-ready.csv:39",
+          "williamson-county-resources.csv:29"
+        ]
+      }
+    ],
+    "sharedWebsiteDifferentTitle": [
+      {
+        "website": "austinvoices.org",
+        "titles": [
+          "Clínicas de inscripción a seguro médico",
+          "Ayuda para usar MyChart",
+          "Apoyo comunitario para personas y familias",
+          "Apoyo del Centro de Recursos Familiares"
+        ],
+        "where": [
+          "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:2",
+          "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:8",
+          "complete-family-resource-guide-puenteatx-import.csv:42",
+          "resource-list-cmm-updated-puenteatx-import.csv:6"
+        ]
+      },
+      {
+        "website": "bastropfoodpantry.org",
+        "titles": [
+          "Despensa de Emergencia del Condado de Bastrop",
+          "Programa de Asistencia de Renta/Utilities — Despensa de Emergencia del Condado de Bastrop"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:2",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:44"
+        ]
+      },
+      {
+        "website": "sacredheartofelgin.org",
+        "titles": [
+          "Despensa de la Iglesia Católica Sagrado Corazón (Elgin)",
+          "Sociedad de San Vicente de Paúl — Iglesia Sagrado Corazón (Elgin)"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:6",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:45"
+        ]
+      },
+      {
+        "website": "centraltexasfoodbank.org/find-food",
+        "titles": [
+          "Despensa Móvil de Cedar Creek (Central Texas Food Bank)",
+          "Despensa Móvil de Elgin (Central Texas Food Bank)"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:11",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:12"
+        ]
+      },
+      {
+        "website": "centraltexasfoodbank.org",
+        "titles": [
+          "Golden Harvest — Comidas para Personas Mayores (Meals on Wheels)",
+          "Distribución de alimentos"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:13",
+          "resource-list-cmm-updated-puenteatx-import.csv:28"
+        ]
+      },
+      {
+        "website": "austinhabitat.org",
+        "titles": [
+          "Austin Habitat for Humanity — Reparación de Vivienda (Bastrop)",
+          "Vivienda y asistencia para necesidades básicas"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:19",
+          "complete-family-resource-guide-puenteatx-import.csv:75"
+        ]
+      },
+      {
+        "website": "ridecarts.com",
+        "titles": [
+          "Autobús Rural CARTS (Country Bus) — Condado de Bastrop",
+          "CARTS (Capital Area Rural Transportation System)",
+          "CARTS – Williamson County",
+          "Transporte público rural CARTS"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:29",
+          "veteranos-adultos-mayores-puenteatx-import.csv:29",
+          "williamson-county-recursos-puenteatx-import-ready.csv:29",
+          "williamson-county-resources.csv:17"
+        ]
+      },
+      {
+        "website": "driveasenior.org",
+        "titles": [
+          "Drive a Senior — Transporte para Adultos Mayores del Centro de Texas",
+          "Drive a Senior Network",
+          "Drive a Senior (Central Texas)"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:35",
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:70",
+          "veteranos-adultos-mayores-puenteatx-import.csv:30"
+        ]
+      },
+      {
+        "website": "bisdtx.org/departments/student-services/student-family-support-services",
+        "titles": [
+          "Centro de Recursos Familiares de BISD (GED/ESL nocturno)",
+          "Servicios de Enlace McKinney-Vento de BISD"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:38",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:39"
+        ]
+      },
+      {
+        "website": "hhs.texas.gov",
+        "titles": [
+          "Oficina de Beneficios de HHSC — Bastrop",
+          "Oficina de Beneficios de HHSC — Elgin"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:47",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:48"
+        ]
+      },
+      {
+        "website": "trla.org",
+        "titles": [
+          "Ayuda Legal RioGrande de Texas (TRLA)",
+          "Texas RioGrande Legal Aid – Williamson County"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:51",
+          "williamson-county-recursos-puenteatx-import-ready.csv:36"
+        ]
+      },
+      {
+        "website": "vlsoct.org",
+        "titles": [
+          "Servicios Legales Voluntarios del Centro de Texas (VLSoCT)",
+          "Volunteer Legal Services of Central Texas (VLSoCT)",
+          "Volunteer Legal Services of Central Texas – Williamson County"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:52",
+          "veteranos-adultos-mayores-puenteatx-import.csv:32",
+          "williamson-county-recursos-puenteatx-import-ready.csv:37"
+        ]
+      },
+      {
+        "website": "bastropcounty.gov/page/co.veteran_services",
+        "titles": [
+          "Oficina de Servicios para Veteranos del Condado de Bastrop"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:57",
+          "veteranos-adultos-mayores-puenteatx-import.csv:10"
+        ]
+      },
+      {
+        "website": "bastropcommunityseniorcenter.org",
+        "titles": [
+          "Centro Comunitario de Adultos Mayores de Bastrop",
+          "Centro Comunitario de Ancianos de Bastrop"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:60",
+          "veteranos-adultos-mayores-puenteatx-import.csv:40"
+        ]
+      },
+      {
+        "website": "hccm.org",
+        "titles": [
+          "Hill Country Community Ministries (HCCM)",
+          "Alimentos y asistencia para necesidades básicas",
+          "Hill Country Community Ministries"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:82",
+          "complete-family-resource-guide-puenteatx-import.csv:15",
+          "williamson-county-recursos-puenteatx-import-ready.csv:19"
+        ]
+      },
+      {
+        "website": "hatctx.com",
+        "titles": [
+          "Housing Authority of Travis County (HATC)",
+          "Housing Authority for Travis County (HATC)"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:104",
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:37"
+        ]
+      },
+      {
+        "website": "stelizabethpf.org/social-outreach",
+        "titles": [
+          "Iglesia Católica St. Elizabeth of Hungary — Despensa de Alimentos",
+          "St. Elizabeth of Hungary — Sociedad de San Vicente de Paúl"
+        ],
+        "where": [
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:110",
+          "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:111"
+        ]
+      },
+      {
+        "website": "workforcesolutionsrca.com",
+        "titles": [
+          "Asistencia financiera y apoyo para necesidades básicas",
+          "Workforce Solutions Rural Capital Area",
+          "Empleo, capacitación y preparación laboral"
+        ],
+        "where": [
+          "complete-family-resource-guide-puenteatx-import.csv:16",
+          "williamson-county-recursos-puenteatx-import-ready.csv:34",
+          "williamson-county-resources.csv:28"
+        ]
+      },
+      {
+        "website": "dressforsuccessaustin.org",
+        "titles": [
+          "Apoyo comunitario para personas y familias",
+          "Apoyo laboral y ropa profesional"
+        ],
+        "where": [
+          "complete-family-resource-guide-puenteatx-import.csv:33",
+          "resource-list-cmm-updated-puenteatx-import.csv:56"
+        ]
+      },
+      {
+        "website": "wilcocac.org",
+        "titles": [
+          "Programas educativos y apoyo al aprendizaje",
+          "Williamson County Children's Advocacy Center"
+        ],
+        "where": [
+          "complete-family-resource-guide-puenteatx-import.csv:39",
+          "williamson-county-recursos-puenteatx-import-ready.csv:15"
+        ]
+      },
+      {
+        "website": "lifeworksaustin.org",
+        "titles": [
+          "Servicios de salud mental y bienestar",
+          "Lifeworks (solamente para jóvenes)"
+        ],
+        "where": [
+          "complete-family-resource-guide-puenteatx-import.csv:62",
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:45"
+        ]
+      },
+      {
+        "website": "elbuen.org",
+        "titles": [
+          "Apoyo comunitario para personas y familias",
+          "Servicios de apoyo comunitario"
+        ],
+        "where": [
+          "complete-family-resource-guide-puenteatx-import.csv:73",
+          "resource-list-cmm-updated-puenteatx-import.csv:3"
+        ]
+      },
+      {
+        "website": "samaritan-center.org/services",
+        "titles": [
+          "Servicios de salud mental y bienestar",
+          "Consejería para familias y adolescentes"
+        ],
+        "where": [
+          "counseling-resources-austin-puenteatx-import.csv:4",
+          "resource-list-cmm-updated-puenteatx-import.csv:24"
+        ]
+      },
+      {
+        "website": "tlsc.org",
+        "titles": [
+          "Texas Legal Services Center",
+          "Texas Legal Services Center – Williamson County"
+        ],
+        "where": [
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:4",
+          "williamson-county-recursos-puenteatx-import-ready.csv:39"
+        ]
+      },
+      {
+        "website": "texaslawhelp.org",
+        "titles": [
+          "Texas Law Help",
+          "Información y formularios legales gratuitos"
+        ],
+        "where": [
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:25",
+          "williamson-county-resources.csv:29"
+        ]
+      },
+      {
+        "website": "ageofcentraltx.org",
+        "titles": [
+          "AGE of Central Texas",
+          "AGE of Central Texas — Servicios para Cuidadores"
+        ],
+        "where": [
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:69",
+          "veteranos-adultos-mayores-puenteatx-import.csv:18"
+        ]
+      },
+      {
+        "website": "mealsonwheelscentraltexas.org",
+        "titles": [
+          "Meals on Wheels Central Texas",
+          "Meals on Wheels Central Texas (MOWCT)"
+        ],
+        "where": [
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:71",
+          "veteranos-adultos-mayores-puenteatx-import.csv:21"
+        ]
+      },
+      {
+        "website": "unitedwayaustin.org/connectatx",
+        "titles": [
+          "Navegación de recursos ConnectATX",
+          "Navegación de recursos comunitarios"
+        ],
+        "where": [
+          "eviction-solidarity-network-consolidated-puenteatx-import.csv:78",
+          "resource-list-cmm-updated-puenteatx-import.csv:2"
+        ]
+      },
+      {
+        "website": "lonestarcares.org",
+        "titles": [
+          "Servicios comunitarios de salud",
+          "Lone Star Circle of Care – Salud Conductual de Round Rock",
+          "Lone Star Circle of Care – Salud Conductual de Georgetown"
+        ],
+        "where": [
+          "resource-list-cmm-updated-puenteatx-import.csv:7",
+          "williamson-county-recursos-puenteatx-import-ready.csv:10",
+          "williamson-county-recursos-puenteatx-import-ready.csv:11"
+        ]
+      },
+      {
+        "website": "austinpcc.org",
+        "titles": [
+          "Centro de Salud para Mujeres",
+          "Clínica comunitaria de salud"
+        ],
+        "where": [
+          "resource-list-cmm-updated-puenteatx-import.csv:9",
+          "resource-list-cmm-updated-puenteatx-import.csv:10"
+        ]
+      },
+      {
+        "website": "austintexas.gov/services/get-free-or-low-cost-vaccines",
+        "titles": [
+          "Clínica de vacunación Far South",
+          "Clínica de vacunación St. Johns"
+        ],
+        "where": [
+          "resource-list-cmm-updated-puenteatx-import.csv:11",
+          "resource-list-cmm-updated-puenteatx-import.csv:12"
+        ]
+      },
+      {
+        "website": "austintexas.gov/services/get-help-neighborhood-centers",
+        "titles": [
+          "Centro Vecinal Dove Springs",
+          "Centro Comunitario St. John",
+          "Centro Vecinal del Este de Austin",
+          "Centro Comunitario Montopolis"
+        ],
+        "where": [
+          "resource-list-cmm-updated-puenteatx-import.csv:50",
+          "resource-list-cmm-updated-puenteatx-import.csv:51",
+          "resource-list-cmm-updated-puenteatx-import.csv:52",
+          "resource-list-cmm-updated-puenteatx-import.csv:53"
+        ]
+      },
+      {
+        "website": "foundcom.org/prosper-centers",
+        "titles": [
+          "Prosper Center Norte",
+          "Prosper Center Sur"
+        ],
+        "where": [
+          "resource-list-cmm-updated-puenteatx-import.csv:54",
+          "resource-list-cmm-updated-puenteatx-import.csv:55"
+        ]
+      },
+      {
+        "website": "owbc-tx.org",
+        "titles": [
+          "Opportunities for Williamson & Burnet Counties (OWBC) — Meals on Wheels",
+          "Opportunities for Williamson & Burnet Counties (OWBC)"
+        ],
+        "where": [
+          "veteranos-adultos-mayores-puenteatx-import.csv:22",
+          "williamson-county-recursos-puenteatx-import-ready.csv:31"
+        ]
+      },
+      {
+        "website": "owbc-tx.org/community-services",
+        "titles": [
+          "Asistencia con Servicios Públicos — OWBC (Williamson/Burnet)",
+          "Asistencia de energía y autosuficiencia"
+        ],
+        "where": [
+          "veteranos-adultos-mayores-puenteatx-import.csv:36",
+          "williamson-county-resources.csv:4"
+        ]
+      },
+      {
+        "website": "bbtrails.org/substance-use-services",
+        "titles": [
+          "Servicios de Consumo de Sustancias de Bluebonnet Trails",
+          "Evaluación y referidos para uso de sustancias"
+        ],
+        "where": [
+          "williamson-county-recursos-puenteatx-import-ready.csv:2",
+          "williamson-county-resources.csv:9"
+        ]
+      },
+      {
+        "website": "rrasc.org",
+        "titles": [
+          "Round Rock Area Serving Center",
+          "Despensa y asistencia financiera"
+        ],
+        "where": [
+          "williamson-county-recursos-puenteatx-import-ready.csv:18",
+          "williamson-county-resources.csv:10"
+        ]
+      },
+      {
+        "website": "crctx.org",
+        "titles": [
+          "Williamson County Community Resource Center – Liberty Hill",
+          "Orientación para encontrar ayuda"
+        ],
+        "where": [
+          "williamson-county-recursos-puenteatx-import-ready.csv:23",
+          "williamson-county-resources.csv:2"
+        ]
+      },
+      {
+        "website": "operationlh.org",
+        "titles": [
+          "Operation Liberty Hill",
+          "Despensa de alimentos de Liberty Hill"
+        ],
+        "where": [
+          "williamson-county-recursos-puenteatx-import-ready.csv:32",
+          "williamson-county-resources.csv:15"
+        ]
+      },
+      {
+        "website": "ccctx.org/immigration-legal-services",
+        "titles": [
+          "Catholic Charities – Servicios Legales de Inmigración en Georgetown",
+          "Asistencia legal de inmigración"
+        ],
+        "where": [
+          "williamson-county-recursos-puenteatx-import-ready.csv:38",
+          "williamson-county-resources.csv:31"
+        ]
+      },
+      {
+        "website": "lonestarcares.org/location",
+        "titles": [
+          "Clínica comunitaria de Cedar Park",
+          "Clínica comunitaria de Round Rock"
+        ],
+        "where": [
+          "williamson-county-resources.csv:20",
+          "williamson-county-resources.csv:21"
+        ]
+      }
+    ]
+  },
+  "orgClusters": [
+    {
+      "org": "Lone Star Circle of Care",
+      "rows": 8,
+      "where": [
+        "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:11",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:81",
+        "resource-list-cmm-updated-puenteatx-import.csv:7",
+        "resource-list-cmm-updated-puenteatx-import.csv:13",
+        "williamson-county-recursos-puenteatx-import-ready.csv:10",
+        "williamson-county-recursos-puenteatx-import-ready.csv:11",
+        "williamson-county-resources.csv:20",
+        "williamson-county-resources.csv:21"
+      ]
+    },
+    {
+      "org": "Travis County Health and Human Services",
+      "rows": 8,
+      "where": [
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:66",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:71",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:72",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:80",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:106",
+        "resource-list-cmm-updated-puenteatx-import.csv:60",
+        "veteranos-adultos-mayores-puenteatx-import.csv:35",
+        "veteranos-adultos-mayores-puenteatx-import.csv:41"
+      ]
+    },
+    {
+      "org": "Austin Public Health",
+      "rows": 7,
+      "where": [
+        "eviction-solidarity-network-consolidated-puenteatx-import.csv:11",
+        "resource-list-cmm-updated-puenteatx-import.csv:11",
+        "resource-list-cmm-updated-puenteatx-import.csv:12",
+        "resource-list-cmm-updated-puenteatx-import.csv:50",
+        "resource-list-cmm-updated-puenteatx-import.csv:51",
+        "resource-list-cmm-updated-puenteatx-import.csv:52",
+        "resource-list-cmm-updated-puenteatx-import.csv:53"
+      ]
+    },
+    {
+      "org": "Opportunities for Williamson & Burnet Counties",
+      "rows": 7,
+      "where": [
+        "resource-list-cmm-updated-puenteatx-import.csv:25",
+        "veteranos-adultos-mayores-puenteatx-import.csv:22",
+        "veteranos-adultos-mayores-puenteatx-import.csv:36",
+        "williamson-county-recursos-puenteatx-import-ready.csv:31",
+        "williamson-county-resources.csv:4",
+        "williamson-county-resources.csv:5",
+        "williamson-county-resources.csv:6"
+      ]
+    },
+    {
+      "org": "Central Texas Food Bank",
+      "rows": 6,
+      "where": [
+        "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:4",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:11",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:12",
+        "resource-list-cmm-updated-puenteatx-import.csv:28",
+        "veteranos-adultos-mayores-puenteatx-import.csv:24",
+        "williamson-county-resources.csv:3"
+      ]
+    },
+    {
+      "org": "Foundation Communities",
+      "rows": 5,
+      "where": [
+        "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:6",
+        "eviction-solidarity-network-consolidated-puenteatx-import.csv:33",
+        "resource-list-cmm-updated-puenteatx-import.csv:26",
+        "resource-list-cmm-updated-puenteatx-import.csv:54",
+        "resource-list-cmm-updated-puenteatx-import.csv:55"
+      ]
+    },
+    {
+      "org": "Bluebonnet Trails Community Services",
+      "rows": 5,
+      "where": [
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:26",
+        "williamson-county-recursos-puenteatx-import-ready.csv:2",
+        "williamson-county-recursos-puenteatx-import-ready.csv:9",
+        "williamson-county-resources.csv:8",
+        "williamson-county-resources.csv:9"
+      ]
+    },
+    {
+      "org": "Capital Area Rural Transportation System (CARTS)",
+      "rows": 5,
+      "where": [
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:29",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:30",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:31",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:98",
+        "williamson-county-recursos-puenteatx-import-ready.csv:29"
+      ]
+    },
+    {
+      "org": "Capital Metropolitan Transportation Authority (CapMetro)",
+      "rows": 5,
+      "where": [
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:99",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:100",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:101",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:102",
+        "veteranos-adultos-mayores-puenteatx-import.csv:28"
+      ]
+    },
+    {
+      "org": "Catholic Charities of Central Texas",
+      "rows": 5,
+      "where": [
+        "eviction-solidarity-network-consolidated-puenteatx-import.csv:8",
+        "eviction-solidarity-network-consolidated-puenteatx-import.csv:65",
+        "veteranos-adultos-mayores-puenteatx-import.csv:9",
+        "williamson-county-recursos-puenteatx-import-ready.csv:38",
+        "williamson-county-resources.csv:31"
+      ]
+    },
+    {
+      "org": "CommUnityCare Health Centers",
+      "rows": 4,
+      "where": [
+        "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:9",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:24",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:67",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:74"
+      ]
+    },
+    {
+      "org": "Bastrop County Government",
+      "rows": 4,
+      "where": [
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:25",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:28",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:54",
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:57"
+      ]
+    },
+    {
+      "org": "Volunteer Legal Services of Central Texas",
+      "rows": 4,
+      "where": [
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:52",
+        "eviction-solidarity-network-consolidated-puenteatx-import.csv:6",
+        "veteranos-adultos-mayores-puenteatx-import.csv:32",
+        "williamson-county-recursos-puenteatx-import-ready.csv:37"
+      ]
+    },
+    {
+      "org": "Hill Country Community Ministries",
+      "rows": 4,
+      "where": [
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:82",
+        "complete-family-resource-guide-puenteatx-import.csv:15",
+        "williamson-county-recursos-puenteatx-import-ready.csv:19",
+        "williamson-county-resources.csv:14"
+      ]
+    },
+    {
+      "org": "Integral Care",
+      "rows": 4,
+      "where": [
+        "complete-family-resource-guide-puenteatx-import.csv:61",
+        "eviction-solidarity-network-consolidated-puenteatx-import.csv:38",
+        "eviction-solidarity-network-consolidated-puenteatx-import.csv:67",
+        "resource-list-cmm-updated-puenteatx-import.csv:23"
+      ]
+    },
+    {
+      "org": "Austin Voices for Education and Youth (AVEY)",
+      "rows": 3,
+      "where": [
+        "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:2",
+        "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:8",
+        "resource-list-cmm-updated-puenteatx-import.csv:6"
+      ]
+    },
+    {
+      "org": "Central Health",
+      "rows": 3,
+      "where": [
+        "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:5",
+        "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:10",
+        "eviction-solidarity-network-consolidated-puenteatx-import.csv:61"
+      ]
+    },
+    {
+      "org": "People's Community Clinic",
+      "rows": 3,
+      "where": [
+        "avey-healthcare-catalog-fall-2026-puenteatx-import.csv:12",
+        "resource-list-cmm-updated-puenteatx-import.csv:9",
+        "resource-list-cmm-updated-puenteatx-import.csv:10"
+      ]
+    },
+    {
+      "org": "Workforce Solutions Rural Capital Area",
+      "rows": 3,
+      "where": [
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:49",
+        "williamson-county-recursos-puenteatx-import-ready.csv:34",
+        "williamson-county-resources.csv:28"
+      ]
+    },
+    {
+      "org": "Texas RioGrande Legal Aid",
+      "rows": 3,
+      "where": [
+        "bastrop-travis-no-austin-consolidated-puenteatx-import.csv:95",
+        "eviction-solidarity-network-consolidated-puenteatx-import.csv:5",
+        "williamson-county-recursos-puenteatx-import-ready.csv:36"
+      ]
+    },
+    {
+      "org": "Samaritan Center",
+      "rows": 3,
+      "where": [
+        "complete-family-resource-guide-puenteatx-import.csv:21",
+        "counseling-resources-austin-puenteatx-import.csv:4",
+        "resource-list-cmm-updated-puenteatx-import.csv:24"
+      ]
+    },
+    {
+      "org": "Williamson County Children's Advocacy Center",
+      "rows": 3,
+      "where": [
+        "complete-family-resource-guide-puenteatx-import.csv:39",
+        "williamson-county-recursos-puenteatx-import-ready.csv:15",
+        "williamson-county-resources.csv:32"
+      ]
+    },
+    {
+      "org": "Austin Child Guidance Center",
+      "rows": 3,
+      "where": [
+        "complete-family-resource-guide-puenteatx-import.csv:76",
+        "counseling-resources-austin-puenteatx-import.csv:7",
+        "resource-list-cmm-updated-puenteatx-import.csv:22"
+      ]
+    },
+    {
+      "org": "Texas Legal Services Center",
+      "rows": 3,
+      "where": [
+        "eviction-solidarity-network-consolidated-puenteatx-import.csv:4",
+        "veteranos-adultos-mayores-puenteatx-import.csv:31",
+        "williamson-county-recursos-puenteatx-import-ready.csv:39"
+      ]
+    },
+    {
+      "org": "City of Austin",
+      "rows": 3,
+      "where": [
+        "eviction-solidarity-network-consolidated-puenteatx-import.csv:43",
+        "eviction-solidarity-network-consolidated-puenteatx-import.csv:50",
+        "eviction-solidarity-network-consolidated-puenteatx-import.csv:74"
+      ]
+    },
+    {
+      "org": "AGE of Central Texas",
+      "rows": 3,
+      "where": [
+        "eviction-solidarity-network-consolidated-puenteatx-import.csv:69",
+        "veteranos-adultos-mayores-puenteatx-import.csv:18",
+        "veteranos-adultos-mayores-puenteatx-import.csv:43"
+      ]
+    },
+    {
+      "org": "Williamson County",
+      "rows": 3,
+      "where": [
+        "veteranos-adultos-mayores-puenteatx-import.csv:6",
+        "veteranos-adultos-mayores-puenteatx-import.csv:42",
+        "williamson-county-recursos-puenteatx-import-ready.csv:8"
+      ]
+    }
+  ]
+}
