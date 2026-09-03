@@ -820,11 +820,10 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
 .admin-csv-intro li::marker { color: var(--color-accent); }
 .admin-csv-intro .secondary-button { margin: 18px 0 0; }
 .admin-csv-file { display: grid; gap: 8px; font-weight: 600; }
-.admin-csv-file input { width: 100%; min-height: 44px; padding: 0; border: 0; background: transparent; color: var(--color-ink); font: inherit; font-weight: 400; cursor: pointer; }
-.admin-csv-file input:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
-.admin-csv-file input::file-selector-button { min-height: 44px; margin-right: 12px; padding: 8px 16px; border: 1.5px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-white); color: var(--color-ink); font-family: var(--font-heading); font-weight: 600; cursor: pointer; transition: border-color .15s, color .15s, box-shadow .15s; }
-.admin-csv-file input::file-selector-button:hover { border-color: var(--color-accent); color: var(--color-accent); box-shadow: var(--shadow-card-hover); }
-.admin-csv-file small { font-weight: 400; }
+.admin-csv-file-picker { display: flex; align-items: center; gap: 12px; min-width: 0; font-weight: 400; }
+.admin-csv-file-picker .secondary-button { height: var(--admin-control-height); min-height: var(--admin-control-height); margin: 0; padding: 6px 16px; display: inline-flex; align-items: center; flex: none; cursor: pointer; }
+.admin-csv-file-picker > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.admin-csv-file-picker input:focus-visible + label { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 .admin-csv-update-mode { margin: 0; padding: 18px; border: 1px solid var(--color-line-subtle); border-radius: var(--radius-md); background: var(--color-insights-surface); display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .admin-csv-update-mode legend { padding: 0 6px; font-family: var(--font-heading); font-weight: 600; }
 .admin-csv-update-mode label { min-width: 0; padding: 12px; border: 1px solid var(--color-line-subtle); border-radius: var(--radius-sm); background: var(--color-white); display: flex; align-items: flex-start; gap: 10px; cursor: pointer; }
@@ -1647,6 +1646,5 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
 .admin-shell .admin-main button, .admin-shell .admin-nav button, .admin-login button, .admin-mfa-card button, .admin-row-menu-popover button { height: var(--admin-control-height); min-height: var(--admin-control-height); padding-block: 6px; }
 .admin-shell .admin-main input:not([type="checkbox"]):not([type="radio"]), .admin-shell .admin-main select,
 .admin-login input:not([type="checkbox"]):not([type="radio"]), .admin-mfa-card input:not([type="checkbox"]):not([type="radio"]) { height: var(--admin-control-height); min-height: var(--admin-control-height); padding-block: 6px; }
-.admin-csv-file input::file-selector-button { height: var(--admin-control-height); min-height: var(--admin-control-height); padding-block: 6px; }
 .admin-shell .admin-main .optional-contact-field > div button { height: auto; min-height: 0; padding-block: 0; line-height: normal; }
 .admin-shell .admin-main .verification-source-field button { height: 30px; min-height: 30px; padding-block: 4px; }

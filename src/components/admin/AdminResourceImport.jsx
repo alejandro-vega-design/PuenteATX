@@ -104,11 +104,14 @@ export default function AdminResourceImport({ t, existingResources, refresh, nav
         <ul><li>{t.csvRuleDraft}</li><li>{t.csvRuleUpdates}</li><li>{t.csvRuleLists}</li><li>{t.csvRuleCategories}</li><li>{t.csvRuleNormalization}</li><li>{t.csvRuleLimit}</li></ul>
         <button className="secondary-button" type="button" onClick={downloadTemplate}>{t.downloadCsvTemplate}</button>
       </div>
-      <label className="admin-csv-file">
+      <div className="admin-csv-file">
         <span>{t.chooseCsv}</span>
-        <input type="file" accept=".csv,text/csv" onChange={chooseFile}/>
-        {fileName && <small>{fileName}</small>}
-      </label>
+        <div className="admin-csv-file-picker">
+          <input id="admin-csv-file-input" className="sr-only" type="file" accept=".csv,text/csv" onChange={chooseFile}/>
+          <label className="secondary-button" htmlFor="admin-csv-file-input">{t.browseCsv}</label>
+          <span>{fileName || t.noCsvSelected}</span>
+        </div>
+      </div>
       <fieldset className="admin-csv-update-mode">
         <legend>{t.csvUpdateMode}</legend>
         <label><input type="radio" name="csv-update-mode" value="empty" checked={updateMode === 'empty'} onChange={() => { setUpdateMode('empty'); if (parsedSource) preparePreview(parsedSource, 'empty'); }}/><span><strong>{t.csvFillEmpty}</strong><small>{t.csvFillEmptyHelp}</small></span></label>
