@@ -105,6 +105,23 @@ for (const row of prepared.rows) {
   }
 }
 
+const sharedTitleGroups = new Map();
+for (const row of prepared.rows) {
+  const resource = row.resource;
+  const key = `${normalizeText(resource.title_es)}|${normalizeText(resource.title_en)}`;
+  if (key === '|') continue;
+  if (!sharedTitleGroups.has(key)) sharedTitleGroups.set(key, []);
+  sharedTitleGroups.get(key).push(row);
+}
+for (const rows of sharedTitleGroups.values()) {
+  if (rows.length < 2) continue;
+  const example = rows[0].resource.title_es || rows[0].resource.title_en;
+  qualityWarnings.push({
+    row: rows[0].rowNumber,
+    issue: `shared bilingual title used by ${rows.length} rows (${example}); review as legitimate repetition, title/content mismatch, or true duplicate`
+  });
+}
+
 const invalid = prepared.rows.filter(row => row.errors.length);
 const importerWarnings = prepared.rows.filter(row => row.warnings.length);
 const actions = prepared.rows.reduce((counts, row) => {

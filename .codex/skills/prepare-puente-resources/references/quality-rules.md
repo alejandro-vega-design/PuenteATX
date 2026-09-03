@@ -11,6 +11,14 @@ Read the live importer first. These rules supplement it and resolve recurring da
 - Make titles understandable without reading the summary. Include the essential service subject or population whenever a generic label could refer to materially different needs. For violence-response resources, specify the supported context: use `Apoyo para sobrevivientes de violencia y agresión sexual` / `Support for survivors of violence and sexual assault`, not the ambiguous `Apoyo para sobrevivientes` / `Survivor support`.
 - Preserve a known existing slug. Do not create a second slug for an update.
 - Flag ambiguous organization/title matches and repeated records in the same document.
+- Audit exact normalized title groups across the complete batch and, when available, across existing resources in the same status. Do not review rows in isolation.
+- Classify shared titles before changing them:
+  - **Legitimate repetition:** equivalent service types from different organizations or distinct locations, such as food pantries or home-health providers. Keep the accurate shared label.
+  - **Title/content mismatch:** the title conflicts with the service evidence, such as pet food labeled as groceries for people or senior-care navigation labeled as adult education. Retitle and repair contaminated summaries.
+  - **Ambiguous title:** the title omits essential context supplied by verified evidence. Add the missing subject or population without adding the organization.
+  - **True duplicate:** contact details, official identity, program description, and coverage show that two rows represent one service. Consolidate verified complementary fields into a canonical record and archive the duplicate; do not fabricate distinct titles.
+- Treat spelling variants, county-split imports, and an organization/program name appearing once as the organization and once as the title as duplicate signals, not proof. Preserve separate programs and separate physical locations when they deliver distinct services.
+- After correction, rerun the audit and document every remaining shared-title group with its legitimate rationale.
 
 ## Classification integrity
 

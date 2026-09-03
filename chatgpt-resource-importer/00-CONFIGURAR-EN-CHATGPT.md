@@ -26,6 +26,6 @@ Adjunta luego uno o más archivos CSV, XLSX, DOCX o PDF.
 
 ## Limitación importante
 
-Este paquete refleja el importer de Puente ATX al **18 de agosto de 2026**. ChatGPT no puede consultar automáticamente el repositorio local. Si cambia el esquema del importer, reemplaza los archivos de conocimiento y la plantilla por versiones actualizadas.
+Este paquete refleja el importer y las reglas editoriales de Puente ATX al **3 de septiembre de 2026**. ChatGPT no puede consultar automáticamente el repositorio local. Si cambia el esquema del importer, reemplaza los archivos de conocimiento y la plantilla por versiones actualizadas.
 
 El GPT prepara borradores para revisión administrativa. Nunca debe importar, publicar ni modificar producción automáticamente.
