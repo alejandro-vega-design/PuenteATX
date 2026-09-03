@@ -30,7 +30,8 @@ Create a bilingual CSV that passes the current Puente ATX importer. Preserve pro
 10. Normalize every row using [references/quality-rules.md](references/quality-rules.md). Read that file before producing the CSV. Classify from source evidence and the official program identity, not from previously generated prose. When several services match, select the most specific service actually represented by the row instead of accepting the first keyword match.
 11. Generate UTF-8 CSV with the exact live header order. Quote fields correctly, preserve accents, and use `|` for list values unless the live importer specifies otherwise.
 12. Run `scripts/validate-puente-csv.mjs` against the project and output. Fix all importer errors and review every quality warning. Audit every row to confirm that neither localized title equals nor redundantly contains `organization_name`.
-13. Deliver:
+13. Audit titles and merged prose editorially. Require each localized title to identify the service or population without relying on the summary for essential context. Rewrite overlapping source fragments into one coherent summary; never concatenate generated sentences mechanically.
+14. Deliver:
    - `<source-name>-puenteatx-import.csv`;
    - `<source-name>-puenteatx-review.md` only when unresolved issues, assumptions, duplicate candidates, or missing fields exist.
 
@@ -80,9 +81,11 @@ The JSON file must be an array of resource objects. Do not connect to production
 - Produce drafts ready for admin review; never publish or import automatically.
 - Populate both Spanish and English titles and summaries.
 - Write `title_es` and `title_en` as concise service or program names only. Keep the institution in `organization_name`; never append or prepend it to a title merely for identification because the Puente ATX interface displays the organization separately. Examples: use `Asistencia legal` with organization `Texas Rio Grande Legal Aid`, and `Atención veterinaria` with organization `Emancipet`.
+- Make every title specific and self-contained enough to distinguish the service. Include the essential subject or population when omitting it would make the title ambiguous. For example, use `Apoyo para sobrevivientes de violencia y agresión sexual` / `Support for survivors of violence and sexual assault`, not `Apoyo para sobrevivientes` / `Survivor support` when the verified source provides that context.
 - Prefer a specific supported service over a broad incidental keyword. In particular, distinguish veterinary care from human dental care, legal assistance from housing topics mentioned in a legal description, Lifeline phone service from household or family language, adult education from employment language, and survivor support from housing that is part of a violence-response program.
 - When schedule or availability information exists, populate and naturally translate both `hours_es` and `hours_en`. Preserve days, times, time zones, appointment requirements, seasonal limits, and exceptions exactly; never translate only the field label or copy prose unchanged between languages.
 - Keep summaries short, user-facing, and free of phone numbers, emails, URLs, or raw contact lists.
+- When consolidating records, synthesize supported facts into natural prose. Do not paste summaries together, repeat sentence openings such as `Ofrece... Ofrece...` or `Provides... Provides...`, or preserve a claim merely because it appeared in a duplicate. Verify every retained claim against the immutable source or an authoritative source.
 - Map all researched content to existing CSV columns; never add a new CSV field merely because the source template uses a different label.
 - Treat the 19-point research checklist as a completeness guide. Skip research for populated fields unless validation or correction is requested.
 - Use the most specific existing primary category and optional existing additional categories. Never create new category slugs.

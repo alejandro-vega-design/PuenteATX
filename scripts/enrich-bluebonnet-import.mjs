@@ -34,7 +34,7 @@ const serviceFacts = [
   [/adult education|ged|english for speakers|digital literacy|college preparation/i, 'Educación para adultos', 'Adult education', 'Ofrece educación para adultos, preparación académica o desarrollo de habilidades.', 'Provides adult education, academic preparation, or skills development.', 'educacion'],
   [/transportation|ride request|bus passes|travel reimbursement/i, 'Apoyo de transporte', 'Transportation support', 'Ofrece transporte, coordinación de viajes o asistencia con gastos de traslado.', 'Provides transportation, ride coordination, or travel-expense assistance.', 'transporte'],
   [/childcare|child care|head start|children from birth/i, 'Apoyo para niños y familias', 'Child and family support', 'Ofrece cuidado infantil, educación temprana o apoyo para niños y sus familias.', 'Provides child care, early education, or support for children and families.', 'otros-recursos'],
-  [/domestic violence|sexual assault|sex trafficking|safety planning|survivor/i, 'Apoyo para sobrevivientes', 'Survivor support', 'Ofrece apoyo confidencial, planificación de seguridad y recursos para sobrevivientes de violencia o agresión sexual.', 'Provides confidential support, safety planning, and resources for survivors of violence or sexual assault.', 'ayuda-legal'],
+  [/domestic violence|sexual assault|sex trafficking|safety planning|survivor/i, 'Apoyo para sobrevivientes de violencia y agresión sexual', 'Support for survivors of violence and sexual assault', 'Ofrece apoyo confidencial, planificación de seguridad y recursos para sobrevivientes de violencia o agresión sexual.', 'Provides confidential support, safety planning, and resources for survivors of violence or sexual assault.', 'ayuda-legal'],
   [/seeking safety|causing harm|rape, abuse|\bRAINN\b/i, 'Apoyo ante violencia sexual o familiar', 'Sexual or family violence support', 'Ofrece información, apoyo o planificación de seguridad ante violencia sexual o familiar.', 'Provides information, support, or safety planning related to sexual or family violence.', 'ayuda-legal'],
   [/civil legal|legal assistance|legal advocacy|immigration benefits|legal hotline/i, 'Asistencia legal', 'Legal assistance', 'Ofrece información, orientación o representación legal según el programa.', 'Provides legal information, guidance, or representation depending on the program.', 'ayuda-legal'],
   [/lifeline|free phone|wireless/i, 'Servicio telefónico Lifeline', 'Lifeline phone service', 'Ofrece servicio telefónico mediante el beneficio federal Lifeline para personas que califican.', 'Provides phone service through the federal Lifeline benefit for eligible applicants.', 'otros-recursos'],
@@ -94,6 +94,13 @@ function enrich(source, pantry) {
   row.summary_en = selectedFacts.slice(0, 2).map(fact => fact[4]).join(' ');
   row.description_es = selectedFacts.map(fact => fact[3]).join(' ');
   row.description_en = cleanEnglish(row.description_en || selectedFacts.map(fact => fact[4]).join(' '));
+  if (key === 'safe alliance') {
+    row.title_es = 'Apoyo para sobrevivientes de violencia y agresión sexual';
+    row.title_en = 'Support for survivors of violence and sexual assault';
+    row.summary_es = 'Ofrece apoyo confidencial, planificación de seguridad, recursos y opciones de refugio para sobrevivientes de violencia o agresión sexual.';
+    row.summary_en = 'Provides confidential support, safety planning, resources, and shelter options for survivors of violence or sexual assault.';
+    row.description_es = row.summary_es;
+  }
   const categories = unique(selectedFacts.map(fact => fact[5]));
   if (categories.length) {
     row.primary_category = categories[0];
@@ -134,7 +141,7 @@ function prioritizeFacts(facts, evidence, key) {
     || (/Adult Education|GED|English for Speakers|digital literacy/i.test(evidence) && 'Adult education')
     || (/Social Security Administration|Social Security card|SSI\/SSDI/i.test(evidence) && 'Social Security benefits')
     || (/Texas Rio Grande Legal Aid|Immigration Legal Services|civil legal|legal assistance/i.test(evidence) && 'Legal assistance')
-    || (/SAFE Alliance|domestic violence|sexual assault|sex trafficking|survivors?|family violence/i.test(evidence) && 'Survivor support')
+    || (/SAFE Alliance|domestic violence|sexual assault|sex trafficking|survivors?|family violence/i.test(evidence) && 'Support for survivors of violence and sexual assault')
     || (/\bOSAR\b|substance use|detoxification|addiction|sober living/i.test(evidence) && 'Treatment and recovery')
     || (/Central Health Medical Access Program|Lone Star Circle of Care/i.test(evidence) && 'Health care')
     || (/GoodWill Industries|Work Force Solutions|Workforce Solutions/i.test(evidence) && 'Employment and job training')

@@ -8,6 +8,7 @@ Read the live importer first. These rules supplement it and resolve recurring da
 - Keep the official organization in `organization_name` and the service/program name in localized titles.
 - Keep titles concise and independent from the organization name. Do not produce `Servicio — Organización`, `Organización — Servicio`, or a title equal to the organization when the interface already renders `organization_name` beneath it.
 - Use the actual official program name when one exists; otherwise use a short, user-facing service label such as `Asistencia legal`, `Atención veterinaria`, or `Despensa de alimentos`.
+- Make titles understandable without reading the summary. Include the essential service subject or population whenever a generic label could refer to materially different needs. For violence-response resources, specify the supported context: use `Apoyo para sobrevivientes de violencia y agresión sexual` / `Support for survivors of violence and sexual assault`, not the ambiguous `Apoyo para sobrevivientes` / `Survivor support`.
 - Preserve a known existing slug. Do not create a second slug for an update.
 - Flag ambiguous organization/title matches and repeated records in the same document.
 
@@ -30,6 +31,9 @@ Read the live importer first. These rules supplement it and resolve recurring da
 
 - Explain what help is offered and, when relevant, who it is for.
 - Prefer one or two concise sentences.
+- After merging duplicates or overlapping services, rewrite the result as one coherent summary. Do not concatenate source or generated summaries sentence by sentence.
+- Remove repeated openings, duplicated claims, and abrupt topic changes. A pattern such as `Ofrece... Ofrece...` or `Provides... Provides...` is a review failure, not a finished summary.
+- Retain only facts supported by the immutable input or a current authoritative source. Do not let a duplicate contribute an unverified service claim to the canonical record.
 - Do not put phone numbers, emails, URLs, addresses, or unedited service lists in summaries.
 - Put contact data only in its dedicated columns.
 

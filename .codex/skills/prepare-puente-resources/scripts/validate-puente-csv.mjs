@@ -59,6 +59,13 @@ const normalizeText = value => String(value || '')
   .toLocaleLowerCase()
   .replace(/[^a-z0-9]+/g, ' ')
   .trim();
+const repeatedServiceLead = value => {
+  const leads = String(value || '')
+    .split(/[.!?]+\s+/)
+    .map(sentence => normalizeText(sentence).split(' ')[0])
+    .filter(lead => ['ofrece', 'provides', 'brinda', 'offers', 'ayuda', 'helps', 'incluye', 'includes'].includes(lead));
+  return new Set(leads).size < leads.length;
+};
 for (const row of prepared.rows) {
   const resource = row.resource;
   const missingBilingual = ['title_es', 'title_en', 'summary_es', 'summary_en'].filter(field => !String(resource[field] || '').trim());
@@ -69,6 +76,18 @@ for (const row of prepared.rows) {
     if (!organization || !title) continue;
     if (title === organization) qualityWarnings.push({ row: row.rowNumber, issue: `${field} duplicates organization_name` });
     else if (organization.length >= 4 && title.includes(organization)) qualityWarnings.push({ row: row.rowNumber, issue: `${field} redundantly contains organization_name` });
+  }
+  for (const field of ['title_es', 'title_en']) {
+    const title = normalizeText(resource[field]);
+    if (/\b(sobreviviente|sobrevivientes|survivor|survivors)\b/.test(title)
+      && !/\b(violencia|violence|abuso|abuse|agresion|assault|sexual|domestica|domestic|familiar|family|trata|trafficking)\b/.test(title)) {
+      qualityWarnings.push({ row: row.rowNumber, issue: `${field} is ambiguous: identify what survivors experienced when supported by the source` });
+    }
+  }
+  for (const field of ['summary_es', 'summary_en', 'description_es', 'description_en']) {
+    if (repeatedServiceLead(resource[field])) {
+      qualityWarnings.push({ row: row.rowNumber, issue: `${field} appears mechanically concatenated; synthesize repeated sentences into coherent prose` });
+    }
   }
   const hoursEs = String(resource.hours_es || '').trim();
   const hoursEn = String(resource.hours_en || '').trim();
