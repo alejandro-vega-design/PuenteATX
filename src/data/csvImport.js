@@ -56,8 +56,8 @@ const normalizeCategorySlug = value => {
 };
 
 const normalizeLanguages = value => {
-  const source = normalizeMatchValue(value || 'es|en');
-  const items = splitList(value || 'es|en');
+  const source = normalizeMatchValue(value);
+  const items = splitList(value);
   const result = [];
   const hasEnglish = items.some(item => ['en', 'english', 'ingles'].includes(normalizeMatchValue(item))) || /\benglish\b/.test(source);
   const spanishIsUnconfirmed = /(not verified|not specified|should be confirmed|ask about|to confirm|case-by-case|availability should|disponibilidad.*confirmar|no verificado)/.test(source);
@@ -69,7 +69,7 @@ const normalizeLanguages = value => {
 };
 
 const normalizeServiceMethods = value => {
-  const items = splitList(value || 'phone');
+  const items = splitList(value);
   const result = [];
   for (const item of items) {
     const normalized = normalizeMatchValue(item).replace(/-/g, ' ');

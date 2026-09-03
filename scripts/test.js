@@ -109,9 +109,17 @@ Centro,Recurso,Resource,Salud,English; Spanish availability should be confirmed,
 assert.deepStrictEqual(unconfirmedSpanishCsv.rows[0].resource.languages, ['en'], 'does not claim Spanish availability when the CSV says it is unconfirmed');
 assert.deepStrictEqual(unconfirmedSpanishCsv.rows[0].resource.service_methods, ['phone'], 'normalizes contact-provider service instructions conservatively');
 assert.strictEqual(unconfirmedSpanishCsv.rows[0].resource.cost_type, 'paid', 'normalizes explicit low-cost services without marking them free');
+const unknownAccessCsv = prepareCsvResources(parseCsv(`organization_name,title_es,title_en,primary_category,languages,service_methods
+Centro,Recurso,Resource,Salud,,
+`), []);
+assert.deepStrictEqual(unknownAccessCsv.rows[0].resource.languages, [], 'does not invent service languages when the CSV field is empty');
+assert.deepStrictEqual(unknownAccessCsv.rows[0].resource.service_methods, [], 'does not invent a phone service method when the CSV field is empty');
 assert.deepStrictEqual(normalizeServiceArea({ serviceAreaEs: 'Austin, Georgetown, Condado de Hays', serviceAreaEn: '', city: '', county: '', postalCode: '' }), { es: 'Condado de Travis, Condado de Williamson, Condado de Hays', en: 'Travis County, Williamson County, Hays County', counties: ['Travis', 'Williamson', 'Hays'] }, 'normalizes mixed city and county service areas to county names only');
 assert.deepStrictEqual(normalizeServiceArea({ serviceAreaEs: 'Georgetown', serviceAreaEn: 'Georgetown', city: '', county: '', postalCode: '' }).counties, ['Williamson'], 'infers the county from a service-area city');
 assert.deepStrictEqual(normalizeServiceArea({ serviceAreaEs: '', serviceAreaEn: '', city: '', county: '', postalCode: '78701' }).counties, ['Travis'], 'uses an approved ZIP as the final county fallback');
+assert.deepStrictEqual(normalizeServiceArea({ serviceAreaEs: 'Condado de Lee, Condado de Fayette, Condado de Gonzales, Condado de Guadalupe', serviceAreaEn: '', city: '', county: '', postalCode: '' }).counties, ['Lee', 'Fayette', 'Gonzales', 'Guadalupe'], 'preserves every Bluebonnet Project HOPE county');
+assert.deepStrictEqual(normalizeServiceArea({ serviceAreaEs: '', serviceAreaEn: '', city: 'Giddings', county: '', postalCode: '' }).counties, ['Lee'], 'infers a newly supported county from its city');
+assert.deepStrictEqual(normalizeServiceArea({ serviceAreaEs: '', serviceAreaEn: '', city: '', county: '', postalCode: '78945' }).counties, ['Fayette'], 'maps a newly supported ZIP to its county');
 assert.deepStrictEqual(normalizeServiceArea({ serviceAreaEs: 'Todo Texas', serviceAreaEn: 'Statewide', city: '', county: '', postalCode: '' }), { es: 'Todos los condados de Texas', en: 'All Texas counties', counties: ['statewide'] }, 'preserves statewide service coverage without listing cities');
 assert.equal(applyImportVerificationDate({ last_verified_at: null }, true, '2026-07-27').last_verified_at, '2026-07-27', 'uses the import date when verification is enabled and the CSV date is empty');
 assert.equal(applyImportVerificationDate({ last_verified_at: '2026-06-12' }, true, '2026-07-27').last_verified_at, '2026-06-12', 'preserves a verification date supplied by the CSV');
@@ -181,7 +189,8 @@ assert.deepStrictEqual(parseInsightFilters(`?${serializeInsightFilters(insightFi
 assert.strictEqual(metricTrend(22, 19), null, 'hides trends with a net change below the threshold');
 assert.deepStrictEqual(metricTrend(30, 20), { net: 10, percent: 50, direction: 'up', sentiment: 'neutral' }, 'shows material trends with sufficient volume');
 assert.deepStrictEqual([MAP_MIN_EVENTS, MAP_MIN_SESSIONS, NO_RESULTS_TERM_MIN_COUNT], [20, 10, 5], 'centralizes privacy thresholds');
-assert.ok(serviceAreas.length >= 100 && supportedCounties.includes('Williamson') && supportedCounties.includes('Bastrop') && supportedCounties.includes('Hays') && supportedCounties.includes('Caldwell'), 'supports ZIP centroids across the five-county launch region');
+assert.deepStrictEqual(supportedCounties, ['Travis', 'Williamson', 'Bastrop', 'Hays', 'Caldwell', 'Burnet', 'Lee', 'Fayette', 'Gonzales', 'Guadalupe'], 'keeps the public county selector synchronized with the ten-county resource region');
+assert.strictEqual(serviceAreas.length, 140, 'supports the approved ZIP centroids across the ten-county region');
 assert.deepStrictEqual(getServiceArea('78626') && [getServiceArea('78626').county, getServiceArea('78626').shortName], ['Williamson', '78626'], 'locates an approved Williamson County ZIP');
 const regionalZipMap = JSON.parse(fs.readFileSync(new URL('../public/maps/central-texas-zip-codes.geojson', import.meta.url), 'utf8'));
 const regionalMapZipCodes = regionalZipMap.features.map(feature => feature.properties?.zip_code);

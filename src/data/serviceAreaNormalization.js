@@ -1,6 +1,6 @@
-import { getServiceArea } from '../config/serviceAreas.js';
+import { getServiceArea, supportedCounties } from '../config/serviceAreas.js';
 
-const COUNTY_ORDER = ['Travis', 'Williamson', 'Bastrop', 'Hays', 'Caldwell', 'Blanco', 'Burnet', 'Bell', 'Hidalgo'];
+const COUNTY_ORDER = [...supportedCounties, 'Blanco', 'Bell', 'Hidalgo'];
 
 const CITY_COUNTIES = new Map([
   ['austin', ['Travis']],
@@ -35,6 +35,20 @@ const CITY_COUNTIES = new Map([
   ['blanco', ['Blanco']],
   ['burnet', ['Burnet']],
   ['marble falls', ['Burnet']],
+  ['giddings', ['Lee']],
+  ['lexington', ['Lee']],
+  ['la grange', ['Fayette']],
+  ['schulenburg', ['Fayette']],
+  ['flatonia', ['Fayette']],
+  ['fayetteville', ['Fayette']],
+  ['gonzales', ['Gonzales']],
+  ['nixon', ['Gonzales']],
+  ['waelder', ['Gonzales']],
+  ['smiley', ['Gonzales']],
+  ['seguin', ['Guadalupe']],
+  ['schertz', ['Guadalupe']],
+  ['cibolo', ['Guadalupe']],
+  ['new braunfels', ['Guadalupe']],
   ['mercedes', ['Hidalgo']]
 ]);
 
@@ -83,4 +97,3 @@ export function normalizeServiceArea({ serviceAreaEs, serviceAreaEn, city, count
     counties: ordered
   };
 }
-

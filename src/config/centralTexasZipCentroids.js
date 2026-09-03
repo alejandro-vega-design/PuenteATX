@@ -10,7 +10,12 @@ export default {
     "Williamson",
     "Bastrop",
     "Hays",
-    "Caldwell"
+    "Caldwell",
+    "Burnet",
+    "Lee",
+    "Fayette",
+    "Gonzales",
+    "Guadalupe"
   ],
   "zipCodes": [
     {
@@ -46,6 +51,30 @@ export default {
       "active": true
     },
     {
+      "zipCode": "76539",
+      "county": "Burnet",
+      "countyFips": "48053",
+      "latitude": 31.090618,
+      "longitude": -97.995741,
+      "active": true
+    },
+    {
+      "zipCode": "76549",
+      "county": "Burnet",
+      "countyFips": "48053",
+      "latitude": 31.017077,
+      "longitude": -97.833092,
+      "active": true
+    },
+    {
+      "zipCode": "76550",
+      "county": "Burnet",
+      "countyFips": "48053",
+      "latitude": 31.102626,
+      "longitude": -98.259776,
+      "active": true
+    },
+    {
       "zipCode": "76573",
       "county": "Williamson",
       "countyFips": "48491",
@@ -78,11 +107,123 @@ export default {
       "active": true
     },
     {
+      "zipCode": "77853",
+      "county": "Lee",
+      "countyFips": "48287",
+      "latitude": 30.354551,
+      "longitude": -96.840806,
+      "active": true
+    },
+    {
+      "zipCode": "77954",
+      "county": "Gonzales",
+      "countyFips": "48177",
+      "latitude": 29.096488,
+      "longitude": -97.295716,
+      "active": true
+    },
+    {
+      "zipCode": "77984",
+      "county": "Gonzales",
+      "countyFips": "48177",
+      "latitude": 29.465685,
+      "longitude": -97.193893,
+      "active": true
+    },
+    {
+      "zipCode": "77994",
+      "county": "Gonzales",
+      "countyFips": "48177",
+      "latitude": 29.178194,
+      "longitude": -97.47155,
+      "active": true
+    },
+    {
+      "zipCode": "78108",
+      "county": "Guadalupe",
+      "countyFips": "48187",
+      "latitude": 29.570142,
+      "longitude": -98.217797,
+      "active": true
+    },
+    {
+      "zipCode": "78121",
+      "county": "Guadalupe",
+      "countyFips": "48187",
+      "latitude": 29.351052,
+      "longitude": -98.088866,
+      "active": true
+    },
+    {
+      "zipCode": "78122",
+      "county": "Gonzales",
+      "countyFips": "48177",
+      "latitude": 29.457249,
+      "longitude": -97.707606,
+      "active": true
+    },
+    {
+      "zipCode": "78123",
+      "county": "Guadalupe",
+      "countyFips": "48187",
+      "latitude": 29.605116,
+      "longitude": -98.039135,
+      "active": true
+    },
+    {
+      "zipCode": "78124",
+      "county": "Guadalupe",
+      "countyFips": "48187",
+      "latitude": 29.557271,
+      "longitude": -98.146892,
+      "active": true
+    },
+    {
       "zipCode": "78130",
-      "county": "Hays",
-      "countyFips": "48209",
+      "county": "Guadalupe",
+      "countyFips": "48187",
       "latitude": 29.693649,
       "longitude": -98.068676,
+      "active": true
+    },
+    {
+      "zipCode": "78132",
+      "county": "Guadalupe",
+      "countyFips": "48187",
+      "latitude": 29.758817,
+      "longitude": -98.191068,
+      "active": true
+    },
+    {
+      "zipCode": "78140",
+      "county": "Gonzales",
+      "countyFips": "48177",
+      "latitude": 29.306802,
+      "longitude": -97.763362,
+      "active": true
+    },
+    {
+      "zipCode": "78154",
+      "county": "Guadalupe",
+      "countyFips": "48187",
+      "latitude": 29.547147,
+      "longitude": -98.262605,
+      "active": true
+    },
+    {
+      "zipCode": "78155",
+      "county": "Guadalupe",
+      "countyFips": "48187",
+      "latitude": 29.537496,
+      "longitude": -97.936596,
+      "active": true
+    },
+    {
+      "zipCode": "78159",
+      "county": "Gonzales",
+      "countyFips": "48177",
+      "latitude": 29.225941,
+      "longitude": -97.585019,
       "active": true
     },
     {
@@ -94,11 +235,35 @@ export default {
       "active": true
     },
     {
+      "zipCode": "78605",
+      "county": "Burnet",
+      "countyFips": "48053",
+      "latitude": 30.773295,
+      "longitude": -98.04518,
+      "active": true
+    },
+    {
+      "zipCode": "78608",
+      "county": "Burnet",
+      "countyFips": "48053",
+      "latitude": 30.931006,
+      "longitude": -97.936974,
+      "active": true
+    },
+    {
       "zipCode": "78610",
       "county": "Hays",
       "countyFips": "48209",
       "latitude": 30.079459,
       "longitude": -97.841011,
+      "active": true
+    },
+    {
+      "zipCode": "78611",
+      "county": "Burnet",
+      "countyFips": "48053",
+      "latitude": 30.801053,
+      "longitude": -98.283491,
       "active": true
     },
     {
@@ -115,6 +280,14 @@ export default {
       "countyFips": "48491",
       "latitude": 30.507079,
       "longitude": -97.819464,
+      "active": true
+    },
+    {
+      "zipCode": "78614",
+      "county": "Gonzales",
+      "countyFips": "48177",
+      "latitude": 29.410411,
+      "longitude": -97.587167,
       "active": true
     },
     {
@@ -198,9 +371,17 @@ export default {
       "active": true
     },
     {
+      "zipCode": "78629",
+      "county": "Gonzales",
+      "countyFips": "48177",
+      "latitude": 29.476842,
+      "longitude": -97.44894,
+      "active": true
+    },
+    {
       "zipCode": "78632",
-      "county": "Caldwell",
-      "countyFips": "48055",
+      "county": "Gonzales",
+      "countyFips": "48177",
       "latitude": 29.685544,
       "longitude": -97.471489,
       "active": true
@@ -219,6 +400,22 @@ export default {
       "countyFips": "48491",
       "latitude": 30.55985,
       "longitude": -97.544081,
+      "active": true
+    },
+    {
+      "zipCode": "78638",
+      "county": "Guadalupe",
+      "countyFips": "48187",
+      "latitude": 29.659588,
+      "longitude": -97.785196,
+      "active": true
+    },
+    {
+      "zipCode": "78639",
+      "county": "Burnet",
+      "countyFips": "48053",
+      "latitude": 30.656288,
+      "longitude": -98.455537,
       "active": true
     },
     {
@@ -295,8 +492,8 @@ export default {
     },
     {
       "zipCode": "78654",
-      "county": "Travis",
-      "countyFips": "48453",
+      "county": "Burnet",
+      "countyFips": "48053",
       "latitude": 30.571849,
       "longitude": -98.210498,
       "active": true
@@ -315,6 +512,22 @@ export default {
       "countyFips": "48055",
       "latitude": 29.904511,
       "longitude": -97.807308,
+      "active": true
+    },
+    {
+      "zipCode": "78657",
+      "county": "Burnet",
+      "countyFips": "48053",
+      "latitude": 30.533379,
+      "longitude": -98.378353,
+      "active": true
+    },
+    {
+      "zipCode": "78658",
+      "county": "Gonzales",
+      "countyFips": "48177",
+      "latitude": 29.595952,
+      "longitude": -97.622539,
       "active": true
     },
     {
@@ -390,6 +603,14 @@ export default {
       "active": true
     },
     {
+      "zipCode": "78670",
+      "county": "Guadalupe",
+      "countyFips": "48187",
+      "latitude": 29.7648,
+      "longitude": -97.848529,
+      "active": true
+    },
+    {
       "zipCode": "78674",
       "county": "Williamson",
       "countyFips": "48491",
@@ -403,6 +624,14 @@ export default {
       "countyFips": "48209",
       "latitude": 30.03875,
       "longitude": -98.159591,
+      "active": true
+    },
+    {
+      "zipCode": "78677",
+      "county": "Gonzales",
+      "countyFips": "48177",
+      "latitude": 29.347767,
+      "longitude": -97.59018,
       "active": true
     },
     {
@@ -766,27 +995,91 @@ export default {
       "active": true
     },
     {
+      "zipCode": "78932",
+      "county": "Fayette",
+      "countyFips": "48149",
+      "latitude": 30.164115,
+      "longitude": -96.718195,
+      "active": true
+    },
+    {
+      "zipCode": "78938",
+      "county": "Fayette",
+      "countyFips": "48149",
+      "latitude": 29.813771,
+      "longitude": -96.708409,
+      "active": true
+    },
+    {
+      "zipCode": "78940",
+      "county": "Fayette",
+      "countyFips": "48149",
+      "latitude": 29.940125,
+      "longitude": -96.658827,
+      "active": true
+    },
+    {
       "zipCode": "78941",
-      "county": "Bastrop",
-      "countyFips": "48021",
+      "county": "Fayette",
+      "countyFips": "48149",
       "latitude": 29.727617,
       "longitude": -97.15845,
       "active": true
     },
     {
       "zipCode": "78942",
-      "county": "Bastrop",
-      "countyFips": "48021",
+      "county": "Lee",
+      "countyFips": "48287",
       "latitude": 30.155484,
       "longitude": -96.938267,
       "active": true
     },
     {
       "zipCode": "78945",
-      "county": "Bastrop",
-      "countyFips": "48021",
+      "county": "Fayette",
+      "countyFips": "48149",
       "latitude": 29.916659,
       "longitude": -96.888985,
+      "active": true
+    },
+    {
+      "zipCode": "78946",
+      "county": "Lee",
+      "countyFips": "48287",
+      "latitude": 30.18837,
+      "longitude": -96.779058,
+      "active": true
+    },
+    {
+      "zipCode": "78947",
+      "county": "Lee",
+      "countyFips": "48287",
+      "latitude": 30.443442,
+      "longitude": -97.063655,
+      "active": true
+    },
+    {
+      "zipCode": "78948",
+      "county": "Lee",
+      "countyFips": "48287",
+      "latitude": 30.321498,
+      "longitude": -96.976823,
+      "active": true
+    },
+    {
+      "zipCode": "78949",
+      "county": "Fayette",
+      "countyFips": "48149",
+      "latitude": 29.847787,
+      "longitude": -97.08019,
+      "active": true
+    },
+    {
+      "zipCode": "78950",
+      "county": "Fayette",
+      "countyFips": "48149",
+      "latitude": 29.904948,
+      "longitude": -96.482617,
       "active": true
     },
     {
@@ -795,6 +1088,22 @@ export default {
       "countyFips": "48021",
       "latitude": 29.844028,
       "longitude": -97.358297,
+      "active": true
+    },
+    {
+      "zipCode": "78954",
+      "county": "Fayette",
+      "countyFips": "48149",
+      "latitude": 30.043016,
+      "longitude": -96.699188,
+      "active": true
+    },
+    {
+      "zipCode": "78956",
+      "county": "Fayette",
+      "countyFips": "48149",
+      "latitude": 29.686382,
+      "longitude": -96.933775,
       "active": true
     },
     {
@@ -807,10 +1116,26 @@ export default {
     },
     {
       "zipCode": "78959",
-      "county": "Caldwell",
-      "countyFips": "48055",
+      "county": "Gonzales",
+      "countyFips": "48177",
       "latitude": 29.700745,
       "longitude": -97.301328,
+      "active": true
+    },
+    {
+      "zipCode": "78962",
+      "county": "Fayette",
+      "countyFips": "48149",
+      "latitude": 29.674439,
+      "longitude": -96.7345,
+      "active": true
+    },
+    {
+      "zipCode": "78963",
+      "county": "Fayette",
+      "countyFips": "48149",
+      "latitude": 29.91692,
+      "longitude": -97.028763,
       "active": true
     }
   ]

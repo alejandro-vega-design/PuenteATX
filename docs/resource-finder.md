@@ -4,7 +4,7 @@
 
 `/buscador` is a public, mobile-first resource locator. A visitor supplies a supported five-digit ZIP code and an optional existing Puente ATX category. The page uses the ZIP centroid as an approximate search origin, calculates straight-line distance to published resources, and keeps a compact result list synchronized with the map.
 
-The initial service region contains Travis, Williamson, Bastrop, Hays, and Caldwell counties. This is a discovery aid, not turn-by-turn routing, and the displayed distance is approximate.
+The service region contains Travis, Williamson, Bastrop, Hays, Caldwell, Burnet, Lee, Fayette, Gonzales, and Guadalupe counties. This is a discovery aid, not turn-by-turn routing, and the displayed distance is approximate.
 
 ## Architecture
 
@@ -29,15 +29,16 @@ The map is supplemental. The list contains all essential resource information an
 
 ## ZIP data and regional expansion
 
-Centroids were generated from the [U.S. Census Bureau 2024 Gazetteer](https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html) and the [2020 ZCTA-to-County Relationship File](https://www.census.gov/geographies/reference-files/time-series/geo/relationship-files.html). The generated configuration currently contains 100 ZCTAs associated with the five launch counties. ZIP centroids are approximate geographic origins; they are not visitor locations and do not imply that a resource serves the entire ZIP.
+Centroids were generated from the [U.S. Census Bureau 2024 Gazetteer](https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html) and the [2020 ZCTA-to-County Relationship File](https://www.census.gov/geographies/reference-files/time-series/geo/relationship-files.html). The generated configuration currently contains 140 ZCTAs associated with the ten supported counties. ZIP centroids are approximate geographic origins; they are not visitor locations and do not imply that a resource serves the entire ZIP.
 
 To expand the region:
 
-1. Add the approved county FIPS to the generation workflow.
-2. Regenerate `centralTexasZipCentroids.js` from the same official sources.
+1. Add the approved county FIPS to `scripts/generate-central-texas-zip-centroids.mjs`.
+2. Regenerate `centralTexasZipCentroids.js` from the same official sources with that script.
 3. Review boundary ZIPs that overlap more than one county.
-4. Add resources for the new county and geocode their physical service locations.
-5. Test representative urban and rural ZIP searches.
+4. Fetch the corresponding TIGERweb ZCTA polygons and merge them with `scripts/merge-resource-finder-zip-polygons.mjs`.
+5. Add resources for the new county and geocode their physical service locations.
+6. Test representative urban and rural ZIP searches.
 
 ## Resource coordinates
 

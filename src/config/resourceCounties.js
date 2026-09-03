@@ -1,4 +1,6 @@
-export const RESOURCE_COUNTIES = ['Travis', 'Williamson', 'Bastrop', 'Hays'];
+import { supportedCounties } from './serviceAreas.js';
+
+export const RESOURCE_COUNTIES = supportedCounties;
 
 export const normalizeCounty = value => String(value || '')
   .toLocaleLowerCase()

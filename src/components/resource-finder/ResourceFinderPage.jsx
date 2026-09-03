@@ -22,7 +22,6 @@ const filtersFromParams = params => ({
   recent: params.get('reciente') === '1'
 });
 const filterCount = filters => filters.categories.length + filters.languages.length + filters.methods.length + filters.costs.length + (filters.recent ? 1 : 0);
-const hasStreetAddress = resource => Boolean(resource.address_line_1?.trim());
 const hasRemoteAccess = resource => resource.service_methods?.some(method => ['phone', 'online'].includes(method)) || resource.phone || resource.website_url;
 
 const scrollCardInsideResults = (card, centerCard) => {
@@ -121,8 +120,8 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
       setResources(found);
       const mappable = sortResourcesByDistance(found, center).filter(resource => resource.distance_miles <= nextRadius);
       const withoutCoordinates = found.filter(resource => !hasCoordinates(resource));
-      const unlocated = withoutCoordinates.filter(hasStreetAddress);
-      const remote = withoutCoordinates.filter(resource => !hasStreetAddress(resource) && hasRemoteAccess(resource));
+      const remote = withoutCoordinates.filter(hasRemoteAccess);
+      const unlocated = withoutCoordinates.filter(resource => !hasRemoteAccess(resource));
       const resultCount = mappable.length + unlocated.length + remote.length;
       const categorySlug = nextFilters.categories.length === 1 ? nextFilters.categories[0] : undefined;
       trackPuenteEvent('search_submitted', { search_result_count: resultCount, category_slug: categorySlug, area_code: zip });
@@ -145,8 +144,8 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
       return longitude >= viewportBounds.west && longitude <= viewportBounds.east && latitude >= viewportBounds.south && latitude <= viewportBounds.north;
     })
     : sorted.filter(resource => resource.distance_miles <= radius), [sorted, radius, viewportBounds]);
-  const unlocatedResults = useMemo(() => resources.filter(resource => !hasCoordinates(resource) && hasStreetAddress(resource)), [resources]);
-  const remoteResults = useMemo(() => resources.filter(resource => !hasCoordinates(resource) && !hasStreetAddress(resource) && hasRemoteAccess(resource)), [resources]);
+  const remoteResults = useMemo(() => resources.filter(resource => !hasCoordinates(resource) && hasRemoteAccess(resource)), [resources]);
+  const unlocatedResults = useMemo(() => resources.filter(resource => !hasCoordinates(resource) && !hasRemoteAccess(resource)), [resources]);
   const excludedCount = resources.length - sorted.length - unlocatedResults.length - remoteResults.length;
   const includedResources = useMemo(() => includedResourceIds.map(id => resources.find(resource => resource.id === id)).filter(Boolean), [includedResourceIds, resources]);
   const active = useMemo(() => [
