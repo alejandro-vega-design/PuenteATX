@@ -53,10 +53,23 @@ const prepared = prepareCsvResources(parsed, existingResources, 'empty');
 const schemaMatches = parsed.headers.length === CSV_IMPORT_HEADERS.length
   && CSV_IMPORT_HEADERS.every((header, index) => parsed.headers[index] === header);
 const qualityWarnings = [];
+const normalizeText = value => String(value || '')
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .toLocaleLowerCase()
+  .replace(/[^a-z0-9]+/g, ' ')
+  .trim();
 for (const row of prepared.rows) {
   const resource = row.resource;
   const missingBilingual = ['title_es', 'title_en', 'summary_es', 'summary_en'].filter(field => !String(resource[field] || '').trim());
   if (missingBilingual.length) qualityWarnings.push({ row: row.rowNumber, issue: `missing bilingual fields: ${missingBilingual.join(', ')}` });
+  const organization = normalizeText(resource.organization_name);
+  for (const field of ['title_es', 'title_en']) {
+    const title = normalizeText(resource[field]);
+    if (!organization || !title) continue;
+    if (title === organization) qualityWarnings.push({ row: row.rowNumber, issue: `${field} duplicates organization_name` });
+    else if (organization.length >= 4 && title.includes(organization)) qualityWarnings.push({ row: row.rowNumber, issue: `${field} redundantly contains organization_name` });
+  }
   const hoursEs = String(resource.hours_es || '').trim();
   const hoursEn = String(resource.hours_en || '').trim();
   if (Boolean(hoursEs) !== Boolean(hoursEn)) {

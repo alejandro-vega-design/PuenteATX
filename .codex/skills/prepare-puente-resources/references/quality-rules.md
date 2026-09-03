@@ -6,8 +6,18 @@ Read the live importer first. These rules supplement it and resolve recurring da
 
 - Represent a distinct public service or program as a resource.
 - Keep the official organization in `organization_name` and the service/program name in localized titles.
+- Keep titles concise and independent from the organization name. Do not produce `Servicio — Organización`, `Organización — Servicio`, or a title equal to the organization when the interface already renders `organization_name` beneath it.
+- Use the actual official program name when one exists; otherwise use a short, user-facing service label such as `Asistencia legal`, `Atención veterinaria`, or `Despensa de alimentos`.
 - Preserve a known existing slug. Do not create a second slug for an update.
 - Flag ambiguous organization/title matches and repeated records in the same document.
+
+## Classification integrity
+
+- Classify from immutable source text and verified official program information. Never use a title, summary, category, or translation generated during a previous enrichment pass as new classification evidence.
+- Make transformation scripts idempotent. Run them twice during validation and confirm that the second run produces no changes.
+- Do not choose the first matching keyword blindly. Review all plausible matches and select the service that best represents the row's actual purpose.
+- Give domain-specific evidence priority over incidental language: veterinary over human dental for animal clinics; legal help over housing for legal programs; Lifeline over generic family support for phone-benefit providers; adult education over employment for education programs; survivor support over housing when shelter is part of a violence-response service.
+- When one organization has distinct programs, keep one row per program and use the service/program title—not the organization name—to distinguish them.
 
 ## Bilingual content
 

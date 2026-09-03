@@ -20,7 +20,7 @@ Public state is split into URL state (search, filters, sort, page), localized UI
 - `/admin/recursos/nuevo` create resource
 - `/admin/recursos/:id/editar` edit resource
 
-CSV imports use a downloadable UTF-8 template, accept quoted commas and line breaks, validate category slugs and controlled values before writing, and are limited to 100 rows per file. Multiple values use `|` as the separator. Every imported resource is created as a draft so an administrator can review it before publication.
+CSV imports use a downloadable UTF-8 template, accept quoted commas and line breaks, validate category slugs and controlled values before writing, and are limited to 500 rows per file. Multiple values use `|` as the separator. Every imported resource is created as a draft so an administrator can review it before publication.
 - `/admin/categorias` category management
 
 ## Data model
