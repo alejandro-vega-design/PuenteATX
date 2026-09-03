@@ -53,10 +53,42 @@ const prepared = prepareCsvResources(parsed, existingResources, 'empty');
 const schemaMatches = parsed.headers.length === CSV_IMPORT_HEADERS.length
   && CSV_IMPORT_HEADERS.every((header, index) => parsed.headers[index] === header);
 const qualityWarnings = [];
+const normalizeText = value => String(value || '')
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .toLocaleLowerCase()
+  .replace(/[^a-z0-9]+/g, ' ')
+  .trim();
+const repeatedServiceLead = value => {
+  const leads = String(value || '')
+    .split(/[.!?]+\s+/)
+    .map(sentence => normalizeText(sentence).split(' ')[0])
+    .filter(lead => ['ofrece', 'provides', 'brinda', 'offers', 'ayuda', 'helps', 'incluye', 'includes'].includes(lead));
+  return new Set(leads).size < leads.length;
+};
 for (const row of prepared.rows) {
   const resource = row.resource;
   const missingBilingual = ['title_es', 'title_en', 'summary_es', 'summary_en'].filter(field => !String(resource[field] || '').trim());
   if (missingBilingual.length) qualityWarnings.push({ row: row.rowNumber, issue: `missing bilingual fields: ${missingBilingual.join(', ')}` });
+  const organization = normalizeText(resource.organization_name);
+  for (const field of ['title_es', 'title_en']) {
+    const title = normalizeText(resource[field]);
+    if (!organization || !title) continue;
+    if (title === organization) qualityWarnings.push({ row: row.rowNumber, issue: `${field} duplicates organization_name` });
+    else if (organization.length >= 4 && title.includes(organization)) qualityWarnings.push({ row: row.rowNumber, issue: `${field} redundantly contains organization_name` });
+  }
+  for (const field of ['title_es', 'title_en']) {
+    const title = normalizeText(resource[field]);
+    if (/\b(sobreviviente|sobrevivientes|survivor|survivors)\b/.test(title)
+      && !/\b(violencia|violence|abuso|abuse|agresion|assault|sexual|domestica|domestic|familiar|family|trata|trafficking)\b/.test(title)) {
+      qualityWarnings.push({ row: row.rowNumber, issue: `${field} is ambiguous: identify what survivors experienced when supported by the source` });
+    }
+  }
+  for (const field of ['summary_es', 'summary_en', 'description_es', 'description_en']) {
+    if (repeatedServiceLead(resource[field])) {
+      qualityWarnings.push({ row: row.rowNumber, issue: `${field} appears mechanically concatenated; synthesize repeated sentences into coherent prose` });
+    }
+  }
   const hoursEs = String(resource.hours_es || '').trim();
   const hoursEn = String(resource.hours_en || '').trim();
   if (Boolean(hoursEs) !== Boolean(hoursEn)) {
@@ -71,6 +103,23 @@ for (const row of prepared.rows) {
   if (resource.service_methods?.includes('in_person') && !String(resource.address_line_1 || '').trim()) {
     qualityWarnings.push({ row: row.rowNumber, issue: 'in-person service has no confirmed street address' });
   }
+}
+
+const sharedTitleGroups = new Map();
+for (const row of prepared.rows) {
+  const resource = row.resource;
+  const key = `${normalizeText(resource.title_es)}|${normalizeText(resource.title_en)}`;
+  if (key === '|') continue;
+  if (!sharedTitleGroups.has(key)) sharedTitleGroups.set(key, []);
+  sharedTitleGroups.get(key).push(row);
+}
+for (const rows of sharedTitleGroups.values()) {
+  if (rows.length < 2) continue;
+  const example = rows[0].resource.title_es || rows[0].resource.title_en;
+  qualityWarnings.push({
+    row: rows[0].rowNumber,
+    issue: `shared bilingual title used by ${rows.length} rows (${example}); review as legitimate repetition, title/content mismatch, or true duplicate`
+  });
 }
 
 const invalid = prepared.rows.filter(row => row.errors.length);

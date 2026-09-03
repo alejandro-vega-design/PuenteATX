@@ -6,8 +6,27 @@ Read the live importer first. These rules supplement it and resolve recurring da
 
 - Represent a distinct public service or program as a resource.
 - Keep the official organization in `organization_name` and the service/program name in localized titles.
+- Keep titles concise and independent from the organization name. Do not produce `Servicio — Organización`, `Organización — Servicio`, or a title equal to the organization when the interface already renders `organization_name` beneath it.
+- Use the actual official program name when one exists; otherwise use a short, user-facing service label such as `Asistencia legal`, `Atención veterinaria`, or `Despensa de alimentos`.
+- Make titles understandable without reading the summary. Include the essential service subject or population whenever a generic label could refer to materially different needs. For violence-response resources, specify the supported context: use `Apoyo para sobrevivientes de violencia y agresión sexual` / `Support for survivors of violence and sexual assault`, not the ambiguous `Apoyo para sobrevivientes` / `Survivor support`.
 - Preserve a known existing slug. Do not create a second slug for an update.
 - Flag ambiguous organization/title matches and repeated records in the same document.
+- Audit exact normalized title groups across the complete batch and, when available, across existing resources in the same status. Do not review rows in isolation.
+- Classify shared titles before changing them:
+  - **Legitimate repetition:** equivalent service types from different organizations or distinct locations, such as food pantries or home-health providers. Keep the accurate shared label.
+  - **Title/content mismatch:** the title conflicts with the service evidence, such as pet food labeled as groceries for people or senior-care navigation labeled as adult education. Retitle and repair contaminated summaries.
+  - **Ambiguous title:** the title omits essential context supplied by verified evidence. Add the missing subject or population without adding the organization.
+  - **True duplicate:** contact details, official identity, program description, and coverage show that two rows represent one service. Consolidate verified complementary fields into a canonical record and archive the duplicate; do not fabricate distinct titles.
+- Treat spelling variants, county-split imports, and an organization/program name appearing once as the organization and once as the title as duplicate signals, not proof. Preserve separate programs and separate physical locations when they deliver distinct services.
+- After correction, rerun the audit and document every remaining shared-title group with its legitimate rationale.
+
+## Classification integrity
+
+- Classify from immutable source text and verified official program information. Never use a title, summary, category, or translation generated during a previous enrichment pass as new classification evidence.
+- Make transformation scripts idempotent. Run them twice during validation and confirm that the second run produces no changes.
+- Do not choose the first matching keyword blindly. Review all plausible matches and select the service that best represents the row's actual purpose.
+- Give domain-specific evidence priority over incidental language: veterinary over human dental for animal clinics; legal help over housing for legal programs; Lifeline over generic family support for phone-benefit providers; adult education over employment for education programs; survivor support over housing when shelter is part of a violence-response service.
+- When one organization has distinct programs, keep one row per program and use the service/program title—not the organization name—to distinguish them.
 
 ## Bilingual content
 
@@ -20,6 +39,9 @@ Read the live importer first. These rules supplement it and resolve recurring da
 
 - Explain what help is offered and, when relevant, who it is for.
 - Prefer one or two concise sentences.
+- After merging duplicates or overlapping services, rewrite the result as one coherent summary. Do not concatenate source or generated summaries sentence by sentence.
+- Remove repeated openings, duplicated claims, and abrupt topic changes. A pattern such as `Ofrece... Ofrece...` or `Provides... Provides...` is a review failure, not a finished summary.
+- Retain only facts supported by the immutable input or a current authoritative source. Do not let a duplicate contribute an unverified service claim to the canonical record.
 - Do not put phone numbers, emails, URLs, addresses, or unedited service lists in summaries.
 - Put contact data only in its dedicated columns.
 
