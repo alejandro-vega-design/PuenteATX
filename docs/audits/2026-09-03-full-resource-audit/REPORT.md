@@ -316,3 +316,27 @@ Verificación final de la etapa:
 - La base conserva 728 registros: 384 publicados, 288 borradores y 56 archivados.
 
 Los resultados posteriores están en `post-stage-9/` y el lote aplicado está documentado en `stage-9-published-location-operations.json`.
+
+## Estado de remediación — etapa 10
+
+La segunda revisión de recursos publicados con atención presencial y sin una dirección pública se aplicó y verificó el 3 de septiembre de 2026:
+
+- Se investigaron y actualizaron 11 recursos publicados usando páginas oficiales actuales.
+- Family Recovery Court recibió su dirección física y teléfono oficiales en Georgetown.
+- Diez servicios quedaron clasificados como atención en ubicaciones variables o múltiples: Williamson County Indigent Defense, Con Mi MADRE, CARY, Live Like Cati, Foster Village, USCIS, LASSA, Texas Parks and Wildlife, Girl Scouts of Central Texas y Breakthrough Central Texas.
+- En esos casos se preservó `in_person` porque la atención sí puede ocurrir presencialmente, pero depende del tribunal, escuela, campamento, centro de recursos, organización aliada, cita o sede asignada. No se usó una oficina administrativa como ubicación representativa.
+- Se reemplazaron siete títulos genéricos o institucionalmente redundantes por títulos bilingües específicos del servicio.
+- Se reescribieron resúmenes y descripciones importados que estaban truncados, excesivamente largos o no identificaban claramente la ayuda ofrecida.
+- LASSA quedó documentado con acceso telefónico y atención coordinada en refugios y centros de crisis; USCIS conserva el localizador oficial porque su oficina depende del trámite y la cita.
+- No se archivó ni eliminó ningún recurso.
+
+Verificación final de la etapa:
+
+- 11 IDs esperados actualizados y 0 cambios fuera del lote.
+- 0 valores divergentes y 0 registros faltantes.
+- El generador es idempotente: la segunda ejecución produjo 0 operaciones.
+- Los casos publicados pendientes de `in_person` sin dirección bajaron de 60 a 49.
+- Las señales editoriales activas bajaron de 160 a 149.
+- La base conserva 728 registros: 384 publicados, 288 borradores y 56 archivados.
+
+Los resultados posteriores están en `post-stage-10/` y el lote aplicado está documentado en `stage-10-published-location-operations.json`.
