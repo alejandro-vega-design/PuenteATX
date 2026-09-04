@@ -1,0 +1,4405 @@
+[
+  {
+    "resource_id": "f7cc7041-2b04-4ec8-a435-dfae78584f85",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "2050 ROCKride Lane",
+      "city": "Georgetown",
+      "state": "TX",
+      "postal_code": "78626"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 412486894,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 662915098,
+        "lat": "30.6149761",
+        "lon": "-97.6420654",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00000999999999995449,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "2050, Rockride Lane, Georgetown, Williamson County, Texas, 78626, United States",
+        "address": {
+          "house_number": "2050",
+          "road": "Rockride Lane",
+          "city": "Georgetown",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78626",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.6149261",
+          "30.6150261",
+          "-97.6421154",
+          "-97.6420154"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "145067fd-844f-4744-bb56-9d13c420ca50",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "1200 W. 17th St.",
+      "city": "Georgetown",
+      "state": "TX",
+      "postal_code": "78626"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315900719,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1103354269,
+        "lat": "30.6281390",
+        "lon": "-97.6865751",
+        "category": "building",
+        "type": "school",
+        "place_rank": 30,
+        "importance": 0.000058891432059159496,
+        "addresstype": "building",
+        "name": "George Washington Carver Elementary School",
+        "display_name": "George Washington Carver Elementary School, 1200, West 17th Street, Georgetown, Williamson County, Texas, 78626, United States",
+        "address": {
+          "building": "George Washington Carver Elementary School",
+          "house_number": "1200",
+          "road": "West 17th Street",
+          "city": "Georgetown",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78626",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "George Washington Carver Elementary School",
+          "name:en": "George Washington Carver Elementary School",
+          "old_name": "Westside Elementary"
+        },
+        "boundingbox": [
+          "30.6277265",
+          "30.6285564",
+          "-97.6871290",
+          "-97.6855811"
+        ]
+      },
+      {
+        "place_id": 316262910,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 356813748,
+        "lat": "30.6282529",
+        "lon": "-97.6862042",
+        "category": "office",
+        "type": "association",
+        "place_rank": 30,
+        "importance": 0.000058891432059159496,
+        "addresstype": "office",
+        "name": "The Carver Center for Families",
+        "display_name": "The Carver Center for Families, 1200, West 17th Street, Georgetown, Williamson County, Texas, 78626, United States",
+        "address": {
+          "office": "The Carver Center for Families",
+          "house_number": "1200",
+          "road": "West 17th Street",
+          "city": "Georgetown",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78626",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "The Carver Center for Families",
+          "name:en": "The Carver Center for Families",
+          "alt_name": "Starry"
+        },
+        "boundingbox": [
+          "30.6282029",
+          "30.6283029",
+          "-97.6862542",
+          "-97.6861542"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "96e32345-c31a-4260-a816-efb412582e88",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "200 Wilco Way",
+      "city": "Georgetown",
+      "state": "TX",
+      "postal_code": "78626"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316284208,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 877335695,
+        "lat": "30.6189098",
+        "lon": "-97.6592847",
+        "category": "amenity",
+        "type": "prison",
+        "place_rank": 30,
+        "importance": 0.000058891432059159496,
+        "addresstype": "amenity",
+        "name": "Williamson County Juvenile Detention Center",
+        "display_name": "Williamson County Juvenile Detention Center, 200, Wilco Way, Georgetown, Williamson County, Texas, 78626, United States",
+        "address": {
+          "amenity": "Williamson County Juvenile Detention Center",
+          "house_number": "200",
+          "road": "Wilco Way",
+          "city": "Georgetown",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78626",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Williamson County Juvenile Detention Center"
+        },
+        "boundingbox": [
+          "30.6161271",
+          "30.6214821",
+          "-97.6615601",
+          "-97.6564198"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "36baf425-4bb9-47ad-bc13-101fdfd4fb78",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "2201 Old Airport Rd.",
+      "city": "Georgetown",
+      "state": "TX",
+      "postal_code": "78628"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316805061,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1147213368,
+        "lat": "30.6624753",
+        "lon": "-97.6685730",
+        "category": "building",
+        "type": "commercial",
+        "place_rank": 30,
+        "importance": 0.000058891432059159496,
+        "addresstype": "building",
+        "name": "",
+        "display_name": "2201, Old Airport Road, Georgetown, Williamson County, Texas, 78626, United States",
+        "address": {
+          "house_number": "2201",
+          "road": "Old Airport Road",
+          "city": "Georgetown",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78626",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.6623764",
+          "30.6625741",
+          "-97.6687480",
+          "-97.6683980"
+        ]
+      },
+      {
+        "place_id": 315706591,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 12324104693,
+        "lat": "30.6624807",
+        "lon": "-97.6685890",
+        "category": "amenity",
+        "type": "social_facility",
+        "place_rank": 30,
+        "importance": 0.000058891432059159496,
+        "addresstype": "amenity",
+        "name": "The Georgetown Project",
+        "display_name": "The Georgetown Project, 2201, Old Airport Road, Georgetown, Williamson County, Texas, 78626, United States",
+        "address": {
+          "amenity": "The Georgetown Project",
+          "house_number": "2201",
+          "road": "Old Airport Road",
+          "city": "Georgetown",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78626",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "The Georgetown Project"
+        },
+        "boundingbox": [
+          "30.6624307",
+          "30.6625307",
+          "-97.6686390",
+          "-97.6685390"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "5f5f2227-d772-4fbb-82fd-e81b283f3750",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "1401 N. Highway 183",
+      "city": "Leander",
+      "state": "TX",
+      "postal_code": "78641"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316860647,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1081079819,
+        "lat": "30.6034668",
+        "lon": "-97.8614037",
+        "category": "highway",
+        "type": "primary",
+        "place_rank": 26,
+        "importance": 0.05338827420462345,
+        "addresstype": "road",
+        "name": "North Highway 183",
+        "display_name": "North Highway 183, Leander, Williamson County, Texas, 78641, United States",
+        "address": {
+          "road": "North Highway 183",
+          "town": "Leander",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78641",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "ref": "US 183",
+          "name": "North Highway 183",
+          "name:en": "North Highway 183"
+        },
+        "boundingbox": [
+          "30.6032612",
+          "30.6036785",
+          "-97.8614988",
+          "-97.8612959"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "47f853a3-e0b3-4e4f-babf-72ca6fa7cff3",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "1200 W. 17th St.",
+      "city": "Georgetown",
+      "state": "TX",
+      "postal_code": "78626"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315900719,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1103354269,
+        "lat": "30.6281390",
+        "lon": "-97.6865751",
+        "category": "building",
+        "type": "school",
+        "place_rank": 30,
+        "importance": 0.000058891432059159496,
+        "addresstype": "building",
+        "name": "George Washington Carver Elementary School",
+        "display_name": "George Washington Carver Elementary School, 1200, West 17th Street, Georgetown, Williamson County, Texas, 78626, United States",
+        "address": {
+          "building": "George Washington Carver Elementary School",
+          "house_number": "1200",
+          "road": "West 17th Street",
+          "city": "Georgetown",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78626",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "George Washington Carver Elementary School",
+          "name:en": "George Washington Carver Elementary School",
+          "old_name": "Westside Elementary"
+        },
+        "boundingbox": [
+          "30.6277265",
+          "30.6285564",
+          "-97.6871290",
+          "-97.6855811"
+        ]
+      },
+      {
+        "place_id": 316262910,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 356813748,
+        "lat": "30.6282529",
+        "lon": "-97.6862042",
+        "category": "office",
+        "type": "association",
+        "place_rank": 30,
+        "importance": 0.000058891432059159496,
+        "addresstype": "office",
+        "name": "The Carver Center for Families",
+        "display_name": "The Carver Center for Families, 1200, West 17th Street, Georgetown, Williamson County, Texas, 78626, United States",
+        "address": {
+          "office": "The Carver Center for Families",
+          "house_number": "1200",
+          "road": "West 17th Street",
+          "city": "Georgetown",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78626",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "The Carver Center for Families",
+          "name:en": "The Carver Center for Families",
+          "alt_name": "Starry"
+        },
+        "boundingbox": [
+          "30.6282029",
+          "30.6283029",
+          "-97.6862542",
+          "-97.6861542"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "2952025e-0e38-4b4a-bda8-476c35c850d6",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "8956 Research Blvd",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78758"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316274072,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 381999162,
+        "lat": "30.3711810",
+        "lon": "-97.7241138",
+        "category": "building",
+        "type": "yes",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "building",
+        "name": "",
+        "display_name": "8956, Research Boulevard, Wooten, Austin, Travis County, Texas, 78758, United States",
+        "address": {
+          "house_number": "8956",
+          "road": "Research Boulevard",
+          "neighbourhood": "Wooten",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78758",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.3711420",
+          "30.3712180",
+          "-97.7241760",
+          "-97.7240520"
+        ]
+      },
+      {
+        "place_id": 315508844,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 11338903866,
+        "lat": "30.3708096",
+        "lon": "-97.7241661",
+        "category": "office",
+        "type": "charity",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "office",
+        "name": "Samaritan Center",
+        "display_name": "Samaritan Center, 8956, Research Boulevard, Wooten, Austin, Travis County, Texas, 78758, United States",
+        "address": {
+          "office": "Samaritan Center",
+          "house_number": "8956",
+          "road": "Research Boulevard",
+          "neighbourhood": "Wooten",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78758",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Samaritan Center"
+        },
+        "boundingbox": [
+          "30.3707596",
+          "30.3708596",
+          "-97.7242161",
+          "-97.7241161"
+        ]
+      },
+      {
+        "place_id": 412291761,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 436632003,
+        "lat": "30.3718348",
+        "lon": "-97.7224354",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00000999999999995449,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "8956, Research Boulevard, Austin, Travis County, Texas, 78758, United States",
+        "address": {
+          "house_number": "8956",
+          "road": "Research Boulevard",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78758",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.3717848",
+          "30.3718848",
+          "-97.7224854",
+          "-97.7223854"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "dc1dba5f-ed5e-4f0b-ab30-931192372aed",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "1200 W. 17th Street",
+      "city": "Georgetown",
+      "state": "TX",
+      "postal_code": "78626"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315900719,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1103354269,
+        "lat": "30.6281390",
+        "lon": "-97.6865751",
+        "category": "building",
+        "type": "school",
+        "place_rank": 30,
+        "importance": 0.000058891432059159496,
+        "addresstype": "building",
+        "name": "George Washington Carver Elementary School",
+        "display_name": "George Washington Carver Elementary School, 1200, West 17th Street, Georgetown, Williamson County, Texas, 78626, United States",
+        "address": {
+          "building": "George Washington Carver Elementary School",
+          "house_number": "1200",
+          "road": "West 17th Street",
+          "city": "Georgetown",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78626",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "George Washington Carver Elementary School",
+          "name:en": "George Washington Carver Elementary School",
+          "old_name": "Westside Elementary"
+        },
+        "boundingbox": [
+          "30.6277265",
+          "30.6285564",
+          "-97.6871290",
+          "-97.6855811"
+        ]
+      },
+      {
+        "place_id": 316262910,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 356813748,
+        "lat": "30.6282529",
+        "lon": "-97.6862042",
+        "category": "office",
+        "type": "association",
+        "place_rank": 30,
+        "importance": 0.000058891432059159496,
+        "addresstype": "office",
+        "name": "The Carver Center for Families",
+        "display_name": "The Carver Center for Families, 1200, West 17th Street, Georgetown, Williamson County, Texas, 78626, United States",
+        "address": {
+          "office": "The Carver Center for Families",
+          "house_number": "1200",
+          "road": "West 17th Street",
+          "city": "Georgetown",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78626",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "The Carver Center for Families",
+          "name:en": "The Carver Center for Families",
+          "alt_name": "Starry"
+        },
+        "boundingbox": [
+          "30.6282029",
+          "30.6283029",
+          "-97.6862542",
+          "-97.6861542"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "ad6f0ff8-ebd7-4a63-be71-910d8a51f48a",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "3000 S IH 35",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78704"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "f114ecc1-49ca-4a76-ac67-cf07dc060373",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "500 W Ben White Boulevard",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78704"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315911481,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 3876317986,
+        "lat": "30.2266680",
+        "lon": "-97.7679830",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "500, West Ben White Boulevard, Placidena, Austin, Travis County, Texas, 78704, United States",
+        "address": {
+          "house_number": "500",
+          "road": "West Ben White Boulevard",
+          "neighbourhood": "Placidena",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78704",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.2266180",
+          "30.2267180",
+          "-97.7680330",
+          "-97.7679330"
+        ]
+      },
+      {
+        "place_id": 400832578,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 436635880,
+        "lat": "30.2260119",
+        "lon": "-97.7695673",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00000999999999995449,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "500, West Ben White Boulevard, Placidena, Austin, Travis County, Texas, 78704, United States",
+        "address": {
+          "house_number": "500",
+          "road": "West Ben White Boulevard",
+          "neighbourhood": "Placidena",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78704",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.2259619",
+          "30.2260619",
+          "-97.7696173",
+          "-97.7695173"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "964ed8a9-7a7f-48b6-8d16-233adc81572d",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "201 East Wilco Highway",
+      "city": "Hutto",
+      "state": "TX",
+      "postal_code": "78634"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315768594,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1446123994,
+        "lat": "30.5085210",
+        "lon": "-97.5313582",
+        "category": "highway",
+        "type": "construction",
+        "place_rank": 26,
+        "importance": 0.05338744411383227,
+        "addresstype": "road",
+        "name": "East Wilco Highway",
+        "display_name": "East Wilco Highway, Hutto, Williamson County, Texas, 78634, United States",
+        "address": {
+          "road": "East Wilco Highway",
+          "town": "Hutto",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78634",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "East Wilco Highway"
+        },
+        "boundingbox": [
+          "30.5048983",
+          "30.5113728",
+          "-97.5369233",
+          "-97.5253948"
+        ]
+      },
+      {
+        "place_id": 316370415,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1479475383,
+        "lat": "30.5013079",
+        "lon": "-97.5677105",
+        "category": "highway",
+        "type": "tertiary",
+        "place_rank": 26,
+        "importance": 0.0533620332646677,
+        "addresstype": "road",
+        "name": "East Wilco Highway",
+        "display_name": "East Wilco Highway, Hutto, Williamson County, Texas, 78634, United States",
+        "address": {
+          "road": "East Wilco Highway",
+          "town": "Hutto",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78634",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "East Wilco Highway"
+        },
+        "boundingbox": [
+          "30.5005685",
+          "30.5021091",
+          "-97.5706037",
+          "-97.5648344"
+        ]
+      },
+      {
+        "place_id": 316685513,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1446143709,
+        "lat": "30.5171628",
+        "lon": "-97.4997816",
+        "category": "highway",
+        "type": "construction",
+        "place_rank": 26,
+        "importance": 0.05335933394369417,
+        "addresstype": "road",
+        "name": "East Wilco Highway",
+        "display_name": "East Wilco Highway, Hutto, Williamson County, Texas, United States",
+        "address": {
+          "road": "East Wilco Highway",
+          "town": "Hutto",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "East Wilco Highway"
+        },
+        "boundingbox": [
+          "30.5146980",
+          "30.5242095",
+          "-97.5121594",
+          "-97.4896740"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "30fa47b2-4985-432a-b020-53f19e042059",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "4430 Menchaca Rd",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78745"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 313239029,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 383904159,
+        "lat": "30.2287800",
+        "lon": "-97.7894867",
+        "category": "amenity",
+        "type": "place_of_worship",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "amenity",
+        "name": "Sunrise Community Church",
+        "display_name": "Sunrise Community Church, 4430, Menchaca Road, Austin, Travis County, Texas, 78745, United States",
+        "address": {
+          "amenity": "Sunrise Community Church",
+          "house_number": "4430",
+          "road": "Menchaca Road",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78745",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Sunrise Community Church"
+        },
+        "boundingbox": [
+          "30.2286270",
+          "30.2289610",
+          "-97.7899340",
+          "-97.7893420"
+        ]
+      },
+      {
+        "place_id": 412690572,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 436640228,
+        "lat": "30.2281880",
+        "lon": "-97.7895560",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00000999999999995449,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "4430, Menchaca Road, Austin, Travis County, Texas, 78745, United States",
+        "address": {
+          "house_number": "4430",
+          "road": "Menchaca Road",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78745",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.2281380",
+          "30.2282380",
+          "-97.7896060",
+          "-97.7895060"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "622d9262-1590-46f0-a976-b75a1c13ec4d",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "7050 Elroy Rd.",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78617"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 313116297,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 30775589,
+        "lat": "30.1286876",
+        "lon": "-97.6248109",
+        "category": "highway",
+        "type": "tertiary",
+        "place_rank": 26,
+        "importance": 0.0533723590447852,
+        "addresstype": "road",
+        "name": "Elroy Road",
+        "display_name": "Elroy Road, Austin, Travis County, Texas, 78617, United States",
+        "address": {
+          "road": "Elroy Road",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78617",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Elroy Road"
+        },
+        "boundingbox": [
+          "30.1207174",
+          "30.1419999",
+          "-97.6352842",
+          "-97.6161686"
+        ]
+      },
+      {
+        "place_id": 314888861,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 30859241,
+        "lat": "30.1667464",
+        "lon": "-97.6589140",
+        "category": "highway",
+        "type": "secondary",
+        "place_rank": 26,
+        "importance": 0.05337838330663001,
+        "addresstype": "road",
+        "name": "Elroy Road",
+        "display_name": "Elroy Road, Austin, Travis County, Texas, 78714, United States",
+        "address": {
+          "road": "Elroy Road",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78714",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Elroy Road"
+        },
+        "boundingbox": [
+          "30.1661276",
+          "30.1673590",
+          "-97.6593228",
+          "-97.6584524"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "0e96ff9d-9e8b-49e8-845a-e9952c5e138b",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "2909 North IH35",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78722"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "7fd18a9b-abd0-41c4-a16d-a776de28d1bd",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "405 W. Stassney Lane",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78745"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315132136,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 384023212,
+        "lat": "30.2069740",
+        "lon": "-97.7792887",
+        "category": "amenity",
+        "type": "community_centre",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "amenity",
+        "name": "Far South Health Center",
+        "display_name": "Far South Health Center, 405, West Stassney Lane, Austin, Travis County, Texas, 78745, United States",
+        "address": {
+          "amenity": "Far South Health Center",
+          "house_number": "405",
+          "road": "West Stassney Lane",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78745",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Far South Health Center"
+        },
+        "boundingbox": [
+          "30.2068580",
+          "30.2070800",
+          "-97.7794860",
+          "-97.7790910"
+        ]
+      },
+      {
+        "place_id": 400240057,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 436633148,
+        "lat": "30.2072826",
+        "lon": "-97.7788345",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00000999999999995449,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "405, West Stassney Lane, Austin, Travis County, Texas, 78745, United States",
+        "address": {
+          "house_number": "405",
+          "road": "West Stassney Lane",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78745",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.2072326",
+          "30.2073326",
+          "-97.7788845",
+          "-97.7787845"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "6db18573-eec3-4bfb-9250-5392f9e27cbb",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "3001 S. Congress Ave",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78704"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315138442,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 188589257,
+        "lat": "30.2298438",
+        "lon": "-97.7546488",
+        "category": "amenity",
+        "type": "university",
+        "place_rank": 30,
+        "importance": 0.45005934006990783,
+        "addresstype": "amenity",
+        "name": "St. Edward's University",
+        "display_name": "St. Edward's University, 3001, South Congress Avenue, Dawson, Austin, Travis County, Texas, 78704, United States",
+        "address": {
+          "amenity": "St. Edward's University",
+          "house_number": "3001",
+          "road": "South Congress Avenue",
+          "neighbourhood": "Dawson",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78704",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "St. Edward's University"
+        },
+        "boundingbox": [
+          "30.2255634",
+          "30.2343949",
+          "-97.7600830",
+          "-97.7488777"
+        ]
+      },
+      {
+        "place_id": 315135031,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 9095873767,
+        "lat": "30.2325510",
+        "lon": "-97.7542933",
+        "category": "amenity",
+        "type": "police",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "amenity",
+        "name": "St. Edward's Police Dpt.",
+        "display_name": "St. Edward's Police Dpt., 3001, South Congress Avenue, LaPrelle Place, Austin, Travis County, Texas, 78704, United States",
+        "address": {
+          "amenity": "St. Edward's Police Dpt.",
+          "house_number": "3001",
+          "road": "South Congress Avenue",
+          "neighbourhood": "LaPrelle Place",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78704",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "St. Edward's Police Dpt."
+        },
+        "boundingbox": [
+          "30.2325010",
+          "30.2326010",
+          "-97.7543433",
+          "-97.7542433"
+        ]
+      },
+      {
+        "place_id": 315162001,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 3190877898,
+        "lat": "30.2326024",
+        "lon": "-97.7562269",
+        "category": "amenity",
+        "type": "cafe",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "amenity",
+        "name": "Jo's Coffee",
+        "display_name": "Jo's Coffee, 3001, South Congress Avenue, LaPrelle Place, Austin, Travis County, Texas, 78704, United States",
+        "address": {
+          "amenity": "Jo's Coffee",
+          "house_number": "3001",
+          "road": "South Congress Avenue",
+          "neighbourhood": "LaPrelle Place",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78704",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Jo's Coffee"
+        },
+        "boundingbox": [
+          "30.2325524",
+          "30.2326524",
+          "-97.7562769",
+          "-97.7561769"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "e8dbc5bb-9bba-4913-9c18-aeea7afd55a1",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "4201 South Congress Avenue Ste 202",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78745"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "29e8c472-0ea5-487b-8bc6-1ef6152a06d1",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "2911 AW Grimes Blvd #203",
+      "city": "Pflugerville",
+      "state": "TX",
+      "postal_code": "78660"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "07b26629-178f-422e-9cbe-cb62b3c1416e",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "5811 Palo Blanco Lane",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78744"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 311844986,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 15378426,
+        "lat": "30.1909138",
+        "lon": "-97.7459126",
+        "category": "highway",
+        "type": "tertiary",
+        "place_rank": 26,
+        "importance": 0.05340827725642783,
+        "addresstype": "road",
+        "name": "Palo Blanco Lane",
+        "display_name": "Palo Blanco Lane, Village South, Austin, Travis County, Texas, 78744, United States",
+        "address": {
+          "road": "Palo Blanco Lane",
+          "residential": "Village South",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78744",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Palo Blanco Lane"
+        },
+        "boundingbox": [
+          "30.1895790",
+          "30.1936258",
+          "-97.7497150",
+          "-97.7412135"
+        ]
+      },
+      {
+        "place_id": 313858505,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1075061893,
+        "lat": "30.1963082",
+        "lon": "-97.7489352",
+        "category": "highway",
+        "type": "tertiary",
+        "place_rank": 26,
+        "importance": 0.05340827725642783,
+        "addresstype": "road",
+        "name": "Palo Blanco Lane",
+        "display_name": "Palo Blanco Lane, Peppertree Park, Austin, Travis County, Texas, 78744, United States",
+        "address": {
+          "road": "Palo Blanco Lane",
+          "residential": "Peppertree Park",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78744",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Palo Blanco Lane"
+        },
+        "boundingbox": [
+          "30.1936258",
+          "30.1986885",
+          "-97.7497946",
+          "-97.7472461"
+        ]
+      },
+      {
+        "place_id": 312064767,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1371592070,
+        "lat": "30.1891814",
+        "lon": "-97.7397952",
+        "category": "highway",
+        "type": "unclassified",
+        "place_rank": 26,
+        "importance": 0.05340827725642783,
+        "addresstype": "road",
+        "name": "Palo Blanco Lane",
+        "display_name": "Palo Blanco Lane, Austin, Travis County, Texas, 78744, United States",
+        "address": {
+          "road": "Palo Blanco Lane",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78744",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Palo Blanco Lane"
+        },
+        "boundingbox": [
+          "30.1887238",
+          "30.1894048",
+          "-97.7408129",
+          "-97.7388452"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "705a5ab0-a0d7-4fd5-86b7-6afa79678d64",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "3000 S. I-35 Frontage Road",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78704"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316418923,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 619451456,
+        "lat": "30.2104378",
+        "lon": "-97.7556045",
+        "category": "highway",
+        "type": "secondary",
+        "place_rank": 26,
+        "importance": 0.05340827725642783,
+        "addresstype": "road",
+        "name": "I 35 Frontage Road",
+        "display_name": "I 35 Frontage Road, Southpark, Austin, Travis County, Texas, 78744, United States",
+        "address": {
+          "road": "I 35 Frontage Road",
+          "neighbourhood": "Southpark",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78744",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "I 35 Frontage Road"
+        },
+        "boundingbox": [
+          "30.2088532",
+          "30.2120517",
+          "-97.7565673",
+          "-97.7546919"
+        ]
+      },
+      {
+        "place_id": 316647648,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 655414254,
+        "lat": "30.3087118",
+        "lon": "-97.7113893",
+        "category": "highway",
+        "type": "secondary",
+        "place_rank": 26,
+        "importance": 0.05340827725642783,
+        "addresstype": "road",
+        "name": "I 35 Frontage Road",
+        "display_name": "I 35 Frontage Road, Austin, Travis County, Texas, 78751, United States",
+        "address": {
+          "road": "I 35 Frontage Road",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78751",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "I 35 Frontage Road",
+          "name:en": "I 35 Frontage Road",
+          "alt_name": "Interstate Highway 35 Service Road N;North I- 35 Service"
+        },
+        "boundingbox": [
+          "30.3082562",
+          "30.3091755",
+          "-97.7114901",
+          "-97.7113453"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "283c04bd-73bd-4dad-8644-0d6c05e47886",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "1503 S. I-35 Frontage Rd",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78741"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "454c78f4-22eb-4e3e-afb1-27d2b6b32cac",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "500 E 7th Street",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78701"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315620760,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 379166123,
+        "lat": "30.2679596",
+        "lon": "-97.7374807",
+        "category": "amenity",
+        "type": "social_facility",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "amenity",
+        "name": "Austin Resource Center for the Homeless (ARCH)",
+        "display_name": "Austin Resource Center for the Homeless (ARCH), 500, East 7th Street, Austin, Travis County, Texas, 78701, United States",
+        "address": {
+          "amenity": "Austin Resource Center for the Homeless (ARCH)",
+          "house_number": "500",
+          "road": "East 7th Street",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78701",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Austin Resource Center for the Homeless (ARCH)"
+        },
+        "boundingbox": [
+          "30.2676800",
+          "30.2681310",
+          "-97.7377687",
+          "-97.7372239"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "bf5c41af-a94a-4b0f-be55-3a8c0bded946",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "3100 Red River Suite 3",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78705"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "8d7f538b-020c-4470-9a49-4850aca6497a",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "8700 Menchaca Rd",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78748"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316446829,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 3871727576,
+        "lat": "30.1850740",
+        "lon": "-97.8174050",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "8700, Menchaca Road, Austin, Travis County, Texas, 78748, United States",
+        "address": {
+          "house_number": "8700",
+          "road": "Menchaca Road",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78748",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.1850240",
+          "30.1851240",
+          "-97.8174550",
+          "-97.8173550"
+        ]
+      },
+      {
+        "place_id": 316813445,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 12801107401,
+        "lat": "30.1854472",
+        "lon": "-97.8173380",
+        "category": "amenity",
+        "type": "dentist",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "amenity",
+        "name": "Grand Oaks Dentistry",
+        "display_name": "Grand Oaks Dentistry, 8700, Menchaca Road, Austin, Travis County, Texas, 78748, United States",
+        "address": {
+          "amenity": "Grand Oaks Dentistry",
+          "house_number": "8700",
+          "road": "Menchaca Road",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78748",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Grand Oaks Dentistry"
+        },
+        "boundingbox": [
+          "30.1853972",
+          "30.1854972",
+          "-97.8173880",
+          "-97.8172880"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "246c88c0-398e-42e8-9194-b491c26bcaf3",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "4201 S Congress Ave",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78745"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315071170,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 9728348939,
+        "lat": "30.2202883",
+        "lon": "-97.7646848",
+        "category": "leisure",
+        "type": "dance",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "leisure",
+        "name": "Inspired Movement",
+        "display_name": "Inspired Movement, 4201, South Congress Avenue, St. Elmo, Austin, Travis County, Texas, 78745, United States",
+        "address": {
+          "leisure": "Inspired Movement",
+          "house_number": "4201",
+          "road": "South Congress Avenue",
+          "neighbourhood": "St. Elmo",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78745",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Inspired Movement"
+        },
+        "boundingbox": [
+          "30.2202383",
+          "30.2203383",
+          "-97.7647348",
+          "-97.7646348"
+        ]
+      },
+      {
+        "place_id": 315154933,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 384255625,
+        "lat": "30.2204170",
+        "lon": "-97.7636176",
+        "category": "building",
+        "type": "office",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "building",
+        "name": "",
+        "display_name": "4201, South Congress Avenue, St. Elmo, Austin, Travis County, Texas, 78745, United States",
+        "address": {
+          "house_number": "4201",
+          "road": "South Congress Avenue",
+          "neighbourhood": "St. Elmo",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78745",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.2197490",
+          "30.2211110",
+          "-97.7647990",
+          "-97.7628700"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "9b5c158e-7afa-4803-b3d2-5a381824ccd9",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "7201 Levander Loop Bldg. C",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78702"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315454682,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 880462461,
+        "lat": "30.2523211",
+        "lon": "-97.6904642",
+        "category": "office",
+        "type": "government",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "office",
+        "name": "City of Austin - Office of Vital Records (Bldg C)",
+        "display_name": "City of Austin - Office of Vital Records (Bldg C), 7201, Levander Loop, Austin, Travis County, Texas, 78702, United States",
+        "address": {
+          "office": "City of Austin - Office of Vital Records (Bldg C)",
+          "house_number": "7201",
+          "road": "Levander Loop",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78702",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "City of Austin - Office of Vital Records (Bldg C)"
+        },
+        "boundingbox": [
+          "30.2522088",
+          "30.2524272",
+          "-97.6906915",
+          "-97.6902379"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "0edcce44-82b9-48aa-af70-cdbb3481fb9c",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "850 East Anderson Lane",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78752"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316697445,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 384396257,
+        "lat": "30.3389810",
+        "lon": "-97.6978139",
+        "category": "office",
+        "type": "government",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "office",
+        "name": "Travis Central Appraisal District",
+        "display_name": "Travis Central Appraisal District, 850, East Anderson Lane, Austin, Travis County, Texas, 78752, United States",
+        "address": {
+          "office": "Travis Central Appraisal District",
+          "house_number": "850",
+          "road": "East Anderson Lane",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78752",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Travis Central Appraisal District"
+        },
+        "boundingbox": [
+          "30.3385450",
+          "30.3394530",
+          "-97.6980470",
+          "-97.6973230"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "800cef72-58f3-4bd0-bb1a-294961db7486",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "100 Wilco Way, Suite V101",
+      "city": "Georgetown",
+      "state": "TX",
+      "postal_code": "78626"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "8909eca7-2057-4a5d-88af-35f40f0cb002",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "1407 E. Freddy Gonzalez Dr.",
+      "city": "Edinburg",
+      "state": "TX",
+      "postal_code": "78539"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 314637672,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1420793122,
+        "lat": "26.2875681",
+        "lon": "-98.1506544",
+        "category": "amenity",
+        "type": "university",
+        "place_rank": 30,
+        "importance": 0.42732767760447,
+        "addresstype": "amenity",
+        "name": "University of Texas Rio Grande Valley",
+        "display_name": "University of Texas Rio Grande Valley, 1407, East Freddy Gonzalez Drive, Edinburg, Hidalgo County, Texas, 78542, United States",
+        "address": {
+          "amenity": "University of Texas Rio Grande Valley",
+          "house_number": "1407",
+          "road": "East Freddy Gonzalez Drive",
+          "city": "Edinburg",
+          "county": "Hidalgo County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78542",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "University of Texas Rio Grande Valley"
+        },
+        "boundingbox": [
+          "26.2861402",
+          "26.2885884",
+          "-98.1518278",
+          "-98.1494810"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "506da0f9-5a4a-4d22-95de-5765ecc825dd",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "7000 N. MoPac Expy #200",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78731"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "302de942-8d80-4199-bc05-f3a7197abebe",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "850 East Anderson Lane",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78752"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316697445,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 384396257,
+        "lat": "30.3389810",
+        "lon": "-97.6978139",
+        "category": "office",
+        "type": "government",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "office",
+        "name": "Travis Central Appraisal District",
+        "display_name": "Travis Central Appraisal District, 850, East Anderson Lane, Austin, Travis County, Texas, 78752, United States",
+        "address": {
+          "office": "Travis Central Appraisal District",
+          "house_number": "850",
+          "road": "East Anderson Lane",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78752",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Travis Central Appraisal District"
+        },
+        "boundingbox": [
+          "30.3385450",
+          "30.3394530",
+          "-97.6980470",
+          "-97.6973230"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "ff8d025b-295a-4b1f-9a09-26ca5ea8f787",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "215 S. Reimer Avenue",
+      "city": "San Marcos",
+      "state": "TX",
+      "postal_code": "78666"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316005580,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 693631919,
+        "lat": "29.8503694",
+        "lon": "-97.9735605",
+        "category": "office",
+        "type": "association",
+        "place_rank": 30,
+        "importance": 0.00006114061188673255,
+        "addresstype": "office",
+        "name": "The Village Main",
+        "display_name": "The Village Main, 215, South Reimer Avenue, San Marcos, Hays County, Texas, 78666, United States",
+        "address": {
+          "office": "The Village Main",
+          "house_number": "215",
+          "road": "South Reimer Avenue",
+          "town": "San Marcos",
+          "county": "Hays County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78666",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "The Village Main"
+        },
+        "boundingbox": [
+          "29.8500868",
+          "29.8506801",
+          "-97.9739920",
+          "-97.9732364"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "560915b3-0a0d-4b8b-aae8-7822575c9f38",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "5325 Airport Blvd, 2do piso",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78753"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "24a2c0f9-7f26-40d2-b836-df8f9fcb99dd",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "2601 Exposition Boulevard",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78703"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316787309,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "relation",
+        "osm_id": 5685794,
+        "lat": "30.3006130",
+        "lon": "-97.7651433",
+        "category": "amenity",
+        "type": "place_of_worship",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "amenity",
+        "name": "Tarrytown United Methodist Church",
+        "display_name": "Tarrytown United Methodist Church, 2601, Exposition Boulevard, Tarrytown, Austin, Travis County, Texas, 78703, United States",
+        "address": {
+          "amenity": "Tarrytown United Methodist Church",
+          "house_number": "2601",
+          "road": "Exposition Boulevard",
+          "neighbourhood": "Tarrytown",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78703",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Tarrytown United Methodist Church"
+        },
+        "boundingbox": [
+          "30.3001780",
+          "30.3010680",
+          "-97.7655700",
+          "-97.7646920"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "b0219ae4-33d0-4864-b248-b6d26826b3ae",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "5555 N. Lamar, Building J Suite 125",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78751"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "f17774b3-626f-4eab-9077-95d46cea0711",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "7201 Levander Loop, Building C",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78702"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "fa8108e4-57c3-4c89-b74f-7192cd4d9783",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "987 N State Highway 95",
+      "city": "Bastrop",
+      "state": "TX",
+      "postal_code": "78602"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "f307f0ea-7f7a-4737-a487-e9c3c5cd2f41",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "303 Ave C",
+      "city": "Elgin",
+      "state": "TX",
+      "postal_code": "78621"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 318300491,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 545135838,
+        "lat": "30.3504336",
+        "lon": "-97.3724166",
+        "category": "building",
+        "type": "yes",
+        "place_rank": 30,
+        "importance": 0.000055008010986450254,
+        "addresstype": "building",
+        "name": "",
+        "display_name": "303, North Avenue C, Elgin, Bastrop County, Texas, 78621, United States",
+        "address": {
+          "house_number": "303",
+          "road": "North Avenue C",
+          "town": "Elgin",
+          "county": "Bastrop County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78621",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.3503124",
+          "30.3506042",
+          "-97.3725444",
+          "-97.3722687"
+        ]
+      },
+      {
+        "place_id": 315504222,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1165521185,
+        "lat": "30.3504272",
+        "lon": "-97.3726367",
+        "category": "amenity",
+        "type": "place_of_worship",
+        "place_rank": 30,
+        "importance": 0.000055008010986450254,
+        "addresstype": "amenity",
+        "name": "First Presbyterian Church",
+        "display_name": "First Presbyterian Church, 303, North Avenue C, Elgin, Bastrop County, Texas, 78621, United States",
+        "address": {
+          "amenity": "First Presbyterian Church",
+          "house_number": "303",
+          "road": "North Avenue C",
+          "town": "Elgin",
+          "county": "Bastrop County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78621",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "First Presbyterian Church"
+        },
+        "boundingbox": [
+          "30.3503574",
+          "30.3505093",
+          "-97.3727486",
+          "-97.3725248"
+        ]
+      },
+      {
+        "place_id": 386300835,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 15111656,
+        "lat": "30.3447454",
+        "lon": "-97.3702695",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00000999999999995449,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "303, South Avenue C, Elgin, Bastrop County, Texas, 78621, United States",
+        "address": {
+          "house_number": "303",
+          "road": "South Avenue C",
+          "town": "Elgin",
+          "county": "Bastrop County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78621",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.3446954",
+          "30.3447954",
+          "-97.3703195",
+          "-97.3702195"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "03df7d5f-d3a9-4b7a-b646-a823f882ca6c",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "301 Lee St. Smithville, TX 78957",
+      "city": "Smithville",
+      "state": "TX",
+      "postal_code": "78957"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "c980a647-c289-49af-908b-1e2ff4cc59eb",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "Bastrop Community Senior Center, 1209 Linden St",
+      "city": "Bastrop",
+      "state": "TX",
+      "postal_code": "78602"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315538272,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 907604439,
+        "lat": "30.1249392",
+        "lon": "-97.3146424",
+        "category": "amenity",
+        "type": "community_centre",
+        "place_rank": 30,
+        "importance": 0.000058430609597879263,
+        "addresstype": "amenity",
+        "name": "Bastrop Community Senior Center",
+        "display_name": "Bastrop Community Senior Center, 1209, Linden Street, Bastrop, Bastrop County, Texas, 78602, United States",
+        "address": {
+          "amenity": "Bastrop Community Senior Center",
+          "house_number": "1209",
+          "road": "Linden Street",
+          "town": "Bastrop",
+          "county": "Bastrop County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78602",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Bastrop Community Senior Center"
+        },
+        "boundingbox": [
+          "30.1248109",
+          "30.1250420",
+          "-97.3147816",
+          "-97.3145032"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "d1fb9aff-e20f-4e22-88b1-1ac68d60670d",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "443 Texas Highway 71",
+      "city": "Bastrop",
+      "state": "TX",
+      "postal_code": "78602"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "f76f85ba-51fe-426f-b57a-dffe1defe6bb",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "200-A Depot Street",
+      "city": "Elgin",
+      "state": "TX",
+      "postal_code": "78621"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315559943,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1166009362,
+        "lat": "30.3472776",
+        "lon": "-97.3713817",
+        "category": "highway",
+        "type": "residential",
+        "place_rank": 26,
+        "importance": 0.053388341344319794,
+        "addresstype": "road",
+        "name": "Depot Street",
+        "display_name": "Depot Street, Elgin, Bastrop County, Texas, 78621, United States",
+        "address": {
+          "road": "Depot Street",
+          "town": "Elgin",
+          "county": "Bastrop County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78621",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Depot Street"
+        },
+        "boundingbox": [
+          "30.3469916",
+          "30.3475840",
+          "-97.3723895",
+          "-97.3703800"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "e9611291-d315-49fc-843b-0103baba142d",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "808 SE Martin Luther King Drive",
+      "city": "Smithville",
+      "state": "TX",
+      "postal_code": "78957"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "2c2224ee-ec1e-47d2-9311-adcb6192a511",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "104 Loop 150 W",
+      "city": "Bastrop",
+      "state": "TX",
+      "postal_code": "78602"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "e94bbd4a-e8ca-406f-a834-6b08f913bd15",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "Estación Bastrop: 310 Hospital Dr",
+      "city": "Bastrop",
+      "state": "TX",
+      "postal_code": "78602"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "b46e9732-0eb7-48e0-89d7-ee8979869c2b",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "1501 W. US Highway 290",
+      "city": "Elgin",
+      "state": "TX",
+      "postal_code": "78621"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316352740,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1165117156,
+        "lat": "30.3542198",
+        "lon": "-97.4062721",
+        "category": "amenity",
+        "type": "college",
+        "place_rank": 30,
+        "importance": 0.000055008010986450254,
+        "addresstype": "amenity",
+        "name": "Austin Community College - Elgin Campus",
+        "display_name": "Austin Community College - Elgin Campus, 1501, West US Highway 290, Elgin, Bastrop County, Texas, 78621, United States",
+        "address": {
+          "amenity": "Austin Community College - Elgin Campus",
+          "house_number": "1501",
+          "road": "West US Highway 290",
+          "town": "Elgin",
+          "county": "Bastrop County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78621",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Austin Community College - Elgin Campus"
+        },
+        "boundingbox": [
+          "30.3523093",
+          "30.3589762",
+          "-97.4116682",
+          "-97.4011716"
+        ]
+      },
+      {
+        "place_id": 316041278,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 545127093,
+        "lat": "30.3540228",
+        "lon": "-97.4059334",
+        "category": "building",
+        "type": "college",
+        "place_rank": 30,
+        "importance": 0.000055008010986450254,
+        "addresstype": "building",
+        "name": "",
+        "display_name": "1501, West US Highway 290, Elgin, Bastrop County, Texas, 78621, United States",
+        "address": {
+          "house_number": "1501",
+          "road": "West US Highway 290",
+          "town": "Elgin",
+          "county": "Bastrop County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78621",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.3537857",
+          "30.3541927",
+          "-97.4063582",
+          "-97.4055523"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "8476d6ef-9633-47b5-83d4-c89dc775b030",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "3809 Loop 150 E",
+      "city": "Bastrop",
+      "state": "TX",
+      "postal_code": "78602"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315151401,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 905703405,
+        "lat": "30.1063542",
+        "lon": "-97.2880734",
+        "category": "office",
+        "type": "government",
+        "place_rank": 30,
+        "importance": 0.000058430609597879263,
+        "addresstype": "office",
+        "name": "Protective & Regulatory Services",
+        "display_name": "Protective & Regulatory Services, 3809, Loop 150 East, Bastrop, Bastrop County, Texas, 78602, United States",
+        "address": {
+          "office": "Protective & Regulatory Services",
+          "house_number": "3809",
+          "road": "Loop 150 East",
+          "town": "Bastrop",
+          "county": "Bastrop County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78602",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Protective & Regulatory Services"
+        },
+        "boundingbox": [
+          "30.1060442",
+          "30.1066641",
+          "-97.2883327",
+          "-97.2878142"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "ffc5a197-bdbc-49f6-a8b0-e2fc6d20e3f2",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "53 Loop 150 West",
+      "city": "Bastrop",
+      "state": "TX",
+      "postal_code": "78602"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "7e3edaac-9562-4dc5-b884-d09b5b907cd7",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "4920 North I-35",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78751"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 313486853,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 132503363,
+        "lat": "30.3069643",
+        "lon": "-97.7122931",
+        "category": "highway",
+        "type": "secondary",
+        "place_rank": 26,
+        "importance": 0.05340827725642783,
+        "addresstype": "road",
+        "name": "North Interstate 35",
+        "display_name": "North Interstate 35, Austin, Travis County, Texas, 78751, United States",
+        "address": {
+          "road": "North Interstate 35",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78751",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "North Interstate 35",
+          "name:en": "North Interstate 35",
+          "alt_name": "Interstate Highway 35 Service Road N;North I- 35 Service"
+        },
+        "boundingbox": [
+          "30.3056892",
+          "30.3082562",
+          "-97.7131220",
+          "-97.7114901"
+        ]
+      },
+      {
+        "place_id": 318048245,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 436634365,
+        "lat": "30.3029205",
+        "lon": "-97.7149088",
+        "category": "highway",
+        "type": "secondary",
+        "place_rank": 26,
+        "importance": 0.05340827725642783,
+        "addresstype": "road",
+        "name": "North Interstate 35",
+        "display_name": "North Interstate 35, Delwood, Austin, Travis County, Texas, 78751, United States",
+        "address": {
+          "road": "North Interstate 35",
+          "neighbourhood": "Delwood",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78751",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "North Interstate 35",
+          "name:en": "North Interstate 35",
+          "alt_name": "Interstate Highway 35 Service Road N;North I- 35 Service"
+        },
+        "boundingbox": [
+          "30.3024588",
+          "30.3033822",
+          "-97.7152183",
+          "-97.7145993"
+        ]
+      },
+      {
+        "place_id": 313476702,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 655414254,
+        "lat": "30.3087118",
+        "lon": "-97.7113893",
+        "category": "highway",
+        "type": "secondary",
+        "place_rank": 26,
+        "importance": 0.05340827725642783,
+        "addresstype": "road",
+        "name": "I 35 Frontage Road",
+        "display_name": "I 35 Frontage Road, Austin, Travis County, Texas, 78751, United States",
+        "address": {
+          "road": "I 35 Frontage Road",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78751",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "I 35 Frontage Road",
+          "name:en": "I 35 Frontage Road",
+          "alt_name": "Interstate Highway 35 Service Road N;North I- 35 Service"
+        },
+        "boundingbox": [
+          "30.3082562",
+          "30.3091755",
+          "-97.7114901",
+          "-97.7113453"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "4557e75b-5cef-4723-99d9-6b262d4c5e3c",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "361 N. Hwy 95",
+      "city": "Elgin",
+      "state": "TX",
+      "postal_code": ""
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "744a034c-13a9-4e65-bb4c-aaaab73576d2",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "2700 W. Pecan St.",
+      "city": "Pflugerville",
+      "state": "TX",
+      "postal_code": "78660"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316379695,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 754082903,
+        "lat": "30.4499887",
+        "lon": "-97.6575232",
+        "category": "amenity",
+        "type": "restaurant",
+        "place_rank": 30,
+        "importance": 0.00003500190737769158,
+        "addresstype": "amenity",
+        "name": "Las Cazuelas",
+        "display_name": "Las Cazuelas, 2700, West Pecan Street, Pflugerville, Travis County, Texas, 78660, United States",
+        "address": {
+          "amenity": "Las Cazuelas",
+          "house_number": "2700",
+          "road": "West Pecan Street",
+          "town": "Pflugerville",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78660",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Las Cazuelas"
+        },
+        "boundingbox": [
+          "30.4498470",
+          "30.4501152",
+          "-97.6576883",
+          "-97.6573583"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "ad27eff6-8e16-4be4-be97-0e88058b8bd2",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "1401 W. Pecan St.",
+      "city": "Pflugerville",
+      "state": "TX",
+      "postal_code": "78660"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316629442,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 384445017,
+        "lat": "30.4464285",
+        "lon": "-97.6365812",
+        "category": "building",
+        "type": "yes",
+        "place_rank": 30,
+        "importance": 0.000055398641947005685,
+        "addresstype": "building",
+        "name": "Pflugerville ISD Admin Building",
+        "display_name": "Pflugerville ISD Admin Building, 1401, West Pecan Street, Pflugerville, Travis County, Texas, 78660, United States",
+        "address": {
+          "building": "Pflugerville ISD Admin Building",
+          "house_number": "1401",
+          "road": "West Pecan Street",
+          "town": "Pflugerville",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78660",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Pflugerville ISD Admin Building"
+        },
+        "boundingbox": [
+          "30.4461160",
+          "30.4467600",
+          "-97.6368280",
+          "-97.6363190"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "4075ac63-2b76-4020-8dfe-ea07a761d25d",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "400 Immanuel Road",
+      "city": "Pflugerville",
+      "state": "TX",
+      "postal_code": "78660"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316620993,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 384754320,
+        "lat": "30.4325310",
+        "lon": "-97.6128617",
+        "category": "leisure",
+        "type": "sports_centre",
+        "place_rank": 30,
+        "importance": 0.000055398641947005685,
+        "addresstype": "leisure",
+        "name": "Pflugerville Recreation Center",
+        "display_name": "Pflugerville Recreation Center, 400, Immanuel Road, Pflugerville, Travis County, Texas, 78691, United States",
+        "address": {
+          "leisure": "Pflugerville Recreation Center",
+          "house_number": "400",
+          "road": "Immanuel Road",
+          "town": "Pflugerville",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78691",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Pflugerville Recreation Center"
+        },
+        "boundingbox": [
+          "30.4322810",
+          "30.4327700",
+          "-97.6131610",
+          "-97.6125950"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "73b799fb-891b-4ed6-9218-3e4509ab8b1f",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "600 W Carrie Manor St",
+      "city": "Manor",
+      "state": "TX",
+      "postal_code": "78653"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315374553,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 382142732,
+        "lat": "30.3401335",
+        "lon": "-97.5637636",
+        "category": "amenity",
+        "type": "community_centre",
+        "place_rank": 30,
+        "importance": 0.00003500190737769158,
+        "addresstype": "amenity",
+        "name": "Manor Community Center",
+        "display_name": "Manor Community Center, 600, West Carrie Manor Street, Wildhorse Creek, Manor, Travis County, Texas, 78653, United States",
+        "address": {
+          "amenity": "Manor Community Center",
+          "house_number": "600",
+          "road": "West Carrie Manor Street",
+          "neighbourhood": "Wildhorse Creek",
+          "town": "Manor",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78653",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Manor Community Center"
+        },
+        "boundingbox": [
+          "30.3399510",
+          "30.3403300",
+          "-97.5639540",
+          "-97.5635710"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "12a4ba93-0bd7-4476-9e57-f59b35c75af9",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "3518 FM 973",
+      "city": "Del Valle",
+      "state": "TX",
+      "postal_code": "78617"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "bd430b02-3cb1-4861-9966-59e1b20535ce",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "10323 US Hwy 290 E",
+      "city": "Manor",
+      "state": "TX",
+      "postal_code": "78653"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315404937,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 954006587,
+        "lat": "30.3434215",
+        "lon": "-97.5731063",
+        "category": "amenity",
+        "type": "clinic",
+        "place_rank": 30,
+        "importance": 0.00003500190737769158,
+        "addresstype": "amenity",
+        "name": "Manor Mustang Health Center",
+        "display_name": "Manor Mustang Health Center, 10323, East US Highway 290, Manor, Travis County, Texas, 78653, United States",
+        "address": {
+          "amenity": "Manor Mustang Health Center",
+          "house_number": "10323",
+          "road": "East US Highway 290",
+          "town": "Manor",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78653",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Manor Mustang Health Center",
+          "name:en": "Manor Mustang Health Center",
+          "alt_name": "People's Community Clinic"
+        },
+        "boundingbox": [
+          "30.3433603",
+          "30.3434826",
+          "-97.5732106",
+          "-97.5730020"
+        ]
+      },
+      {
+        "place_id": 412341385,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 350277360,
+        "lat": "30.3458030",
+        "lon": "-97.5717889",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00000999999999995449,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "10323, East US Highway 290, Manor, Travis County, Texas, 78653, United States",
+        "address": {
+          "house_number": "10323",
+          "road": "East US Highway 290",
+          "town": "Manor",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78653",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.3457530",
+          "30.3458530",
+          "-97.5718389",
+          "-97.5717389"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "79e6b782-1b4d-462f-b7cb-edbcc1970d4e",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "18649 FM 1431",
+      "city": "Jonestown",
+      "state": "TX",
+      "postal_code": "78645"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "971d1abd-c963-42f0-836f-75b7b05426d5",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "1011 FM 1626",
+      "city": "Manchaca",
+      "state": "TX",
+      "postal_code": "78652"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315425811,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "relation",
+        "osm_id": 5713869,
+        "lat": "30.1397726",
+        "lon": "-97.8323621",
+        "category": "amenity",
+        "type": "place_of_worship",
+        "place_rank": 30,
+        "importance": 0.000038683909361364424,
+        "addresstype": "amenity",
+        "name": "Manchaca United Methodist Church",
+        "display_name": "Manchaca United Methodist Church, 1011, West FM 1626, Manchaca, Travis County, Texas, 78652, United States",
+        "address": {
+          "amenity": "Manchaca United Methodist Church",
+          "house_number": "1011",
+          "road": "West FM 1626",
+          "village": "Manchaca",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78652",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Manchaca United Methodist Church"
+        },
+        "boundingbox": [
+          "30.1392756",
+          "30.1402726",
+          "-97.8328921",
+          "-97.8320801"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "a600ca1d-45fc-408e-bdc8-b10e2efa2886",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "303 Ave C",
+      "city": "Elgin",
+      "state": "TX",
+      "postal_code": "78621"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 318300491,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 545135838,
+        "lat": "30.3504336",
+        "lon": "-97.3724166",
+        "category": "building",
+        "type": "yes",
+        "place_rank": 30,
+        "importance": 0.000055008010986450254,
+        "addresstype": "building",
+        "name": "",
+        "display_name": "303, North Avenue C, Elgin, Bastrop County, Texas, 78621, United States",
+        "address": {
+          "house_number": "303",
+          "road": "North Avenue C",
+          "town": "Elgin",
+          "county": "Bastrop County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78621",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.3503124",
+          "30.3506042",
+          "-97.3725444",
+          "-97.3722687"
+        ]
+      },
+      {
+        "place_id": 315504222,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1165521185,
+        "lat": "30.3504272",
+        "lon": "-97.3726367",
+        "category": "amenity",
+        "type": "place_of_worship",
+        "place_rank": 30,
+        "importance": 0.000055008010986450254,
+        "addresstype": "amenity",
+        "name": "First Presbyterian Church",
+        "display_name": "First Presbyterian Church, 303, North Avenue C, Elgin, Bastrop County, Texas, 78621, United States",
+        "address": {
+          "amenity": "First Presbyterian Church",
+          "house_number": "303",
+          "road": "North Avenue C",
+          "town": "Elgin",
+          "county": "Bastrop County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78621",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "First Presbyterian Church"
+        },
+        "boundingbox": [
+          "30.3503574",
+          "30.3505093",
+          "-97.3727486",
+          "-97.3725248"
+        ]
+      },
+      {
+        "place_id": 386300835,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 15111656,
+        "lat": "30.3447454",
+        "lon": "-97.3702695",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00000999999999995449,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "303, South Avenue C, Elgin, Bastrop County, Texas, 78621, United States",
+        "address": {
+          "house_number": "303",
+          "road": "South Avenue C",
+          "town": "Elgin",
+          "county": "Bastrop County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78621",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.3446954",
+          "30.3447954",
+          "-97.3703195",
+          "-97.3702195"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "b3cfcb36-4f77-44d5-978c-d66c763d429a",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "101 W Carrie Manor St.",
+      "city": "Manor",
+      "state": "TX",
+      "postal_code": "78653"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315467585,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 236476481,
+        "lat": "30.3399868",
+        "lon": "-97.5613718",
+        "category": "highway",
+        "type": "residential",
+        "place_rank": 26,
+        "importance": 0.05336833524071104,
+        "addresstype": "road",
+        "name": "West Carrie Manor Street",
+        "display_name": "West Carrie Manor Street, Wildhorse Creek, Manor, Travis County, Texas, 78653, United States",
+        "address": {
+          "road": "West Carrie Manor Street",
+          "neighbourhood": "Wildhorse Creek",
+          "town": "Manor",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78653",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "West Carrie Manor Street"
+        },
+        "boundingbox": [
+          "30.3397632",
+          "30.3401858",
+          "-97.5626179",
+          "-97.5601245"
+        ]
+      },
+      {
+        "place_id": 315422741,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 359609054,
+        "lat": "30.3404824",
+        "lon": "-97.5634420",
+        "category": "highway",
+        "type": "service",
+        "place_rank": 27,
+        "importance": 0.04003500190737773,
+        "addresstype": "road",
+        "name": "West Carrie Manor Street",
+        "display_name": "West Carrie Manor Street, Wildhorse Creek, Manor, Travis County, Texas, 78653, United States",
+        "address": {
+          "road": "West Carrie Manor Street",
+          "neighbourhood": "Wildhorse Creek",
+          "town": "Manor",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78653",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "West Carrie Manor Street"
+        },
+        "boundingbox": [
+          "30.3401656",
+          "30.3405888",
+          "-97.5642258",
+          "-97.5626179"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "edc2a6d0-c693-4b83-9d1e-a1e4c1e4bc6a",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "Dawn Dr. & Thunderbird St.",
+      "city": "Lago Vista",
+      "state": "TX",
+      "postal_code": "78645"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "b6a07b03-37a7-4665-8566-f13df34ef906",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "502 E Highland Mall Blvd, Suite 106-B",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78752"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "957a2be5-c531-4835-8857-3d5f695abe58",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "903 Pfluger Street",
+      "city": "Pflugerville",
+      "state": "TX",
+      "postal_code": "78660"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315348442,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 384755008,
+        "lat": "30.4411805",
+        "lon": "-97.6285088",
+        "category": "building",
+        "type": "detached",
+        "place_rank": 30,
+        "importance": 0.000055398641947005685,
+        "addresstype": "building",
+        "name": "",
+        "display_name": "903, West Pfluger Street, Meadow Park, Pflugerville, Travis County, Texas, 78660, United States",
+        "address": {
+          "house_number": "903",
+          "road": "West Pfluger Street",
+          "neighbourhood": "Meadow Park",
+          "town": "Pflugerville",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78660",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.4410680",
+          "30.4413040",
+          "-97.6286830",
+          "-97.6283890"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "ad347649-b2e8-49c7-a878-ee5b77361fd6",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "601 W. Louis Henna Blvd.",
+      "city": "Round Rock",
+      "state": "TX",
+      "postal_code": "78664"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315374992,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 383171221,
+        "lat": "30.4788305",
+        "lon": "-97.6811043",
+        "category": "shop",
+        "type": "charity",
+        "place_rank": 30,
+        "importance": 0.00006264515144574682,
+        "addresstype": "shop",
+        "name": "The Salvation Army",
+        "display_name": "The Salvation Army, 601, West Louis Henna Boulevard, Austin, Travis County, Texas, 78728, United States",
+        "address": {
+          "shop": "The Salvation Army",
+          "house_number": "601",
+          "road": "West Louis Henna Boulevard",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78728",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "The Salvation Army",
+          "brand": "The Salvation Army",
+          "name:en": "The Salvation Army"
+        },
+        "boundingbox": [
+          "30.4785445",
+          "30.4789991",
+          "-97.6814587",
+          "-97.6807898"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "2aece945-b84e-43b7-bac8-24b02591d4e8",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "13635 Rutledge Spur",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": ""
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315239686,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 3851148240,
+        "lat": "30.4762530",
+        "lon": "-97.7803450",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "13635, Rutledge Spur, Austin, Williamson County, Texas, 78717, United States",
+        "address": {
+          "house_number": "13635",
+          "road": "Rutledge Spur",
+          "city": "Austin",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78717",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.4762030",
+          "30.4763030",
+          "-97.7803950",
+          "-97.7802950"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "09b70bc8-2b35-4b78-a14a-bb542429f16e",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "612 MLK Jr. Blvd.",
+      "city": "Taylor",
+      "state": "TX",
+      "postal_code": "76574"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "5a55abad-00b5-43cd-945b-10635c0ce4e5",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "7224 Northeast Dr.",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78723"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 320150883,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 3852173241,
+        "lat": "30.3216140",
+        "lon": "-97.6800900",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "7224, Northeast Drive, Coronado Hills, Austin, Travis County, Texas, 78723, United States",
+        "address": {
+          "house_number": "7224",
+          "road": "Northeast Drive",
+          "neighbourhood": "Coronado Hills",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78723",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.3215640",
+          "30.3216640",
+          "-97.6801400",
+          "-97.6800400"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "e38a3530-8fad-48de-b48a-2bbb28841acc",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "2918 E Martin Luther King Jr. Blvd",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78722"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315573878,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 382595928,
+        "lat": "30.2822595",
+        "lon": "-97.7076888",
+        "category": "building",
+        "type": "yes",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "building",
+        "name": "",
+        "display_name": "2918, East Martin Luther King Jr Boulevard, Austin, Travis County, Texas, 78722, United States",
+        "address": {
+          "house_number": "2918",
+          "road": "East Martin Luther King Jr Boulevard",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78722",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.2820420",
+          "30.2824560",
+          "-97.7078340",
+          "-97.7074600"
+        ]
+      },
+      {
+        "place_id": 400266680,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 958995546,
+        "lat": "30.2819283",
+        "lon": "-97.7083838",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00000999999999995449,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "2918, East Martin Luther King Jr Boulevard, Chestnut, Austin, Travis County, Texas, 78702, United States",
+        "address": {
+          "house_number": "2918",
+          "road": "East Martin Luther King Jr Boulevard",
+          "neighbourhood": "Chestnut",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78702",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.2818783",
+          "30.2819783",
+          "-97.7084338",
+          "-97.7083338"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "9a2b31f5-34bb-4c7d-bcd3-e35c7630400d",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "6117 W Hwy 290",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78749"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 313140823,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 384291487,
+        "lat": "30.2347855",
+        "lon": "-97.8546223",
+        "category": "amenity",
+        "type": "place_of_worship",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "amenity",
+        "name": "Oak Hill Bible Church",
+        "display_name": "Oak Hill Bible Church, 6117, West US Highway 290, Austin, Travis County, Texas, 78749, United States",
+        "address": {
+          "amenity": "Oak Hill Bible Church",
+          "house_number": "6117",
+          "road": "West US Highway 290",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78749",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Oak Hill Bible Church"
+        },
+        "boundingbox": [
+          "30.2347380",
+          "30.2348780",
+          "-97.8547790",
+          "-97.8544660"
+        ]
+      },
+      {
+        "place_id": 412292529,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1227161327,
+        "lat": "30.2348966",
+        "lon": "-97.8568930",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00000999999999995449,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "6117, West US Highway 290 Frontage Road, Austin, Travis County, Texas, 78735, United States",
+        "address": {
+          "house_number": "6117",
+          "road": "West US Highway 290 Frontage Road",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78735",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.2348466",
+          "30.2349466",
+          "-97.8569430",
+          "-97.8568430"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "50b24b7d-a6fc-4cd4-8b6b-a640bbcca1cc",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "18649 FM 1631",
+      "city": "Jonestown",
+      "state": "TX",
+      "postal_code": "78645"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "1a27a3fe-76fa-4f3f-b284-1e2c86693ffc",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "806 Fayette St.",
+      "city": "Bastrop",
+      "state": "TX",
+      "postal_code": "78602"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316771985,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 594338580,
+        "lat": "30.1089272",
+        "lon": "-97.3131538",
+        "category": "amenity",
+        "type": "social_facility",
+        "place_rank": 30,
+        "importance": 0.000058430609597879263,
+        "addresstype": "amenity",
+        "name": "Bastrop County Emergency Food Pantry",
+        "display_name": "Bastrop County Emergency Food Pantry, 806, Fayette Street, Bastrop, Bastrop County, Texas, 78602, United States",
+        "address": {
+          "amenity": "Bastrop County Emergency Food Pantry",
+          "house_number": "806",
+          "road": "Fayette Street",
+          "town": "Bastrop",
+          "county": "Bastrop County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78602",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Bastrop County Emergency Food Pantry"
+        },
+        "boundingbox": [
+          "30.1088800",
+          "30.1089743",
+          "-97.3132447",
+          "-97.3130628"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "52d5b5c6-2ed5-4398-a480-af31028de87c",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "159 Ridgeway Cemetray Rd.",
+      "city": "Paige",
+      "state": "TX",
+      "postal_code": "78659"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "68822793-b0a7-4c07-a7a9-8bbaa398b0e8",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "115 Sorrell, Red Rock, TX 78662",
+      "city": "Red Rock",
+      "state": "TX",
+      "postal_code": "78662"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "52eaa45a-a64d-43f5-980b-ea7cd88044cb",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "1033 Hwy 71 W, Bastrop, TX 78602",
+      "city": "Bastrop",
+      "state": "TX",
+      "postal_code": "78602"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "104861dd-ebbc-4c0a-9aa9-68ec2b0cb772",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "987 N SH 95",
+      "city": "Bastrop",
+      "state": "TX",
+      "postal_code": "78602"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316851276,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 905283267,
+        "lat": "30.3473095",
+        "lon": "-97.3702636",
+        "category": "highway",
+        "type": "secondary",
+        "place_rank": 26,
+        "importance": 0.053388341344319794,
+        "addresstype": "road",
+        "name": "North Main Street",
+        "display_name": "North Main Street, Elgin, Bastrop County, Texas, 78621, United States",
+        "address": {
+          "road": "North Main Street",
+          "town": "Elgin",
+          "county": "Bastrop County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78621",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "ref": "Loop 109",
+          "name": "North Main Street",
+          "name:en": "North Main Street",
+          "old_ref": "SH 20;SH 95"
+        },
+        "boundingbox": [
+          "30.3472279",
+          "30.3473911",
+          "-97.3702975",
+          "-97.3702298"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "a2dbb0c5-89a4-4127-a6c4-3e68a03231ea",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "708 St. Louis Street",
+      "city": "Gonzales",
+      "state": "TX",
+      "postal_code": "78629"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 402351143,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 174984651,
+        "lat": "29.5015639",
+        "lon": "-97.4486074",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00000999999999995449,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "708, Saint Louis Street, Gonzales, Gonzales County, Texas, 78629, United States",
+        "address": {
+          "house_number": "708",
+          "road": "Saint Louis Street",
+          "town": "Gonzales",
+          "county": "Gonzales County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78629",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "29.5015139",
+          "29.5016139",
+          "-97.4486574",
+          "-97.4485574"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "694e5f8c-3024-43b7-a0d7-0690f5209dce",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "1016 Broadway, Marble Falls, TX 78654",
+      "city": "Marble Falls",
+      "state": "TX",
+      "postal_code": "78654"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "97c3289a-20eb-4581-a420-48e93c3c5dc0",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "13740 Research Blvd. Ste M7",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78750"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "fb064d44-73e3-40c1-87d3-12ae0b1238d7",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "150 West Palm Valley Blvd.",
+      "city": "Round Rock",
+      "state": "TX",
+      "postal_code": "78664"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316744556,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 753362423,
+        "lat": "30.5188985",
+        "lon": "-97.6845061",
+        "category": "shop",
+        "type": "charity",
+        "place_rank": 30,
+        "importance": 0.00006264515144574682,
+        "addresstype": "shop",
+        "name": "Goodwill",
+        "display_name": "Goodwill, 150, West Palm Valley Boulevard, Round Rock, Williamson County, Texas, 78664, United States",
+        "address": {
+          "shop": "Goodwill",
+          "house_number": "150",
+          "road": "West Palm Valley Boulevard",
+          "city": "Round Rock",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78664",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Goodwill",
+          "brand": "Goodwill",
+          "name:en": "Goodwill"
+        },
+        "boundingbox": [
+          "30.5186204",
+          "30.5192704",
+          "-97.6847786",
+          "-97.6842374"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "298c7ffb-5919-463f-b700-3e02e2766ed9",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "1603 Northwest Blvd.",
+      "city": "Georgetown",
+      "state": "TX",
+      "postal_code": "78628"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 315833606,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1446786305,
+        "lat": "30.6581417",
+        "lon": "-97.6779436",
+        "category": "building",
+        "type": "yes",
+        "place_rank": 30,
+        "importance": 0.000058891432059159496,
+        "addresstype": "building",
+        "name": "",
+        "display_name": "1603, Northwest Boulevard, Georgetown, Williamson County, Texas, 78628, United States",
+        "address": {
+          "house_number": "1603",
+          "road": "Northwest Boulevard",
+          "city": "Georgetown",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78628",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.6579854",
+          "30.6582978",
+          "-97.6781156",
+          "-97.6777717"
+        ]
+      },
+      {
+        "place_id": 315630530,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 13274608013,
+        "lat": "30.6581408",
+        "lon": "-97.6779569",
+        "category": "amenity",
+        "type": "social_facility",
+        "place_rank": 30,
+        "importance": 0.000058891432059159496,
+        "addresstype": "amenity",
+        "name": "Furrbaby Food Pantry",
+        "display_name": "Furrbaby Food Pantry, 1603, Northwest Boulevard, Georgetown, Williamson County, Texas, 78628, United States",
+        "address": {
+          "amenity": "Furrbaby Food Pantry",
+          "house_number": "1603",
+          "road": "Northwest Boulevard",
+          "city": "Georgetown",
+          "county": "Williamson County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78628",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Furrbaby Food Pantry"
+        },
+        "boundingbox": [
+          "30.6580908",
+          "30.6581908",
+          "-97.6780069",
+          "-97.6779069"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "463348b0-7ad0-4b4e-abe3-d9ab5afe50c5",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "124 Anderson Ln.",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78752"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 412290014,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1074099933,
+        "lat": "30.3439393",
+        "lon": "-97.7047326",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00000999999999995449,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "124, East Anderson Lane, Austin, Travis County, Texas, 78752, United States",
+        "address": {
+          "house_number": "124",
+          "road": "East Anderson Lane",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78752",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.3438893",
+          "30.3439893",
+          "-97.7047826",
+          "-97.7046826"
+        ]
+      },
+      {
+        "place_id": 412330455,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 968078325,
+        "lat": "30.3442885",
+        "lon": "-97.7065647",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00000999999999995449,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "124, West Anderson Lane, Austin, Travis County, Texas, 78752, United States",
+        "address": {
+          "house_number": "124",
+          "road": "West Anderson Lane",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78752",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.3442385",
+          "30.3443385",
+          "-97.7066147",
+          "-97.7065147"
+        ]
+      },
+      {
+        "place_id": 315675168,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 379203995,
+        "lat": "30.3447040",
+        "lon": "-97.7052440",
+        "category": "amenity",
+        "type": "animal_shelter",
+        "place_rank": 30,
+        "importance": 0.00007494392309448413,
+        "addresstype": "amenity",
+        "name": "Austin Humane Society",
+        "display_name": "Austin Humane Society, 124, West Anderson Lane, Austin, Travis County, Texas, 78757, United States",
+        "address": {
+          "amenity": "Austin Humane Society",
+          "house_number": "124",
+          "road": "West Anderson Lane",
+          "city": "Austin",
+          "county": "Travis County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78757",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "name": "Austin Humane Society"
+        },
+        "boundingbox": [
+          "30.3444760",
+          "30.3449320",
+          "-97.7055360",
+          "-97.7049520"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "b05780d3-c0f8-453c-b665-6a0676fe2f71",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "57 Loop 150 West",
+      "city": "Bastrop",
+      "state": "TX",
+      "postal_code": "78602"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "49e20288-0419-4c47-9c8f-f063aafd4a6b",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "987 N SH 95",
+      "city": "Bastrop",
+      "state": "TX",
+      "postal_code": "78602"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 316851276,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 905283267,
+        "lat": "30.3473095",
+        "lon": "-97.3702636",
+        "category": "highway",
+        "type": "secondary",
+        "place_rank": 26,
+        "importance": 0.053388341344319794,
+        "addresstype": "road",
+        "name": "North Main Street",
+        "display_name": "North Main Street, Elgin, Bastrop County, Texas, 78621, United States",
+        "address": {
+          "road": "North Main Street",
+          "town": "Elgin",
+          "county": "Bastrop County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78621",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": {
+          "ref": "Loop 109",
+          "name": "North Main Street",
+          "name:en": "North Main Street",
+          "old_ref": "SH 20;SH 95"
+        },
+        "boundingbox": [
+          "30.3472279",
+          "30.3473911",
+          "-97.3702975",
+          "-97.3702298"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "29117cb0-2d56-4dc2-9abd-dbe455dcf335",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "2 Saint Marks Place",
+      "city": "LaGrange",
+      "state": "TX",
+      "postal_code": "78945"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "9b69d51f-cb43-4c93-ba58-19dafd8f7eea",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "1016 Broadway",
+      "city": "Marble Falls",
+      "state": "TX",
+      "postal_code": "78654"
+    },
+    "http_status": 200,
+    "candidates": [
+      {
+        "place_id": 392554096,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 15145991,
+        "lat": "30.5771878",
+        "lon": "-98.2758045",
+        "category": "place",
+        "type": "house",
+        "place_rank": 30,
+        "importance": 0.00000999999999995449,
+        "addresstype": "place",
+        "name": "",
+        "display_name": "1016, Broadway Street, Marble Falls, Burnet County, Texas, 78654, United States",
+        "address": {
+          "house_number": "1016",
+          "road": "Broadway Street",
+          "town": "Marble Falls",
+          "county": "Burnet County",
+          "state": "Texas",
+          "ISO3166-2-lvl4": "US-TX",
+          "postcode": "78654",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "namedetails": null,
+        "boundingbox": [
+          "30.5771378",
+          "30.5772378",
+          "-98.2758545",
+          "-98.2757545"
+        ]
+      }
+    ],
+    "error": ""
+  },
+  {
+    "resource_id": "1a7bba8e-a7d0-4d7a-be2c-0bc5e7646c79",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "218 E. Jackson, Burnet, TX 78611",
+      "city": "Burnet",
+      "state": "TX",
+      "postal_code": "78611"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "4d1f40fa-609d-4b0a-adc5-f718f1c0671c",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "100 N IH 35, Ste 2000",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78701"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  },
+  {
+    "resource_id": "f98be83d-1a62-46c2-bff5-5186baf6bb33",
+    "provider": "OpenStreetMap Nominatim",
+    "checked_at": "2026-09-03",
+    "attribution": "Data © OpenStreetMap contributors, ODbL 1.0",
+    "query": {
+      "street": "4920 North I-35, Austin, TX 78751",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78751"
+    },
+    "http_status": 200,
+    "candidates": [],
+    "error": ""
+  }
+]

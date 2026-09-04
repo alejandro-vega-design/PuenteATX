@@ -1,0 +1,16 @@
+{
+  "reviewed": 88,
+  "official_complete": 51,
+  "approved_non_exact": 24,
+  "approved_secondary": 7,
+  "proposed_operations": 31,
+  "remaining_manual_review": 57,
+  "applied_operations": 31,
+  "production_modified_in_second_pass": true,
+  "post_apply_verification": {
+    "changed_ids": 31,
+    "unexpected_ids": 0,
+    "unexpected_fields": 0,
+    "remaining_address_without_coordinates": 65
+  }
+}
