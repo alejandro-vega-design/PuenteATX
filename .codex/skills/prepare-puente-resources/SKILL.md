@@ -1,6 +1,6 @@
 ---
 name: prepare-puente-resources
-description: Convert community-resource documents or incomplete resource exports into a consolidated, researched, bilingual, import-ready Puente ATX CSV. Use when a user asks to prepare, translate, clean, audit, enrich, complete missing fields, deduplicate, consolidate, or validate resource lists from CSV, JSON, XLSX, DOCX, PDF, or paired English/Spanish documents for the Puente ATX admin importer.
+description: Convert community-resource documents or incomplete resource exports into a consolidated, researched, bilingual, import-ready Puente ATX CSV. Use when a user asks to prepare, translate, clean, audit, enrich, geocode stored resource addresses, complete missing fields, deduplicate, consolidate, or validate resource lists from CSV, JSON, XLSX, DOCX, PDF, or paired English/Spanish documents for the Puente ATX admin importer.
 ---
 
 # Prepare Puente Resources
@@ -74,6 +74,26 @@ The audit is read-only. For each finding:
 2. Retitle a resource when its title omits essential context or conflicts with its immutable description or official source.
 3. When two records represent the same program, select the strongest canonical record, preserve activity and the stable slug, merge verified complementary coverage, and archive the duplicate rather than inventing different titles. Never permanently delete it.
 4. Recheck every targeted ID immediately before mutation, compare a fresh export afterward, and require that only approved IDs changed.
+
+## Stored-coordinate audit
+
+Use this workflow when auditing resources that have a physical service address but lack valid coordinates. Geocode once during the controlled audit and persist approved coordinates; never geocode on demand when a visitor opens the Resource Finder.
+
+1. Export and preserve a timestamped, immutable backup of all targeted records before proposing or applying changes. Include both published and draft resources unless the user narrows the scope.
+2. Select only records with a physical service address that is operationally useful and with either coordinate missing, nonnumeric, zeroed, out of regional bounds, or otherwise invalid. Do not geocode phone/online-only resources or headquarters that are not service locations.
+3. Normalize the address for lookup without overwriting its displayed form. Use address line, unit when relevant, city, state, and ZIP code. Flag incomplete or internally conflicting addresses before lookup.
+4. Use an approved geocoding source to obtain candidate latitude and longitude once. Record the original address, normalized query, provider, lookup date, returned formatted address, coordinates, match type or precision, confidence evidence, and any discrepancy in an audit report.
+5. Classify every candidate:
+   - **Exact/high confidence:** rooftop, parcel, or verified establishment match whose returned street number, street, city, state, and ZIP are consistent. Eligible for a proposed batch update.
+   - **Approximate/ambiguous:** interpolated street, multiple candidates, partial match, conflicting city/ZIP, entrance ambiguity, or materially displaced point. Require human review before update.
+   - **Unresolved:** incomplete address, no result, locality/ZIP centroid only, or result outside the expected service region. Do not invent or save coordinates.
+6. Never use a city, county, or ZIP centroid as the resource marker. ZIP centroids may center a user's search, but they do not establish a service location.
+7. Before any production mutation, present the report and obtain explicit user approval. Re-export and recheck each targeted ID immediately before mutation so stale data or concurrent edits cannot be overwritten.
+8. Update only `latitude` and `longitude` for approved exact matches unless the user separately approves an address correction. Preserve IDs, slugs, publication status, reviewed content, and all unrelated fields.
+9. Export the records again after mutation and compare by ID. Require exact agreement with the approved operation set, no unexpected changed IDs or fields, valid regional bounds, and idempotency on a second dry run.
+10. Verify representative ZIP searches in the Resource Finder. Confirm approved published resources appear as markers at the expected establishment, while drafts remain absent from public results until published. Report resources that remain unlocated separately.
+
+Required deliverables are the pre-change backup, a coordinate-candidate report with confidence classifications, the explicitly approved operation set, and a post-change comparison. Keep production unchanged when the request is only to audit, prepare, explain, or update this skill.
 
 ## Required command
 
