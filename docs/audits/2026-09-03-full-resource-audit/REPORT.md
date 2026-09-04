@@ -340,3 +340,250 @@ Verificación final de la etapa:
 - La base conserva 728 registros: 384 publicados, 288 borradores y 56 archivados.
 
 Los resultados posteriores están en `post-stage-10/` y el lote aplicado está documentado en `stage-10-published-location-operations.json`.
+
+## Estado de remediación — etapa 11
+
+La tercera revisión de recursos publicados con atención presencial y sin una dirección pública se aplicó y verificó el 3 de septiembre de 2026:
+
+- Se investigaron y actualizaron 10 recursos publicados usando fuentes oficiales actuales.
+- Se añadieron tres ubicaciones operativas confirmadas: Texas Baptist Children's Home en Round Rock, The Settlement Home for Children en Austin y la oficina de Foster In Texas, Adoption y BeREAL de Upbring en Austin.
+- Siete recursos quedaron documentados como servicios de ubicación variable o multisede: Partnerships for Children, The Georgetown Project, Wonders & Worries, Girls Empowerment Network, Seedling, PEAS y College Possible Texas.
+- Se preservó `in_person` en esos siete casos porque los servicios ocurren en escuelas, centros de CPS, oficinas por cita, campamentos, universidades o varias sedes. No se añadió una oficina administrativa como sustituto.
+- Se reemplazaron ocho títulos genéricos por títulos bilingües específicos y se reescribieron resúmenes y descripciones truncados, excesivamente largos o poco claros.
+- Partnerships for Children quedó descrito como apoyo para menores y familias vinculados con CPS; Seedling como mentoría escolar para estudiantes con padres encarcelados; Wonders & Worries como apoyo para menores con un padre o cuidador gravemente enfermo.
+- No se archivó ni eliminó ningún recurso.
+
+Verificación final de la etapa:
+
+- 10 IDs esperados actualizados y 0 cambios fuera del lote.
+- 0 valores divergentes y 0 registros faltantes.
+- El generador es idempotente: la segunda ejecución produjo 0 operaciones.
+- Los casos publicados pendientes de `in_person` sin dirección bajaron de 49 a 39.
+- Las señales editoriales activas bajaron de 149 a 140.
+- La base conserva 728 registros: 384 publicados, 288 borradores y 56 archivados.
+
+Los resultados posteriores están en `post-stage-11/` y el lote aplicado está documentado en `stage-11-published-location-operations.json`.
+
+## Estado de remediación — etapa 12
+
+La cuarta revisión de recursos publicados con atención presencial y sin una dirección pública se aplicó y verificó el 3 de septiembre de 2026:
+
+- Se investigaron y actualizaron 10 recursos publicados usando fuentes oficiales actuales.
+- Nueve programas quedaron documentados como servicios de ubicación variable o multisede: Autism Society of Texas, Foster Angels of Central Texas, Austin Youth Fitness, just keep livin Foundation, Keep Austin Beautiful, Austin Voices for Education and Youth, Travis Audubon, Texas Wildlife Association y Austin Youth River Watch.
+- Se preservó `in_person` en esos nueve casos porque las actividades sí ocurren presencialmente en escuelas, parques, reservas, arroyos, centros asociados, eventos u otras sedes coordinadas. No se añadió una oficina administrativa como ubicación representativa.
+- Dell Children's Health Plan se corrigió de servicio presencial genérico a acceso por teléfono e internet. El registro ahora describe correctamente la cobertura STAR Medicaid y CHIP, la búsqueda de proveedores de su red y el teléfono vigente de Servicios para Miembros; la atención física ocurre con el proveedor elegido, no en una sede única del plan.
+- Se reemplazaron los 10 títulos genéricos o imprecisos por títulos bilingües específicos y se reescribieron resúmenes y descripciones heredados, truncados o innecesariamente largos.
+- No se archivó ni eliminó ningún recurso.
+
+Verificación final de la etapa:
+
+- 10 IDs esperados actualizados y 0 cambios fuera del lote.
+- 0 valores divergentes y 0 registros faltantes.
+- El generador es idempotente: la segunda ejecución produjo 0 operaciones.
+- Los casos publicados pendientes de `in_person` sin dirección bajaron de 39 a 29.
+- Las señales editoriales activas bajaron de 140 a 130, sin introducir nuevas alertas bilingües, de títulos o contacto.
+- La base conserva 728 registros: 384 publicados, 288 borradores y 56 archivados.
+
+Los resultados posteriores están en `post-stage-12/` y el lote aplicado está documentado en `stage-12-published-location-operations.json`.
+
+## Estado de remediación — etapa 13
+
+La quinta revisión de recursos publicados con atención presencial y sin una dirección pública se aplicó y verificó el 3 de septiembre de 2026:
+
+- Se investigaron y actualizaron 10 recursos publicados usando fuentes oficiales o directorios públicos autorizados actuales.
+- Se añadieron cuatro ubicaciones operativas confirmadas: los cursos presenciales de VELA en East 4th Street, Healing Wings en Georgetown, la oficina ambulatoria de Impact Counseling en Georgetown y Centered Youth Clinic en Hutto.
+- Se documentaron seis servicios de ubicación variable o multisede: Todos Juntos Learning Center, African American Youth Harvest Foundation, Black Mamas ATX, Giving Austin Labor Support, Creative Action y el proyecto de conservación de A Rocha USA en Bull Creek.
+- Black Mamas ATX quedó descrito como apoyo de doulas y salud materna para madres negras, con visitas presenciales o virtuales y acompañamiento en el lugar de parto elegido. Se descartó su dirección postal como punto de servicio.
+- Impact Counseling quedó diferenciado entre su consultorio ambulatorio y los servicios prestados en escuelas; Creative Action refleja que sus campamentos y programas usan múltiples planteles y sedes comunitarias.
+- Se reemplazaron títulos genéricos y textos truncados por contenido bilingüe específico, conciso y respaldado. También se actualizaron teléfonos, horarios o métodos cuando la fuente oficial los confirmó.
+- No se archivó ni eliminó ningún recurso.
+
+Verificación final de la etapa:
+
+- 10 IDs esperados actualizados y 0 cambios fuera del lote.
+- 0 valores divergentes y 0 registros faltantes.
+- El generador es idempotente: la segunda ejecución produjo 0 operaciones.
+- Los casos publicados pendientes de `in_person` sin dirección bajaron de 29 a 19.
+- Las señales editoriales activas bajaron de 130 a 120, sin introducir nuevas alertas.
+- La base conserva 728 registros: 384 publicados, 288 borradores y 56 archivados.
+
+Los resultados posteriores están en `post-stage-13/` y el lote aplicado está documentado en `stage-13-published-location-operations.json`.
+
+## Estado de remediación — etapa 14
+
+La sexta revisión de recursos publicados con atención presencial y sin una dirección pública se aplicó y verificó el 3 de septiembre de 2026:
+
+- Se investigaron y actualizaron 10 recursos publicados mediante fuentes oficiales actuales.
+- Fostering Hope recibió la ubicación operativa de su Family Center en Pond Springs Road; el ZIP y el condado se normalizaron conforme al conjunto geográfico vigente del proyecto.
+- Workforce Solutions Rural Capital Area Child Care Services se corrigió a acceso por teléfono e internet: administra solicitudes y subsidios, mientras el cuidado ocurre con el proveedor elegido por la familia, no en una oficina central.
+- Ocho programas quedaron documentados como variables o multisede: David Phillips Foundation, Texas Foster Family Association, ATX Kids Club, Families in Nature, RBI Austin, El Ranchito, Urban Roots y Mama Sana Vibrant Woman.
+- ATX Kids Club quedó descrito con sus múltiples parques de llegada y excursiones; Mama Sana refleja círculos en sedes anunciadas, opciones virtuales y apoyo de doulas en ubicaciones acordadas con cada participante.
+- Se reemplazaron títulos genéricos y textos truncados por contenido bilingüe específico y respaldado, actualizando métodos, teléfonos o costos cuando la fuente lo confirmó.
+- No se archivó ni eliminó ningún recurso.
+
+Verificación final de la etapa:
+
+- 10 IDs esperados actualizados y 0 cambios fuera del lote.
+- 0 valores divergentes y 0 registros faltantes.
+- El generador es idempotente: la segunda ejecución produjo 0 operaciones.
+- Los casos publicados pendientes de `in_person` sin dirección bajaron de 19 a 9.
+- Las señales editoriales activas bajaron de 120 a 110, sin introducir nuevas alertas.
+- La base conserva 728 registros: 384 publicados, 288 borradores y 56 archivados.
+
+Los resultados posteriores están en `post-stage-14/` y el lote aplicado está documentado en `stage-14-published-location-operations.json`.
+
+## Estado de remediación — etapa 15
+
+La séptima y última revisión de recursos publicados con atención presencial y sin una ubicación documentada se aplicó y verificó el 3 de septiembre de 2026:
+
+- Se investigaron y actualizaron los 9 recursos publicados que seguían pendientes en esta clase.
+- Se añadieron tres ubicaciones operativas confirmadas: Literacy Council of Williamson County en Georgetown, Bridge Lacrosse en Montopolis Recreation Center y la oficina de orientación de Austin Habitat for Humanity en Ben White Boulevard.
+- Cinco programas quedaron documentados como servicios de ubicación variable o multisede: Beat 4 Beat, Uplift Texas, Maven Youth, Black Women Who y GenYW de YWCA Greater Austin.
+- Mañana Counseling quedó documentado como atención con ubicación confidencial. Se preservó `in_person` porque el servicio fue verificado directamente por Puente ATX, sin publicar ni inventar la dirección de la práctica.
+- La ficha obsoleta de YWCA, que describía solamente una sesión de verano de 2025, se actualizó al programa vigente GenYW y a su modelo actual de atención en escuelas, comunidad y eventos.
+- Literacy Council se conservó publicado al encontrarse evidencia comunitaria de noviembre de 2025 que confirma sus servicios, dirección, teléfono y correo; no se archivó un recurso todavía activo por depender de un sitio web antiguo.
+- Se reemplazaron títulos genéricos y textos heredados por contenido bilingüe específico y conciso. También se actualizaron métodos, teléfonos, correos, costos o fuentes cuando la evidencia vigente lo respaldó.
+- No se archivó ni eliminó ningún recurso.
+
+Verificación final de la etapa:
+
+- 9 IDs esperados actualizados y 0 cambios fuera del lote.
+- 0 valores divergentes y 0 registros faltantes.
+- El generador es idempotente: la segunda ejecución produjo 0 operaciones.
+- Quedan 0 recursos publicados pendientes de `in_person` sin dirección o una excepción explícita; los 6 avisos técnicos restantes pertenecen exclusivamente a registros archivados.
+- Las señales editoriales activas bajaron de 110 a 100 y ya no quedan alertas activas de acceso, títulos, bilingüismo, contacto o procedencia. Las 100 señales restantes son heurísticas geográficas o de posible categoría que requieren revisión individual.
+- La base conserva 728 registros: 384 publicados, 288 borradores y 56 archivados.
+
+Los resultados posteriores están en `post-stage-15/` y el lote aplicado está documentado en `stage-15-published-location-operations.json`.
+
+## Estado de remediación — etapa 16
+
+La revisión de integridad geográfica y de contenido relacionada se aplicó y verificó el 3 de septiembre de 2026:
+
+- Se corrigieron 5 recursos canónicos y se archivó 1 duplicado publicado, para un total de 6 IDs afectados.
+- Los dos registros generales de Texas Legal Services Center representaban el mismo servicio estatal. Se conservó el que tenía una lista guardada y se archivó la copia sin actividad; el recurso canónico ahora refleja acceso por teléfono e internet y ya no presenta la dirección postal como lugar de atención presencial.
+- Community Action Inc. quedó con el ZIP físico `78666` y el condado Hays; `78667-0748` corresponde al apartado postal publicado por la organización.
+- Combined Community Action quedó con su oficina de Giddings en Lee County, su cobertura oficial de nueve condados, una categoría primaria de recursos financieros y un título bilingüe sin el nombre redundante de la organización.
+- Halcyon Home tenía contenido incorrecto sobre ayuda de renta y servicios públicos. La ficha se reconstruyó con la oferta oficial real: atención médica en el hogar, asistencia personal, cuidados paliativos y hospicio. Se eliminó la oficina administrativa como ubicación del servicio y se corrigieron categoría, métodos, costo y cobertura.
+- Sacred Heart–St. Vincent de Paul quedó con la dirección parroquial vigente en 302 West 11th Street, Bastrop County; también se repararon una elegibilidad inglesa truncada, una palabra clave incompleta y el área de servicio.
+- Las aparentes discrepancias de `78641`, `78610` y `78729` no se modificaron automáticamente: son ZIP que cruzan límites de condado o cuyos puntos concretos requieren conservar el condado verificado, por lo que el centroide único del dataset no constituye evidencia suficiente para reemplazarlos.
+- Los ZIP `76543` y `78539` son direcciones válidas fuera del conjunto regional de ZIP admitidos por el buscador; permanecen como excepciones documentadas, no como errores tipográficos.
+
+Verificación final de la etapa:
+
+- 6 IDs esperados cambiaron y 0 registros ajenos al lote fueron modificados.
+- 0 valores divergentes y 0 registros faltantes.
+- El generador es idempotente: una segunda ejecución produjo 0 operaciones.
+- Las señales editoriales activas bajaron de 100 a 95.
+- La base conserva 728 registros: 383 publicados, 288 borradores y 57 archivados.
+
+Los resultados posteriores están en `post-stage-16/` y el lote aplicado está documentado en `stage-16-geography-and-integrity-operations.json`.
+
+## Estado de remediación — etapa 17
+
+La primera revisión de integridad de categorías se aplicó y verificó el 3 de septiembre de 2026:
+
+- Se corrigieron 6 recursos cuya categoría primaria no representaba el servicio principal; se preservaron categorías secundarias útiles y se retiraron asociaciones contaminadas.
+- Con Mi MADRE y Todos Juntos Learning Center pasaron de `otros-recursos` a `educacion`, conservando apoyo comunitario como categoría secundaria.
+- Goodwill Career and Technical Academy pasó a `educacion`; además recibió su ubicación operativa vigente, atención presencial y contenido bilingüe actualizado sin teléfonos ni correos incrustados en la descripción.
+- Drive a Senior pasó a `transporte` y se actualizó al servicio regional unificado vigente desde 2025, con cobertura de Bastrop, norte de Hays, Travis y Williamson y teléfono actual.
+- Black Mamas ATX pasó a `salud`, porque su servicio principal es apoyo de doulas y salud materna durante embarazo, parto y posparto. La mención de educación perinatal continúa produciendo una señal heurística, pero no justifica clasificar el recurso como educación.
+- La ficha de Head Start de Community Council of South Central Texas pasó a `educacion` y se reparó contenido contaminado con información de Seguro Social. Ahora describe Head Start y Early Head Start, la cobertura oficial de Comal y Guadalupe, el contacto del programa y su condición multisede.
+- No se archivó ni eliminó ningún recurso.
+
+Verificación final de la etapa:
+
+- 6 IDs esperados cambiaron y 0 registros ajenos al lote fueron modificados.
+- 0 valores divergentes y 0 registros faltantes.
+- El generador es idempotente: una segunda ejecución produjo 0 operaciones.
+- Las señales editoriales activas bajaron de 95 a 90.
+- Permanecen 78 señales heurísticas de posible categoría —56 publicadas y 22 borradores— y 12 señales geográficas previamente clasificadas; ninguna debe corregirse automáticamente por coincidencia de palabras.
+- La base conserva 728 registros: 383 publicados, 288 borradores y 57 archivados.
+
+Los resultados posteriores están en `post-stage-17/` y el lote aplicado está documentado en `stage-17-category-integrity-operations.json`.
+
+## Estado de remediación — etapa 18
+
+La revisión de duplicados funcionales ocultos y diferenciación de programas se aplicó y verificó el 3 de septiembre de 2026:
+
+- Se consolidaron 2 pares confirmados y se aclaró 1 recurso general que podía confundirse con una ficha específica; 5 IDs cambiaron en total.
+- Los dos recursos publicados de ConnectATX describían el mismo servicio de navegación de United Way for Greater Austin. Ninguno tenía actividad registrada. Se conservó el registro más completo, se actualizó con la línea 2-1-1 gratuita, confidencial, multilingüe y disponible las 24 horas, y se archivó la copia redundante.
+- Los dos borradores de asistencia energética de Community Action describían el mismo programa CEAP. Se conservó la ficha completa para Hays, Caldwell y Blanco, se preservó el teléfono local de Caldwell en las instrucciones de acceso y se archivó el borrador separado y contaminado.
+- Los recursos de The Georgetown Project y NEST Empowerment Center se confirmaron como distintos: uno es una ficha general de múltiples programas y sedes, mientras el otro corresponde al programa específico NEST. Ambos se conservaron; la ficha general recibió título, descripción, palabras clave, métodos y fuente que explicitan la diferencia.
+- No hubo eliminaciones permanentes ni cambios en recursos ajenos al lote.
+
+Verificación final de la etapa:
+
+- 5 IDs esperados cambiaron y 0 registros fuera del lote fueron modificados.
+- 0 valores divergentes y 0 registros faltantes.
+- El generador es idempotente: una segunda ejecución produjo 0 operaciones.
+- Las señales editoriales activas bajaron de 90 a 88; las 74 señales de categoría restantes son heurísticas y no errores confirmados.
+- La base conserva 728 registros: 382 publicados, 287 borradores y 59 archivados.
+
+Los resultados posteriores están en `post-stage-18/` y el lote aplicado está documentado en `stage-18-duplicate-integrity-operations.json`.
+
+## Estado de remediación — etapa 19
+
+La segunda revisión de integridad de categorías y contenido se aplicó y verificó el 3 de septiembre de 2026:
+
+- Se corrigieron 4 recursos mediante fuentes oficiales actuales; no se archivó ni eliminó ningún registro.
+- St. Gabriel’s Pregnancy and Parenting Program contenía texto contaminado sobre renta, hipoteca y Seguro Social que no correspondía al programa. La ficha se reconstruyó con sus servicios reales de manejo de casos, educación prenatal y de crianza, mentoría y artículos básicos para familias con menores de hasta 36 meses. También se confirmaron inglés y español, horario, elegibilidad y acceso.
+- NEST Empowerment Center dejó de estar clasificado principalmente como salud. La fuente oficial confirma que es un programa integral de apoyo para estudiantes con necesidades básicas, ayuda académica, habilidades para la vida y programación terapéutica, no una clínica abierta al público. Quedó en `otros-recursos` con educación como categoría secundaria.
+- Travis County Veterans Services pasó de salud a recursos financieros, porque su función principal es preparar, presentar y tramitar reclamos y beneficios de VA. Se retiraron las siete categorías secundarias indiscriminadas y se conservó únicamente apoyo comunitario como categoría complementaria.
+- La exención de vivienda para mayores de 65 años pasó de vivienda a recursos financieros, con vivienda como categoría secundaria. La ficha se limitó explícitamente al Travis Central Appraisal District y al Condado de Travis para no presentar una oficina local como punto de acceso para otros condados.
+- Se revisaron y descartaron como falsos positivos de categoría las fichas del Tribunal de Bancarrota, navegación comunitaria, WIC y otros servicios donde las palabras legales, educativas o de transporte son incidentales.
+
+Verificación final de la etapa:
+
+- 4 IDs esperados cambiaron y 0 registros fuera del lote fueron modificados.
+- 0 valores divergentes y 0 registros faltantes.
+- El generador es idempotente: una segunda ejecución produjo 0 operaciones.
+- Las 88 señales editoriales permanecen porque el detector continúa marcando menciones incidentales dentro de los cuatro recursos corregidos; la inspección manual confirmó que sus nuevas categorías representan el servicio principal.
+- Los grupos amplios de posible duplicidad bajaron de 49 a 48 al normalizar la identidad institucional de St. Gabriel.
+- La base conserva 728 registros: 382 publicados, 287 borradores y 59 archivados.
+
+Los resultados posteriores están en `post-stage-19/` y el lote aplicado está documentado en `stage-19-category-and-content-integrity-operations.json`.
+
+## Estado de remediación — etapa 20
+
+La revisión de integridad del formato de contacto se aplicó y verificó el 3 de septiembre de 2026:
+
+- Se normalizaron los 5 teléfonos activos que todavía mezclaban el número principal y una extensión dentro del mismo campo.
+- Las extensiones no se eliminaron: se trasladaron a `application_steps_es` y `application_steps_en`, donde pueden explicarse sin impedir que el teléfono principal funcione como enlace de llamada.
+- Se actualizaron The Settlement Home for Children Post-Adoption Services, Keep Austin Beautiful, Girls Empowerment Network, el Consulado General de México en Austin y UPLift.
+- El directorio oficial vigente del Consulado identifica ahora la extensión 128 para Asuntos Culturales, Económicos y Comunidades; se reemplazó la antigua extensión 101 y se actualizó la fuente al directorio oficial.
+- Las alertas restantes de fuente, contacto, fecha, horario y dirección pertenecen a recursos archivados. No se modificaron porque no afectan el directorio activo y no deben reactivarse implícitamente durante una limpieza de formato.
+- No se archivó ni eliminó ningún recurso.
+
+Verificación final de la etapa:
+
+- 5 IDs esperados cambiaron y 0 registros fuera del lote fueron modificados.
+- 0 valores divergentes y 0 registros faltantes.
+- El generador es idempotente: una segunda ejecución produjo 0 operaciones.
+- Los problemas estructurales detectados bajaron de 108 a 103 y quedaron en cero los teléfonos activos con formato incompatible.
+- Las 88 señales editoriales permanecen sin cambios porque pertenecen a categorías o geografía, no al formato telefónico.
+- La base conserva 728 registros: 382 publicados, 287 borradores y 59 archivados.
+
+Los resultados posteriores están en `post-stage-20/` y el lote aplicado está documentado en `stage-20-contact-format-integrity-operations.json`.
+
+## Estado de remediación — etapa 21
+
+La primera revisión de recursos activos sin descripción se aplicó y verificó el 3 de septiembre de 2026:
+
+- Se investigaron 8 recursos publicados mediante fuentes oficiales y se añadieron descripciones bilingües que explican el funcionamiento del servicio sin repetir simplemente el resumen.
+- Find Food Now quedó descrito como buscador de despensas, distribuciones móviles y programas para distintas poblaciones dentro del área de 21 condados del Central Texas Food Bank.
+- Angel House recibió sus horarios vigentes de desayuno, almuerzo y duchas, las excepciones de Acción de Gracias y Navidad y la condición variable de la ropa donada.
+- AHOST ahora explica qué información contiene el buscador, sus límites generales de ingreso y que cada persona debe contactar directamente la propiedad para confirmar disponibilidad.
+- HACA quedó documentado con sus listas separadas para vales y propiedades; Ben White Health Clinic recibió servicios y horarios vigentes; Equifare recibió elegibilidad, documentación, solicitud y duración; CARTS Country Bus recibió reservas, horario, tarifas y accesibilidad.
+- La revisión reveló que los dos recursos activos de Drive a Senior representaban el mismo programa regional. Se conservó como canónico el registro con una lista guardada, se incorporó el contenido regional verificado y se archivó la copia sin actividad. No hubo eliminación permanente.
+
+Verificación final de la etapa:
+
+- 9 IDs esperados cambiaron —8 canónicos y 1 duplicado archivado— y 0 registros fuera del lote fueron modificados.
+- 0 valores divergentes y 0 registros faltantes.
+- El generador es idempotente: una segunda ejecución produjo 0 operaciones.
+- Los recursos sin descripción en ambos idiomas bajaron de 47 a 39 y los problemas estructurales totales bajaron de 103 a 95.
+- Los grupos amplios de posible duplicidad bajaron de 48 a 47.
+- La base conserva 728 registros: 381 publicados, 287 borradores y 60 archivados.
+
+Los resultados posteriores están en `post-stage-21/` y el lote aplicado está documentado en `stage-21-published-description-operations.json`.

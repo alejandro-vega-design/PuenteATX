@@ -1,0 +1,32 @@
+{
+  "total": 728,
+  "byStatus": {
+    "published": 382,
+    "archived": 59,
+    "draft": 287
+  },
+  "duplicates": {
+    "clusters": 49,
+    "recordsInClusters": 136,
+    "highConfidencePairs": 398,
+    "exactSlug": 0,
+    "orgPlusTitle": 22,
+    "sharedPhoneDifferentRecord": 92,
+    "sharedWebsiteDifferentRecord": 64,
+    "sharedAddressDifferentRecord": 23,
+    "organizationNameVariants": 45,
+    "tripleOrMore": 55
+  },
+  "fieldIssuesByCode": {
+    "no_description_either_language": 47,
+    "service_area_names_city": 33,
+    "draft_missing_source_url": 8,
+    "in_person_without_address": 6,
+    "no_contact_method": 6,
+    "phone_not_dashed": 5,
+    "hours_one_language_only": 1,
+    "address_without_in_person": 1,
+    "draft_missing_last_verified_at": 1
+  },
+  "fieldIssuesTotal": 108
+}

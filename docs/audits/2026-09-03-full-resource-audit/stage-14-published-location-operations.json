@@ -1,0 +1,215 @@
+[
+  {
+    "canonical_id": "46442109-648c-4f51-9ed4-df714e0f9864",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Capacitación y apoyo para familias de cuidado temporal",
+      "title_en": "Training and support for foster families",
+      "summary_es": "Ofrece capacitación, grupos y recursos para familias de cuidado temporal, adoptivas y de parentesco y para personas que desean apoyarlas.",
+      "summary_en": "Offers training, groups, and resources for foster, adoptive, and kinship families and people who want to support them.",
+      "description_es": "El Family Center alberga capacitaciones y actividades para cuidadores. Algunos eventos también se ofrecen en otras sedes, por lo que se debe confirmar el lugar al registrarse.",
+      "description_en": "The Family Center hosts caregiver training and activities. Some events are also held elsewhere, so participants should confirm the location when registering.",
+      "address_line_1": "13300 Pond Springs Road",
+      "address_line_2": "",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78729",
+      "county": "Williamson",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "website_url": "https://iamfosteringhope.org/",
+      "source_url": "https://iamfosteringhope.org/venue/fostering-hope-austin/",
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "77f8682b-dc32-4ba5-87c7-e067208a8df0",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Acceso a deportes y recreación para menores",
+      "title_en": "Sports and recreation access for children",
+      "summary_es": "Elimina barreras para que menores participen en deportes y recreación mediante programas extraescolares, becas para campamentos y apoyo con costos.",
+      "summary_en": "Removes barriers to youth sports and recreation through after-school programs, camp scholarships, and help with participation costs.",
+      "description_es": "La fundación financia oportunidades ofrecidas por escuelas y proveedores deportivos asociados en distintas partes de Austin. La sede depende del programa seleccionado.",
+      "description_en": "The foundation funds opportunities delivered by partner schools and sports providers across Austin. The location depends on the selected program.",
+      "phone": "737-235-6343",
+      "website_url": "https://www.davidphillipsfoundation.org/",
+      "source_url": "https://www.davidphillipsfoundation.org/",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "b34b0e49-696b-4043-b340-be0dfee17673",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Capacitación y apoyo para familias de cuidado temporal",
+      "title_en": "Training and support for foster families",
+      "summary_es": "Ofrece capacitación, recursos, actividades y defensa para familias de cuidado temporal, adoptivas y de parentesco en Texas.",
+      "summary_en": "Offers training, resources, activities, and advocacy for foster, adoptive, and kinship families across Texas.",
+      "description_es": "Los beneficios incluyen capacitación presencial y en línea, encuentros regionales, retiros y becas. Las sedes cambian según el evento publicado.",
+      "description_en": "Benefits include in-person and online training, regional gatherings, retreats, and scholarships. Locations vary by posted event.",
+      "service_methods": [
+        "in_person",
+        "online"
+      ],
+      "website_url": "https://www.tffa.org/",
+      "source_url": "https://www.tffa.org/membership/membership-and-its-benefits/",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "1e1c4788-2cfb-457b-80a1-e70c8f25772b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Campamentos y excursiones para menores",
+      "title_en": "Camps and field trips for children",
+      "summary_es": "Ofrece campamentos y excursiones para menores de 4 a 13 años que recorren parques, museos y otros destinos de Austin y sus alrededores.",
+      "summary_en": "Offers camps and field trips for children ages 4–13 who explore parks, museums, and other destinations across the Austin area.",
+      "description_es": "Los campamentos parten de varios parques de Austin y visitan destinos distintos cada día. La sede de entrega y recogida se elige al inscribirse; hay asistencia de matrícula según ingresos.",
+      "description_en": "Camps depart from several Austin parks and visit different destinations each day. Families select a drop-off and pickup park during registration; income-based tuition assistance is available.",
+      "phone": "512-234-5437",
+      "service_methods": [
+        "in_person",
+        "online",
+        "phone"
+      ],
+      "cost_type": "paid",
+      "website_url": "https://www.atxkidsclub.org/",
+      "source_url": "https://www.atxkidsclub.org/summer-camp.html",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ecaa3518-9c6d-46c9-8ab8-82c41abd5fd0",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Experiencias familiares al aire libre",
+      "title_en": "Outdoor experiences for families",
+      "summary_es": "Conecta a familias con la naturaleza mediante excursiones, campamentos, actividades educativas y préstamo de equipo.",
+      "summary_en": "Connects families with nature through outings, camps, learning activities, and a gear library.",
+      "description_es": "Las actividades ocurren en parques, senderos y espacios naturales que cambian según el calendario. La ubicación se comunica para cada evento o programa.",
+      "description_en": "Activities take place at parks, trails, and natural areas that vary with the calendar. The location is provided for each event or program.",
+      "website_url": "https://familiesinnature.org/",
+      "source_url": "https://familiesinnature.org/",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "3d84a53d-1b8f-4ae9-8b34-291a1f5fb7e6",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Béisbol, sóftbol y mentoría para jóvenes",
+      "title_en": "Youth baseball, softball, and mentoring",
+      "summary_es": "Ofrece ligas deportivas, mentoría y apoyo académico para niñas, niños y adolescentes en vecindarios del este de Austin.",
+      "summary_en": "Offers sports leagues, mentoring, and academic support for children and teens in East Austin neighborhoods.",
+      "description_es": "Los entrenamientos, juegos y actividades se realizan en distintos parques, planteles y sedes asociadas según la temporada y el equipo.",
+      "description_en": "Practices, games, and activities take place at different parks, campuses, and partner sites depending on the season and team.",
+      "website_url": "https://www.rbiaustin.org/",
+      "source_url": "https://www.rbiaustin.org/programs",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "70bff9cc-e79e-458e-aa08-123353f489e1",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Campamento de naturaleza y desarrollo juvenil",
+      "title_en": "Nature camp and youth development",
+      "summary_es": "Ofrece campamentos de verano y experiencias al aire libre que fortalecen habilidades sociales, confianza y conexión con la naturaleza.",
+      "summary_en": "Offers summer camps and outdoor experiences that build social skills, confidence, and connection with nature.",
+      "description_es": "El Ranchito realiza programas en Shield Ranch y otras áreas naturales; la sede y el punto de llegada dependen de la sesión asignada.",
+      "description_en": "El Ranchito holds programs at Shield Ranch and other natural areas; the location and arrival instructions depend on the assigned session.",
+      "website_url": "https://www.elranchito.org/",
+      "source_url": "https://www.elranchito.org/programs",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "0d41a430-c159-4f9b-b8f4-2ed7b1cbc5cc",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Trabajo remunerado y aprendizaje agrícola para jóvenes",
+      "title_en": "Paid farm work and learning for youth",
+      "summary_es": "Ofrece a adolescentes trabajo remunerado, mentoría y aprendizaje práctico sobre agricultura, alimentos y liderazgo.",
+      "summary_en": "Provides teens with paid work, mentoring, and hands-on learning about farming, food, and leadership.",
+      "description_es": "Los programas juveniles combinan trabajo en granjas, talleres, voluntariado y actividades comunitarias. La sede depende del programa y la temporada.",
+      "description_en": "Youth programs combine farm work, workshops, volunteering, and community activities. The location depends on the program and season.",
+      "website_url": "https://urbanrootsatx.org/",
+      "source_url": "https://urbanrootsatx.org/youth-programs",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "1223b6d6-d956-43c5-b254-0b938076d2f1",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Apoyo prenatal, doulas y círculos posparto para personas de color",
+      "title_en": "Prenatal support, doulas, and postpartum circles for people of color",
+      "summary_es": "Ofrece gratuitamente círculos prenatales y posparto, preparación para el parto, doulas y conexión con atención de partería para personas BIPOC.",
+      "summary_en": "Offers free prenatal and postpartum circles, childbirth preparation, doulas, and connections to midwifery care for BIPOC participants.",
+      "description_es": "Las actividades grupales usan sedes anunciadas y los acompañantes de parto atienden en el lugar acordado con cada participante. También hay opciones virtuales.",
+      "description_en": "Group activities use announced locations, and birth companions provide support at the location arranged with each participant. Virtual options are also available.",
+      "phone": "833-658-2558",
+      "email": "info@msvwatx.org",
+      "service_methods": [
+        "in_person",
+        "online",
+        "home_visit",
+        "phone"
+      ],
+      "website_url": "https://www.msvwatx.org/home",
+      "source_url": "https://www.msvwatx.org/copy-of-programs",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "6c24c546-2575-4a93-8ac9-7afac780955b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Asistencia para pagar el cuidado infantil",
+      "title_en": "Child care tuition assistance",
+      "summary_es": "Ayuda a familias elegibles de nueve condados rurales del centro de Texas a pagar servicios de cuidado infantil mientras trabajan, estudian o buscan empleo.",
+      "summary_en": "Helps eligible families in nine rural Central Texas counties pay for child care while working, training, or seeking employment.",
+      "description_es": "La solicitud y la lista de espera se administran mediante el portal de Child Care Services. Las familias seleccionan un proveedor participante cerca de su hogar, lugar de estudio o trabajo; no existe una sede única donde se preste el cuidado.",
+      "description_en": "Applications and the waitlist are managed through the Child Care Services portal. Families select a participating provider near home, training site, or work; care is not delivered at one central office.",
+      "service_methods": [
+        "online",
+        "phone"
+      ],
+      "phone": "877-223-0404",
+      "website_url": "https://workforcesolutionsrca.com/childcare/parents",
+      "source_url": "https://workforcesolutionsrca.com/childcare/parents",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": ""
+    },
+    "archive_ids": []
+  }
+]

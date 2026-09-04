@@ -1,0 +1,249 @@
+[
+  {
+    "canonical_id": "15dc36d5-f3d8-4799-a3b8-adc185a5ed8f",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Cursos y apoyo para padres de menores con discapacidades",
+      "title_en": "Courses and support for parents of children with disabilities",
+      "summary_es": "Ofrece cursos, grupos de apoyo y manejo de casos para ayudar a padres y cuidadores a defender las necesidades de menores con discapacidades.",
+      "summary_en": "Offers courses, support groups, and case management to help parents and caregivers advocate for children with disabilities.",
+      "description_es": "Los servicios gratuitos se ofrecen en inglés y español, de forma presencial o virtual. Los cursos presenciales se realizan en la sede de East 4th Street y ayudan a las familias a navegar planes para discapacidades, terapias y otros sistemas.",
+      "description_en": "Free services are offered in English and Spanish, in person or virtually. In-person courses meet at the East 4th Street location and help families navigate disability plans, therapies, and other systems.",
+      "address_line_1": "3100 East 4th Street",
+      "address_line_2": "",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78702",
+      "county": "Travis",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "website_url": "https://www.velafamilies.org/",
+      "source_url": "https://www.velafamilies.org/courses",
+      "email": "info@velafamilies.org",
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "40f9a72b-aa77-4860-8ffd-6e4c473993a8",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Terapia y evaluación psicológica para menores",
+      "title_en": "Therapy and psychological assessment for youth",
+      "summary_es": "Ofrece terapia para niñas, niños y adolescentes y evaluaciones psicológicas para dificultades emocionales, conductuales, de aprendizaje y relacionadas con trauma.",
+      "summary_en": "Offers therapy for children and adolescents and psychological assessments for emotional, behavioral, learning, and trauma-related concerns.",
+      "description_es": "La atención incluye evaluación inicial, terapia de juego, terapia cognitivo-conductual y otros enfoques para pacientes de 5 a 18 años. Las citas se solicitan por teléfono o correo electrónico.",
+      "description_en": "Care includes an initial assessment, play therapy, cognitive behavioral therapy, and other approaches for patients ages 5–18. Appointments are requested by phone or email.",
+      "address_line_1": "4749 Williams Drive",
+      "address_line_2": "Suite 323",
+      "city": "Georgetown",
+      "state": "TX",
+      "postal_code": "78633",
+      "county": "Williamson",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "website_url": "https://healingwingsllc.com/",
+      "source_url": "https://healingwingsllc.com/faqs/",
+      "hours_es": "Lunes a viernes, 8:00 a.m.–5:00 p.m.",
+      "hours_en": "Monday–Friday, 8 a.m.–5 p.m.",
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "24a73cb9-c809-4de7-9d4a-91311a668122",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Consejería para menores, adultos y familias",
+      "title_en": "Counseling for youth, adults, and families",
+      "summary_es": "Ofrece consejería individual, de pareja y familiar en consultorios, además de servicios de salud mental en escuelas participantes.",
+      "summary_en": "Offers individual, couples, and family counseling in outpatient offices, plus mental health services at participating schools.",
+      "description_es": "Profesionales de salud mental atienden ansiedad, depresión, duelo, trauma, dificultades familiares y otras necesidades. La organización también presta servicios en distritos escolares de Williamson y Bell.",
+      "description_en": "Mental health professionals address anxiety, depression, grief, trauma, family concerns, and other needs. The organization also provides services in Williamson and Bell County school districts.",
+      "address_line_1": "2100 Scenic Drive",
+      "address_line_2": "Suite 140",
+      "city": "Georgetown",
+      "state": "TX",
+      "postal_code": "78626",
+      "county": "Williamson",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "service_methods": [
+        "in_person",
+        "phone",
+        "online"
+      ],
+      "website_url": "https://impactcounselingservices.org/",
+      "source_url": "https://impactcounselingservices.org/contact",
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "964ed8a9-7a7f-48b6-8d16-233adc81572d",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Atención primaria y especializada para jóvenes",
+      "title_en": "Primary and specialized health care for youth",
+      "summary_es": "Brinda atención primaria y servicios especializados para recién nacidos, niñas, niños, adolescentes y adultos jóvenes hasta los 25 años.",
+      "summary_en": "Provides primary care and specialized services for newborns, children, adolescents, and young adults through age 25.",
+      "description_es": "Los servicios incluyen consultas preventivas y por enfermedad, vacunas, medicina del estilo de vida, atención para acné, circuncisión neonatal y telesalud con cita.",
+      "description_en": "Services include well and sick visits, vaccines, lifestyle medicine, acne care, newborn circumcision, and telehealth by appointment.",
+      "address_line_1": "201 East Wilco Highway",
+      "address_line_2": "Suite 201",
+      "city": "Hutto",
+      "state": "TX",
+      "postal_code": "78634",
+      "county": "Williamson",
+      "latitude": null,
+      "longitude": null,
+      "geocoded_at": null,
+      "phone": "512-900-1780",
+      "service_methods": [
+        "in_person",
+        "online",
+        "phone"
+      ],
+      "website_url": "https://centeredyouth.com/our-services",
+      "source_url": "https://centeredyouth.com/our-services",
+      "hours_es": "Martes, miércoles y viernes, 8:30 a.m.–5:30 p.m.",
+      "hours_en": "Tuesday, Wednesday, and Friday, 8:30 a.m.–5:30 p.m.",
+      "last_verified_at": "2026-09-03"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "fe44121c-f3fc-45e0-bedb-ddceff9cd388",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Educación bilingüe para familias inmigrantes",
+      "title_en": "Bilingual education for immigrant families",
+      "summary_es": "Combina clases de inglés para adultos, educación infantil, alfabetización familiar y apoyo social para familias inmigrantes y refugiadas.",
+      "summary_en": "Combines adult English classes, early childhood education, family literacy, and social support for immigrant and refugee families.",
+      "description_es": "El modelo de dos generaciones ayuda simultáneamente a padres y menores mediante ESL, preparación laboral, computación, educación infantil y conexión con recursos. La sede de los programas debe confirmarse al inscribirse.",
+      "description_en": "The two-generation model supports parents and children together through ESL, workforce preparation, computer skills, early childhood education, and resource connections. Confirm the program location during enrollment.",
+      "service_methods": [
+        "in_person",
+        "phone",
+        "online"
+      ],
+      "website_url": "https://todosjuntoslc.org/",
+      "source_url": "https://tcall.tamu.edu/detail.aspx?provider_id=683",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "aef44fd4-dad3-46c3-b679-414b3d981ac1",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Educación, bienestar y apoyo integral para jóvenes y familias",
+      "title_en": "Education, wellness, and wraparound support for youth and families",
+      "summary_es": "Ofrece mentoría, educación, preparación laboral, apoyo de salud conductual y conexión con recursos para jóvenes y familias del área de Austin.",
+      "summary_en": "Offers mentoring, education, workforce preparation, behavioral health support, and resource connections for Austin-area youth and families.",
+      "description_es": "Los programas se prestan desde centros en Austin y Manor y mediante actividades escolares y comunitarias. La sede depende del programa y la inscripción.",
+      "description_en": "Programs operate from centers in Austin and Manor and through school- and community-based activities. The location depends on the program and enrollment.",
+      "phone": "512-428-4480",
+      "website_url": "https://aayhf.org/",
+      "source_url": "https://aayhf.org/",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "98d4da6f-df63-4e3f-b11e-5647f372c084",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Doulas y apoyo de salud materna para madres negras",
+      "title_en": "Doula and maternal health support for Black mothers",
+      "summary_es": "Ofrece doulas, educación perinatal, apoyo emocional y servicios de bienestar sin costo para personas negras durante el embarazo, parto y posparto.",
+      "summary_en": "Offers no-cost doula care, perinatal education, emotional support, and wellness services for Black people during pregnancy, birth, and postpartum.",
+      "description_es": "Las visitas prenatales y posparto pueden ser presenciales o virtuales, y la doula acompaña el parto en el lugar elegido por la participante. Atiende los condados de Travis, Williamson, Bastrop, Hays y Caldwell.",
+      "description_en": "Prenatal and postpartum visits may be in person or virtual, and the doula attends labor at the participant’s chosen birth location. Serves Travis, Williamson, Bastrop, Hays, and Caldwell counties.",
+      "service_methods": [
+        "in_person",
+        "online",
+        "home_visit"
+      ],
+      "service_area_es": "Condado de Travis, Condado de Williamson, Condado de Bastrop, Condado de Hays, Condado de Caldwell",
+      "service_area_en": "Travis County, Williamson County, Bastrop County, Hays County, Caldwell County",
+      "website_url": "https://blackmamasatx.com/",
+      "source_url": "https://blackmamasatx.com/how-when-to-get-a-black-mamas-atx-doula/",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "82498cc8-75da-410b-8e26-8c572a635a0c",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Doulas y educación perinatal sin costo",
+      "title_en": "No-cost doula care and perinatal education",
+      "summary_es": "Brinda apoyo gratuito de doulas, educación perinatal, conexión con recursos y artículos básicos durante el embarazo, parto y posparto.",
+      "summary_en": "Provides free doula support, perinatal education, resource connections, and basic items during pregnancy, birth, and postpartum.",
+      "description_es": "La atención emocional, física, educativa y de defensa se coordina con cada participante y ocurre en el lugar de parto, el hogar, espacios comunitarios o de forma remota.",
+      "description_en": "Emotional, physical, educational, and advocacy support is coordinated with each participant and occurs at the birth location, at home, in community settings, or remotely.",
+      "service_methods": [
+        "in_person",
+        "phone",
+        "online",
+        "home_visit"
+      ],
+      "website_url": "https://galsaustin.org/",
+      "source_url": "https://galsaustin.org/",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "4058c496-d4db-4eff-81ec-41f098c3527b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Campamentos y programas artísticos para jóvenes",
+      "title_en": "Arts camps and youth programs",
+      "summary_es": "Ofrece campamentos, programas extraescolares y experiencias de arte, teatro, música y cine para niñas, niños y adolescentes.",
+      "summary_en": "Offers camps, after-school programs, and art, theater, music, and film experiences for children and teens.",
+      "description_es": "Los programas se realizan en escuelas y distintas sedes comunitarias de Austin. La ubicación, edad y costo dependen del campamento o programa seleccionado; hay ayuda financiera.",
+      "description_en": "Programs take place at schools and various community sites across Austin. Location, age range, and cost depend on the selected camp or program; financial aid is available.",
+      "website_url": "https://www.creativeaction.org/programs/",
+      "source_url": "https://www.creativeaction.org/programs/",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "89813161-cbea-4aac-b1cd-3880a150280b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "title_es": "Conservación comunitaria del arroyo Bull Creek",
+      "title_en": "Bull Creek community conservation",
+      "summary_es": "Organiza restauración de hábitat, monitoreo ecológico y actividades comunitarias en la cuenca de Bull Creek.",
+      "summary_en": "Organizes habitat restoration, ecological monitoring, and community activities in the Bull Creek watershed.",
+      "description_es": "El proyecto de conservación de Austin trabaja en distintos espacios de la cuenca mediante actividades y eventos programados. La ubicación se publica para cada actividad.",
+      "description_en": "The Austin conservation project works at different sites throughout the watershed through scheduled activities and events. The location is posted for each activity.",
+      "website_url": "https://arocha.us/conservation-projects",
+      "source_url": "https://arocha.us/conservation-projects",
+      "last_verified_at": "2026-09-03",
+      "verification_notes": "[location-review: variable]"
+    },
+    "archive_ids": []
+  }
+]

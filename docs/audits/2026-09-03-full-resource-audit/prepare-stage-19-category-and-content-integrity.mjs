@@ -1,0 +1,76 @@
+#!/usr/bin/env node
+import fs from 'node:fs';
+
+const [inputPath, outputPath] = process.argv.slice(2);
+if (!inputPath || !outputPath) throw new Error('Usage: prepare-stage-19-category-and-content-integrity.mjs <resources.json> <operations.json>');
+const resources = JSON.parse(fs.readFileSync(inputPath, 'utf8'));
+const byId = new Map(resources.map(resource => [resource.id, resource]));
+const verified = '2026-09-03';
+const category = {
+  housing: '10000000-0000-4000-8000-000000000002',
+  health: '10000000-0000-4000-8000-000000000003',
+  financial: '10000000-0000-4000-8000-000000000005',
+  education: '10000000-0000-4000-8000-000000000006',
+  other: '10000000-0000-4000-8000-000000000008'
+};
+const same = (resource, patch) => Object.entries(patch).every(([key, value]) => JSON.stringify(resource[key] ?? null) === JSON.stringify(value));
+const targets = new Map([
+  ['1ae95abd-bb23-4d4b-a3e2-531cf3b9c56b', { status: 'draft', additional: [category.health, category.education], patch: {
+    organization_name: 'Catholic Charities of Central Texas', primary_category_id: category.other,
+    summary_es: 'Acompaña a personas embarazadas y familias con menores de hasta 36 meses mediante orientación, educación prenatal y de crianza, mentoría y artículos básicos.',
+    summary_en: 'Supports expectant parents and families with children up to 36 months through guidance, prenatal and parenting education, mentoring, and basic-needs items.',
+    description_es: 'El programa ofrece manejo de casos familiares, un plan de orientación individualizado, educación prenatal y de crianza basada en evidencia, mentoría en habilidades para la vida y asistencia material como pañales y toallitas. Los servicios son confidenciales y están disponibles en inglés y español.',
+    description_en: 'The program offers family case management, a customized guidance plan, evidence-based prenatal and parenting education, life-skills mentoring, and material assistance such as diapers and wipes. Services are confidential and available in English and Spanish.',
+    keywords_es: ['embarazo', 'crianza', 'educación prenatal', 'pañales', 'manejo de casos familiares'],
+    keywords_en: ['pregnancy', 'parenting', 'prenatal education', 'diapers', 'family case management'],
+    languages: ['es', 'en'], service_methods: ['phone'], cost_type: 'unknown',
+    eligibility_es: 'Personas embarazadas o madres, padres y cuidadores de menores de 0 a 36 meses.',
+    eligibility_en: 'Expectant parents or parents and caregivers of children from birth through 36 months.',
+    application_steps_es: 'Llame al 512-651-6100 y proporcione su nombre, teléfono, correo electrónico e información sobre el embarazo o la edad de su hijo o hija.',
+    application_steps_en: 'Call 512-651-6100 and provide your name, phone number, email address, and information about the pregnancy or your child’s age.',
+    hours_es: 'Lunes a viernes, 8:30 a.m.–5:00 p.m.; hay clases nocturnas disponibles.',
+    hours_en: 'Monday–Friday, 8:30 a.m.–5:00 p.m.; evening classes are available.',
+    website_url: 'https://ccctx.org/st-gabriels-pregnancy-parenting-program/', source_url: 'https://ccctx.org/st-gabriels-pregnancy-parenting-program/',
+    is_emergency: false, last_verified_at: verified,
+    verification_notes: 'Se eliminó contenido contaminado sobre vivienda y Seguro Social. Los servicios, elegibilidad, idiomas, horario y acceso se confirmaron en la página oficial del programa.'
+  }}],
+  ['36baf425-4bb9-47ad-bc13-101fdfd4fb78', { status: 'published', additional: [category.education], patch: {
+    primary_category_id: category.other,
+    keywords_es: ['apoyo juvenil', 'estudiantes sin hogar', 'necesidades básicas', 'ayuda con tareas', 'habilidades para la vida'],
+    keywords_en: ['youth support', 'homeless students', 'basic needs', 'homework help', 'life skills'],
+    email: 'cb@georgetownproject.org', source_url: 'https://www.georgetownproject.org/nest-empowerment-center/', last_verified_at: verified,
+    verification_notes: 'Programa integral de apoyo juvenil con necesidades básicas, ayuda académica, habilidades para la vida y actividades terapéuticas; no es una clínica de salud abierta al público.'
+  }}],
+  ['717c0149-204c-4a6e-8300-b1a1213eabe0', { status: 'published', additional: [category.other], patch: {
+    primary_category_id: category.financial,
+    keywords_es: ['veteranos', 'beneficios de VA', 'reclamos de discapacidad', 'apelaciones', 'dependientes elegibles'],
+    keywords_en: ['veterans', 'VA benefits', 'disability claims', 'appeals', 'eligible dependents'],
+    source_url: 'https://www.traviscountytx.gov/veterans-services', last_verified_at: verified,
+    verification_notes: 'El servicio principal es preparar y tramitar reclamos de beneficios de VA; las menciones de salud, vivienda, educación y otros servicios son remisiones, no categorías primarias.'
+  }}],
+  ['302de942-8d80-4199-bc05-f3a7197abebe', { status: 'draft', additional: [category.housing], patch: {
+    organization_name: 'Travis Central Appraisal District',
+    title_es: 'Exención de impuestos de vivienda para mayores de 65 años', title_en: 'Over-65 homestead tax exemption',
+    primary_category_id: category.financial,
+    summary_es: 'Ayuda a propietarios de vivienda de 65 años o más a reducir sus impuestos sobre la propiedad y establecer un límite para ciertos impuestos.',
+    summary_en: 'Helps homeowners age 65 or older reduce property taxes and establish a ceiling on certain taxes.',
+    service_area_es: 'Condado de Travis', service_area_en: 'Travis County',
+    source_url: 'https://traviscad.org/homesteadexemptions', last_verified_at: verified,
+    verification_notes: 'Ficha limitada al Travis Central Appraisal District y al Condado de Travis; otros condados administran sus propias solicitudes. La categoría primaria es financiera porque la exención reduce impuestos sobre la propiedad.'
+  }}]
+]);
+
+const operations = [];
+for (const [id, target] of targets) {
+  const resource = byId.get(id);
+  if (!resource || resource.status !== target.status) throw new Error(`Invalid target ${id}`);
+  const currentAdditional = (resource.resource_categories || []).map(item => item.category_id).sort();
+  const expectedAdditional = [...target.additional].sort();
+  if (!same(resource, target.patch) || JSON.stringify(currentAdditional) !== JSON.stringify(expectedAdditional)) operations.push({
+    canonical_id: id, expected_canonical_status: target.status, expected_archive_status: 'published',
+    patch: target.patch, archive_ids: [], additional_category_ids: target.additional
+  });
+}
+if (operations.length !== 0 && operations.length !== targets.size) throw new Error(`Expected ${targets.size} operations or 0; found ${operations.length}`);
+fs.writeFileSync(outputPath, `${JSON.stringify(operations, null, 2)}\n`);
+console.log(JSON.stringify({ operations: operations.length, correctedResources: targets.size }, null, 2));

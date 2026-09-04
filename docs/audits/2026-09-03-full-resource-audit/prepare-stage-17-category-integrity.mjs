@@ -1,0 +1,116 @@
+#!/usr/bin/env node
+import fs from 'node:fs';
+
+const [inputPath, outputPath] = process.argv.slice(2);
+if (!inputPath || !outputPath) throw new Error('Usage: prepare-stage-17-category-integrity.mjs <resources.json> <operations.json>');
+const resources = JSON.parse(fs.readFileSync(inputPath, 'utf8'));
+const byId = new Map(resources.map(resource => [resource.id, resource]));
+const verified = '2026-09-03';
+const category = {
+  health: '10000000-0000-4000-8000-000000000003',
+  transportation: '10000000-0000-4000-8000-000000000004',
+  education: '10000000-0000-4000-8000-000000000006',
+  other: '10000000-0000-4000-8000-000000000008'
+};
+const same = (resource, patch) => Object.entries(patch).every(([key, value]) => JSON.stringify(resource[key] ?? null) === JSON.stringify(value));
+const targets = new Map([
+  ['684e5303-f318-4851-ac58-b2c899680469', {
+    status: 'published', additional: [category.other], patch: {
+      primary_category_id: category.education,
+      keywords_es: ['preparación universitaria', 'universidad', 'estudiantes latinas', 'liderazgo', 'madres y tutoras'],
+      keywords_en: ['college readiness', 'college', 'Latina students', 'leadership', 'mothers and guardians'],
+      source_url: 'https://www.conmimadre.org/programming', last_verified_at: verified
+    }
+  }],
+  ['fe44121c-f3fc-45e0-bedb-ddceff9cd388', {
+    status: 'published', additional: [category.other], patch: {
+      primary_category_id: category.education,
+      keywords_es: ['inglés para adultos', 'ESL', 'educación infantil', 'alfabetización familiar', 'familias inmigrantes'],
+      keywords_en: ['adult English', 'ESL', 'early childhood education', 'family literacy', 'immigrant families'],
+      last_verified_at: verified
+    }
+  }],
+  ['98d4da6f-df63-4e3f-b11e-5647f372c084', {
+    status: 'published', additional: [category.other], patch: {
+      primary_category_id: category.health,
+      keywords_es: ['doula', 'salud materna', 'embarazo', 'parto', 'posparto', 'madres negras'],
+      keywords_en: ['doula', 'maternal health', 'pregnancy', 'birth', 'postpartum', 'Black mothers'],
+      source_url: 'https://blackmamasatx.com/how-when-to-get-a-black-mamas-atx-doula/', last_verified_at: verified
+    }
+  }],
+  ['1617f63a-5e6d-4d72-ae3c-24cef6ca65f4', {
+    status: 'published', additional: [category.other], patch: {
+      primary_category_id: category.transportation,
+      summary_es: 'Ofrece transporte gratuito de puerta a puerta para personas mayores, incluidos viajes a citas médicas, supermercados y farmacias.',
+      summary_en: 'Provides free door-to-door transportation for older adults, including rides to medical appointments, grocery stores, and pharmacies.',
+      description_es: 'Conductores voluntarios y personal del programa ofrecen viajes individuales y grupales, además de apoyo para mantener la independencia y la conexión social. El servicio cubre Bastrop, el norte de Hays, Travis y Williamson.',
+      description_en: 'Volunteer drivers and program staff provide individual and group rides, along with support that helps older adults remain independent and socially connected. Service covers Bastrop, northern Hays, Travis, and Williamson.',
+      keywords_es: ['transporte para adultos mayores', 'viajes gratuitos', 'citas médicas', 'supermercado', 'transporte de puerta a puerta'],
+      keywords_en: ['senior transportation', 'free rides', 'medical appointments', 'grocery trips', 'door-to-door transportation'],
+      service_methods: ['in_person', 'phone', 'online'],
+      service_area_es: 'Condado de Travis, Condado de Williamson, Condado de Bastrop, norte del Condado de Hays',
+      service_area_en: 'Travis County, Williamson County, Bastrop County, and northern Hays County',
+      phone: '512-472-6339', source_url: 'https://driveasenior.org/', last_verified_at: verified,
+      verification_notes: '[location-review: variable]'
+    }
+  }],
+  ['5f2c362a-438a-4f1a-9a7e-f5d76a092c3b', {
+    status: 'published', additional: [category.other], patch: {
+      primary_category_id: category.education,
+      summary_es: 'Ofrece capacitación técnica acelerada, educación para personas adultas y preparación para certificaciones y empleos en sectores de alta demanda.',
+      summary_en: 'Offers accelerated technical training, adult education, and preparation for certifications and jobs in high-demand fields.',
+      description_es: 'Los programas incluyen capacitación práctica en oficios, salud y tecnología, además de inglés como segundo idioma, alfabetización para adultos y apoyo para ingresar al empleo.',
+      description_en: 'Programs include hands-on training in skilled trades, health care, and technology, along with English as a second language, adult literacy, and employment support.',
+      keywords_es: ['educación técnica', 'capacitación profesional', 'certificaciones', 'ESL', 'alfabetización para adultos', 'empleo'],
+      keywords_en: ['technical education', 'career training', 'certifications', 'ESL', 'adult literacy', 'employment'],
+      service_methods: ['in_person', 'phone', 'online'],
+      address_line_1: '1015 Norwood Park Boulevard', address_line_2: '', city: 'Austin', state: 'TX', postal_code: '78753', county: 'Travis',
+      latitude: null, longitude: null, geocoded_at: null,
+      website_url: 'https://www.goodwillcentraltexas.org/locations/', source_url: 'https://www.goodwillcentraltexas.org/locations/', last_verified_at: verified,
+      verification_notes: 'La ubicación, el teléfono y la oferta de capacitación fueron confirmados en fuentes oficiales vigentes de Goodwill Central Texas.'
+    }
+  }],
+  ['d9ac6095-de0d-473e-9ba2-6b04353d712e', {
+    status: 'draft', additional: [category.other], patch: {
+      organization_name: 'Community Council of South Central Texas',
+      primary_category_id: category.education,
+      summary_es: 'Ofrece Head Start y Early Head Start para promover el aprendizaje, el desarrollo y la preparación escolar de menores desde el nacimiento hasta los cinco años.',
+      summary_en: 'Provides Head Start and Early Head Start to support learning, development, and school readiness for children from birth through age five.',
+      description_es: 'Brinda entornos de aprendizaje y servicios centrados en la familia que apoyan el desarrollo cognitivo, social, emocional y físico. Head Start atiende los condados de Comal y Guadalupe.',
+      description_en: 'Provides learning environments and family-centered services that support cognitive, social, emotional, and physical development. Head Start serves Comal and Guadalupe counties.',
+      keywords_es: ['Head Start', 'Early Head Start', 'educación infantil', 'preparación escolar', 'desarrollo infantil'],
+      keywords_en: ['Head Start', 'Early Head Start', 'early childhood education', 'school readiness', 'child development'],
+      languages: ['es', 'en'], service_methods: ['in_person', 'phone', 'online'], cost_type: 'free',
+      application_steps_es: 'Complete la solicitud de Head Start en línea o comuníquese con el programa para recibir ayuda con la inscripción.',
+      application_steps_en: 'Complete the Head Start application online or contact the program for enrollment assistance.',
+      hours_es: '', hours_en: '',
+      service_area_es: 'Condado de Comal, Condado de Guadalupe', service_area_en: 'Comal County, Guadalupe County',
+      phone: '830-327-4990', email: 'jcantu@ccsct.org',
+      address_line_1: '', address_line_2: '', city: '', state: 'TX', postal_code: '', county: '',
+      latitude: null, longitude: null, geocoded_at: null,
+      website_url: 'https://www.ccsct.org/program/head-start/', source_url: 'https://www.ccsct.org/program/head-start/',
+      is_emergency: false, last_verified_at: verified,
+      verification_notes: 'Piloto de Bluebonnet Project HOPE. Head Start opera en múltiples sedes; la dirección administrativa de Seguin no representa un único centro de servicio. [location-review: variable]'
+    }
+  }]
+]);
+
+const operations = [];
+for (const [id, target] of targets) {
+  const resource = byId.get(id);
+  if (!resource || resource.status !== target.status) throw new Error(`Invalid target ${id}`);
+  const currentAdditional = (resource.resource_categories || []).map(item => item.category_id).sort();
+  const expectedAdditional = [...target.additional].sort();
+  const categoriesSame = JSON.stringify(currentAdditional) === JSON.stringify(expectedAdditional);
+  if (!same(resource, target.patch) || !categoriesSame) operations.push({
+    canonical_id: id,
+    expected_canonical_status: target.status,
+    expected_archive_status: 'published',
+    patch: target.patch,
+    archive_ids: [],
+    additional_category_ids: target.additional
+  });
+}
+if (operations.length !== 0 && operations.length !== targets.size) throw new Error(`Expected ${targets.size} operations or 0; found ${operations.length}`);
+fs.writeFileSync(outputPath, `${JSON.stringify(operations, null, 2)}\n`);
+console.log(JSON.stringify({ operations: operations.length, categoryCorrections: targets.size }, null, 2));
