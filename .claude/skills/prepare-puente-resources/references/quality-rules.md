@@ -57,6 +57,7 @@ Read the live importer first. These rules supplement it and resolve recurring da
 - Use `in_person` when a participant can receive the described service at a physical location.
 - Use `phone`, `online`, or `home_visit` only when supported by the source.
 - For an in-person service, find and include its confirmed service location whenever reasonably available.
+- `in_person` can be valid without one street address when the service is mobile, transportation-based, delivered across multiple schools/clinics/sites, or uses a confidential location. Classify and document that exception explicitly; do not invent one representative address merely to silence an audit warning.
 - Do not use an administrative headquarters as a service address unless the source indicates participants can go there.
 - When no physical service location exists, leave address, city, ZIP, latitude, and longitude blank.
 - Do not infer exact coordinates. Document approved geocoding separately.
