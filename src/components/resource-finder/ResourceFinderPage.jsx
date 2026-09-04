@@ -3,6 +3,7 @@ import { getCategories, getResourceFinderData } from '../../data/repository';
 import { getServiceArea } from '../../config/serviceAreas';
 import { RESOURCE_FINDER_EXPANDED_RADIUS_MILES, RESOURCE_FINDER_INITIAL_RADIUS_MILES, RESOURCE_FINDER_REGIONAL_RADIUS_MILES } from '../../config/resourceFinder';
 import { hasCoordinates, sortResourcesByDistance } from '../../utils/geo';
+import { toggleVisibleSelection } from '../../utils/resourceSelection';
 import { trackPuenteEvent } from '../../analytics/client';
 import { shareLink, sharedListUrl } from '../../services/share';
 import ResourceSearchForm from './ResourceSearchForm';
@@ -178,7 +179,7 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
   }, [activeZip, categories, isMobile, resources, selectedResourceId]);
   const hoverResource = useCallback(id => setHoveredResourceId(id), []);
   const toggleIncluded = useCallback(id => setIncludedResourceIds(current => current.includes(id) ? current.filter(value => value !== id) : [...current, id]), []);
-  const toggleAllVisible = useCallback(ids => setIncludedResourceIds(current => ids.every(id => current.includes(id)) ? current.filter(id => !ids.includes(id)) : [...new Set([...current, ...ids])]), []);
+  const toggleAllVisible = useCallback(ids => setIncludedResourceIds(current => toggleVisibleSelection(current, ids)), []);
   const showStatus = useCallback(message => setStatusToast({ id: Date.now(), message }), []);
   const shareSelected = useCallback(async () => {
     const url = sharedListUrl(includedResources.map(resource => resource.slug));

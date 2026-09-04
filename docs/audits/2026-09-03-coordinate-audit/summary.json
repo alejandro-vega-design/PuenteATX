@@ -1,0 +1,40 @@
+{
+  "audit_date": "2026-09-03",
+  "provider": "U.S. Census Bureau Geocoder",
+  "total_resources_reviewed": 250,
+  "exact": {
+    "total": 154,
+    "published": 103,
+    "draft": 51
+  },
+  "needs_review": {
+    "total": 57,
+    "published": 25,
+    "draft": 32
+  },
+  "unresolved": {
+    "total": 39,
+    "published": 18,
+    "draft": 21
+  },
+  "proposed_operations": 154,
+  "applied_operations": 154,
+  "production_modified": true,
+  "post_apply_verification": {
+    "changed_ids": 154,
+    "unexpected_ids": 0,
+    "unexpected_fields": 0,
+    "coordinate_precision": 6,
+    "remaining_address_without_coordinates_after_first_pass": 96
+  },
+  "second_pass": {
+    "online_reviewed": 88,
+    "applied_operations": 31,
+    "published": 22,
+    "draft": 9,
+    "unexpected_ids": 0,
+    "unexpected_fields": 0
+  },
+  "total_applied_operations": 185,
+  "final_remaining_address_without_coordinates": 65
+}

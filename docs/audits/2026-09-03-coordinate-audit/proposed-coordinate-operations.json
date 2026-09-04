@@ -1,0 +1,1850 @@
+[
+  {
+    "canonical_id": "248e2b4d-7a2c-4427-9773-5cf5d36bbc60",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.503269391164,
+      "longitude": -97.688749171204,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "d36aa5a9-9c03-4a98-ad40-e34106f4c6db",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.613853489482,
+      "longitude": -97.657223463808,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c81ada7a-35f9-4f2c-8282-303c82c3b30c",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.639860538682,
+      "longitude": -97.680913263791,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "bfa1bda7-274b-42fb-9a1b-3cacab6c0395",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.626922320429,
+      "longitude": -97.684634871524,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "6aaaceb5-440b-463b-b09b-81c9752bc509",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.633233039789,
+      "longitude": -97.683247965121,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "855ba650-5774-4bea-a87d-a4674464b7bc",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.320712699368,
+      "longitude": -97.694147230615,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "36cce978-6612-4e04-8874-0a54503645eb",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.270129712111,
+      "longitude": -97.715983517891,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9e02be2f-dabf-4e0d-87ae-4b8aacdba5b4",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.518300445659,
+      "longitude": -97.683005353582,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "a922e19a-6fa5-4e4d-8621-48a7d7623ab7",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.364686554099,
+      "longitude": -97.715124661538,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "e20bd28c-bbc1-4ff3-89f4-f6493b731344",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.335611248587,
+      "longitude": -97.670013052943,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9a3dbad5-475f-4fc9-bf04-66897b2da65c",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.338190028235,
+      "longitude": -97.676547212999,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "40f9a72b-aa77-4860-8ffd-6e4c473993a8",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.688381168682,
+      "longitude": -97.723504139106,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "24a73cb9-c809-4de7-9d4a-91311a668122",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.626375517074,
+      "longitude": -97.687611090441,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "0e0452ad-c60b-4f3b-92ab-0434444425f4",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.506737991925,
+      "longitude": -98.074461663371,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "1fee08a5-40ba-4bbf-b10a-0474d09ea20c",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.274703326726,
+      "longitude": -97.776634693722,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "bc94d411-db8d-4ba0-8571-2a8e964f289a",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.339205408058,
+      "longitude": -98.139544586832,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "a56bf4d3-8986-4009-b2d6-9c6273582a8d",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.266224562324,
+      "longitude": -97.769029303442,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "15dc36d5-f3d8-4799-a3b8-adc185a5ed8f",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.254464697085,
+      "longitude": -97.708666617501,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "46442109-648c-4f51-9ed4-df714e0f9864",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.447948416244,
+      "longitude": -97.782095001013,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "20e66dca-2481-48d1-a472-2f0cd5092e22",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.324315298944,
+      "longitude": -97.74275681366,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "180d2b16-e6f5-47b5-92fa-44df43637545",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.232319627812,
+      "longitude": -97.698902033918,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "b460fd32-3961-4299-9beb-4f29f185029b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.313762259736,
+      "longitude": -97.68770220831,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "e3497e15-889d-4c79-b5df-5464e49d62b3",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.306674432243,
+      "longitude": -97.723432360135,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "73b444a8-b037-4d04-8325-8e5ecec24043",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.301949707135,
+      "longitude": -97.736329890761,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "e01eedb9-6ee0-4c1b-81c6-b822ffc9e6c7",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.31231595723,
+      "longitude": -97.735435514344,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "0e830d50-cae6-4930-9a2b-987e73a20b85",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.227322029935,
+      "longitude": -97.778467421065,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "1fb67fff-90dd-4867-8de4-878cc3e85322",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.324875579805,
+      "longitude": -97.700194597664,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9fd1002c-023f-4650-aa26-9b5889fbf6fc",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.332027518138,
+      "longitude": -97.69306280548,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "4b2cd9bb-a1fc-409b-bdbe-39f3059edd9d",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.214530757707,
+      "longitude": -97.727076430412,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "bb12f176-ea4d-4370-80de-21b47489272b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.381596235919,
+      "longitude": -97.743300108233,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "78fd23b1-9406-49ad-b803-71e3e0c077ac",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.31231595723,
+      "longitude": -97.735435514344,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "380d78f2-3fd7-4cb0-ac5f-24952ac11a37",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.619334151063,
+      "longitude": -97.670418401313,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "71ef5708-40b2-46e5-b632-07f876b68844",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.202104818821,
+      "longitude": -97.710306976849,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "7a381e10-25c6-442b-a53a-6e7838946815",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.23295051919,
+      "longitude": -97.698347342631,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "b2d878c8-fb16-4cec-98ef-214683c19eae",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.269570081546,
+      "longitude": -97.740696585361,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "3ea9291b-b85a-4009-b49a-79169c6e0b4c",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.275804893724,
+      "longitude": -97.742633852007,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "4fa4cebd-453a-42f5-866f-020952f2260a",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.28516485659,
+      "longitude": -97.742824975052,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c5211c29-1b7f-43fc-bbd3-209a9af4b1ad",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.287850560574,
+      "longitude": -97.741471735453,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "4aca8d3c-240c-4408-b9fc-16d2c7bf2ac7",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.313947457322,
+      "longitude": -97.714780870706,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c59aeb14-d78e-4511-be0f-f8f21479b7d5",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.339170351618,
+      "longitude": -97.692986090291,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "1e2c42fa-f230-4e76-afd3-9f70e1f51d8c",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.178219272974,
+      "longitude": -97.61519984697,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9c1858a2-e36d-4bd8-b287-ad85594efea5",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.298550430798,
+      "longitude": -97.720136142284,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "87a796dc-71a2-4d5a-b14c-292e6d11ac96",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.300379483019,
+      "longitude": -97.648051929391,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "03ab5ff0-7750-4d87-b288-0471a3f8691c",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.332027518138,
+      "longitude": -97.69306280548,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "f28939b6-8201-4657-a509-f1909198b3ff",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.259538455721,
+      "longitude": -97.72811629403,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "3c82de24-1c8f-4d9b-bbde-7673dc6791da",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.232319627812,
+      "longitude": -97.698902033918,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "fce78f82-15f4-431b-8524-c739e9d59503",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.358888695117,
+      "longitude": -97.708738407205,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "965b2004-2de8-49f4-a0d3-d0f6a0ccb3ac",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.297354389831,
+      "longitude": -97.720140720548,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "0a97f4ee-26c3-4a07-a118-c3cf024c20d5",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.291781699937,
+      "longitude": -97.739080017072,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "a13989cb-a3d6-42da-bf51-264ecc328b84",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.267408392177,
+      "longitude": -97.733398227215,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c95962a4-2670-4382-809b-433c69bd0c27",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.297524012531,
+      "longitude": -97.707118794819,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "b11604b0-5d1a-4d0e-9c59-58397e6b02d6",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.259361030684,
+      "longitude": -97.701511530882,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9e6e2426-ca9f-49cf-974d-36834eccde34",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.258445516251,
+      "longitude": -97.749273200861,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "148cb73a-4dc6-4b43-8515-1a59f006e203",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.258445516251,
+      "longitude": -97.749273200861,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "7ad531f3-582b-45d5-b9c7-c4edf164e26b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.295253553201,
+      "longitude": -97.688969858832,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5fcf4ba4-34cd-4e80-90e4-db0069526974",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.283868510119,
+      "longitude": -97.671640940227,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "78d81c43-ba39-444d-b04c-3075252a64f9",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.283868510119,
+      "longitude": -97.671640940227,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "d8a0d9f5-ca03-4a94-bf7a-a0d4f5d37669",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.260916608742,
+      "longitude": -97.735384901884,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9fb125d7-eee4-41ed-bb48-adfcf413ff6b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.266899108638,
+      "longitude": -97.738133883428,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "f75751d5-0532-460c-9db1-e97ceba68cab",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.234529768316,
+      "longitude": -97.743371852527,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "b6ddcd4a-db8d-4c8e-aa55-c3e4d34d9f4b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.28137799203,
+      "longitude": -97.672552350731,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "cb535f66-7a0d-4881-a5af-87e976717ae0",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.381960004297,
+      "longitude": -97.686593590168,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "fd841f57-2c4a-4141-acc0-71b0c09c2f60",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.287850560574,
+      "longitude": -97.741471735453,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "986bbf8f-0c0a-4b57-a0d1-ab8d9fb7fe9f",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.446953047535,
+      "longitude": -97.811995808788,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c61cce1e-249c-476b-b865-15db97834851",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.381960004297,
+      "longitude": -97.686593590168,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5f2c362a-438a-4f1a-9a7e-f5d76a092c3b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.339170351618,
+      "longitude": -97.692986090291,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "e0d9758c-a1a5-40d4-8cef-a4fe70121dec",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.268326453613,
+      "longitude": -97.73991485344,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "48138c8c-4ea6-473a-b0c0-ea9df8476bef",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.299539990354,
+      "longitude": -97.74655989559,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "cbf5824e-7e4a-4970-b6df-a52600064887",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.31155349063,
+      "longitude": -97.742443922372,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "bb315bb3-7fb2-4348-b299-449331255bd4",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.318769733594,
+      "longitude": -97.712697851496,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "b70cbbba-4659-4657-b50e-7d2db25a1388",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.270343175709,
+      "longitude": -97.743459021295,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "2820cec6-9291-4585-9a6a-a7ce0dd533c4",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.272843643358,
+      "longitude": -97.744938378299,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "a8dc3b93-1f99-408c-a283-b421244d111d",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.279809691347,
+      "longitude": -97.742332778441,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "f0af5bdc-4f5e-4ac1-95cf-dc4cca39a5fa",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.328993068823,
+      "longitude": -97.674103755616,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "28e68e9c-a1a8-4d0b-bc7b-07016870b424",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.279809691347,
+      "longitude": -97.742332778441,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "192ff2bb-47d5-4e66-8ce0-707963cedb01",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.314267125881,
+      "longitude": -97.714884849125,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "4115c792-beac-4c6d-8a48-741741cc1a67",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.279809691347,
+      "longitude": -97.742332778441,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ea4846e2-c3b8-4097-a341-87ac4db9c11b",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.279809691347,
+      "longitude": -97.742332778441,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "721880c3-a6fa-42a3-ac6a-1dac836305b8",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.326902454533,
+      "longitude": -97.725673172778,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "d8dbc7e1-d086-4b8c-aa34-a5ffc957b8da",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.639860538682,
+      "longitude": -97.680913263791,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "f8db57ca-4412-46e9-a1da-aead364cbd33",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.109402162757,
+      "longitude": -97.318636187198,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "39ff5930-8bde-4c04-9fc2-1c9ac5b29615",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.325587286086,
+      "longitude": -97.701660548776,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "2f2fc895-6e71-4be5-9e6f-90aecf8673fd",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.270226431053,
+      "longitude": -97.739246091827,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "717c0149-204c-4a6e-8300-b1a1213eabe0",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.314267125881,
+      "longitude": -97.714884849125,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "8e73d3df-4162-4125-b65e-ef03c3293585",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.206981427636,
+      "longitude": -97.694420497254,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "0da18055-141a-481b-bad5-6ead41d7a125",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.206981427636,
+      "longitude": -97.694420497254,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "1f9d9076-ebd8-444e-9c6e-5a3964b6e7e1",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 29.882209171732,
+      "longitude": -97.941147942359,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "b4ec4cc4-7148-4215-9e96-bf243cb77dd1",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 31.120484743843,
+      "longitude": -97.700056882122,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5e7c1ec1-b2e5-4807-9b3c-248719aefd2b",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.105370308357,
+      "longitude": -97.329141331888,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5161245e-540b-4198-bbfb-51c2763f0ed3",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.495476234211,
+      "longitude": -97.811513627009,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "4380d5fd-6cfa-41d7-8380-3b8f185ba163",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 29.873459934637,
+      "longitude": -97.652500825586,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "73e14c4e-af91-43fe-83bb-094977880a82",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.343359511282,
+      "longitude": -97.71165809166,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "53b6fddc-6986-423a-a3a5-8270cb669a16",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.33422131784,
+      "longitude": -97.680206637669,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "04566642-11ce-41c5-b1c2-b3cec69dbbdd",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.202104818821,
+      "longitude": -97.710306976849,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "8feadfac-90c3-4cb6-b439-aa1d897aa6a4",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.2020259204,
+      "longitude": -97.710212162777,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9a748be6-55f1-40ab-a40f-4e6e3046fe33",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.256283920407,
+      "longitude": -97.709935579651,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "e1f144b6-eded-49b7-bc96-d3b48d8ca033",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 29.870222876065,
+      "longitude": -97.944337906988,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "f266da43-7ff9-4e6b-9fb8-5c65b10eac0b",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 29.885270323548,
+      "longitude": -97.684756594655,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ae13c611-e987-4851-a76a-244b9a096fba",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.125201375678,
+      "longitude": -97.314461685988,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "7136ccfe-2ede-4de6-ad9a-fffbcb49040d",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.343359511282,
+      "longitude": -97.71165809166,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ff866166-7d9e-4d6e-ac4d-7386004157d5",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.308857837465,
+      "longitude": -97.712893068473,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ab202566-f7ac-44cc-a7a7-9537b078b51b",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.109482504456,
+      "longitude": -97.313731255959,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "e094e039-07de-436e-8942-3abbe5becd34",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.103180459117,
+      "longitude": -97.317429229407,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c4e54dbb-6cae-42b4-8ce4-c5138271bfed",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.352158038491,
+      "longitude": -97.379364625869,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "3c5faf40-fa41-450b-894c-299c71202980",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.349053023549,
+      "longitude": -97.372228722835,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "faf2ea96-cef5-4920-9cfa-e9a9917d6588",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.086444422563,
+      "longitude": -97.49997933017,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ec30a4a3-60cf-4a17-bdbe-b2098131d48a",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.083886904657,
+      "longitude": -97.500852071141,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5089e913-cd51-483c-b322-666165033d0f",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.093349035508,
+      "longitude": -97.47852773545,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "1d5c0fd4-3e2a-4d75-a2a2-d2fcd2fffb61",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.352226324199,
+      "longitude": -97.404131293349,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "a9218b46-6595-453b-b319-a2cb3624d4af",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.112690260315,
+      "longitude": -97.32158564417,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c5402ac3-c220-4995-937d-3b1673a613a9",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.346398841232,
+      "longitude": -97.364473342414,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "d9b16bbc-d6e2-48e6-a5ab-9e9d5ab3f5a0",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.1830477827,
+      "longitude": -96.937983391088,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "64eaf9fd-99fb-4dfe-8ebc-639d80ebbfd4",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.107303488301,
+      "longitude": -97.295496774407,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "c3d4d644-e959-47e2-a470-e63cd383e280",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.102406136824,
+      "longitude": -97.307379588104,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "6bf9b42e-a820-46ab-9868-e6b4aaeba1e5",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.34787521348,
+      "longitude": -97.380360662554,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "6253cf05-e248-48ee-a471-1bb5a6861985",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.111053621098,
+      "longitude": -97.337329024503,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "3523d021-4843-43b1-9af2-70b583c9183c",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.106899299046,
+      "longitude": -97.334728258613,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9409990b-0eb4-4a63-9cba-995ca29708de",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.105370308357,
+      "longitude": -97.329141331888,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "a43b6184-e8d0-4794-bebe-82bd37dd0fa2",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.102406136824,
+      "longitude": -97.307379588104,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "3a9d1256-af01-4769-bb61-8cf9b7d3e945",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.117003996884,
+      "longitude": -97.315174099078,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "03c59176-049c-4c8b-b88e-2183737b12bb",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.128424657845,
+      "longitude": -97.32045723826,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "9843a2f6-f872-4047-99ed-1abfafa60f61",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.117003996884,
+      "longitude": -97.315174099078,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "fd2760f6-81c5-4dd7-8729-ebd0de85a85b",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.117003996884,
+      "longitude": -97.315174099078,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "4e3b8aac-bd20-4b21-a6b2-38f5752b273b",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.112137160125,
+      "longitude": -97.321322913838,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "74cee507-34e1-4d84-b6ef-35ad50f35bb3",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.010283503298,
+      "longitude": -97.158641966876,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "818ec584-39cb-4f83-b5f2-5a5f4a0bf502",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.350535606091,
+      "longitude": -97.371673529343,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "96f1bed9-7531-411e-99b6-f15a7e030f85",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.109482504456,
+      "longitude": -97.313731255959,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5bc08239-2d68-424b-9b6c-0b28f1b16c54",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.345815269193,
+      "longitude": -97.369745497442,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "dc30539b-1f5e-4176-ae79-2d9aa4d53b74",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.108534978889,
+      "longitude": -97.317556188746,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "d3706107-6b76-406a-8ebf-20fb3c8f2332",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.105370308357,
+      "longitude": -97.329141331888,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ce3088ec-323f-4d85-90d5-d5736318d5c7",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.109516913468,
+      "longitude": -97.318615324832,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "407e8035-bc4d-4b93-a206-d5f028acd038",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 29.99942615626,
+      "longitude": -97.138522010531,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "2a3cb8bc-969e-4e58-aef3-e09ae04792f0",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.108545678993,
+      "longitude": -97.318787214765,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "1ca04324-ee01-49f7-88a0-f7a473eedba6",
+    "expected_canonical_status": "draft",
+    "expected_archive_status": "draft",
+    "patch": {
+      "latitude": 30.449882849435,
+      "longitude": -97.658127379196,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "79c126f2-d23e-41f0-8191-fe66e7cb3919",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.44776622102,
+      "longitude": -97.652194443577,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "248e6c14-214d-430b-bb84-6201ef75c1a2",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.441656788504,
+      "longitude": -97.628823188033,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "48337b98-9b16-46f6-8513-37dafae976af",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.157779837875,
+      "longitude": -97.642229123497,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "0c68b06e-cf10-40f1-bde2-00fc2e9d7a9a",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.187712499454,
+      "longitude": -97.560691413413,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "eed8e03b-41f3-4f79-97af-9221116028b2",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.376990046411,
+      "longitude": -97.946547557707,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "4838708e-aef3-4267-88dc-0d6b857377cd",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.565518895963,
+      "longitude": -97.849243821789,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "8e441103-0f9f-4e9f-98c7-48abc40c829e",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.362932713159,
+      "longitude": -97.979611926101,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "85db4da9-40aa-4d3f-8d8e-47ee12f6b470",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.3444413279,
+      "longitude": -97.975292231257,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "28518a19-636e-4203-ad56-71df016c78ae",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.086975629696,
+      "longitude": -97.734848723504,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "781f32b5-d6f0-49d3-b98f-1fad59122c64",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.088820482962,
+      "longitude": -97.722679889095,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "50591043-0e94-47bb-8e30-7a9dd272465a",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.348455311113,
+      "longitude": -97.379188901863,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ae2c7616-75fd-4dfc-ae89-889775d93abb",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.274293508596,
+      "longitude": -97.812171046711,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "2d7f18e8-ef1a-47cf-8a96-922e50e222ad",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.279809691347,
+      "longitude": -97.742332778441,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5c98eae9-8418-4a9b-bfc2-342ec9ede2b5",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.295253553201,
+      "longitude": -97.688969858832,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "8c822dd0-4914-4a7e-8475-8686386d295f",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.444050469744,
+      "longitude": -97.626571166291,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "60024568-c352-4d9a-88e2-a3eaf3688385",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.314267125881,
+      "longitude": -97.714884849125,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "5af011fa-ae44-4b4c-a6f3-ee621c1067f5",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.438243218982,
+      "longitude": -97.617254945611,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "ada9dadc-4ec8-4907-a707-d4007f35690f",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.352158038491,
+      "longitude": -97.379364625869,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "539a447e-0cf8-4ca3-bbcf-aaa795dc39c5",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.189579741812,
+      "longitude": -97.560348858279,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  },
+  {
+    "canonical_id": "f7b86ed1-1722-4b5c-8db8-668d70f39b7d",
+    "expected_canonical_status": "published",
+    "expected_archive_status": "published",
+    "patch": {
+      "latitude": 30.453886411872,
+      "longitude": -97.979380283177,
+      "geocoded_at": "2026-09-03T00:00:00-05:00",
+      "geocode_status": "success"
+    },
+    "archive_ids": []
+  }
+]
