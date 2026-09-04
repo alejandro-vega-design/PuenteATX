@@ -20,6 +20,11 @@ const { default: analyticsHandler } = await import('../api/analytics/events.js')
 const { distanceMiles, distanceRingsGeojson, hasCoordinates, sortResourcesByDistance } = await import('../src/utils/geo.js');
 const { getServiceArea, serviceAreas, supportedCounties } = await import('../src/config/serviceAreas.js');
 const { normalizeServiceArea } = await import('../src/data/serviceAreaNormalization.js');
+const { toggleVisibleSelection } = await import('../src/utils/resourceSelection.js');
+
+assert.deepStrictEqual(toggleVisibleSelection([], ['a', 'b']), ['a', 'b'], 'selects every visible resource from an empty selection');
+assert.deepStrictEqual(toggleVisibleSelection(['outside', 'a'], ['a', 'b']), ['outside', 'a', 'b'], 'selects missing visible resources without clearing selections outside the current results');
+assert.deepStrictEqual(toggleVisibleSelection(['outside', 'a', 'b'], ['a', 'b']), ['outside'], 'clears only the visible resources when all of them are selected');
 
 saved.clearSavedResources();
 assert.deepStrictEqual(saved.getSavedResources(), [], 'clears saved resources');
