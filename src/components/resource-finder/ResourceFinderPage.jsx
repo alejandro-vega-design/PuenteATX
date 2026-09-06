@@ -80,6 +80,7 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
   const sheetDragRef = useRef(null);
   const requestSequence = useRef(0);
   const abortRef = useRef(null);
+  const centerOnRevealRef = useRef(false);
 
   useEffect(() => {
     const media = window.matchMedia('(max-width: 767px)');
@@ -193,6 +194,7 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
       return;
     }
     setSelectedResourceId(id);
+    centerOnRevealRef.current = centerCard;
     const resource = resources.find(item => item.id === id);
     const selectedCategory = categories.find(item => item.id === resource?.primary_category_id);
     if (resource) trackPuenteEvent('resource_selected', { resource_id: id, category_slug: selectedCategory?.slug, area_code: activeZip });
@@ -206,6 +208,18 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
       window.setTimeout(revealCard, 300);
     } else window.requestAnimationFrame(revealCard);
   }, [activeZip, categories, isMobile, resources, selectedResourceId]);
+  // Results keep streaming in after a marker is clicked (progressive batching),
+  // and a closer resource arriving in a later batch can re-sort the list after
+  // the initial scroll already ran — leaving the just-selected card wherever it
+  // landed instead of centered. Re-run the same centering whenever the sorted
+  // list changes while that selection is still the one asking to be centered.
+  useEffect(() => {
+    if (!selectedResourceId || !centerOnRevealRef.current) return;
+    const card = cardRefs.current.get(selectedResourceId);
+    if (!card) return;
+    const reveal = () => scrollCardInsideResults(card, true);
+    if (isMobile) window.setTimeout(reveal, 300); else window.requestAnimationFrame(reveal);
+  }, [results, selectedResourceId, isMobile]);
   const hoverResource = useCallback(id => setHoveredResourceId(id), []);
   const toggleIncluded = useCallback(id => setIncludedResourceIds(current => current.includes(id) ? current.filter(value => value !== id) : [...current, id]), []);
   const toggleAllVisible = useCallback(ids => setIncludedResourceIds(current => toggleVisibleSelection(current, ids)), []);
@@ -313,7 +327,7 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
   const printIncluded = useCallback(() => printSelected(false), [printSelected]);
   const saveIncludedPdf = useCallback(() => printSelected(true), [printSelected]);
   const openMobileActions = useCallback(() => { if (isMobile) setMobileSheetSnap('expanded'); }, [isMobile]);
-  const map = <ResourceMap t={t} zip={activeZip} zipCenter={zipCenter} resources={results} categories={categories} selectedId={selectedResourceId} hoveredId={hoveredResourceId} fitResults={!viewportBounds} bottomInset={mobileMapBottomInset} onSelect={selectResourceFromMap} onHover={hoverResource} onSearchArea={searchVisibleArea}/>;
+  const map = <ResourceMap t={t} zip={activeZip} zipCenter={zipCenter} resources={results} categories={categories} selectedId={selectedResourceId} hoveredId={hoveredResourceId} fitResults={!viewportBounds} bottomInset={mobileMapBottomInset} loading={loading} onSelect={selectResourceFromMap} onHover={hoverResource} onSearchArea={searchVisibleArea}/>;
   const resultsPanel = <div className="finder-panel-results">
     {isMobile && <div className="finder-mobile-map">{map}</div>}
     <div className={`finder-results is-sheet-${mobileSheetSnap}${mobileSheetDragging ? ' is-sheet-dragging' : ''}`} style={mobileSheetHeight ? { '--finder-sheet-height': `${mobileSheetHeight}px` } : undefined}>

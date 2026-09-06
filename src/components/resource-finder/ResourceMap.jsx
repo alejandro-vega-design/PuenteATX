@@ -20,10 +20,11 @@ const getMapPadding = (bottomInset = 0) => isDesktopMap() ? DESKTOP_MAP_PADDING 
 const getVisibleMapOffset = () => isDesktopMap() ? [226, 0] : [0, 0];
 const boundsFromPoints = points => points.reduce((bounds, point) => bounds.extend(point), new maplibregl.LngLatBounds(points[0], points[0]));
 
-const ResourceMap = React.memo(function ResourceMap({ t, zip, zipCenter, resources, categories, selectedId, hoveredId, fitResults = true, bottomInset = 0, onSelect, onHover, onSearchArea }) {
-  const containerRef = useRef(null); const mapRef = useRef(null); const markersRef = useRef(new Map()); const clusterMarkersRef = useRef([]); const clusterOriginsRef = useRef(new Map()); const clusterRefreshVersionRef = useRef(0); const clusterRefreshFrameRef = useRef(null); const lastClusterCameraRef = useRef(''); const lastClusterSelectionRef = useRef(selectedId); const zipMarkerRef = useRef(null); const userMoveRef = useRef(false); const refreshClustersRef = useRef(() => {}); const selectedIdRef = useRef(selectedId); const bottomInsetRef = useRef(bottomInset);
+const ResourceMap = React.memo(function ResourceMap({ t, zip, zipCenter, resources, categories, selectedId, hoveredId, fitResults = true, bottomInset = 0, loading = false, onSelect, onHover, onSearchArea }) {
+  const containerRef = useRef(null); const mapRef = useRef(null); const markersRef = useRef(new Map()); const clusterMarkersRef = useRef([]); const clusterOriginsRef = useRef(new Map()); const clusterRefreshVersionRef = useRef(0); const clusterRefreshFrameRef = useRef(null); const lastClusterCameraRef = useRef(''); const lastClusterSelectionRef = useRef(selectedId); const zipMarkerRef = useRef(null); const userMoveRef = useRef(false); const refreshClustersRef = useRef(() => {}); const selectedIdRef = useRef(selectedId); const bottomInsetRef = useRef(bottomInset); const loadingRef = useRef(loading);
   selectedIdRef.current = selectedId;
   bottomInsetRef.current = bottomInset;
+  loadingRef.current = loading;
   const [loaded, setLoaded] = useState(false); const [failed, setFailed] = useState(false); const [zipGeojson, setZipGeojson] = useState(null); const [showRings, setShowRings] = useState(false); const [pendingBounds, setPendingBounds] = useState(null);
   const selectedZipFeature = useMemo(() => zipGeojson?.features?.find(feature => feature.properties?.zip_code === zip), [zipGeojson, zip]);
   const selectedZipCoordinates = useMemo(() => selectedZipFeature ? allCoordinates(selectedZipFeature.geometry.coordinates) : [], [selectedZipFeature]);
@@ -124,7 +125,14 @@ const ResourceMap = React.memo(function ResourceMap({ t, zip, zipCenter, resourc
       if (cameraSignature === lastClusterCameraRef.current) return;
       lastClusterCameraRef.current = cameraSignature;
       const refreshVersion = ++clusterRefreshVersionRef.current;
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      // Resources arrive in batches while a search is still loading (see
+      // getPublishedResources' progressive fetch): every batch replaces the
+      // whole resources prop, which tears down and rebuilds every marker and
+      // forces a re-cluster. Animating that collapse/expand on each batch reads
+      // as markers randomly jumping around instead of a search filling in, so
+      // clusters are placed directly (like prefers-reduced-motion already does)
+      // until the full result set has loaded.
+      const reduceMotion = loadingRef.current || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const previousClusterOrigins = clusterOriginsRef.current;
       const nextClusterOrigins = new Map();
       const markerOffsets = new Map();
