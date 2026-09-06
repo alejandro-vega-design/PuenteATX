@@ -245,7 +245,7 @@ const ResourceMap = React.memo(function ResourceMap({ t, zip, zipCenter, resourc
     <div className="finder-map-actions no-print">
       {RESOURCE_FINDER_DISTANCE_RINGS_ENABLED && <button className={`finder-map-control${showRings ? ' is-active' : ''}`} type="button" aria-pressed={showRings} aria-label={t.distanceRings} title={t.distanceRings} onClick={() => setShowRings(value => !value)}><span className="material-symbols-rounded" aria-hidden="true">radar</span></button>}
     </div>
-    {!loaded && !failed && <div className="finder-map-status">{t.mapLoading}</div>}{failed && <div className="finder-map-status"><p>{t.mapError}</p></div>}
+    {!loaded && !failed && <div className="finder-map-status"><span className="loading-inline"><span className="admin-button-spinner" aria-hidden="true"/><span>{t.mapLoading}</span></span></div>}{failed && <div className="finder-map-status"><p>{t.mapError}</p></div>}
   </section>;
 });
 

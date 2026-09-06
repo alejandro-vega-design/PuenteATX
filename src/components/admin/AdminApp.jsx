@@ -83,14 +83,14 @@ export default function AdminApp({ path, locationSearch, lang, setLang, navigate
   }, [revalidateCurrentSession]);
   useEffect(() => { refresh(); }, [refresh, path]);
   useEffect(() => { if (!sessionReady) return; if (path === '/admin/login' && session) navigate('/admin', { replace: true }); else if (path !== '/admin/login' && !session) navigate('/admin/login', { replace: true }); }, [path, session, sessionReady, navigate]);
-  if (!sessionReady) return <main className="admin-loading">{lang === 'es' ? 'Comprobando sesión…' : 'Checking session…'}</main>;
+  if (!sessionReady) return <main className="admin-loading"><span className="loading-inline"><span className="admin-button-spinner" aria-hidden="true"/><span>{lang === 'es' ? 'Comprobando sesión…' : 'Checking session…'}</span></span></main>;
   if (path === '/admin/login') return session ? null : <AdminLogin t={t} onSuccess={value => { setSession(value); navigate('/admin'); }} onPublic={() => navigate('/')}/>;
   if (!session) return null;
   const logout = () => { clearAdminSession(); setSession(null); navigate('/admin/login', { replace: true }); };
   if (requiresAdminMfa(session)) return <AdminMfaGate session={session} lang={lang} onVerified={setSession} onLogout={logout}/>;
   const canAdmin = session.profile?.role === 'admin';
   let page;
-  if (loading) page = <p>{lang === 'es' ? 'Cargando…' : 'Loading…'}</p>;
+  if (loading) page = <p className="loading-inline"><span className="admin-button-spinner" aria-hidden="true"/><span>{lang === 'es' ? 'Cargando…' : 'Loading…'}</span></p>;
   else if (path === '/admin' && ['admin', 'editor'].includes(session.profile?.role)) page = <AdminDashboard t={t} resources={resources} demo={isDemoMode} navigate={navigate}/>;
   else if (path === '/admin' && hasCommunityAccess(session.profile)) page = <CommunityPassportList session={session} lang={lang} navigate={navigate}/>;
   else if (path === '/admin/recursos') page = <AdminResources t={t} lang={lang} resources={resources} refresh={refresh} navigate={navigate} notify={notify} canDeletePermanently={canAdmin} initialReview={new URLSearchParams(locationSearch).get('revision') === '1'} locationSearch={locationSearch}/>;

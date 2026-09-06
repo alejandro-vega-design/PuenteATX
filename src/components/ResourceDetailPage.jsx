@@ -20,7 +20,7 @@ export default function ResourceDetailPage({ slug, lang, t, legalTitle, legalTex
     trackPuenteEvent('resource_viewed', { resource_id: resource.id, category_slug: getCategoryById(resource.primary_category_id)?.slug });
   }, [resource]);
   useEffect(() => { if (resource && printRequested) window.setTimeout(() => { trackPuenteEvent('resource_printed', { resource_id: resource.id, category_slug: getCategoryById(resource.primary_category_id)?.slug }); window.print(); }, 250); }, [resource, printRequested]);
-  if (loading) return <main className="detail-page"><div className="narrow-container loading-state">{t.loading}</div></main>;
+  if (loading) return <main className="detail-page"><div className="narrow-container loading-state"><span className="loading-inline"><span className="admin-button-spinner" aria-hidden="true"/><span>{t.loading}</span></span></div></main>;
   if (!resource) return <><SeoHead title={`${t.notFound} | Puente ATX`} description={t.notFoundHelp} path={`/recursos/${encodeURIComponent(slug)}`} lang={lang} noindex/><main className="detail-page"><div className="narrow-container public-state"><h1>{t.notFound}</h1><p>{t.notFoundHelp}</p><button className="primary-button" onClick={() => navigate('/recursos')}>{t.browse}</button></div></main></>;
   const category = getCategoryById(resource.primary_category_id); const title = localized(resource, 'title', lang); const summary = localized(resource, 'summary', lang); const address = [resource.address_line_1, resource.address_line_2, resource.city, resource.state, resource.postal_code].filter(Boolean).join(', '); const url = canonicalResourceUrl(resource.slug);
   const structuredData = {

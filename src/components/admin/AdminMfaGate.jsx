@@ -57,7 +57,7 @@ export default function AdminMfaGate({ session, lang, onVerified, onLogout }) {
       <img className="admin-mfa-logo" src="/assets/puenteatx-logo-horizontal.svg" alt="Puente ATX"/>
       <h1 id="mfa-title">{isSetup ? t.setupTitle : t.verifyTitle}</h1>
       <p>{isSetup ? t.setupBody : t.verifyBody}</p>
-      {loading ? <p aria-live="polite">{t.loading}</p> : <form onSubmit={submit}>
+      {loading ? <p className="loading-inline" aria-live="polite"><span className="admin-button-spinner" aria-hidden="true"/><span>{t.loading}</span></p> : <form onSubmit={submit}>
         {isSetup && enrollment?.totp && <div className="admin-mfa-setup">
           {!qrFailed && totpQrSource(enrollment.totp.qr_code) && <img src={totpQrSource(enrollment.totp.qr_code)} alt={t.qrAlt} onError={() => setQrFailed(true)}/>}
           {(qrFailed || !totpQrSource(enrollment.totp.qr_code)) && <p className="admin-mfa-qr-fallback">{t.qrFallback}</p>}

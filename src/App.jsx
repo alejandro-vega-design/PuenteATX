@@ -69,7 +69,7 @@ export default function App() {
   }, []);
 
   const search = () => navigate(`/recursos?q=${encodeURIComponent(query.trim())}`, { analyticsSearch: true });
-  if (location.path.startsWith('/admin')) return <><SeoHead title={lang === 'es' ? 'Administración | Puente ATX' : 'Administration | Puente ATX'} description={lang === 'es' ? 'Acceso administrativo de Puente ATX.' : 'Puente ATX administrative access.'} path={location.path} lang={lang} noindex/><Suspense fallback={<main className="admin-loading">Cargando…</main>}><AdminApp path={location.path} locationSearch={location.search} lang={lang} setLang={setLang} navigate={navigate}/></Suspense></>;
+  if (location.path.startsWith('/admin')) return <><SeoHead title={lang === 'es' ? 'Administración | Puente ATX' : 'Administration | Puente ATX'} description={lang === 'es' ? 'Acceso administrativo de Puente ATX.' : 'Puente ATX administrative access.'} path={location.path} lang={lang} noindex/><Suspense fallback={<main className="admin-loading"><span className="loading-inline"><span className="admin-button-spinner" aria-hidden="true"/><span>Cargando…</span></span></main>}><AdminApp path={location.path} locationSearch={location.search} lang={lang} setLang={setLang} navigate={navigate}/></Suspense></>;
   const toggleSaved = value => {
     const slug = typeof value === 'string' ? value : value.slug;
     const adding = !savedResources.isSaved(slug);

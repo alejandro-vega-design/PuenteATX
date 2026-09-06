@@ -225,7 +225,7 @@ export default function AdminInsights({ lang, locationSearch, navigate }) {
     const filtered = (snapshot?.resources || []).filter(item => !query || [item.organization_name, item.title_es, item.title_en].join(' ').toLocaleLowerCase().includes(query));
     return [...filtered].sort((a, b) => resourceSort === 'views' ? b.views - a.views : resourceSort === 'saves' ? b.saves - a.saves : b.contact_actions - a.contact_actions);
   }, [snapshot, resourceQuery, resourceSort]);
-  if (loading && !snapshot) return <div className="insights-loading" aria-live="polite">{t.loading}</div>;
+  if (loading && !snapshot) return <div className="insights-loading" aria-live="polite"><span className="loading-inline"><span className="admin-button-spinner" aria-hidden="true"/><span>{t.loading}</span></span></div>;
   if (error && !snapshot) return <section className="admin-error-state"><h1>{t.title}</h1><p>{t.loadError}</p><button className="secondary-button" onClick={load}>{t.retry}</button></section>;
   const kpis = snapshot ? [
     { label: t.activeSessions, value: current.active_sessions, definition: metricDefinitions.active_sessions.description[lang], trend: metricTrend(current.active_sessions, previous.active_sessions), lang },

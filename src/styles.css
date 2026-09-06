@@ -670,10 +670,12 @@ a.compact-resource-line { text-decoration: underline; text-underline-offset: 3px
 .save-card-action.is-saved { border-color: var(--color-accent); color: var(--color-accent); }
 .show-more { width: 100%; }
 .loading-state, .public-state { min-height: 220px; padding: 40px 20px; border: 1px solid var(--color-line); border-radius: var(--radius-md); display: grid; place-items: center; text-align: center; }
+/* Generic spinner + text pairing for any inline "loading"/interstitial message. */
+.loading-inline { display: inline-flex; align-items: center; gap: 8px; }
 .resource-loading-state { align-content: center; gap: 12px; }
 .resource-loading-state strong { font-family: var(--font-heading); font-size: 20px; }
 .resource-loading-state > span:last-child { max-width: 340px; line-height: 1.45; }
-.resource-loading-spinner { width: 34px; height: 34px; border-width: 3px; border-color: var(--color-line-faint); border-top-color: var(--color-accent); }
+.resource-loading-spinner { width: 34px; height: 34px; border-width: 3px; }
 .resource-progressive-loading { min-height: 52px; padding: 8px 12px; border: 1px solid var(--color-line-subtle); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--color-ink); font-weight: 600; }
 .resource-progressive-loading .resource-loading-spinner { width: 20px; height: 20px; border-width: 2px; }
 .results-list > .public-state { border-color: var(--color-line-subtle); }
@@ -842,7 +844,10 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
 .admin-csv-preview > header p { margin: 4px 0 0; }
 .admin-csv-preview > header .primary-button { margin: 0; flex: none; }
 .admin-import-progress-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
-.admin-button-spinner { width: 17px; height: 17px; border: 2px solid rgba(255, 255, 255, .45); border-top-color: var(--color-white); border-radius: 50%; animation: admin-button-spin .7s linear infinite; }
+/* Uses currentColor so it always matches whatever text it sits next to (white on
+   a filled button, ink on a page's loading copy, etc.) without needing a
+   per-context color override — only size varies (see .resource-loading-spinner). */
+.admin-button-spinner { flex: none; width: 17px; height: 17px; border: 2px solid color-mix(in srgb, currentColor 30%, transparent); border-top-color: currentColor; border-radius: 50%; animation: admin-button-spin .7s linear infinite; }
 @keyframes admin-button-spin { to { transform: rotate(360deg); } }
 .admin-csv-table-wrap { border: 1px solid var(--color-line-subtle); border-radius: var(--radius-sm); overflow-x: auto; }
 .admin-csv-table-wrap table { width: 100%; min-width: 700px; border-collapse: collapse; }
