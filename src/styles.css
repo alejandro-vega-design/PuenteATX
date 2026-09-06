@@ -495,7 +495,15 @@ h2 { letter-spacing: -.015em; }
 .finder-active-filters .finder-clear-filters { padding-inline: 2px; border: 0; border-radius: 0; color: var(--color-ink); text-decoration: underline; text-underline-offset: 3px; }
 .finder-active-filters .finder-clear-filters:hover, .finder-active-filters .finder-clear-filters:focus-visible { color: var(--color-accent); }
 .finder-panel-results { min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr); overflow: hidden; }
-.finder-results { min-height: 0; height: 100%; overflow-x: hidden; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-gutter: stable; touch-action: pan-y; -webkit-overflow-scrolling: touch; }
+/* overflow-anchor: none — cards below the fold use content-visibility: auto, so
+   scrolling past one for the first time can resolve its real (vs. estimated)
+   height mid-scroll. The browser's own scroll-anchoring then "corrects" for
+   that shift by nudging scrollTop on its own, fighting the precise centered
+   position scrollCardInsideResults() just set — but only the first time a
+   given stretch of cards is scrolled through, since their heights are already
+   resolved after that. Disabling native anchoring here leaves our own math as
+   the only thing moving this container. */
+.finder-results { min-height: 0; height: 100%; overflow-x: hidden; overflow-y: auto; overflow-anchor: none; overscroll-behavior-y: contain; scrollbar-gutter: stable; touch-action: pan-y; -webkit-overflow-scrolling: touch; }
 .finder-sheet-handle { display: none; }
 .finder-results-content { padding: 14px 16px 24px; }
 .finder-results-summary { position: sticky; z-index: 8; top: 0; min-height: 53px; margin: -14px -16px 12px; padding: 6px 16px 7px; border-bottom: 1px solid var(--color-line-subtle); background: var(--color-canvas); display: grid; gap: 0; }
