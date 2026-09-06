@@ -51,6 +51,20 @@ export function destinationPoint(origin, distance, bearing) {
   return [degrees(nextLongitude), degrees(nextLatitude)];
 }
 
+// A bounding box that fully contains the circle of `radiusMiles` around
+// `origin`: the four cardinal destination points are exactly the circle's
+// north/south/east/west extremes, so the box neither clips the circle nor
+// pads it unnecessarily. Used to pre-filter the resources query server-side
+// instead of downloading every resource in the state to filter client-side.
+export function boundingBoxFromCenter(origin, radiusMiles) {
+  if (!hasCoordinates(origin) || !Number.isFinite(radiusMiles) || radiusMiles <= 0) return null;
+  const [, north] = destinationPoint(origin, radiusMiles, 0);
+  const [east] = destinationPoint(origin, radiusMiles, 90);
+  const [, south] = destinationPoint(origin, radiusMiles, 180);
+  const [west] = destinationPoint(origin, radiusMiles, 270);
+  return { north, south, east, west };
+}
+
 export function distanceRingsGeojson(origin, radii = [10, 20, 30], steps = 96) {
   if (!hasCoordinates(origin)) return { type: 'FeatureCollection', features: [] };
   const ringFeatures = radii.map(radius => {

@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { getCategories, getResourceFinderData } from '../../data/repository';
 import { getServiceArea } from '../../config/serviceAreas';
 import { RESOURCE_FINDER_EXPANDED_RADIUS_MILES, RESOURCE_FINDER_INITIAL_RADIUS_MILES, RESOURCE_FINDER_REGIONAL_RADIUS_MILES } from '../../config/resourceFinder';
-import { hasCoordinates, sortResourcesByDistance } from '../../utils/geo';
+import { boundingBoxFromCenter, hasCoordinates, sortResourcesByDistance } from '../../utils/geo';
 import { toggleVisibleSelection } from '../../utils/resourceSelection';
 import { trackPuenteEvent } from '../../analytics/client';
 import { shareLink, sharedListUrl } from '../../services/share';
@@ -78,6 +78,8 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
   const [filterDrawerActive, setFilterDrawerActive] = useState(false);
   const cardRefs = useRef(new Map());
   const sheetDragRef = useRef(null);
+  const requestSequence = useRef(0);
+  const abortRef = useRef(null);
 
   useEffect(() => {
     const media = window.matchMedia('(max-width: 767px)');
@@ -87,6 +89,7 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
     return () => media.removeEventListener?.('change', update);
   }, []);
   useEffect(() => { getCategories().then(setCategories).catch(() => setError(t.loadError)); }, [t.loadError]);
+  useEffect(() => () => abortRef.current?.abort(), []);
   useEffect(() => {
     if (!isMobile) { setFilterDrawerMounted(false); setFilterDrawerActive(false); return undefined; }
     if (panelView === 'filters') {
@@ -117,12 +120,29 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
     return `/buscador${query ? `?${query}` : ''}`;
   }, []);
 
+  // Resources stream in progressively (see getPublishedResources' onProgress
+  // batching) instead of blocking on one request for every published resource:
+  // the map and result cards start rendering after the first small batch, and
+  // a geographic bounding box (computed from the zip + search radius) is sent
+  // to the server so a search only ever downloads resources that could plausibly
+  // be in range — the set fetched stays bounded by the search area, not by how
+  // many resources exist across the whole database, however large that grows.
   const runSearch = useCallback(async (zip, nextFilters, nextRadius = RESOURCE_FINDER_INITIAL_RADIUS_MILES, updateUrl = true) => {
     const center = getServiceArea(zip);
     if (!center) { setZipError(t.invalidZip); return; }
-    setZipError(''); setError(null); setLoading(true); setSearched(true); setSelectedResourceId(null); setActiveZip(zip); setZipCenter(center); setRadius(nextRadius); setViewportBounds(null);
+    abortRef.current?.abort();
+    const controller = new AbortController();
+    abortRef.current = controller;
+    const requestId = ++requestSequence.current;
+    const isCurrent = () => requestId === requestSequence.current && !controller.signal.aborted;
+    setZipError(''); setError(null); setLoading(true); setSearched(true); setSelectedResourceId(null); setActiveZip(zip); setZipCenter(center); setRadius(nextRadius); setViewportBounds(null); setResources([]);
+    const bbox = boundingBoxFromCenter(center, nextRadius);
     try {
-      const found = await getResourceFinderData({ filters: nextFilters, lang });
+      const found = await getResourceFinderData({
+        filters: nextFilters, lang, bbox, signal: controller.signal,
+        onProgress: partial => { if (isCurrent()) setResources(partial); }
+      });
+      if (!isCurrent()) return;
       setResources(found);
       const mappable = sortResourcesByDistance(found, center).filter(resource => resource.distance_miles <= nextRadius);
       const withoutCoordinates = found.filter(resource => !hasCoordinates(resource));
@@ -133,7 +153,11 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
       trackPuenteEvent('search_submitted', { search_result_count: resultCount, category_slug: categorySlug, area_code: zip });
       if (!resultCount) trackPuenteEvent('search_no_results', { search_result_count: 0, category_slug: categorySlug, area_code: zip });
       if (updateUrl) navigate(urlForSearch(zip, nextFilters), { replace: true, scroll: false });
-    } catch { setError(t.loadError); } finally { setLoading(false); }
+    } catch (loadError) {
+      if (loadError?.name !== 'AbortError' && isCurrent()) setError(t.loadError);
+    } finally {
+      if (isCurrent()) setLoading(false);
+    }
   }, [lang, navigate, t.invalidZip, t.loadError, urlForSearch]);
 
   useEffect(() => { if (initialZip) runSearch(initialZip, initialFilters, RESOURCE_FINDER_INITIAL_RADIUS_MILES, false); }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -216,7 +240,30 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
     const next = { categories: [], languages: [], methods: [], costs: [], recent: false };
     setFilters(next); setDraftFilters(next); runSearch(form.zip, next);
   };
-  const searchVisibleArea = useCallback(bounds => { setViewportBounds(bounds); setSelectedResourceId(null); }, []);
+  // "Search this area" can pan well outside the zip-derived bounding box that
+  // the original search fetched, so it re-queries the server with the panned
+  // viewport as the new bbox rather than only re-filtering whatever the initial
+  // search already happened to have in memory.
+  const searchVisibleArea = useCallback(async bounds => {
+    setViewportBounds(bounds); setSelectedResourceId(null);
+    abortRef.current?.abort();
+    const controller = new AbortController();
+    abortRef.current = controller;
+    const requestId = ++requestSequence.current;
+    const isCurrent = () => requestId === requestSequence.current && !controller.signal.aborted;
+    setLoading(true); setError(null);
+    try {
+      const found = await getResourceFinderData({
+        filters, lang, bbox: bounds, signal: controller.signal,
+        onProgress: partial => { if (isCurrent()) setResources(partial); }
+      });
+      if (isCurrent()) setResources(found);
+    } catch (loadError) {
+      if (loadError?.name !== 'AbortError' && isCurrent()) setError(t.loadError);
+    } finally {
+      if (isCurrent()) setLoading(false);
+    }
+  }, [filters, lang, t.loadError]);
   const startSheetDrag = event => {
     if (!isMobile) return;
     const sheet = event.currentTarget.closest('.finder-results');

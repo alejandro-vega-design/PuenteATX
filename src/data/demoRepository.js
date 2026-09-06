@@ -12,7 +12,7 @@ export const demoRepository = {
   async getResourceBySlug(slug) { return delay(resources.find(resource => resource.slug === slug && resource.status === 'published') || null); },
   async searchResources(term, lang = 'es') { return this.getPublishedResources({ q: term }, lang); },
   async filterResources(filters, lang = 'es') { return this.getPublishedResources(filters, lang); },
-  async getResourceFinderData({ filters = {}, lang = 'es' } = {}) { return this.getPublishedResources({ q: '', categories: [], languages: [], methods: [], costs: [], area: '', recent: false, sort: 'updated', page: 1, ...filters }, lang); },
+  async getResourceFinderData({ filters = {}, lang = 'es', ...options } = {}) { return this.getPublishedResources({ q: '', categories: [], languages: [], methods: [], costs: [], area: '', recent: false, sort: 'updated', page: 1, ...filters }, lang, options); },
   async getAdminResources() { return delay([...resources]); },
   async createResource(values) { const resource = { ...values, id: crypto.randomUUID?.() || `demo-${Date.now()}`, created_at: new Date().toISOString(), updated_at: new Date().toISOString() }; resources = [resource, ...resources]; return delay(resource); },
   async updateResource(id, values) { let updated; resources = resources.map(resource => resource.id === id ? (updated = { ...resource, ...values, updated_at: new Date().toISOString() }) : resource); return delay(updated); },

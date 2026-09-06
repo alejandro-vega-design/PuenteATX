@@ -17,9 +17,14 @@ const ResourceResultsPanel = React.memo(function ResourceResultsPanel({ t, lang,
     document.addEventListener('pointerdown', close); document.addEventListener('keydown', escape);
     return () => { document.removeEventListener('pointerdown', close); document.removeEventListener('keydown', escape); };
   }, [actionsOpen]);
-  if (loading) return <div className="finder-skeletons" aria-live="polite"><span className="sr-only">{t.resourcesLoading}</span>{[1, 2, 3].map(item => <div className="finder-card-skeleton" key={item}/>)}</div>;
   if (!searched) return <div className="finder-empty"><span className="material-symbols-rounded finder-empty-icon" aria-hidden="true">location_on</span><h2>{t.startTitle}</h2><p>{t.startText}</p></div>;
-  if (!results.length && !unlocatedResults.length && !remoteResults.length) return <div className="finder-empty" aria-live="polite"><span className="material-symbols-rounded finder-empty-icon" aria-hidden="true">location_on</span><h2>{t.empty(categoryLabel, zip)}</h2><p>{t.emptyHelp}</p><div className="finder-empty-actions">{radius < 50 && <button className="secondary-button" onClick={onExpand}>{t.expand(radius === 15 ? 30 : 50)}</button>}{categoryLabel && <button className="secondary-button" onClick={onClearCategory}>{t.allNearby}</button>}<button className="text-link" onClick={onRequestHelp}>{t.requestHelp}</button></div></div>;
+  const hasAnyResults = results.length > 0 || unlocatedResults.length > 0 || remoteResults.length > 0;
+  // Results stream in progressively (see getPublishedResources' batching), so the
+  // full-page skeleton only covers the gap before the first batch arrives; once
+  // there is something to show, render it immediately and mark that more is on
+  // the way instead of hiding already-loaded cards behind a skeleton the whole time.
+  if (loading && !hasAnyResults) return <div className="finder-skeletons" aria-live="polite"><span className="sr-only">{t.resourcesLoading}</span>{[1, 2, 3].map(item => <div className="finder-card-skeleton" key={item}/>)}</div>;
+  if (!loading && !hasAnyResults) return <div className="finder-empty" aria-live="polite"><span className="material-symbols-rounded finder-empty-icon" aria-hidden="true">location_on</span><h2>{t.empty(categoryLabel, zip)}</h2><p>{t.emptyHelp}</p><div className="finder-empty-actions">{radius < 50 && <button className="secondary-button" onClick={onExpand}>{t.expand(radius === 15 ? 30 : 50)}</button>}{categoryLabel && <button className="secondary-button" onClick={onClearCategory}>{t.allNearby}</button>}<button className="text-link" onClick={onRequestHelp}>{t.requestHelp}</button></div></div>;
   const visibleIds = [...results, ...unlocatedResults, ...remoteResults].map(resource => resource.id);
   const allVisibleSelected = visibleIds.length > 0 && visibleIds.every(id => includedIds.includes(id));
   const toggleActions = () => {
@@ -47,6 +52,7 @@ const ResourceResultsPanel = React.memo(function ResourceResultsPanel({ t, lang,
     {results.length > 0 && <section className="finder-result-group"><Cards resources={results} {...cardProps}/></section>}
     {unlocatedResults.length > 0 && <section className="finder-result-group finder-remote-results"><h2>{t.unlocatedTitle}</h2><p>{t.unlocatedText}</p><Cards resources={unlocatedResults} {...cardProps}/></section>}
     {remoteResults.length > 0 && <section className="finder-result-group finder-remote-results"><h2>{results.length ? t.remoteTitle : t.noPhysical(zip)}</h2><p>{results.length ? t.remoteText : t.remoteOnlyText}</p><Cards resources={remoteResults} {...cardProps}/></section>}
+    {loading && <div className="resource-progressive-loading" role="status" aria-live="polite"><span className="admin-button-spinner resource-loading-spinner" aria-hidden="true"/><span>{t.loadingMore}</span></div>}
   </div>;
 });
 
