@@ -28,16 +28,21 @@ const hasRemoteAccess = resource => resource.service_methods?.some(method => ['p
 const scrollCardInsideResults = (card, centerCard) => {
   const scrollArea = card?.closest('.finder-results');
   if (!scrollArea || scrollArea.scrollHeight <= scrollArea.clientHeight) return;
+  // The results count header is sticky (position: sticky; top: 0) and covers the
+  // top of the scroll area while scrolled, so it must be excluded from both the
+  // "is this card already visible" check and the available height used to center.
+  const stickyHeight = scrollArea.querySelector('.finder-results-summary')?.getBoundingClientRect().height || 0;
   const areaRect = scrollArea.getBoundingClientRect();
   const cardRect = card.getBoundingClientRect();
   const cardTop = scrollArea.scrollTop + cardRect.top - areaRect.top;
   const cardBottom = cardTop + cardRect.height;
-  const visibleTop = scrollArea.scrollTop;
-  const visibleBottom = visibleTop + scrollArea.clientHeight;
-  const hasRoomToCenter = centerCard && scrollArea.clientHeight >= cardRect.height + 32;
-  let nextTop = visibleTop;
-  if (hasRoomToCenter) nextTop = cardTop - (scrollArea.clientHeight - cardRect.height) / 2;
-  else if (cardTop < visibleTop) nextTop = cardTop;
+  const visibleTop = scrollArea.scrollTop + stickyHeight;
+  const visibleBottom = scrollArea.scrollTop + scrollArea.clientHeight;
+  const availableHeight = scrollArea.clientHeight - stickyHeight;
+  const hasRoomToCenter = centerCard && availableHeight >= cardRect.height + 32;
+  let nextTop = scrollArea.scrollTop;
+  if (hasRoomToCenter) nextTop = cardTop - stickyHeight - (availableHeight - cardRect.height) / 2;
+  else if (cardTop < visibleTop) nextTop = cardTop - stickyHeight;
   else if (cardBottom > visibleBottom) nextTop = cardBottom - scrollArea.clientHeight;
   else return;
   scrollArea.scrollTo({ top: Math.max(0, nextTop), behavior: 'smooth' });
