@@ -48,6 +48,36 @@ const scrollCardInsideResults = (card, centerCard) => {
   scrollArea.scrollTo({ top: Math.max(0, nextTop), behavior: 'smooth' });
 };
 
+// On mobile, centering a card also expands the bottom sheet, which animates its
+// height via CSS transition (.28s, see .finder-results in styles.css). Centering
+// math needs the sheet's FINAL height, so guessing a fixed delay before measuring
+// is the same class of bug already fixed on desktop (content-visibility/scroll
+// anchoring): it can run short under jank and land off-center. Instead, poll
+// clientHeight across frames until it stops changing, then reveal — same "measure
+// real state, don't guess timing" fix, applied to the sheet-resize case.
+const waitForStableHeight = (el, done, framesLeft = 24) => {
+  const before = el.clientHeight;
+  window.requestAnimationFrame(() => {
+    if (before === el.clientHeight || framesLeft <= 0) done();
+    else waitForStableHeight(el, done, framesLeft - 1);
+  });
+};
+
+const scheduleReveal = (getCard, centerCard, isMobile) => {
+  const revealNow = () => {
+    const card = getCard();
+    if (card) scrollCardInsideResults(card, centerCard);
+  };
+  if (!isMobile) { window.requestAnimationFrame(revealNow); return; }
+  // Wait a frame so the sheet's snap class (set just before calling this) has
+  // committed to the DOM, then wait for its resize transition to settle.
+  window.requestAnimationFrame(() => {
+    const sheet = getCard()?.closest('.finder-results');
+    if (!sheet) { revealNow(); return; }
+    waitForStableHeight(sheet, revealNow);
+  });
+};
+
 export default function ResourceFinderPage({ lang, t, filterT, locationSearch, navigate }) {
   const params = useMemo(() => new URLSearchParams(locationSearch), [locationSearch]);
   const initialZip = params.get('zip') || '';
@@ -198,15 +228,8 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
     const resource = resources.find(item => item.id === id);
     const selectedCategory = categories.find(item => item.id === resource?.primary_category_id);
     if (resource) trackPuenteEvent('resource_selected', { resource_id: id, category_slug: selectedCategory?.slug, area_code: activeZip });
-    const revealCard = () => {
-      const card = cardRefs.current.get(id);
-      if (!card) return;
-      scrollCardInsideResults(card, centerCard);
-    };
-    if (centerCard && isMobile) {
-      setMobileSheetSnap('half');
-      window.setTimeout(revealCard, 300);
-    } else window.requestAnimationFrame(revealCard);
+    if (centerCard && isMobile) setMobileSheetSnap('half');
+    scheduleReveal(() => cardRefs.current.get(id), centerCard, isMobile);
   }, [activeZip, categories, isMobile, resources, selectedResourceId]);
   // Results keep streaming in after a marker is clicked (progressive batching),
   // and a closer resource arriving in a later batch can re-sort the list after
@@ -215,10 +238,8 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
   // list changes while that selection is still the one asking to be centered.
   useEffect(() => {
     if (!selectedResourceId || !centerOnRevealRef.current) return;
-    const card = cardRefs.current.get(selectedResourceId);
-    if (!card) return;
-    const reveal = () => scrollCardInsideResults(card, true);
-    if (isMobile) window.setTimeout(reveal, 300); else window.requestAnimationFrame(reveal);
+    if (!cardRefs.current.get(selectedResourceId)) return;
+    scheduleReveal(() => cardRefs.current.get(selectedResourceId), true, isMobile);
   }, [results, selectedResourceId, isMobile]);
   const hoverResource = useCallback(id => setHoveredResourceId(id), []);
   const toggleIncluded = useCallback(id => setIncludedResourceIds(current => current.includes(id) ? current.filter(value => value !== id) : [...current, id]), []);

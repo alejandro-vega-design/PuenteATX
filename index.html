@@ -7,8 +7,17 @@
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back,arrow_downward_alt,arrow_forward,arrow_outward,check,check_box,check_box_outline_blank,chevron_left,close,done_all,expand_more,filter_list,location_on,more_horiz,picture_as_pdf,print,radar,refresh,remove_done,search,share,swap_vert" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=archive,badge,category,corporate_fare,download,edit,file_export,forward_to_inbox,group,info,publish,query_stats,upload_file" />
+    <!-- Loaded non-blocking: on a slow/cellular connection these external stylesheets
+         would otherwise delay first paint of the whole app shell just to fetch icon
+         glyphs. media="print" makes the browser fetch them without blocking render;
+         onload swaps it to "all" once it arrives, and the <noscript> fallback covers
+         the (rare) no-JS case. -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back,arrow_downward_alt,arrow_forward,arrow_outward,check,check_box,check_box_outline_blank,chevron_left,close,done_all,expand_more,filter_list,location_on,more_horiz,picture_as_pdf,print,radar,refresh,remove_done,search,share,swap_vert" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=archive,badge,category,corporate_fare,download,edit,file_export,forward_to_inbox,group,info,publish,query_stats,upload_file" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back,arrow_downward_alt,arrow_forward,arrow_outward,check,check_box,check_box_outline_blank,chevron_left,close,done_all,expand_more,filter_list,location_on,more_horiz,picture_as_pdf,print,radar,refresh,remove_done,search,share,swap_vert" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=archive,badge,category,corporate_fare,download,edit,file_export,forward_to_inbox,group,info,publish,query_stats,upload_file" />
+    </noscript>
     <meta name="description" content="Puente ATX: recursos gratuitos y confidenciales para familias del Centro de Texas." />
     <meta name="robots" content="index, follow" />
     <meta property="og:title" content="Puente ATX | Recursos comunitarios en Austin" />
@@ -28,5 +37,16 @@
     <link rel="canonical" href="https://puenteatx.org" />
     <title>Puente ATX | Recursos comunitarios en Austin</title>
   </head>
-  <body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body>
+  <body>
+    <div id="root">
+      <!-- Static first paint for slow/cellular connections: the JS bundle can take a
+           moment to download and execute, and a bare white screen reads as broken.
+           React replaces this the instant it mounts. -->
+      <div style="min-height:100vh;display:grid;place-items:center;background:#f8f7f2;">
+        <div style="width:34px;height:34px;border:3px solid #e1d6cf;border-top-color:#db744a;border-radius:50%;animation:app-boot-spin .7s linear infinite;"></div>
+      </div>
+      <style>@keyframes app-boot-spin{to{transform:rotate(360deg)}}</style>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
