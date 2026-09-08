@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "vite build && node scripts/generate-seo.js",
+    "build": "node scripts/split-zip-boundaries.mjs && vite build && node scripts/generate-seo.js",
     "lint": "eslint src",
     "test": "node --experimental-specifier-resolution=node scripts/test.js"
   },

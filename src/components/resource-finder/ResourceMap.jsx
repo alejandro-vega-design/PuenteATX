@@ -31,13 +31,16 @@ const ResourceMap = React.memo(function ResourceMap({ t, zip, zipCenter, resourc
   const ringGeojson = useMemo(() => RESOURCE_FINDER_DISTANCE_RINGS_ENABLED && showRings && zipCenter ? distanceRingsGeojson(zipCenter, DISPLAY_RING_MILES) : { type: 'FeatureCollection', features: [] }, [showRings, zipCenter]);
   useEffect(() => { setPendingBounds(null); }, [zip]);
   useEffect(() => {
+    // Fetches only the searched ZIP's own boundary file (a couple KB) instead of
+    // the ~150-185KB file combining all approved ZIPs — see split-zip-boundaries.mjs.
+    if (!zip) { setZipGeojson(null); return undefined; }
     let active = true;
-    fetch('/maps/central-texas-zip-codes.geojson').then(response => {
+    fetch(`/maps/zip-boundaries/${encodeURIComponent(zip)}.geojson`).then(response => {
       if (!response.ok) throw new Error('ZIP geography unavailable');
       return response.json();
-    }).then(data => { if (active) setZipGeojson(data); }).catch(() => {});
+    }).then(data => { if (active) setZipGeojson(data); }).catch(() => { if (active) setZipGeojson(null); });
     return () => { active = false; };
-  }, []);
+  }, [zip]);
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return undefined;
     try {

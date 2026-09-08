@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { getCategories, getResourceFinderData } from '../../data/repository';
 import { getServiceArea } from '../../config/serviceAreas';
 import { RESOURCE_FINDER_EXPANDED_RADIUS_MILES, RESOURCE_FINDER_INITIAL_RADIUS_MILES, RESOURCE_FINDER_REGIONAL_RADIUS_MILES } from '../../config/resourceFinder';
@@ -9,7 +9,15 @@ import { shareLink, sharedListUrl } from '../../services/share';
 import ResourceSearchForm from './ResourceSearchForm';
 import ResourceResultsPanel from './ResourceResultsPanel';
 import ResourceFinderFilters from './ResourceFinderFilters';
-import ResourceMap from './ResourceMap';
+// MapLibre GL (~200KB gzip) is the vast majority of what this page weighs, but the
+// search form and results list don't need it — split it into its own chunk so
+// those can render as soon as they're ready instead of waiting on the map's JS to
+// finish downloading and parsing too. This only reorders when things arrive; the
+// map still loads automatically and shows in the same place (see the Suspense
+// fallback below, which reuses ResourceMap's own "loading map" look so the
+// hand-off between the two is seamless).
+const ResourceMap = lazy(() => import('./ResourceMap'));
+const mapLoadingFallback = t => <div className="finder-map-status"><span className="loading-inline"><span className="admin-button-spinner" aria-hidden="true"/><span>{t.mapLoading}</span></span></div>;
 import FinderPrintSheet from './FinderPrintSheet';
 import StatusToast from '../StatusToast';
 
@@ -348,7 +356,7 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
   const printIncluded = useCallback(() => printSelected(false), [printSelected]);
   const saveIncludedPdf = useCallback(() => printSelected(true), [printSelected]);
   const openMobileActions = useCallback(() => { if (isMobile) setMobileSheetSnap('expanded'); }, [isMobile]);
-  const map = <ResourceMap t={t} zip={activeZip} zipCenter={zipCenter} resources={results} categories={categories} selectedId={selectedResourceId} hoveredId={hoveredResourceId} fitResults={!viewportBounds} bottomInset={mobileMapBottomInset} loading={loading} onSelect={selectResourceFromMap} onHover={hoverResource} onSearchArea={searchVisibleArea}/>;
+  const map = <Suspense fallback={mapLoadingFallback(t)}><ResourceMap t={t} zip={activeZip} zipCenter={zipCenter} resources={results} categories={categories} selectedId={selectedResourceId} hoveredId={hoveredResourceId} fitResults={!viewportBounds} bottomInset={mobileMapBottomInset} loading={loading} onSelect={selectResourceFromMap} onHover={hoverResource} onSearchArea={searchVisibleArea}/></Suspense>;
   const resultsPanel = <div className="finder-panel-results">
     {isMobile && <div className="finder-mobile-map">{map}</div>}
     <div className={`finder-results is-sheet-${mobileSheetSnap}${mobileSheetDragging ? ' is-sheet-dragging' : ''}`} style={mobileSheetHeight ? { '--finder-sheet-height': `${mobileSheetHeight}px` } : undefined}>
