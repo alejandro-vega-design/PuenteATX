@@ -83,6 +83,12 @@ For pairs that share a hard anchor (exact phone, exact normalized address, or ex
 
 Prefer the record with the more recent `updated_at` as the survivor when both sides are otherwise equivalent in quality; the older one is the one to resolve.
 
+Two cheap, high-precision signals worth checking first on any export, before the similarity pass:
+- A `slug` ending in `-2`, `-3`, … that the importer auto-appended on collision. It only does this when it could not match an existing record and created a new one, so the suffixed slug is almost always a true duplicate of the un-suffixed one (`integral-care-integral-care-2` beside `integral-care-integral-care`, `catholic-charities-…-2`, `greater-mt-zion-church-…-2`).
+- A record whose Spanish title matches another record's English title under the same normalized organization. The importer's name-plus-title match runs per language, so a listing entered once in Spanish and once in English becomes two separate records — often both `published` (`hope-counseling-program-williamson-county` beside `programa-de-consejeria-hope-…`, `communitycare-primary-and-specialty-health-services` beside `atencion-medica-primaria-y-especializada-…`). Merge the language-split pair into one bilingual record; do not treat the thinner-language side as a distinct service.
+
+A plain `select * from resources` export (Supabase Table Editor or SQL) has three shapes that trip naive parsing: `primary_category_id` is a UUID, not a slug — map it through `categories.js`; additional categories are absent entirely, since they live in the `resource_categories` join table rather than a column; and `languages` / `service_methods` / `keywords_*` come back as JSON arrays (`["es","en"]`) or Postgres array literals (`{es,en}`), not `|`-delimited strings. `scripts/audit-db-resources.mjs` already handles all three — a hand-written query or a different export tool will not.
+
 ### Tagging convention when the admin app cannot hard-delete
 
 The `resources` table's `authenticated` role has `SELECT`/`INSERT`/`UPDATE` but **no `DELETE` grant** — attempting a REST `DELETE` returns `42501 permission denied`. This is intentional (never permanently delete; archive instead), and a service-role key must never be introduced to work around it. Practical convention for flagging outcomes so a human admin can act from the dashboard list view without opening each record:

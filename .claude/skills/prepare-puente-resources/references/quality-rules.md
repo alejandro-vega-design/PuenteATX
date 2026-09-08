@@ -17,7 +17,7 @@ Read the live importer first. These rules supplement it and resolve recurring da
   - **Title/content mismatch:** the title conflicts with the service evidence, such as pet food labeled as groceries for people or senior-care navigation labeled as adult education. Retitle and repair contaminated summaries.
   - **Ambiguous title:** the title omits essential context supplied by verified evidence. Add the missing subject or population without adding the organization.
   - **True duplicate:** contact details, official identity, program description, and coverage show that two rows represent one service. Consolidate verified complementary fields into a canonical record and archive the duplicate; do not fabricate distinct titles.
-- Treat spelling variants, county-split imports, and an organization/program name appearing once as the organization and once as the title as duplicate signals, not proof. Preserve separate programs and separate physical locations when they deliver distinct services.
+- Treat spelling variants, county-split imports, importer-suffixed slugs (`-2`, `-3`), a Spanish-titled row and an English-titled row for one program under the same organization, and an organization/program name appearing once as the organization and once as the title as duplicate signals, not proof. Preserve separate programs and separate physical locations when they deliver distinct services.
 - After correction, rerun the audit and document every remaining shared-title group with its legitimate rationale.
 
 ## Classification integrity
