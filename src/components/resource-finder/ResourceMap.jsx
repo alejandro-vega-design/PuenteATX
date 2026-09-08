@@ -12,7 +12,13 @@ const RINGS_LINE_LAYER_ID = 'finder-distance-rings-line';
 const RINGS_LABEL_LAYER_ID = 'finder-distance-rings-label';
 const DISPLAY_RING_MILES = [5, 10, 15];
 const DESKTOP_MAP_QUERY = '(min-width: 768px)';
-const DESKTOP_MAP_PADDING = { top: 64, right: 48, bottom: 64, left: 500 };
+// left matches the sidebar's actual rendered footprint (.finder-sidebar: 16px
+// margin + 460px card, in styles.css) — the map canvas spans the full window
+// width behind it, so fitBounds needs this to know how much of that width is
+// actually hidden under the drawer. Measured live against production: was
+// hardcoded to 500, drifting 24px from the real 476px and skewing the fitted
+// center a bit left of where it should sit.
+const DESKTOP_MAP_PADDING = { top: 64, right: 48, bottom: 64, left: 476 };
 const MOBILE_MAP_PADDING = { top: 48, right: 32, bottom: 48, left: 32 };
 const allCoordinates = coordinates => Array.isArray(coordinates?.[0]?.[0]) ? coordinates.flatMap(allCoordinates) : coordinates;
 const isDesktopMap = () => window.matchMedia(DESKTOP_MAP_QUERY).matches;
