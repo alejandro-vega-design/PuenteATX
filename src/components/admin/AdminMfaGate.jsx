@@ -64,7 +64,7 @@ export default function AdminMfaGate({ session, lang, onVerified, onLogout }) {
           <div><span>{t.manual}</span><code>{enrollment.totp.secret}</code></div>
         </div>}
         <label htmlFor="admin-mfa-code">{t.code}</label>
-        <input id="admin-mfa-code" inputMode="numeric" autoComplete="one-time-code" maxLength="6" pattern="[0-9]{6}" value={code} onChange={event => setCode(event.target.value.replace(/\D/g, '').slice(0, 6))}/>
+        <input id="admin-mfa-code" inputMode="numeric" autoComplete="one-time-code" maxLength="6" pattern="[0-9]{6}" autoFocus={!isSetup} value={code} onChange={event => setCode(event.target.value.replace(/\D/g, '').slice(0, 6))}/>
         {error && <p className="form-error" role="alert">{error}</p>}
         <button className="primary-button" type="submit" disabled={submitting || !enrollment && isSetup}>{t.verify}</button>
       </form>}

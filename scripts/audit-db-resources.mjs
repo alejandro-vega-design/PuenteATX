@@ -34,6 +34,21 @@ const categoryById = new Map(resourceCategories.map(c => [c.id, c.slug]));
 
 const norm = v => String(v ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
 const digits = v => String(v ?? '').replace(/\D/g, '').replace(/^1(?=\d{10}$)/, '');
+// Address-only folding, applied on top of norm(): collapses the spelled-out/abbreviated
+// variants that otherwise make an exact-string address anchor miss a real match (e.g. the
+// St. Vincent de Paul "901 West Braker Lane" vs "901 W. Braker Lane" duplicate, which the
+// plain norm() above treats as two different strings — found 2026-09-08 by inspecting a
+// pair the similarity pass had also missed, since a spelled-out word shifts every later
+// bigram and drags title/summary similarity down as a side effect, not just the address key).
+// Word-boundary token replacement only, so it never touches a street/place NAME that merely
+// contains one of these as a substring (e.g. "Westlake", "Southpark").
+const ADDR_TOKEN_FOLD = {
+  west: 'w', east: 'e', north: 'n', south: 's',
+  street: 'st', lane: 'ln', avenue: 'ave', drive: 'dr', road: 'rd',
+  boulevard: 'blvd', highway: 'hwy', court: 'ct', circle: 'cir',
+  place: 'pl', parkway: 'pkwy', trail: 'trl', suite: 'ste', apartment: 'apt',
+};
+const normAddr = v => norm(v).split(' ').map(t => ADDR_TOKEN_FOLD[t] || t).join(' ');
 const list = v => {
   if (Array.isArray(v)) return v.map(String);
   const s = String(v ?? '').trim();
@@ -93,7 +108,7 @@ const dupPhone = cluster(r => { const p = digits(r.phone); return p.length === 1
 const dupWebsite = cluster(r => { const w = webKey(r.website_url); return w.length >= 6 && `web:${w}`; })
   .filter(g => g.titles.length > 1);
 const dupAddress = cluster(r => {
-  const a = norm(r.address_line_1); const c = norm(r.city);
+  const a = normAddr(r.address_line_1); const c = norm(r.city);
   return a.length > 4 && c && `addr:${a}|${c}`;
 }).filter(g => g.titles.length > 1);
 
@@ -105,7 +120,7 @@ const dice = (a, b) => { if (!a && !b) return 1; if (!a || !b) return 0; const A
 const anchorsOf = r => new Set([
   digits(r.phone).length === 10 && `ph:${digits(r.phone)}`,
   webKey(r.website_url).length >= 6 && `web:${webKey(r.website_url)}`,
-  norm(r.address_line_1).length > 4 && norm(r.city) && `addr:${norm(r.address_line_1)}|${norm(r.city)}`,
+  normAddr(r.address_line_1).length > 4 && norm(r.city) && `addr:${normAddr(r.address_line_1)}|${norm(r.city)}`,
 ].filter(Boolean));
 const anchorIndex = new Map();
 records.forEach((r, i) => { for (const a of anchorsOf(r)) { if (!anchorIndex.has(a)) anchorIndex.set(a, []); anchorIndex.get(a).push(i); } });
