@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { getCategoryById } from '../data/categories';
-import { localized } from '../data/resourceUtils';
+import { highlightMatches, localized } from '../data/resourceUtils';
 import { canonicalResourceUrl, shareLink } from '../services/share';
 import { BookmarkIcon, CategoryIcon, CheckCircleIcon, MapIcon, MoreIcon, PhoneIcon, ShareIcon } from './Icons';
 import { trackPuenteEvent } from '../analytics/client';
 import StatusToast from './StatusToast';
 
-export default function ResourceCard({ resource, lang, t, saved = false, onSave, listMode = false }) {
+export default function ResourceCard({ resource, lang, t, saved = false, onSave, listMode = false, searchQuery = '' }) {
   const [shareStatus, setShareStatus] = useState(null);
   const [descriptionExpanded, setDescriptionExpanded] = useState(false);
   const [descriptionCanExpand, setDescriptionCanExpand] = useState(false);
@@ -93,12 +93,12 @@ export default function ResourceCard({ resource, lang, t, saved = false, onSave,
   };
   return <article ref={cardRef} className={`resource-card${saved && !listMode ? ' is-saved' : ''}${listMode ? ' is-list-card' : ''}`}>
     <button className={`resource-save-button${saved ? ' is-saved' : ''}`} onClick={() => onSave(resource)} aria-pressed={saved} aria-label={saved ? t.removeSaved : t.save} title={saved ? t.removeSaved : t.save}><BookmarkIcon/></button>
-    <div className="resource-category">{category && <CategoryIcon name={category.icon_path.split('/').pop().replace('.svg', '')}/>}<span>{category ? localized(category, 'label', lang) : ''}</span></div>
-    <h2>{title}</h2><p className="resource-organization">{resource.website_url ? <a href={resource.website_url} target="_blank" rel="noreferrer" onClick={() => trackPuenteEvent('website_clicked', { resource_id: resource.id, category_slug: category?.slug })} aria-label={`${resource.organization_name} — ${lang === 'es' ? 'abre en una pestaña nueva' : 'opens in a new tab'}`}>{resource.organization_name}<span className="material-symbols-rounded" aria-hidden="true">arrow_outward</span></a> : resource.organization_name}</p>
+    <div className="resource-category">{category && <CategoryIcon name={category.icon_path.split('/').pop().replace('.svg', '')}/>}<span>{category ? highlightMatches(localized(category, 'label', lang), searchQuery) : ''}</span></div>
+    <h2>{highlightMatches(title, searchQuery)}</h2><p className="resource-organization">{resource.website_url ? <a href={resource.website_url} target="_blank" rel="noreferrer" onClick={() => trackPuenteEvent('website_clicked', { resource_id: resource.id, category_slug: category?.slug })} aria-label={`${resource.organization_name} — ${lang === 'es' ? 'abre en una pestaña nueva' : 'opens in a new tab'}`}>{highlightMatches(resource.organization_name, searchQuery)}<span className="material-symbols-rounded" aria-hidden="true">arrow_outward</span></a> : highlightMatches(resource.organization_name, searchQuery)}</p>
     {badges.length > 0 && <ul className="resource-badges" aria-label={lang === 'es' ? 'Características' : 'Features'}>{badges.map(badge => <li key={badge}>{badge}</li>)}</ul>}
     {(address || resource.phone) && <div className="resource-contact-links">{address && <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`} target="_blank" rel="noreferrer" onClick={() => trackPuenteEvent('directions_clicked', { resource_id: resource.id, category_slug: category?.slug })} aria-label={`${t.openMap}: ${address}`}><MapIcon/><span>{address}</span></a>}{resource.phone && <a href={`tel:${resource.phone}`} onClick={() => trackPuenteEvent('call_clicked', { resource_id: resource.id, category_slug: category?.slug })} aria-label={`${t.call}: ${resource.phone}`}><PhoneIcon/><span>{resource.phone}</span></a>}</div>}
-    <div className="resource-description"><p ref={summaryRef} id={`description-${resource.id}`} className={`resource-summary${descriptionExpanded ? ' is-expanded' : ''}`}>{summary}</p>{descriptionCanExpand && <button className="description-toggle" onClick={() => setDescriptionExpanded(value => !value)} aria-expanded={descriptionExpanded} aria-controls={`description-${resource.id}`}>{descriptionExpanded ? t.showLess : t.showMore}</button>}</div>
-    <dl className="resource-meta">{area && !address && <div><dt>{t.location}</dt><dd>{area}</dd></div>}</dl>
+    <div className="resource-description"><p ref={summaryRef} id={`description-${resource.id}`} className={`resource-summary${descriptionExpanded ? ' is-expanded' : ''}`}>{highlightMatches(summary, searchQuery)}</p>{descriptionCanExpand && <button className="description-toggle" onClick={() => setDescriptionExpanded(value => !value)} aria-expanded={descriptionExpanded} aria-controls={`description-${resource.id}`}>{descriptionExpanded ? t.showLess : t.showMore}</button>}</div>
+    <dl className="resource-meta">{area && !address && <div><dt>{t.location}</dt><dd>{highlightMatches(area, searchQuery)}</dd></div>}</dl>
     {(resource.last_verified_at || listMode) && <div className="resource-card-footer">{resource.last_verified_at && <p className="resource-verified"><CheckCircleIcon/><span>{t.verified} {new Intl.DateTimeFormat(lang === 'es' ? 'es-US' : 'en-US', { dateStyle: 'medium' }).format(new Date(`${resource.last_verified_at}T12:00:00`))}</span></p>}{listMode && <div className="resource-card-overflow" ref={listMenuRef}><button ref={listMenuButtonRef} className="resource-overflow-button" onClick={() => setListMenuOpen(value => !value)} aria-label={t.resourceOptions} aria-expanded={listMenuOpen} aria-controls={`resource-menu-${resource.id}`}><MoreIcon/></button>{listMenuOpen && <div className="resource-overflow-menu" id={`resource-menu-${resource.id}`}><button data-menu-first onClick={async () => { setListMenuOpen(false); await share(); }}>{t.shareThis}</button><button onClick={() => { setListMenuOpen(false); printCard(); }}>{t.printThis}</button></div>}</div>}</div>}
     {!listMode && <div className="resource-actions">
       <button className="card-action secondary-card-action desktop-resource-action" onClick={share}><ShareIcon/><span>{t.share}</span></button>

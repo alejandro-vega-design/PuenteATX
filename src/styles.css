@@ -425,6 +425,9 @@ h2 { letter-spacing: -.015em; }
 .resource-organization a .material-symbols-rounded { display: inline-block; margin-left: 4px; font-size: 15px; line-height: 1; vertical-align: -2px; }
 .resource-organization a:hover, .resource-organization a:focus-visible { color: var(--color-accent); text-decoration: underline; }
 .resource-summary { margin: 0; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; line-height: 1.5; }
+/* Search-term highlight: subtle accent tint, no bold — a colored underline
+   would work too, but a soft fill reads as "found here" without shouting. */
+mark.search-highlight { background: color-mix(in srgb, var(--color-accent) 22%, transparent); color: inherit; border-radius: 3px; padding: 0 1px; }
 .resource-summary.is-expanded { display: block; overflow: visible; -webkit-line-clamp: unset; line-clamp: unset; }
 .resource-description { margin: var(--resource-group-gap) 0 0; }
 .description-toggle { min-height: 44px; margin: 0; padding: 0; border: 0; background: transparent; color: var(--color-ink); display: inline-flex; align-items: center; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
@@ -669,10 +672,14 @@ a.compact-resource-line { text-decoration: underline; text-underline-offset: 3px
 .whatsapp-asset-icon { display: inline-block; flex: none; width: 20px; height: 20px; background: currentColor; -webkit-mask: url('/assets/icons/whatsapp-icon.svg') center / contain no-repeat; mask: url('/assets/icons/whatsapp-icon.svg') center / contain no-repeat; }
 .save-card-action.is-saved { border-color: var(--color-accent); color: var(--color-accent); }
 .show-more { width: 100%; }
-.loading-state, .public-state { min-height: 220px; padding: 40px 20px; border: 1px solid var(--color-line); border-radius: var(--radius-md); display: grid; place-items: center; text-align: center; }
+.public-state { min-height: 220px; padding: 40px 20px; border: 1px solid var(--color-line); border-radius: var(--radius-md); display: grid; place-items: center; text-align: center; }
+/* Loading states stay unboxed on purpose: unlike .public-state (an error or an
+   empty result with a real call to action), a loading state is transient and
+   shouldn't compete visually with a bordered card. */
+.loading-state { min-height: 120px; padding: 24px 20px; display: grid; place-items: center; text-align: center; }
 /* Generic spinner + text pairing for any inline "loading"/interstitial message. */
 .loading-inline { display: inline-flex; align-items: center; gap: 8px; }
-.resource-loading-state { align-content: center; gap: 12px; }
+.resource-loading-state { min-height: 220px; padding: 24px 20px; display: grid; place-items: center; align-content: center; gap: 12px; text-align: center; }
 .resource-loading-state strong { font-family: var(--font-heading); font-size: 20px; }
 .resource-loading-state > span:last-child { max-width: 340px; line-height: 1.45; }
 .resource-loading-spinner { width: 34px; height: 34px; border-width: 3px; }

@@ -1,7 +1,32 @@
+import React from 'react';
 import { getCategoryById, resourceCategories } from './categories.js';
 import { VERIFICATION_REVIEW_DAYS } from './resourceTypes.js';
 import { SERVICE_AREA_ALL, SERVICE_AREA_UNDISCLOSED } from '../config/serviceAreas.js';
 import { isResourceCounty, normalizeCounty } from '../config/resourceCounties.js';
+
+// Short connector words in es/en: skipped so a search for "circle of hope" or
+// "despensa de alimentos" doesn't light up every "of"/"de" in a card — those
+// words still count toward the AND match in searchResource() below, they just
+// aren't visually distinctive enough to highlight.
+const HIGHLIGHT_STOPWORDS = new Set(['de', 'la', 'el', 'los', 'las', 'del', 'al', 'en', 'un', 'una', 'unos', 'unas', 'y', 'o', 'a', 'con', 'por', 'que', 'es', 'se', 'su', 'sus', 'the', 'and', 'of', 'in', 'on', 'for', 'to', 'a']);
+
+// Wraps every occurrence of a query word (2+ letters, not a stopword) in <mark>.
+// Word-level, not phrase-level, on purpose: searchResource() below matches each
+// query word independently across several concatenated fields, so a query can
+// satisfy the filter without its words ever appearing contiguously in one
+// field — highlighting the literal query string would then often highlight
+// nothing at all on a real match.
+export function highlightMatches(text, query) {
+  if (!text) return text;
+  const words = [...new Set(String(query || '').toLocaleLowerCase().trim().split(/\s+/).filter(word => word.length >= 2 && !HIGHLIGHT_STOPWORDS.has(word)))];
+  if (!words.length) return text;
+  const pattern = new RegExp(`(${words.map(word => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'gi');
+  const parts = String(text).split(pattern);
+  if (parts.length === 1) return text;
+  return parts.map((part, index) => index % 2 === 1
+    ? React.createElement('mark', { className: 'search-highlight', key: index }, part)
+    : part);
+}
 
 export const localized = (item, field, lang) => item[`${field}_${lang}`] || item[`${field}_${lang === 'es' ? 'en' : 'es'}`] || '';
 export const categoryLabel = (resource, lang) => localized(getCategoryById(resource.primary_category_id) || {}, 'label', lang);
