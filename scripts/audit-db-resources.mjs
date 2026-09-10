@@ -228,6 +228,32 @@ for (const r of records) {
   const hasContact = [r.phone, r.sms_phone, r.whatsapp_phone, r.email, r.website_url].some(nonEmpty);
   if (!hasContact) add(r, 'no_contact_method');
 
+  // --- address-field hygiene ---
+  // address_line_1 holds ONE street address; address_line_2 holds ONLY a unit
+  // designator (Ste 200 / Bldg C / Apt 4 / #210 / Room 5 / Floor 2). Anything
+  // else — a second street address, a descriptive label, city/state/ZIP that
+  // belong in their own columns, or contact info — breaks the map link and the
+  // card display. Real case: The Caring Place had `address_line_2` =
+  // "Programs & Services: 2001 Railroad Avenue" (a whole second building).
+  const streetAddrHits = s => String(s).match(/\b\d{1,6}\b[^,;|]{0,40}?\b(ave|avenue|st|street|rd|road|dr|drive|blvd|boulevard|ln|lane|hwy|highway|pkwy|parkway|cir|circle|ct|court|way|trl|trail|loop)\b/gi) || [];
+  const addr1 = String(r.address_line_1 ?? '').trim();
+  const addr2 = String(r.address_line_2 ?? '').trim();
+  // a trailing ZIP or an embedded state name belongs in postal_code / state,
+  // never in a street line (a bare 5-digit street number like "12012" is NOT a ZIP)
+  const hasEmbeddedCityStateZip = s => /,\s*(TX|texas)\b/i.test(s) || /\b(TX|texas)\.?,?\s*\d{5}\b/i.test(s) || /\b\d{5}(-\d{4})?\s*$/.test(s.replace(/^\s*\d{1,6}\b/, ''));
+  const unitKeyword = /\b(#\s*[\w-]+|ste|suite|bldg|building|apt|apartment|unit|rm|room|fl|floor|lot|space|trailer|portable|dept)\b/i;
+  if (addr1) {
+    if (streetAddrHits(addr1).length >= 2) add(r, 'address_line_1_multiple_addresses', addr1.slice(0, 90));
+    if (hasEmbeddedCityStateZip(addr1)) add(r, 'address_line_1_has_city_state_zip', addr1.slice(0, 90));
+    for (const [k, re] of Object.entries(CONTACT_RE)) if (re.test(addr1)) add(r, `address_line_1_has_${k}`, addr1.slice(0, 90));
+  }
+  if (addr2) {
+    if (streetAddrHits(addr2).length >= 1) add(r, 'address_line_2_is_a_street_address', addr2.slice(0, 90));
+    else if (/:/.test(addr2)) add(r, 'address_line_2_has_label', addr2.slice(0, 90));
+    else if (!unitKeyword.test(addr2) && addr2.length > 20) add(r, 'address_line_2_prose_not_unit', addr2.slice(0, 90));
+    for (const [k, re] of Object.entries(CONTACT_RE)) if (re.test(addr2)) add(r, `address_line_2_has_${k}`, addr2.slice(0, 90));
+  }
+
   // publish-requirement gaps (mirrors the DB check constraint)
   if (published) {
     const missing = [];
