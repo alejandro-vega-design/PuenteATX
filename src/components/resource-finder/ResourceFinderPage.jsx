@@ -4,7 +4,7 @@ import { getServiceArea } from '../../config/serviceAreas';
 import { RESOURCE_FINDER_EXPANDED_RADIUS_MILES, RESOURCE_FINDER_INITIAL_RADIUS_MILES, RESOURCE_FINDER_REGIONAL_RADIUS_MILES } from '../../config/resourceFinder';
 import { boundingBoxFromCenter, hasCoordinates, sortResourcesByDistance } from '../../utils/geo';
 import { toggleVisibleSelection } from '../../utils/resourceSelection';
-import { trackPuenteEvent } from '../../analytics/client';
+import { setOriginAreaCode, trackPuenteEvent } from '../../analytics/client';
 import { shareLink, sharedListUrl } from '../../services/share';
 import ResourceSearchForm from './ResourceSearchForm';
 import ResourceResultsPanel from './ResourceResultsPanel';
@@ -189,6 +189,7 @@ export default function ResourceFinderPage({ lang, t, filterT, locationSearch, n
       const unlocated = withoutCoordinates.filter(resource => !hasRemoteAccess(resource));
       const resultCount = mappable.length + unlocated.length + remote.length;
       const categorySlug = nextFilters.categories.length === 1 ? nextFilters.categories[0] : undefined;
+      setOriginAreaCode(zip);
       trackPuenteEvent('search_submitted', { search_result_count: resultCount, category_slug: categorySlug, area_code: zip });
       if (!resultCount) trackPuenteEvent('search_no_results', { search_result_count: 0, category_slug: categorySlug, area_code: zip });
       if (updateUrl) navigate(urlForSearch(zip, nextFilters), { replace: true, scroll: false });

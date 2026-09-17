@@ -1,8 +1,17 @@
 import { ANALYTICS_SCHEMA_VERSION, validateEventPayload } from './events.js';
 
 const SESSION_KEY = 'puente-atx:analytics-session:v1';
+// The ZIP/area a session first searched, so later interaction events (a call,
+// a directions click) on a resource in a DIFFERENT county still carry where
+// the person's need originated — e.g. a Williamson-area search that ends in a
+// Travis-county resource stays attributable to Williamson. First-write-wins:
+// we never overwrite it later in the same browser session (see
+// setOriginAreaCode), so it answers "where did this need start," not "where
+// did they most recently look."
+const ORIGIN_AREA_KEY = 'puente-atx:analytics-origin-area:v1';
 let language = 'es';
 let memorySessionId = null;
+let memoryOriginAreaCode;
 
 function fallbackUuid() {
   if (!globalThis.crypto?.getRandomValues) return null;
@@ -44,11 +53,35 @@ export const setAnalyticsLanguage = value => {
   if (value === 'es' || value === 'en') language = value;
 };
 
+export function getOriginAreaCode() {
+  if (memoryOriginAreaCode !== undefined) return memoryOriginAreaCode;
+  try {
+    return (memoryOriginAreaCode = sessionStorage.getItem(ORIGIN_AREA_KEY) || null);
+  } catch {
+    return (memoryOriginAreaCode = null);
+  }
+}
+
+// Call this wherever a real ZIP is searched (never with "all"/"undisclosed").
+// First-write-wins for the life of the browser session — see the note above.
+export function setOriginAreaCode(areaCode) {
+  if (!areaCode || getOriginAreaCode()) return;
+  memoryOriginAreaCode = areaCode;
+  try { sessionStorage.setItem(ORIGIN_AREA_KEY, areaCode); } catch { /* best-effort only */ }
+}
+
 export async function trackPuenteEvent(eventName, properties = {}) {
   if (typeof window === 'undefined') return false;
+  // A caller reporting its own area (search forms already compute one) wins;
+  // otherwise fall back to the session's origin area so a later interaction
+  // (a call, a directions click) still carries where the need started, even
+  // on a resource in a different county. Harmless no-op for event types that
+  // don't allow area_code at all — validateEventPayload just drops it.
+  const areaCode = Object.prototype.hasOwnProperty.call(properties, 'area_code') ? properties.area_code : getOriginAreaCode();
   const validation = validateEventPayload({
     event_name: eventName,
     ...properties,
+    area_code: areaCode,
     anonymous_session_id: getAnonymousSessionId(),
     language,
     device_type: getDeviceType(),

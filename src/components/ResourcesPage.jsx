@@ -5,7 +5,7 @@ import { emptyResourceFilters, parseResourceFilters, serializeResourceFilters } 
 import ResourceCard from './ResourceCard';
 import { FilterDialog, FilterFields } from './ResourceFilters';
 import { SearchIcon } from './Icons';
-import { trackPuenteEvent } from '../analytics/client';
+import { setOriginAreaCode, trackPuenteEvent } from '../analytics/client';
 import { SERVICE_AREA_ALL, SERVICE_AREA_UNDISCLOSED } from '../config/serviceAreas';
 
 export default function ResourcesPage({ lang, t, locationSearch, navigate, savedSlugs = [], onToggleSaved }) {
@@ -30,6 +30,7 @@ export default function ResourcesPage({ lang, t, locationSearch, navigate, saved
       setResources(result);
       if (shouldTrack) {
         const areaCode = /^\d{5}$/.test(filters.area) && ![SERVICE_AREA_ALL, SERVICE_AREA_UNDISCLOSED].includes(filters.area) ? filters.area : null;
+        setOriginAreaCode(areaCode);
         const properties = {
           search_term_normalized: filters.q,
           search_result_count: result.length,
