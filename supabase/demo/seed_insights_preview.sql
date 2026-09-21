@@ -3,6 +3,7 @@
 -- IMPORTANTE:
 -- - Inserta eventos solamente en el entorno "preview".
 -- - No modifica recursos, categorías ni usuarios.
+-- - Incluye cruces entre condados para el panel "Uso entre condados" (requiere la migración 020).
 -- - No contiene información personal.
 -- - Puede ejecutarse nuevamente: primero elimina únicamente este mismo seed.
 -- - Para retirarlo, ejecuta supabase/demo/clear_insights_preview.sql.
@@ -589,6 +590,298 @@ join demo_sessions session
   on session.session_number = 1 + (
     (sequence_number * 31 + char_length(plan.event_name)) % 180
   );
+
+-- Actividad por código postal en los otros nueve condados, para que el mapa
+-- "Necesidades por código postal" muestre datos al elegir cada condado: cuatro
+-- ZIPs por condado con niveles distintos de actividad (alto, medio y bajo, todos
+-- por encima de los umbrales del mapa: 20 búsquedas y 10 sesiones distintas).
+-- El periodo anterior recibe volumen proporcional (~1.8 a 1) para que la
+-- tendencia de los KPI de búsquedas se mantenga parecida a la del resto del seed.
+-- Sin categoría ni término de búsqueda, para no alterar el panel de categorías
+-- ni el de búsquedas sin resultados.
+create temporary table demo_county_zip_searches (
+  zip_key integer primary key,
+  county text not null,
+  area_code text not null,
+  current_searches integer not null,
+  previous_searches integer not null
+) on commit drop;
+
+insert into demo_county_zip_searches (zip_key, county, area_code, current_searches, previous_searches) values
+  (1, 'Williamson', '78664', 70, 39),
+  (2, 'Williamson', '78665', 48, 27),
+  (3, 'Williamson', '78626', 35, 19),
+  (4, 'Williamson', '78628', 28, 16),
+  (5, 'Bastrop', '78602', 50, 28),
+  (6, 'Bastrop', '78612', 34, 19),
+  (7, 'Bastrop', '78621', 25, 14),
+  (8, 'Bastrop', '78957', 20, 11),
+  (9, 'Hays', '78666', 60, 33),
+  (10, 'Hays', '78640', 41, 23),
+  (11, 'Hays', '78610', 30, 17),
+  (12, 'Hays', '78676', 24, 13),
+  (13, 'Caldwell', '78644', 45, 25),
+  (14, 'Caldwell', '78648', 31, 17),
+  (15, 'Caldwell', '78616', 22, 12),
+  (16, 'Caldwell', '78656', 20, 11),
+  (17, 'Burnet', '78611', 45, 25),
+  (18, 'Burnet', '78654', 31, 17),
+  (19, 'Burnet', '78605', 22, 12),
+  (20, 'Burnet', '78639', 20, 11),
+  (21, 'Lee', '78942', 40, 22),
+  (22, 'Lee', '78947', 27, 15),
+  (23, 'Lee', '77853', 20, 11),
+  (24, 'Lee', '78946', 20, 11),
+  (25, 'Fayette', '78945', 45, 25),
+  (26, 'Fayette', '78938', 31, 17),
+  (27, 'Fayette', '78940', 22, 12),
+  (28, 'Fayette', '78941', 20, 11),
+  (29, 'Gonzales', '78629', 45, 25),
+  (30, 'Gonzales', '78632', 31, 17),
+  (31, 'Gonzales', '78140', 22, 12),
+  (32, 'Gonzales', '77954', 20, 11),
+  (33, 'Guadalupe', '78155', 50, 28),
+  (34, 'Guadalupe', '78108', 34, 19),
+  (35, 'Guadalupe', '78154', 25, 14),
+  (36, 'Guadalupe', '78124', 20, 11);
+
+insert into public.analytics_events (
+  event_name,
+  occurred_at,
+  anonymous_session_id,
+  area_code,
+  search_result_count,
+  language,
+  device_type,
+  page_path,
+  environment,
+  schema_version,
+  metadata
+)
+select
+  'search_submitted',
+  now() - ((1 + ((sequence_number + zip.zip_key) % 27))::text || ' days')::interval
+        - ((sequence_number % 13)::text || ' hours')::interval,
+  session.session_id,
+  zip.area_code,
+  3 + (sequence_number % 12),
+  session.language,
+  session.device_type,
+  case when sequence_number % 3 = 0 then '/buscador' else '/recursos' end,
+  'preview',
+  1,
+  jsonb_build_object('demo_seed', 'puente-atx-insights-v1')
+from demo_county_zip_searches zip
+cross join lateral generate_series(1, zip.current_searches) as sequence_number
+join demo_sessions session
+  on session.session_number = 1 + (((sequence_number * 7) + (zip.zip_key * 19)) % 180);
+
+insert into public.analytics_events (
+  event_name,
+  occurred_at,
+  anonymous_session_id,
+  area_code,
+  search_result_count,
+  language,
+  device_type,
+  page_path,
+  environment,
+  schema_version,
+  metadata
+)
+select
+  'search_submitted',
+  now() - ((31 + ((sequence_number + zip.zip_key) % 27))::text || ' days')::interval
+        - ((sequence_number % 13)::text || ' hours')::interval,
+  session.session_id,
+  zip.area_code,
+  2 + (sequence_number % 10),
+  session.language,
+  session.device_type,
+  '/recursos',
+  'preview',
+  1,
+  jsonb_build_object('demo_seed', 'puente-atx-insights-v1')
+from demo_county_zip_searches zip
+cross join lateral generate_series(1, zip.previous_searches) as sequence_number
+join demo_sessions session
+  on session.session_number = 1 + (((sequence_number * 11) + (zip.zip_key * 17)) % 180);
+
+-- Cruces entre condados (panel "Uso entre condados").
+-- Cada fila de demo_cross_pairs son N sesiones DISTINTAS que buscaron en el ZIP
+-- de un condado (area_code) y contactaron un recurso publicado real ubicado en
+-- otro condado. Los pares con 10 o más sesiones se muestran en el heatmap; los
+-- de 1 a 9 quedan como "muestra insuficiente", igual que en producción.
+-- Requiere la migración 020 (tabla zip_counties y get_insights_cross_county).
+create temporary table demo_cross_zips (
+  county text primary key,
+  zip text not null
+) on commit drop;
+
+insert into demo_cross_zips (county, zip) values
+  ('Travis', '78701'),
+  ('Williamson', '78664'),
+  ('Hays', '78666'),
+  ('Bastrop', '78602'),
+  ('Caldwell', '78644'),
+  ('Burnet', '78611'),
+  ('Lee', '78942'),
+  ('Fayette', '78945'),
+  ('Gonzales', '78629'),
+  ('Guadalupe', '78155');
+
+create temporary table demo_cross_pairs (
+  origin_county text not null,
+  resource_county text not null,
+  sessions integer not null
+) on commit drop;
+
+insert into demo_cross_pairs (origin_county, resource_county, sessions) values
+  ('Travis', 'Williamson', 42),
+  ('Travis', 'Hays', 35),
+  ('Travis', 'Bastrop', 18),
+  ('Travis', 'Caldwell', 6),
+  ('Travis', 'Burnet', 4),
+  ('Travis', 'Lee', 2),
+  ('Travis', 'Fayette', 1),
+  ('Travis', 'Gonzales', 3),
+  ('Travis', 'Guadalupe', 5),
+  ('Williamson', 'Travis', 156),
+  ('Williamson', 'Hays', 22),
+  ('Williamson', 'Bastrop', 9),
+  ('Williamson', 'Caldwell', 3),
+  ('Williamson', 'Burnet', 31),
+  ('Williamson', 'Lee', 2),
+  ('Williamson', 'Fayette', 1),
+  ('Williamson', 'Guadalupe', 4),
+  ('Hays', 'Travis', 98),
+  ('Hays', 'Williamson', 27),
+  ('Hays', 'Bastrop', 14),
+  ('Hays', 'Caldwell', 19),
+  ('Hays', 'Burnet', 5),
+  ('Hays', 'Lee', 1),
+  ('Hays', 'Gonzales', 8),
+  ('Hays', 'Guadalupe', 11),
+  ('Bastrop', 'Travis', 87),
+  ('Bastrop', 'Williamson', 12),
+  ('Bastrop', 'Hays', 9),
+  ('Bastrop', 'Caldwell', 16),
+  ('Bastrop', 'Burnet', 3),
+  ('Bastrop', 'Lee', 21),
+  ('Bastrop', 'Fayette', 13),
+  ('Bastrop', 'Gonzales', 2),
+  ('Bastrop', 'Guadalupe', 4),
+  ('Caldwell', 'Travis', 64),
+  ('Caldwell', 'Williamson', 8),
+  ('Caldwell', 'Hays', 29),
+  ('Caldwell', 'Bastrop', 11),
+  ('Caldwell', 'Burnet', 1),
+  ('Caldwell', 'Lee', 3),
+  ('Caldwell', 'Fayette', 2),
+  ('Caldwell', 'Gonzales', 18),
+  ('Caldwell', 'Guadalupe', 22),
+  ('Burnet', 'Travis', 45),
+  ('Burnet', 'Williamson', 38),
+  ('Burnet', 'Hays', 4),
+  ('Burnet', 'Bastrop', 2),
+  ('Burnet', 'Lee', 1),
+  ('Burnet', 'Guadalupe', 1),
+  ('Lee', 'Travis', 19),
+  ('Lee', 'Williamson', 6),
+  ('Lee', 'Hays', 2),
+  ('Lee', 'Bastrop', 24),
+  ('Lee', 'Caldwell', 4),
+  ('Lee', 'Burnet', 1),
+  ('Lee', 'Fayette', 17),
+  ('Lee', 'Guadalupe', 2),
+  ('Fayette', 'Travis', 11),
+  ('Fayette', 'Williamson', 2),
+  ('Fayette', 'Hays', 1),
+  ('Fayette', 'Bastrop', 15),
+  ('Fayette', 'Caldwell', 3),
+  ('Fayette', 'Lee', 13),
+  ('Fayette', 'Gonzales', 5),
+  ('Fayette', 'Guadalupe', 9),
+  ('Gonzales', 'Travis', 9),
+  ('Gonzales', 'Williamson', 1),
+  ('Gonzales', 'Hays', 6),
+  ('Gonzales', 'Bastrop', 2),
+  ('Gonzales', 'Caldwell', 14),
+  ('Gonzales', 'Fayette', 3),
+  ('Gonzales', 'Guadalupe', 31),
+  ('Guadalupe', 'Travis', 13),
+  ('Guadalupe', 'Williamson', 3),
+  ('Guadalupe', 'Hays', 17),
+  ('Guadalupe', 'Bastrop', 1),
+  ('Guadalupe', 'Caldwell', 26),
+  ('Guadalupe', 'Lee', 2),
+  ('Guadalupe', 'Fayette', 4),
+  ('Guadalupe', 'Gonzales', 28);
+
+-- Hasta tres recursos publicados reales por condado de destino.
+create temporary table demo_cross_resources on commit drop as
+select id, category_slug, county_key, pool_number, pool_size
+from (
+  select
+    r.id,
+    c.slug as category_slug,
+    lower(btrim(regexp_replace(coalesce(r.county, ''), '(^condado de\s+|\s+county$)', '', 'i'))) as county_key,
+    row_number() over (
+      partition by lower(btrim(regexp_replace(coalesce(r.county, ''), '(^condado de\s+|\s+county$)', '', 'i')))
+      order by r.updated_at desc, r.id
+    )::integer as pool_number,
+    least(3, count(*) over (
+      partition by lower(btrim(regexp_replace(coalesce(r.county, ''), '(^condado de\s+|\s+county$)', '', 'i')))
+    ))::integer as pool_size
+  from public.resources r
+  left join public.categories c on c.id = r.primary_category_id
+  where r.status = 'published'
+) ranked
+where pool_number <= 3;
+
+insert into public.analytics_events (
+  event_name,
+  occurred_at,
+  anonymous_session_id,
+  resource_id,
+  category_slug,
+  area_code,
+  language,
+  device_type,
+  page_path,
+  environment,
+  schema_version,
+  metadata
+)
+select
+  case session.n % 4
+    when 0 then 'website_clicked'
+    when 2 then 'directions_clicked'
+    else 'call_clicked'
+  end,
+  now()
+    - ((1 + ((session.n * 7) % 28))::text || ' days')::interval
+    - (((session.n * 13) % 24)::text || ' hours')::interval,
+  gen_random_uuid(),
+  resource.id,
+  resource.category_slug,
+  origin.zip,
+  case when session.n % 4 = 0 then 'en' else 'es' end,
+  case
+    when session.n % 10 < 6 then 'mobile'
+    when session.n % 10 < 8 then 'desktop'
+    else 'tablet'
+  end,
+  case when session.n % 3 = 0 then '/buscador' else '/recursos' end,
+  'preview',
+  1,
+  jsonb_build_object('demo_seed', 'puente-atx-insights-v1')
+from demo_cross_pairs pair
+join demo_cross_zips origin on origin.county = pair.origin_county
+cross join lateral generate_series(1, pair.sessions) as session(n)
+join demo_cross_resources resource
+  on resource.county_key = lower(pair.resource_county)
+ and resource.pool_number = 1 + (session.n % resource.pool_size);
 
 commit;
 

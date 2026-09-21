@@ -1,6 +1,7 @@
 import { supabaseRequest } from '../data/supabaseClient.js';
 import { getAdminSession } from '../services/adminAuth.js';
 import { insightDateRange } from './filters.js';
+import { demoAreas, demoCrossCounty } from './demoCrossCounty.js';
 
 export async function getInsightsSnapshot(filters) {
   const session = getAdminSession();
@@ -16,12 +17,13 @@ export async function getInsightsSnapshot(filters) {
         previous_no_result_rate: 0
       },
       categories: [],
-      areas: { visible: [], visible_total: 0, suppressed_area_count: 0 },
+      areas: filters.environment === 'preview' ? demoAreas : { visible: [], visible_total: 0, suppressed_area_count: 0 },
       no_results: { terms: [], low_volume_occurrences: 0 },
       resources: [],
       quality: null,
       contact_channels: { calls: 0, whatsapp: 0, websites: 0, directions: 0, resource_prints: 0, list_shares: 0, conversations: 0, total: 0 },
-      timeline: { granularity: 'day', points: [] }
+      timeline: { granularity: 'day', points: [] },
+      cross_county: filters.environment === 'preview' ? demoCrossCounty : { min_sessions: 10, pairs: [], suppressed_pair_count: 0 }
     };
   }
   const range = insightDateRange(filters.period);
@@ -38,10 +40,16 @@ export async function getInsightsSnapshot(filters) {
     }
   };
   const snapshot = await supabaseRequest('/rest/v1/rpc/get_insights_snapshot', request);
-  const [timelineResult, contactChannelsResult] = await Promise.allSettled([
+  const [timelineResult, contactChannelsResult, crossCountyResult] = await Promise.allSettled([
     supabaseRequest('/rest/v1/rpc/get_insights_time_series', request),
-    supabaseRequest('/rest/v1/rpc/get_insights_contact_channels', request)
+    supabaseRequest('/rest/v1/rpc/get_insights_contact_channels', request),
+    supabaseRequest('/rest/v1/rpc/get_insights_cross_county', request)
   ]);
+  // Rejected while migration 020 is not applied yet: the panel shows an
+  // "unavailable" note instead of breaking the rest of the dashboard.
+  snapshot.cross_county = crossCountyResult.status === 'fulfilled'
+    ? crossCountyResult.value
+    : { min_sessions: 10, pairs: [], suppressed_pair_count: 0, unavailable: true };
   snapshot.timeline = timelineResult.status === 'fulfilled'
     ? timelineResult.value
     : { granularity: 'day', points: [] };
