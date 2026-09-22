@@ -6,7 +6,7 @@ import { createUniqueResourceSlug, localized, verificationState } from '../../da
 import { getPublishRequirementKeys } from '../../data/resourceValidation';
 import { createAdminResourceSearch, saveAdminResourceNavigation } from '../../data/adminResourceNavigation';
 import { normalizeCounty, RESOURCE_COUNTIES } from '../../config/resourceCounties';
-import { ChevronLeftIcon, MoreIcon, SearchIcon } from '../Icons';
+import { ChevronLeftIcon, DeleteIcon, MoreIcon, SearchIcon } from '../Icons';
 import ConfirmDialog from '../ConfirmDialog';
 
 const MOBILE_PAGE_SIZE = 10;
@@ -65,7 +65,7 @@ export default function AdminResources({ t, lang, resources, refresh, navigate, 
   const initialParams = useMemo(() => new URLSearchParams(locationSearch), [locationSearch]);
   const [query, setQuery] = useState(() => initialParams.get('q') || ''); const [status, setStatus] = useState(() => initialParams.get('status') || 'all'); const [category, setCategory] = useState(() => initialParams.get('category') || 'all'); const [county, setCounty] = useState(() => initialParams.get('county') || 'all'); const [review, setReview] = useState(() => initialParams.get('review') || (initialReview ? 'review' : 'all')); const [sort, setSort] = useState(() => initialParams.get('sort') || 'updated'); const [page, setPage] = useState(() => Math.max(1, Number.parseInt(initialParams.get('page'), 10) || 1));
   const [pageSize, setPageSize] = useState(MOBILE_PAGE_SIZE);
-  const [selected, setSelected] = useState([]); const [processing, setProcessing] = useState(false); const [feedback, setFeedback] = useState(''); const [categoryDialog, setCategoryDialog] = useState(false); const [archiveDialog, setArchiveDialog] = useState(null); const [deleteDialog, setDeleteDialog] = useState(null); const [bulkCategory, setBulkCategory] = useState(''); const [publishReport, setPublishReport] = useState(null); const categorySelectRef = useRef(null); const categoryDialogRef = useRef(null); const categoryTriggerRef = useRef(null); const publishReportRef = useRef(null); const selectPageRef = useRef(null); const mobileSelectPageRef = useRef(null);
+  const [selected, setSelected] = useState([]); const [processing, setProcessing] = useState(false); const [feedback, setFeedback] = useState(''); const [categoryDialog, setCategoryDialog] = useState(false); const [archiveDialog, setArchiveDialog] = useState(null); const [deleteDialog, setDeleteDialog] = useState(null); const [bulkDeleteDialog, setBulkDeleteDialog] = useState(false); const [bulkCategory, setBulkCategory] = useState(''); const [publishReport, setPublishReport] = useState(null); const categorySelectRef = useRef(null); const categoryDialogRef = useRef(null); const categoryTriggerRef = useRef(null); const publishReportRef = useRef(null); const selectPageRef = useRef(null); const mobileSelectPageRef = useRef(null);
   const tableWrapRef = useRef(null); const pageRef = useRef(page); const pageSizeRef = useRef(pageSize);
   const filtered = useMemo(() => resources.filter(resource => status === 'all' || resource.status === status).filter(resource => category === 'all' || resource.primary_category_id === category).filter(resource => county === 'all' || normalizeCounty(resource.county) === normalizeCounty(county)).filter(resource => review === 'all' || verificationState(resource) === review).filter(resource => `${localized(resource, 'title', lang)} ${resource.organization_name}`.toLowerCase().includes(query.toLowerCase())).sort((a,b) => sort === 'title' ? localized(a,'title',lang).localeCompare(localized(b,'title',lang)) : new Date(b.updated_at) - new Date(a.updated_at)), [resources, status, category, county, review, sort, query, lang]);
   const pageCount = Math.ceil(filtered.length / pageSize); const pageItems = getPageItems(page, pageCount); const visible = useMemo(() => filtered.slice((page - 1) * pageSize, page * pageSize), [filtered, page, pageSize]); const visibleIds = useMemo(() => visible.map(resource => resource.id), [visible]); const allVisibleSelected = visibleIds.length > 0 && visibleIds.every(id => selected.includes(id));
@@ -162,6 +162,22 @@ export default function AdminResources({ t, lang, resources, refresh, navigate, 
       setProcessing(false);
     }
   };
+  // Permanent bulk delete: same admin-only RPC as the single-row delete, one call per
+  // resource. Anything that fails stays selected so it can be retried.
+  const deleteSelected = async () => {
+    if (!canDeletePermanently) return;
+    setProcessing(true);
+    const ids = [...selected];
+    const results = await Promise.allSettled(ids.map(id => deleteResourcePermanently(id)));
+    const failedIds = ids.filter((id, index) => results[index].status === 'rejected');
+    const message = failedIds.length ? t.bulkDeletePartial(ids.length - failedIds.length, failedIds.length) : t.bulkDeleted(ids.length);
+    if (failedIds.length) console.error('Unable to permanently delete some resources', results.filter(result => result.status === 'rejected').map(result => result.reason));
+    setFeedback(message); notify(message);
+    setSelected(failedIds);
+    setBulkDeleteDialog(false);
+    await refresh();
+    setProcessing(false);
+  };
   const changeCategory = async () => {
     if (!bulkCategory) return; setProcessing(true); const results = await Promise.allSettled(selectedResources.map(resource => updateResource(resource.id, { ...resource, primary_category_id: bulkCategory }))); const failed = results.filter(result => result.status === 'rejected').length; const resultMessage = failed ? t.bulkPartial(results.length - failed, failed) : t.bulkCategoryChanged(results.length); setFeedback(resultMessage); notify(resultMessage); setSelected([]); setCategoryDialog(false); setBulkCategory(''); await refresh(); setProcessing(false);
   };
@@ -193,7 +209,7 @@ export default function AdminResources({ t, lang, resources, refresh, navigate, 
   };
   const rowActions = resource => ({ onDuplicate: () => duplicate(resource), onArchive: () => setArchiveDialog({ type: 'single', resource }), onRestore: async () => { await restoreResource(resource.id); notify(t.resourceRestored); refresh(); }, onPreview: () => navigate(`/recursos/${resource.slug}`), onDelete: canDeletePermanently ? () => setDeleteDialog(resource) : undefined });
   const updateFilter = setter => event => { setter(event.target.value); setPage(1); };
-  const bulkActions = desktop => <section className="admin-bulk-bar" aria-label={t.bulkActions}><span className="admin-bulk-summary">{!desktop && <label><input ref={mobileSelectPageRef} type="checkbox" checked={allVisibleSelected} onChange={toggleVisible}/><span className="sr-only">{t.selectPage}</span></label>}<strong>{t.selectedCount(selected.length)}</strong></span><div><button className="admin-bulk-publish-button" disabled={processing || !selectedDrafts.length} onClick={publishSelected}><span className="material-symbols-outlined" aria-hidden="true">publish</span>{t.publish}</button><button disabled={processing} onClick={() => setArchiveDialog({ type: 'bulk' })}><span className="material-symbols-outlined" aria-hidden="true">archive</span>{t.archive}</button><button ref={desktop ? categoryTriggerRef : undefined} disabled={processing} onClick={() => setCategoryDialog(true)}><span className="material-symbols-outlined" aria-hidden="true">category</span>{t.changeCategory}</button><button disabled={processing} onClick={exportSelected}><span className="material-symbols-outlined" aria-hidden="true">file_export</span>{t.export}</button></div></section>;
+  const bulkActions = desktop => <section className="admin-bulk-bar" aria-label={t.bulkActions}><span className="admin-bulk-summary">{!desktop && <label><input ref={mobileSelectPageRef} type="checkbox" checked={allVisibleSelected} onChange={toggleVisible}/><span className="sr-only">{t.selectPage}</span></label>}<strong>{t.selectedCount(selected.length)}</strong></span><div><button className="admin-bulk-publish-button" disabled={processing || !selectedDrafts.length} onClick={publishSelected}><span className="material-symbols-outlined" aria-hidden="true">publish</span>{t.publish}</button><button disabled={processing} onClick={() => setArchiveDialog({ type: 'bulk' })}><span className="material-symbols-outlined" aria-hidden="true">archive</span>{t.archive}</button><button ref={desktop ? categoryTriggerRef : undefined} disabled={processing} onClick={() => setCategoryDialog(true)}><span className="material-symbols-outlined" aria-hidden="true">category</span>{t.changeCategory}</button><button disabled={processing} onClick={exportSelected}><span className="material-symbols-outlined" aria-hidden="true">file_export</span>{t.export}</button>{canDeletePermanently && <button type="button" className="admin-delete-resource-button" disabled={processing} onClick={() => setBulkDeleteDialog(true)}><DeleteIcon/>{t.deletePermanently}</button>}</div></section>;
   const sortLabel = sort === 'updated' ? t.modifiedRecent : 'A–Z';
   const nextSortLabel = sort === 'updated' ? 'A–Z' : t.modifiedRecent;
 
@@ -207,5 +223,6 @@ export default function AdminResources({ t, lang, resources, refresh, navigate, 
     {publishReport && <div className="admin-dialog-overlay" onMouseDown={event => event.target === event.currentTarget && setPublishReport(null)}><section className="admin-dialog admin-publish-report" role="dialog" aria-modal="true" aria-labelledby="bulk-publish-title"><h2 id="bulk-publish-title">{t.bulkPublishTitle}</h2><p>{t.bulkPublishResult(publishReport.published, publishReport.unresolved.length)}</p>{publishReport.unresolved.length > 0 && <><h3>{t.bulkPublishNeedsAttention}</h3><ul>{publishReport.unresolved.map(resource => <li key={resource.id}><strong>{resource.title}</strong><span>{resource.missing.map(t.bulkRequirementLabel).join(', ')}</span></li>)}</ul></>}<div><button ref={publishReportRef} className="primary-button" onClick={() => setPublishReport(null)}>{t.bulkClose}</button></div></section></div>}
     <ConfirmDialog open={Boolean(archiveDialog)} title={archiveDialog?.type === 'bulk' ? t.bulkArchiveConfirm(selected.length) : t.archiveResourceConfirm} cancelLabel={t.cancel} confirmLabel={t.archive} busy={processing} onCancel={() => setArchiveDialog(null)} onConfirm={() => archiveDialog?.type === 'bulk' ? archiveSelected() : archiveOne(archiveDialog.resource)}/>
     <ConfirmDialog open={Boolean(deleteDialog)} title={deleteDialog ? t.deleteResourceConfirm(localized(deleteDialog, 'title', lang)) : ''} description={t.deleteResourceDescription} cancelLabel={t.cancel} confirmLabel={t.deletePermanently} busy={processing} onCancel={() => setDeleteDialog(null)} onConfirm={() => deleteOne(deleteDialog)}/>
+    <ConfirmDialog open={bulkDeleteDialog} title={t.bulkDeleteConfirm(selected.length)} description={t.bulkDeleteDescription(selected.length, selectedResources.filter(resource => resource.status === 'published').length)} cancelLabel={t.cancel} confirmLabel={t.bulkDeleteAction(selected.length)} busy={processing} onCancel={() => setBulkDeleteDialog(false)} onConfirm={deleteSelected}/>
   </>;
 }

@@ -899,6 +899,9 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
 .admin-bulk-bar .admin-bulk-publish-button { border-color: var(--color-accent); background: var(--color-accent); color: var(--color-white); font-weight: 600; }
 .admin-bulk-bar .admin-bulk-publish-button:hover { border-color: var(--color-accent-dark); background: var(--color-accent-dark); color: var(--color-white); }
 .admin-bulk-bar button:disabled { opacity: .55; cursor: wait; }
+/* `.admin-bulk-bar button` outranks `.admin-delete-resource-button`, which would turn the shared delete button's red outline gray inside the bulk bar. */
+.admin-bulk-bar .admin-delete-resource-button { border-color: var(--status-negative); background: transparent; color: var(--status-negative); }
+.admin-bulk-bar .admin-delete-resource-button:hover { border-color: var(--status-negative); background: var(--status-negative-bg); color: var(--status-negative); }
 .admin-resource-table-wrap { border: 1px solid var(--color-line-subtle); border-radius: var(--radius-md); background: var(--color-insights-surface); overflow-x: auto; }
 .admin-resource-table { width: 100%; min-width: 780px; border-collapse: collapse; }
 .admin-resource-table thead tr { height: 56px; }

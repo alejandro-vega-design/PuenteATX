@@ -3,14 +3,13 @@ import { archiveResource, createResource, deleteResourcePermanently, getAdminRes
 import { resourceCategories } from '../../data/categories';
 import { createResourceSlug, createUniqueResourceSlug } from '../../data/resourceUtils';
 import { getPublishRequirementKeys } from '../../data/resourceValidation';
-import { ChevronLeftIcon } from '../Icons';
+import { ChevronLeftIcon, DeleteIcon } from '../Icons';
 import ConfirmDialog from '../ConfirmDialog';
 import { readAdminResourceNavigation } from '../../data/adminResourceNavigation';
 
 const blank = { slug: '', status: 'draft', organization_name: '', title_es: '', title_en: '', summary_es: '', summary_en: '', description_es: '', description_en: '', primary_category_id: '', additional_category_ids: [], keywords_es: [], keywords_en: [], languages: ['es','en'], service_methods: ['phone'], cost_type: 'unknown', eligibility_es: '', eligibility_en: '', required_documents_es: '', required_documents_en: '', application_steps_es: '', application_steps_en: '', hours_es: '', hours_en: '', accessibility_notes_es: '', accessibility_notes_en: '', service_area_es: '', service_area_en: '', phone: '', sms_phone: '', whatsapp_phone: '', email: '', website_url: '', address_line_1: '', address_line_2: '', city: '', state: 'TX', postal_code: '', county: 'Travis', source_url: '', is_featured: false, is_emergency: false, last_verified_at: '', verification_notes: '' };
 const RequiredLabel = ({ children }) => <span>{children} <span className="required-mark" aria-hidden="true">*</span><span className="sr-only"> (obligatorio para publicar)</span></span>;
 const Field = ({ label, name, value, onChange, textarea = false, type = 'text', publishRequired = false, ...inputProps }) => <label>{publishRequired ? <RequiredLabel>{label}</RequiredLabel> : label}{textarea ? <textarea name={name} value={value || ''} onChange={onChange} rows="4" {...inputProps}/> : <input name={name} type={type} value={value || ''} onChange={onChange} {...inputProps}/>}</label>;
-const DeleteIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12Zm2-10h8v10H8V9Zm7.5-5-1-1h-5l-1 1H5v2h14V4h-3.5Z"/></svg>;
 const formatPhone = value => {
   const digits = value.replace(/\D/g, '').slice(0, 10);
   if (digits.length <= 3) return digits;

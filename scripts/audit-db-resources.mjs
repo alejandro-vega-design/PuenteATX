@@ -242,6 +242,16 @@ for (const r of records) {
   // never in a street line (a bare 5-digit street number like "12012" is NOT a ZIP)
   const hasEmbeddedCityStateZip = s => /,\s*(TX|texas)\b/i.test(s) || /\b(TX|texas)\.?,?\s*\d{5}\b/i.test(s) || /\b\d{5}(-\d{4})?\s*$/.test(s.replace(/^\s*\d{1,6}\b/, ''));
   const unitKeyword = /\b(#\s*[\w-]+|ste|suite|bldg|building|apt|apartment|unit|rm|room|fl|floor|lot|space|trailer|portable|dept)\b/i;
+  // The card joins line 1 + line 2 + city..., so a unit written in BOTH lines is
+  // shown twice ("1711 South Colorado Street, Unit G, Unit G"). Normalized so
+  // Suite/Ste, Building/Bldg, Apartment/Apt, Room/Rm and Floor/Fl compare equal.
+  const normUnit = v => String(v ?? '').toLowerCase().replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\bsuite\b/g, 'ste').replace(/\bbuilding\b/g, 'bldg').replace(/\bapartment\b/g, 'apt')
+    .replace(/\broom\b/g, 'rm').replace(/\bfloor\b/g, 'fl').replace(/\s+/g, ' ').trim();
+  const unitInLine1 = /\b(ste|suite|unit|bldg|building|apt|apartment|rm|room|fl|floor)\b\.?\s*[#\w-]+|#\s*\w+/i;
+  if (addr1 && addr2 && normUnit(addr2) && normUnit(addr1).includes(normUnit(addr2))) add(r, 'address_line_2_duplicates_line_1', `${addr1.slice(0, 60)} | ${addr2.slice(0, 30)}`);
+  // Lower severity: no duplicate shown, but the unit lives in line 1 instead of line 2.
+  else if (addr1 && !addr2 && unitInLine1.test(addr1)) add(r, 'address_unit_in_line_1_line_2_empty', addr1.slice(0, 90));
   if (addr1) {
     if (streetAddrHits(addr1).length >= 2) add(r, 'address_line_1_multiple_addresses', addr1.slice(0, 90));
     if (hasEmbeddedCityStateZip(addr1)) add(r, 'address_line_1_has_city_state_zip', addr1.slice(0, 90));
