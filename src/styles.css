@@ -765,8 +765,9 @@ a.compact-resource-line { text-decoration: underline; text-underline-offset: 3px
 .admin-flags-note, .admin-flags-area { margin: 0 0 6px; line-height: 1.4; }
 .admin-flags-date { margin: 0 0 8px; color: var(--color-line); font-size: 13px; }
 .admin-flags-status select { min-height: 40px; padding: 6px 10px; border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-white); font: inherit; }
-.resource-flag-badge { margin-left: 6px; border: 0; background: transparent; cursor: pointer; font-size: 15px; line-height: 1; }
+.resource-flag-badge { margin-left: 6px; padding: 0; border: 0; background: transparent; cursor: pointer; line-height: 1; }
 .resource-flag-badge:hover { transform: scale(1.15); }
+.resource-flag-badge svg { width: 17px; height: 17px; fill: var(--status-negative); }
 .admin-row-menu-popover .admin-destructive-menu-item { color: var(--status-negative); }
 .admin-row-menu-popover .admin-destructive-menu-item:hover { color: var(--status-negative); }
 .unavailable-resource { margin-top: 12px; padding: 16px; border: 1px solid var(--color-line); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: space-between; gap: 10px; }
@@ -905,7 +906,6 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
 .admin-resource-filters label { min-width: 0; }
 .admin-resource-filters input, .admin-resource-filters select { width: 100%; min-height: 44px; padding: 8px 12px; border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-white); color: var(--color-ink); font-size: 16px; }
 .admin-flags-filter { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 12px; border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-white); }
-.admin-flags-filter input { width: auto; min-height: 0; }
 .admin-resource-sort-button { width: 44px; height: 44px; padding: 0; border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-white); color: var(--color-ink); display: grid; place-items: center; cursor: pointer; }
 .admin-resource-sort-button:hover { border-color: var(--color-accent); color: var(--color-accent); }
 .admin-resource-sort-button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 0; }
@@ -944,10 +944,10 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
 .admin-resource-table td:nth-child(2) strong, .admin-resource-table td:nth-child(2) span { display: block; }
 .admin-resource-table td:nth-child(2) span { margin-top: 2px; font-size: 14px; }
 .admin-check-cell { width: 44px; text-align: center !important; }
-.admin-check-cell input, .admin-resource-mobile input[type="checkbox"], .admin-bulk-summary input { appearance: none; width: 19px; height: 19px; margin: 0; border: 1px solid var(--color-line); border-radius: 3px; background: var(--color-white); display: grid; place-content: center; vertical-align: middle; cursor: pointer; }
-.admin-check-cell input::before, .admin-resource-mobile input[type="checkbox"]::before, .admin-bulk-summary input::before { content: ""; width: 11px; height: 9px; background: var(--color-white); clip-path: polygon(0 45%, 18% 25%, 42% 55%, 82% 5%, 100% 25%, 42% 100%); transform: scale(0); transform-origin: center; }
-.admin-check-cell input:checked, .admin-resource-mobile input[type="checkbox"]:checked, .admin-bulk-summary input:checked, .admin-check-cell input:indeterminate, .admin-resource-mobile input[type="checkbox"]:indeterminate, .admin-bulk-summary input:indeterminate { border-color: var(--color-accent); background: var(--color-accent); }
-.admin-check-cell input:checked::before, .admin-resource-mobile input[type="checkbox"]:checked::before, .admin-bulk-summary input:checked::before { transform: scale(1); }
+.admin-check-cell input, .admin-resource-mobile input[type="checkbox"], .admin-bulk-summary input, .admin-flags-filter input { appearance: none; flex: none; width: 19px; height: 19px; margin: 0; border: 1px solid var(--color-line); border-radius: 3px; background: var(--color-white); display: grid; place-content: center; vertical-align: middle; cursor: pointer; }
+.admin-check-cell input::before, .admin-resource-mobile input[type="checkbox"]::before, .admin-bulk-summary input::before, .admin-flags-filter input::before { content: ""; width: 11px; height: 9px; background: var(--color-white); clip-path: polygon(0 45%, 18% 25%, 42% 55%, 82% 5%, 100% 25%, 42% 100%); transform: scale(0); transform-origin: center; }
+.admin-check-cell input:checked, .admin-resource-mobile input[type="checkbox"]:checked, .admin-bulk-summary input:checked, .admin-flags-filter input:checked, .admin-check-cell input:indeterminate, .admin-resource-mobile input[type="checkbox"]:indeterminate, .admin-bulk-summary input:indeterminate { border-color: var(--color-accent); background: var(--color-accent); }
+.admin-check-cell input:checked::before, .admin-resource-mobile input[type="checkbox"]:checked::before, .admin-bulk-summary input:checked::before, .admin-flags-filter input:checked::before { transform: scale(1); }
 .admin-check-cell input:indeterminate::before, .admin-resource-mobile input[type="checkbox"]:indeterminate::before, .admin-bulk-summary input:indeterminate::before { width: 9px; height: 2px; background: var(--color-white); clip-path: none; transform: none; }
 .admin-table-actions { display: flex; align-items: center; justify-content: flex-end; gap: 6px; }
 .admin-table-actions > button, .admin-mobile-edit { min-height: 44px; padding: 7px 12px; border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-white); display: inline-flex; align-items: center; justify-content: center; gap: 6px; font-weight: 600; cursor: pointer; }

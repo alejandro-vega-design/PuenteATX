@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getResourceFlags, updateResourceFlagStatus } from '../../data/repository';
+import { CloseIcon } from '../Icons';
 
 const STATUS_OPTIONS = ['open', 'reviewing', 'resolved', 'dismissed'];
 
@@ -31,7 +32,7 @@ export default function AdminFlagsDialog({ resource, t, lang, onClose, onChanged
 
   return <div className="confirm-dialog-overlay" onMouseDown={event => event.target === event.currentTarget && onClose()}>
     <section className="report-dialog admin-flags-dialog" role="dialog" aria-modal="true">
-      <button className="close-button" onClick={onClose} aria-label={t.flagsClose}>×</button>
+      <button className="close-button" onClick={onClose} aria-label={t.flagsClose}><CloseIcon/></button>
       <h2>{t.flagsListTitle}</h2>
       {flags === null && <p>…</p>}
       {flags?.length === 0 && <p>{t.flagsListEmpty}</p>}
