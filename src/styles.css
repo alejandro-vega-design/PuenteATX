@@ -906,6 +906,7 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
 .admin-resource-filters label { min-width: 0; }
 .admin-resource-filters input, .admin-resource-filters select { width: 100%; min-height: 44px; padding: 8px 12px; border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-white); color: var(--color-ink); font-size: 16px; }
 .admin-flags-filter { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 12px; border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-white); }
+.admin-flags-filter input[type="checkbox"] { min-height: 0; padding: 0; }
 .admin-resource-sort-button { width: 44px; height: 44px; padding: 0; border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-white); color: var(--color-ink); display: grid; place-items: center; cursor: pointer; }
 .admin-resource-sort-button:hover { border-color: var(--color-accent); color: var(--color-accent); }
 .admin-resource-sort-button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 0; }
