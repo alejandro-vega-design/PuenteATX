@@ -765,7 +765,7 @@ a.compact-resource-line { text-decoration: underline; text-underline-offset: 3px
 .admin-flags-note, .admin-flags-area { margin: 0 0 6px; line-height: 1.4; }
 .admin-flags-date { margin: 0 0 8px; color: var(--color-line); font-size: 13px; }
 .admin-flags-status select { min-height: 40px; padding: 6px 10px; border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-white); font: inherit; }
-.resource-flag-badge { margin-left: 6px; padding: 0; border: 0; background: transparent; cursor: pointer; line-height: 1; }
+.resource-flag-badge { display: inline-flex; align-items: center; margin-left: 6px; padding: 0; border: 0; background: transparent; cursor: pointer; line-height: 1; vertical-align: middle; }
 .resource-flag-badge:hover { transform: scale(1.15); }
 .resource-flag-badge svg { width: 17px; height: 17px; fill: var(--status-negative); }
 .admin-row-menu-popover .admin-destructive-menu-item { color: var(--status-negative); }
@@ -823,6 +823,7 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
 .admin-resource-list small { color: var(--color-accent-dark); }
 .status-badge {
   min-height: 24px;
+  vertical-align: middle;
   padding: 3px 9px 1px;
   border: 1px solid var(--color-line);
   border-radius: 999px;
@@ -902,10 +903,10 @@ select { appearance: none; -webkit-appearance: none; padding-right: 44px !import
 .admin-csv-verification-option input:disabled { opacity: .5; cursor: not-allowed; }
 .admin-add-resource-button { min-width: 158px; margin: 0; display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
 .admin-add-resource-button span { font-size: 20px; line-height: 1; }
-.admin-resource-filters { margin-bottom: 12px; display: grid; grid-template-columns: minmax(240px, 1.5fr) repeat(4, minmax(140px, 1fr)) minmax(140px, 1fr) 44px; gap: 8px; }
+.admin-resource-filters { margin-bottom: 12px; display: grid; grid-template-columns: minmax(240px, 1.5fr) repeat(4, minmax(140px, 1fr)) auto 44px; gap: 8px; }
 .admin-resource-filters label { min-width: 0; }
 .admin-resource-filters input, .admin-resource-filters select { width: 100%; min-height: 44px; padding: 8px 12px; border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-white); color: var(--color-ink); font-size: 16px; }
-.admin-flags-filter { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 12px; border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-white); }
+.admin-flags-filter { flex: none; box-sizing: border-box; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 12px; border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-white); white-space: nowrap; }
 .admin-flags-filter input[type="checkbox"] { min-height: 0; padding: 0; }
 .admin-resource-sort-button { width: 44px; height: 44px; padding: 0; border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-white); color: var(--color-ink); display: grid; place-items: center; cursor: pointer; }
 .admin-resource-sort-button:hover { border-color: var(--color-accent); color: var(--color-accent); }
