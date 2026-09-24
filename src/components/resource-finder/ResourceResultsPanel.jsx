@@ -1,5 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import CompactResourceCard from './CompactResourceCard';
+import ReportResourceDialog from '../ReportResourceDialog';
+import StatusToast from '../StatusToast';
+import { FlagIcon } from '../Icons';
+import { reportCopy } from '../../data';
+import { hasFlaggedResource } from '../../services/resourceFlags';
 
 function Cards({ resources, categories, lang, t, selectedId, hoveredId, includedIds, onSelect, onHover, onToggleIncluded, cardRefs }) {
   return <div className="finder-results-list">{resources.map(resource => <div key={resource.id} ref={node => { if (node) cardRefs.current.set(resource.id, node); else cardRefs.current.delete(resource.id); }}>
@@ -9,6 +14,8 @@ function Cards({ resources, categories, lang, t, selectedId, hoveredId, included
 
 const ResourceResultsPanel = React.memo(function ResourceResultsPanel({ t, lang, results, unlocatedResults, remoteResults, categories, selectedId, hoveredId, includedIds, loading, searched, zip, categoryLabel, excludedCount, radius, onSelect, onHover, onToggleIncluded, onToggleAll, onExpand, onClearCategory, onRequestHelp, onShare, onPrint, onSavePdf, onOpenActions, cardRefs }) {
   const [actionsOpen, setActionsOpen] = useState(false);
+  const [reportOpen, setReportOpen] = useState(false);
+  const [reportStatus, setReportStatus] = useState(null);
   const actionsRef = useRef(null);
   useEffect(() => {
     if (!actionsOpen) return undefined;
@@ -25,8 +32,10 @@ const ResourceResultsPanel = React.memo(function ResourceResultsPanel({ t, lang,
   // the way instead of hiding already-loaded cards behind a skeleton the whole time.
   if (loading && !hasAnyResults) return <div className="finder-skeletons" aria-live="polite"><span className="sr-only">{t.resourcesLoading}</span>{[1, 2, 3].map(item => <div className="finder-card-skeleton" key={item}/>)}</div>;
   if (!loading && !hasAnyResults) return <div className="finder-empty" aria-live="polite"><span className="material-symbols-rounded finder-empty-icon" aria-hidden="true">location_on</span><h2>{t.empty(categoryLabel, zip)}</h2><p>{t.emptyHelp}</p><div className="finder-empty-actions">{radius < 50 && <button className="secondary-button" onClick={onExpand}>{t.expand(radius === 15 ? 30 : 50)}</button>}{categoryLabel && <button className="secondary-button" onClick={onClearCategory}>{t.allNearby}</button>}<button className="text-link" onClick={onRequestHelp}>{t.requestHelp}</button></div></div>;
-  const visibleIds = [...results, ...unlocatedResults, ...remoteResults].map(resource => resource.id);
+  const allResources = [...results, ...unlocatedResults, ...remoteResults];
+  const visibleIds = allResources.map(resource => resource.id);
   const allVisibleSelected = visibleIds.length > 0 && visibleIds.every(id => includedIds.includes(id));
+  const reportResource = includedIds.length === 1 ? allResources.find(resource => resource.id === includedIds[0]) : null;
   const toggleActions = () => {
     const nextOpen = !actionsOpen;
     setActionsOpen(nextOpen);
@@ -36,6 +45,12 @@ const ResourceResultsPanel = React.memo(function ResourceResultsPanel({ t, lang,
     onToggleAll(visibleIds);
     setActionsOpen(false);
   };
+  const openReport = () => {
+    if (!reportResource) return;
+    setActionsOpen(false);
+    if (hasFlaggedResource(reportResource.id)) { setReportStatus({ id: Date.now(), message: reportCopy[lang].alreadyFlagged }); return; }
+    setReportOpen(true);
+  };
   const cardProps = { categories, lang, t, selectedId, hoveredId, includedIds, onSelect, onHover, onToggleIncluded, cardRefs };
   return <div className="finder-results-content">
     <div className="finder-results-summary">
@@ -44,7 +59,7 @@ const ResourceResultsPanel = React.memo(function ResourceResultsPanel({ t, lang,
         <div className="finder-more-actions finder-results-actions no-print" ref={actionsRef}>
           <button className="finder-results-actions-button finder-results-actions-button-desktop" type="button" aria-label={`${t.moreActions}: ${includedIds.length}`} title={t.moreActions} aria-haspopup="menu" aria-expanded={actionsOpen} onClick={toggleActions}><span className="material-symbols-rounded" aria-hidden="true">more_horiz</span></button>
           <button className="finder-results-actions-button finder-results-actions-button-mobile" type="button" aria-label={`${t.moreActions}: ${includedIds.length}`} title={t.moreActions} aria-haspopup="menu" aria-expanded={actionsOpen} onClick={toggleActions}><span className="material-symbols-rounded" aria-hidden="true">more_horiz</span></button>
-          {actionsOpen && <div className="finder-actions-menu" role="menu"><button className="finder-batch-toggle" type="button" role="menuitem" onClick={toggleAllFromActions}><span className="material-symbols-rounded" aria-hidden="true">{allVisibleSelected ? 'remove_done' : 'done_all'}</span>{lang === 'es' ? (allVisibleSelected ? 'Quitar selección' : 'Seleccionar todos') : (allVisibleSelected ? 'Clear selection' : 'Select all')}</button><p>{lang === 'es' ? `${includedIds.length} ${includedIds.length === 1 ? 'recurso seleccionado' : 'recursos seleccionados'}` : `${includedIds.length} selected ${includedIds.length === 1 ? 'resource' : 'resources'}`}</p><button type="button" role="menuitem" disabled={!includedIds.length} onClick={() => { setActionsOpen(false); onShare(); }}><span className="material-symbols-rounded" aria-hidden="true">share</span>{t.shareList}</button><button type="button" role="menuitem" disabled={!includedIds.length} onClick={() => { setActionsOpen(false); onPrint(); }}><span className="material-symbols-rounded" aria-hidden="true">print</span>{t.printList}</button><button type="button" role="menuitem" disabled={!includedIds.length} onClick={() => { setActionsOpen(false); onSavePdf(); }}><span className="material-symbols-rounded" aria-hidden="true">picture_as_pdf</span>{t.savePdf}</button></div>}
+          {actionsOpen && <div className="finder-actions-menu" role="menu"><button className="finder-batch-toggle" type="button" role="menuitem" onClick={toggleAllFromActions}><span className="material-symbols-rounded" aria-hidden="true">{allVisibleSelected ? 'remove_done' : 'done_all'}</span>{lang === 'es' ? (allVisibleSelected ? 'Quitar selección' : 'Seleccionar todos') : (allVisibleSelected ? 'Clear selection' : 'Select all')}</button><p>{lang === 'es' ? `${includedIds.length} ${includedIds.length === 1 ? 'recurso seleccionado' : 'recursos seleccionados'}` : `${includedIds.length} selected ${includedIds.length === 1 ? 'resource' : 'resources'}`}</p><button type="button" role="menuitem" disabled={!includedIds.length} onClick={() => { setActionsOpen(false); onShare(); }}><span className="material-symbols-rounded" aria-hidden="true">share</span>{t.shareList}</button><button type="button" role="menuitem" disabled={!includedIds.length} onClick={() => { setActionsOpen(false); onPrint(); }}><span className="material-symbols-rounded" aria-hidden="true">print</span>{t.printList}</button><button type="button" role="menuitem" disabled={!includedIds.length} onClick={() => { setActionsOpen(false); onSavePdf(); }}><span className="material-symbols-rounded" aria-hidden="true">picture_as_pdf</span>{t.savePdf}</button><button type="button" role="menuitem" disabled={includedIds.length !== 1} title={includedIds.length !== 1 ? t.reportNeedsOne : undefined} onClick={openReport}><FlagIcon/>{t.report}</button></div>}
         </div>
       </div>
     </div>
@@ -53,6 +68,8 @@ const ResourceResultsPanel = React.memo(function ResourceResultsPanel({ t, lang,
     {unlocatedResults.length > 0 && <section className="finder-result-group finder-remote-results"><h2>{t.unlocatedTitle}</h2><p>{t.unlocatedText}</p><Cards resources={unlocatedResults} {...cardProps}/></section>}
     {remoteResults.length > 0 && <section className="finder-result-group finder-remote-results"><h2>{results.length ? t.remoteTitle : t.noPhysical(zip)}</h2><p>{results.length ? t.remoteText : t.remoteOnlyText}</p><Cards resources={remoteResults} {...cardProps}/></section>}
     {loading && <div className="resource-progressive-loading" role="status" aria-live="polite"><span className="admin-button-spinner resource-loading-spinner" aria-hidden="true"/><span>{t.loadingMore}</span></div>}
+    <ReportResourceDialog open={reportOpen} resource={reportResource} categorySlug={categories.find(category => category.id === reportResource?.primary_category_id)?.slug} lang={lang} onClose={() => setReportOpen(false)} onSubmitted={message => setReportStatus({ id: Date.now(), message })}/>
+    <StatusToast toast={reportStatus} onClose={() => setReportStatus(null)} closeLabel={t.closeNotification}/>
   </div>;
 });
 

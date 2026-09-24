@@ -22,5 +22,9 @@ export const demoRepository = {
   async deleteResourcePermanently(id) { const resource = resources.find(item => item.id === id); resources = resources.filter(item => item.id !== id); return delay(resource || null); },
   async getCategories({ admin = false } = {}) { return delay(categories.filter(category => admin || category.is_active).sort((a, b) => a.sort_order - b.sort_order)); },
   async createCategory(values) { const category = { ...values, id: `demo-cat-${Date.now()}` }; categories = [...categories, category]; return delay(category); },
-  async updateCategory(id, values) { let updated; categories = categories.map(category => category.id === id ? (updated = { ...category, ...values }) : category); return delay(updated); }
+  async updateCategory(id, values) { let updated; categories = categories.map(category => category.id === id ? (updated = { ...category, ...values }) : category); return delay(updated); },
+  // Demo mode has no resource_flags table — there is nothing to flag yet.
+  async getOpenResourceFlagCounts() { return delay({}); },
+  async getResourceFlags() { return delay([]); },
+  async updateResourceFlagStatus(id, status) { return delay({ id, status }); }
 };

@@ -7,7 +7,8 @@ const unavailableRepository = {
   mode: 'unavailable',
   getPublishedResources: unavailable, getResourceBySlug: unavailable, searchResources: unavailable, filterResources: unavailable,
   getResourceFinderData: unavailable, getAdminResources: unavailable, createResource: unavailable, updateResource: unavailable, publishResource: unavailable,
-  archiveResource: unavailable, restoreResource: unavailable, deleteResourcePermanently: unavailable, getCategories: unavailable, createCategory: unavailable, updateCategory: unavailable
+  archiveResource: unavailable, restoreResource: unavailable, deleteResourcePermanently: unavailable, getCategories: unavailable, createCategory: unavailable, updateCategory: unavailable,
+  getOpenResourceFlagCounts: unavailable, getResourceFlags: unavailable, updateResourceFlagStatus: unavailable
 };
 
 export const resourceRepository = hasSupabaseConfig ? supabaseRepository : isDemoEnabled ? demoRepository : unavailableRepository;
@@ -28,3 +29,6 @@ export const deleteResourcePermanently = (...args) => resourceRepository.deleteR
 export const getCategories = (...args) => resourceRepository.getCategories(...args);
 export const createCategory = (...args) => resourceRepository.createCategory(...args);
 export const updateCategory = (...args) => resourceRepository.updateCategory(...args);
+export const getOpenResourceFlagCounts = (...args) => resourceRepository.getOpenResourceFlagCounts(...args);
+export const getResourceFlags = (...args) => resourceRepository.getResourceFlags(...args);
+export const updateResourceFlagStatus = (...args) => resourceRepository.updateResourceFlagStatus(...args);

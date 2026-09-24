@@ -18,7 +18,8 @@ export const ANALYTICS_EVENT_NAMES = [
   'list_printed',
   'resource_printed',
   'conversation_requested',
-  'shared_list_opened'
+  'shared_list_opened',
+  'resource_flag_submitted'
 ];
 
 const EVENT_FIELDS = {
@@ -38,7 +39,8 @@ const EVENT_FIELDS = {
   list_printed: { required: [], optional: [] },
   resource_printed: { required: ['resource_id'], optional: ['category_slug', 'area_code'] },
   conversation_requested: { required: [], optional: [] },
-  shared_list_opened: { required: [], optional: [] }
+  shared_list_opened: { required: [], optional: [] },
+  resource_flag_submitted: { required: ['resource_id'], optional: ['category_slug', 'area_code'] }
 };
 
 export const eventDefinitions = Object.freeze({
@@ -58,7 +60,8 @@ export const eventDefinitions = Object.freeze({
   list_printed: { description: 'A saved-resource list print action was initiated.', source: 'My list', metric: 'listsPrinted' },
   resource_printed: { description: 'A single resource print action was initiated.', source: 'Resource cards and details', metric: 'resourcesPrinted' },
   conversation_requested: { description: 'A conversation request was successfully submitted.', source: 'Conversation form', metric: 'conversationRequests' },
-  shared_list_opened: { description: 'A shared resource-list URL was opened.', source: 'My list', metric: 'sharedListsOpened' }
+  shared_list_opened: { description: 'A shared resource-list URL was opened.', source: 'My list', metric: 'sharedListsOpened' },
+  resource_flag_submitted: { description: 'A visitor reported a resource as possibly incorrect.', source: 'Resource cards, My list, and the map finder', metric: 'resourceFlagsSubmitted' }
 });
 
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;

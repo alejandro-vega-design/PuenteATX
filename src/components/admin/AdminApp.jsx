@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { adminCopy } from '../../data';
-import { getAdminResources, isDemoMode } from '../../data/repository';
+import { getAdminResources, getOpenResourceFlagCounts, isDemoMode } from '../../data/repository';
 import { ADMIN_SESSION_EXPIRED_EVENT, clearAdminSession, expireAdminSession, getAdminSession, validateAdminSession } from '../../services/adminAuth';
 import AdminCategories from './AdminCategories';
 import AdminDashboard from './AdminDashboard';
@@ -22,7 +22,7 @@ import { canCreatePassport, canManageOrganization, canViewInsights, canWorkRefer
 import { requiresAdminMfa } from '../../services/adminMfa';
 
 export default function AdminApp({ path, locationSearch, lang, setLang, navigate }) {
-  const [session, setSession] = useState(null); const [sessionReady, setSessionReady] = useState(false); const [resources, setResources] = useState([]); const [loading, setLoading] = useState(true); const [toast, setToast] = useState(null); const t = adminCopy[lang];
+  const [session, setSession] = useState(null); const [sessionReady, setSessionReady] = useState(false); const [resources, setResources] = useState([]); const [flagCounts, setFlagCounts] = useState({}); const [loading, setLoading] = useState(true); const [toast, setToast] = useState(null); const t = adminCopy[lang];
   const hasLoadedResources = useRef(false); const refreshInFlight = useRef(null); const sessionValidationInFlight = useRef(null);
   const notify = useCallback(message => setToast({ id: Date.now(), message }), []);
   const closeToast = useCallback(() => setToast(null), []);
@@ -30,7 +30,7 @@ export default function AdminApp({ path, locationSearch, lang, setLang, navigate
     if (!session || requiresAdminMfa(session) || !['admin', 'editor'].includes(session.profile?.role)) { setLoading(false); return Promise.resolve(); }
     if (refreshInFlight.current) return refreshInFlight.current;
     if (!hasLoadedResources.current) setLoading(true);
-    const request = getAdminResources().then(setResources).finally(() => {
+    const request = Promise.all([getAdminResources(), getOpenResourceFlagCounts().catch(() => ({}))]).then(([resourceRows, counts]) => { setResources(resourceRows); setFlagCounts(counts); }).finally(() => {
       hasLoadedResources.current = true;
       setLoading(false);
       if (refreshInFlight.current === request) refreshInFlight.current = null;
@@ -93,7 +93,7 @@ export default function AdminApp({ path, locationSearch, lang, setLang, navigate
   if (loading) page = <p className="loading-inline"><span className="admin-button-spinner" aria-hidden="true"/><span>{lang === 'es' ? 'Cargando…' : 'Loading…'}</span></p>;
   else if (path === '/admin' && ['admin', 'editor'].includes(session.profile?.role)) page = <AdminDashboard t={t} resources={resources} demo={isDemoMode} navigate={navigate}/>;
   else if (path === '/admin' && hasCommunityAccess(session.profile)) page = <CommunityPassportList session={session} lang={lang} navigate={navigate}/>;
-  else if (path === '/admin/recursos') page = <AdminResources t={t} lang={lang} resources={resources} refresh={refresh} navigate={navigate} notify={notify} canDeletePermanently={canAdmin} initialReview={new URLSearchParams(locationSearch).get('revision') === '1'} locationSearch={locationSearch}/>;
+  else if (path === '/admin/recursos') page = <AdminResources t={t} lang={lang} resources={resources} flagCounts={flagCounts} refresh={refresh} navigate={navigate} notify={notify} canDeletePermanently={canAdmin} initialReview={new URLSearchParams(locationSearch).get('revision') === '1'} locationSearch={locationSearch}/>;
   else if (path === '/admin/recursos/importar') page = <AdminResourceImport t={t} existingResources={resources} refresh={refresh} navigate={navigate} notify={notify}/>;
   else if (path === '/admin/recursos/nuevo') page = <AdminResourceForm t={t} navigate={navigate} notify={notify}/>;
   else if (/^\/admin\/recursos\/[^/]+\/editar$/.test(path)) { const id = path.split('/')[3]; page = <AdminResourceForm key={id} t={t} resource={resources.find(item => item.id === id)} resources={resources} refresh={refresh} navigate={navigate} notify={notify} canDeletePermanently={canAdmin} locationSearch={locationSearch}/>; }

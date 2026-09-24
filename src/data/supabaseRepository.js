@@ -81,5 +81,14 @@ export const supabaseRepository = {
   async deleteResourcePermanently(id) { return adminRequest('/rest/v1/rpc/delete_resource_permanently', { method: 'POST', body: { p_resource_id: id } }); },
   async getCategories({ admin = false } = {}) { return admin ? adminRequest('/rest/v1/categories?select=*&order=sort_order.asc') : supabaseRequest('/rest/v1/categories?is_active=eq.true&select=*&order=sort_order.asc'); },
   async createCategory(values) { const rows = await adminRequest('/rest/v1/categories', { method: 'POST', body: values }); return rows[0]; },
-  async updateCategory(id, values) { const rows = await adminRequest(`/rest/v1/categories?id=eq.${encodeURIComponent(id)}`, { method: 'PATCH', body: values }); return rows[0]; }
+  async updateCategory(id, values) { const rows = await adminRequest(`/rest/v1/categories?id=eq.${encodeURIComponent(id)}`, { method: 'PATCH', body: values }); return rows[0]; },
+  // A resource's badge only cares about counts, so this fetches just resource_id
+  // for open/reviewing flags and tallies client-side rather than round-tripping
+  // through a Postgres view for what is, in practice, a small table.
+  async getOpenResourceFlagCounts() {
+    const rows = await adminRequest('/rest/v1/resource_flags?status=in.(open,reviewing)&select=resource_id');
+    return rows.reduce((counts, row) => { counts[row.resource_id] = (counts[row.resource_id] || 0) + 1; return counts; }, {});
+  },
+  async getResourceFlags(resourceId) { return adminRequest(`/rest/v1/resource_flags?resource_id=eq.${encodeURIComponent(resourceId)}&select=*&order=created_at.desc`); },
+  async updateResourceFlagStatus(id, status) { const rows = await adminRequest(`/rest/v1/resource_flags?id=eq.${encodeURIComponent(id)}`, { method: 'PATCH', body: { status } }); return rows[0]; }
 };

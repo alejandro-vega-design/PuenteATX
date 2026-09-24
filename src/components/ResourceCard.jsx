@@ -2,15 +2,19 @@ import React, { useEffect, useRef, useState } from 'react';
 import { getCategoryById } from '../data/categories';
 import { highlightMatches, localized } from '../data/resourceUtils';
 import { canonicalResourceUrl, shareLink } from '../services/share';
-import { BookmarkIcon, CategoryIcon, CheckCircleIcon, MapIcon, MoreIcon, PhoneIcon, ShareIcon } from './Icons';
+import { BookmarkIcon, CategoryIcon, CheckCircleIcon, FlagIcon, MapIcon, MoreIcon, PhoneIcon, PrintIcon, ShareIcon } from './Icons';
 import { trackPuenteEvent } from '../analytics/client';
+import { hasFlaggedResource } from '../services/resourceFlags';
+import { reportCopy } from '../data';
 import StatusToast from './StatusToast';
+import ReportResourceDialog from './ReportResourceDialog';
 
 export default function ResourceCard({ resource, lang, t, saved = false, onSave, listMode = false, searchQuery = '' }) {
   const [shareStatus, setShareStatus] = useState(null);
   const [descriptionExpanded, setDescriptionExpanded] = useState(false);
   const [descriptionCanExpand, setDescriptionCanExpand] = useState(false);
   const [listMenuOpen, setListMenuOpen] = useState(false);
+  const [reportOpen, setReportOpen] = useState(false);
   const cardRef = useRef(null); const listMenuRef = useRef(null); const listMenuButtonRef = useRef(null); const summaryRef = useRef(null);
   const category = getCategoryById(resource.primary_category_id);
   const title = localized(resource, 'title', lang);
@@ -22,6 +26,10 @@ export default function ResourceCard({ resource, lang, t, saved = false, onSave,
     const result = await shareLink({ title, text: summary, url: canonicalResourceUrl(resource.slug) });
     if (result === 'copied') setShareStatus({ id: Date.now(), message: t.copied });
     if (result === 'failed') setShareStatus({ id: Date.now(), message: t.shareError });
+  };
+  const openReport = () => {
+    if (hasFlaggedResource(resource.id)) { setShareStatus({ id: Date.now(), message: reportCopy[lang].alreadyFlagged }); return; }
+    setReportOpen(true);
   };
   useEffect(() => { setDescriptionExpanded(false); setDescriptionCanExpand(false); }, [summary]);
   useEffect(() => {
@@ -99,11 +107,13 @@ export default function ResourceCard({ resource, lang, t, saved = false, onSave,
     {(address || resource.phone) && <div className="resource-contact-links">{address && <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`} target="_blank" rel="noreferrer" onClick={() => trackPuenteEvent('directions_clicked', { resource_id: resource.id, category_slug: category?.slug })} aria-label={`${t.openMap}: ${address}`}><MapIcon/><span>{address}</span></a>}{resource.phone && <a href={`tel:${resource.phone}`} onClick={() => trackPuenteEvent('call_clicked', { resource_id: resource.id, category_slug: category?.slug })} aria-label={`${t.call}: ${resource.phone}`}><PhoneIcon/><span>{resource.phone}</span></a>}</div>}
     <div className="resource-description"><p ref={summaryRef} id={`description-${resource.id}`} className={`resource-summary${descriptionExpanded ? ' is-expanded' : ''}`}>{highlightMatches(summary, searchQuery)}</p>{descriptionCanExpand && <button className="description-toggle" onClick={() => setDescriptionExpanded(value => !value)} aria-expanded={descriptionExpanded} aria-controls={`description-${resource.id}`}>{descriptionExpanded ? t.showLess : t.showMore}</button>}</div>
     <dl className="resource-meta">{area && !address && <div><dt>{t.location}</dt><dd>{highlightMatches(area, searchQuery)}</dd></div>}</dl>
-    {(resource.last_verified_at || listMode) && <div className="resource-card-footer">{resource.last_verified_at && <p className="resource-verified"><CheckCircleIcon/><span>{t.verified} {new Intl.DateTimeFormat(lang === 'es' ? 'es-US' : 'en-US', { dateStyle: 'medium' }).format(new Date(`${resource.last_verified_at}T12:00:00`))}</span></p>}{listMode && <div className="resource-card-overflow" ref={listMenuRef}><button ref={listMenuButtonRef} className="resource-overflow-button" onClick={() => setListMenuOpen(value => !value)} aria-label={t.resourceOptions} aria-expanded={listMenuOpen} aria-controls={`resource-menu-${resource.id}`}><MoreIcon/></button>{listMenuOpen && <div className="resource-overflow-menu" id={`resource-menu-${resource.id}`}><button data-menu-first onClick={async () => { setListMenuOpen(false); await share(); }}>{t.shareThis}</button><button onClick={() => { setListMenuOpen(false); printCard(); }}>{t.printThis}</button></div>}</div>}</div>}
+    {(resource.last_verified_at || listMode) && <div className="resource-card-footer">{resource.last_verified_at && <p className="resource-verified"><CheckCircleIcon/><span>{t.verified} {new Intl.DateTimeFormat(lang === 'es' ? 'es-US' : 'en-US', { dateStyle: 'medium' }).format(new Date(`${resource.last_verified_at}T12:00:00`))}</span></p>}{listMode && <div className="resource-card-overflow" ref={listMenuRef}><button ref={listMenuButtonRef} className="resource-overflow-button" onClick={() => setListMenuOpen(value => !value)} aria-label={t.resourceOptions} aria-expanded={listMenuOpen} aria-controls={`resource-menu-${resource.id}`}><MoreIcon/></button>{listMenuOpen && <div className="resource-overflow-menu" id={`resource-menu-${resource.id}`}><button data-menu-first onClick={async () => { setListMenuOpen(false); await share(); }}>{t.shareThis}</button><button onClick={() => { setListMenuOpen(false); printCard(); }}>{t.printThis}</button><button onClick={() => { setListMenuOpen(false); openReport(); }}>{t.reportThis}</button></div>}</div>}</div>}
     {!listMode && <div className="resource-actions">
       <button className="card-action secondary-card-action desktop-resource-action" onClick={share}><ShareIcon/><span>{t.share}</span></button>
-      <button className="card-action print-card-action desktop-resource-action" onClick={printCard}><span className="material-symbols-rounded" aria-hidden="true">print</span><span>{t.print}</span></button>
+      <button className="card-action print-card-action desktop-resource-action" onClick={printCard}><PrintIcon/><span>{t.print}</span></button>
+      <button className="card-action flag-card-action desktop-resource-action" onClick={openReport} aria-label={t.report} title={t.report}><FlagIcon/></button>
     </div>}
+    <ReportResourceDialog open={reportOpen} resource={resource} categorySlug={category?.slug} lang={lang} onClose={() => setReportOpen(false)} onSubmitted={message => setShareStatus({ id: Date.now(), message })}/>
     <StatusToast toast={shareStatus} onClose={() => setShareStatus(null)} closeLabel={t.closeNotification}/>
   </article>;
 }
