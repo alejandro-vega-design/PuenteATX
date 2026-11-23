@@ -26,5 +26,8 @@ export const demoRepository = {
   // Demo mode has no resource_flags table — there is nothing to flag yet.
   async getOpenResourceFlagCounts() { return delay({}); },
   async getResourceFlags() { return delay([]); },
-  async updateResourceFlagStatus(id, status) { return delay({ id, status }); }
+  async updateResourceFlagStatus(id, status) { return delay({ id, status }); },
+  async getDiscoveryCandidates() { return delay([]); },
+  async getDiscoveryCandidateCounts() { return delay({ total: 0 }); },
+  async reviewDiscoveryCandidate(id, { status }) { return delay({ id, status }); }
 };

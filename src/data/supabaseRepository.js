@@ -90,5 +90,17 @@ export const supabaseRepository = {
     return rows.reduce((counts, row) => { counts[row.resource_id] = (counts[row.resource_id] || 0) + 1; return counts; }, {});
   },
   async getResourceFlags(resourceId) { return adminRequest(`/rest/v1/resource_flags?resource_id=eq.${encodeURIComponent(resourceId)}&select=*&order=created_at.desc`); },
-  async updateResourceFlagStatus(id, status) { const rows = await adminRequest(`/rest/v1/resource_flags?id=eq.${encodeURIComponent(id)}`, { method: 'PATCH', body: { status } }); return rows[0]; }
+  async updateResourceFlagStatus(id, status) { const rows = await adminRequest(`/rest/v1/resource_flags?id=eq.${encodeURIComponent(id)}`, { method: 'PATCH', body: { status } }); return rows[0]; },
+  async getDiscoveryCandidates(status = 'pending') { return adminRequest(`/rest/v1/discovery_candidates?status=eq.${encodeURIComponent(status)}&select=*&order=created_at.desc`); },
+  async getDiscoveryCandidateCounts() {
+    const rows = await adminRequest('/rest/v1/discovery_candidates?status=eq.pending&select=source');
+    return rows.reduce((counts, row) => { counts[row.source] = (counts[row.source] || 0) + 1; return counts; }, { total: rows.length });
+  },
+  async reviewDiscoveryCandidate(id, { status, resourceId, reviewedBy }) {
+    const rows = await adminRequest(`/rest/v1/discovery_candidates?id=eq.${encodeURIComponent(id)}`, {
+      method: 'PATCH',
+      body: { status, reviewed_at: new Date().toISOString(), reviewed_by: reviewedBy || null, resulting_resource_id: resourceId || null }
+    });
+    return rows[0];
+  }
 };

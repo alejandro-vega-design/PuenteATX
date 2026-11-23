@@ -9,6 +9,7 @@ import AdminLogin from './AdminLogin';
 import AdminResourceForm from './AdminResourceForm';
 import AdminResourceImport from './AdminResourceImport';
 import AdminResources from './AdminResources';
+import AdminDiscovery from './AdminDiscovery';
 import AdminInsights from './AdminInsights';
 import AdminMfaGate from './AdminMfaGate';
 import CommunityPassportList from './CommunityPassportList';
@@ -94,6 +95,7 @@ export default function AdminApp({ path, locationSearch, lang, setLang, navigate
   else if (path === '/admin' && ['admin', 'editor'].includes(session.profile?.role)) page = <AdminDashboard t={t} resources={resources} demo={isDemoMode} navigate={navigate}/>;
   else if (path === '/admin' && hasCommunityAccess(session.profile)) page = <CommunityPassportList session={session} lang={lang} navigate={navigate}/>;
   else if (path === '/admin/recursos') page = <AdminResources t={t} lang={lang} resources={resources} flagCounts={flagCounts} refresh={refresh} navigate={navigate} notify={notify} canDeletePermanently={canAdmin} initialReview={new URLSearchParams(locationSearch).get('revision') === '1'} locationSearch={locationSearch}/>;
+  else if (path === '/admin/descubrimiento') page = <AdminDiscovery lang={lang} resources={resources} refresh={refresh} notify={notify} reviewerId={session.profile?.id}/>;
   else if (path === '/admin/recursos/importar') page = <AdminResourceImport t={t} existingResources={resources} refresh={refresh} navigate={navigate} notify={notify}/>;
   else if (path === '/admin/recursos/nuevo') page = <AdminResourceForm t={t} navigate={navigate} notify={notify}/>;
   else if (/^\/admin\/recursos\/[^/]+\/editar$/.test(path)) { const id = path.split('/')[3]; page = <AdminResourceForm key={id} t={t} resource={resources.find(item => item.id === id)} resources={resources} refresh={refresh} navigate={navigate} notify={notify} canDeletePermanently={canAdmin} locationSearch={locationSearch}/>; }
@@ -108,5 +110,5 @@ export default function AdminApp({ path, locationSearch, lang, setLang, navigate
   else if (path === '/admin/organizaciones' && canManageOrganization(session.profile)) page = <CommunityOrganizations session={session} lang={lang} notify={notify}/>;
   else if (path.startsWith('/admin/pasaportes') || path.startsWith('/admin/referidos')) page = <section className="admin-error-state"><h1>{lang === 'es' ? 'Acceso denegado' : 'Access denied'}</h1><p>{lang === 'es' ? 'Tu cuenta no pertenece a una organización autorizada.' : 'Your account does not belong to an authorized organization.'}</p></section>;
   else page = <AdminDashboard t={t} resources={resources} demo={isDemoMode} navigate={navigate}/>;
-  return <AdminLayout t={t} lang={lang} path={path} onLanguage={() => setLang(lang === 'es' ? 'en' : 'es')} onNavigate={navigate} onLogout={logout} canAdmin={canAdmin} canViewInsights={canViewInsights(session.profile)} canCommunity={hasCommunityAccess(session.profile)} canManageCommunity={canManageOrganization(session.profile)}>{page}<StatusToast toast={toast} onClose={closeToast} closeLabel={t.closeNotification}/></AdminLayout>;
+  return <AdminLayout t={t} lang={lang} path={path} onLanguage={() => setLang(lang === 'es' ? 'en' : 'es')} onNavigate={navigate} onLogout={logout} canAdmin={canAdmin} canViewInsights={canViewInsights(session.profile)} canCommunity={hasCommunityAccess(session.profile)}>{page}<StatusToast toast={toast} onClose={closeToast} closeLabel={t.closeNotification}/></AdminLayout>;
 }
